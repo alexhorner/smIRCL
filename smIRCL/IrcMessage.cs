@@ -37,7 +37,7 @@ namespace smIRCL
         /// </summary>
         /// <param name="message">The message to parse</param>
         /// <returns></returns>
-        public static IrcMessage ParseMessage(string message)
+        public static IrcMessage Parse(string message)
         {
             if (String.IsNullOrWhiteSpace(message)) throw new ArgumentException($"The parameter '{nameof(message)}' is null or whitespace");
 
@@ -137,7 +137,7 @@ namespace smIRCL
             {
                 Tags = tags,
                 HostMask = hostMask,
-                Command = command,
+                Command = command.ToUpper(),
                 Parameters = messageParts
             };
         }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using smIRCL.Enums;
 
 namespace smIRCL.Config
@@ -26,6 +27,11 @@ namespace smIRCL.Config
         public string Nick { get; set; }
 
         /// <summary>
+        /// A list of alternative Nicks if the preferred one is unavailable
+        /// </summary>
+        public Queue<string> AlternativeNicks { get; set; } = new Queue<string>();
+
+        /// <summary>
         /// The User name for the client. If unspecified, Nick will be used
         /// </summary>
         public string UserName { get; set; }
@@ -49,6 +55,16 @@ namespace smIRCL.Config
         /// Whether to use SSL for the connection
         /// </summary>
         public bool UseSsl { get; set; }
+
+        /// <summary>
+        /// How many times to attempt a reconnect on failure
+        /// </summary>
+        public int ReconnectAttempts { get; set; } = 3;
+
+        /// <summary>
+        /// Whether to connect immediately during IrcClient instantiation
+        /// </summary>
+        public bool ConnectOnInstantiation { get; set; } = true;
 
         /// <summary>
         /// Checks this configuration is valid
@@ -77,6 +93,15 @@ namespace smIRCL.Config
                 isValid = false;
             }
 
+            foreach (string nick in AlternativeNicks)
+            {
+                if (string.IsNullOrWhiteSpace(nick))
+                {
+                    if (throwOnValidationError) throw new Exception($"One of the values in the parameter '{nameof(AlternativeNicks)}' is invalid");
+                    isValid = false;
+                }
+            }
+
             if (string.IsNullOrWhiteSpace(UserName))
             {
                 if (throwOnValidationError) throw new Exception($"The parameter '{nameof(UserName)}' is invalid");
@@ -92,6 +117,12 @@ namespace smIRCL.Config
             if (AuthMode != AuthMode.None && string.IsNullOrWhiteSpace(AuthPassword))
             {
                 if (throwOnValidationError) throw new Exception($"The parameter '{nameof(AuthPassword)}' is invalid for AuthMode {AuthMode.ToString()}");
+                isValid = false;
+            }
+
+            if (ReconnectAttempts < 0)
+            {
+                if (throwOnValidationError) throw new Exception($"The parameter '{nameof(ReconnectAttempts)}' is less than 0");
                 isValid = false;
             }
 
