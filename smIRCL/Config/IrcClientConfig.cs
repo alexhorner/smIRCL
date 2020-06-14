@@ -64,7 +64,7 @@ namespace smIRCL.Config
         /// <summary>
         /// Whether to connect immediately during IrcClient instantiation
         /// </summary>
-        public bool ConnectOnInstantiation { get; set; } = true;
+        public bool ConnectOnInstantiation { get; set; } = false;
 
         /// <summary>
         /// Checks this configuration is valid

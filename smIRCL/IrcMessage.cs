@@ -39,7 +39,7 @@ namespace smIRCL
         /// <returns></returns>
         public static IrcMessage Parse(string message)
         {
-            if (String.IsNullOrWhiteSpace(message)) throw new ArgumentException($"The parameter '{nameof(message)}' is null or whitespace");
+            if (String.IsNullOrWhiteSpace(message)) return null;
 
             #region Split Tags from Message
 
