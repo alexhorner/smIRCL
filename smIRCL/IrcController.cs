@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using smIRCL.ServerEntities;
 
 namespace smIRCL
 {
@@ -10,6 +11,8 @@ namespace smIRCL
         #region Public Properties
 
         public IrcConnector Connector { get; internal set; }
+        public readonly List<IrcChannel> Channels = new List<IrcChannel>();
+
         public string Nick { get; internal set; }
         public string UserName { get; internal set; }
         public string RealName { get; internal set; }
@@ -63,10 +66,14 @@ namespace smIRCL
                 connector.MessageReceived += ConnectorOnMessageReceived;
 
                 Handlers.Add("PING", OnPing);
-                Handlers.Add(Numerics.RPL_MYINFO, OnWelcomeEnd);
                 Handlers.Add("ERROR", OnUnrecoverableError);
                 Handlers.Add("NICK", OnNickSet);
+                Handlers.Add("JOIN", OnJoin);
+                Handlers.Add("TOPIC", OnTopicUpdate);
+
+                Handlers.Add(Numerics.RPL_MYINFO, OnWelcomeEnd);
                 Handlers.Add(Numerics.RPL_WHOREPLY, OnWhoReply);
+                Handlers.Add(Numerics.RPL_TOPIC, OnTopicInform);
 
                 Handlers.Add(Numerics.ERR_NONICKNAMEGIVEN, OnNickError);
                 Handlers.Add(Numerics.ERR_ERRONEUSNICKNAME, OnNickError);
@@ -99,6 +106,11 @@ namespace smIRCL
         public void SetNick(string newNick)
         {
             Connector.Transmit($"NICK :{newNick}");
+        }
+
+        public void Who(string channelOrNick)
+        {
+            Connector.Transmit($"WHO :{channelOrNick}");
         }
 
         #endregion
@@ -167,7 +179,7 @@ namespace smIRCL
             if (message.SourceNick == Nick) //Minimum requirement of a source is Nick which is always unique
             {
                 Nick = message.Parameters[0];
-                Connector.Transmit($"WHO :{Nick}");
+                Who(Nick);
             }
             else
             {
@@ -179,7 +191,7 @@ namespace smIRCL
         {
             Nick = _unconfirmedNick;
             _unconfirmedNick = null;
-            Connector.Transmit($"WHO :{Nick}");
+            Who(Nick);
         }
 
         private void OnWhoReply(IrcConnector client, IrcController controller, IrcMessage message)
@@ -193,6 +205,47 @@ namespace smIRCL
             {
                 //TODO update WHO details of internally kept user
             }
+        }
+
+        private void OnJoin(IrcConnector client, IrcController controller, IrcMessage message)
+        {
+            if (message.SourceNick == Nick)
+            {
+                Channels.Add(new IrcChannel(message.Parameters[0]));
+                //TODO do a who on the channel
+            }
+            else
+            {
+                //TODO update channel to add user
+                //TODO update user to add channel
+            }
+        }
+
+        private void OnPart(IrcConnector client, IrcController controller, IrcMessage message)
+        {
+            if (message.SourceNick == Nick)
+            {
+                IrcChannel channel = Channels.FirstOrDefault(ch => ch.Name == message.Parameters[0]);
+                if (channel != null) Channels.Remove(channel);
+            }
+            else
+            {
+                //TODO update channel to remove user
+                //TODO update user to remove channel
+                //TODO garbage collect user if no more mutual channels
+            }
+        }
+
+        private void OnTopicInform(IrcConnector client, IrcController controller, IrcMessage message)
+        {
+            IrcChannel channel = Channels.FirstOrDefault(ch => ch.Name == message.Parameters[1]);
+            if (channel != null) channel.Topic = message.Parameters[2];
+        }
+
+        private void OnTopicUpdate(IrcConnector client, IrcController controller, IrcMessage message)
+        {
+            IrcChannel channel = Channels.FirstOrDefault(ch => ch.Name == message.Parameters[0]);
+            if (channel != null) channel.Topic = message.Parameters[1] != "" ? message.Parameters[1] : null;
         }
 
         #endregion
