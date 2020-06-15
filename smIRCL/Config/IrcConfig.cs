@@ -4,7 +4,7 @@ using smIRCL.Enums;
 
 namespace smIRCL.Config
 {
-    public class IrcClientConfig
+    public class IrcConfig
     {
         /// <summary>
         /// The hostname or IP address of the server

@@ -5,31 +5,28 @@ using System.Threading.Tasks;
 
 namespace smIRCL
 {
-    /// <summary>
-    /// Controls the handling of IrcMessages from an IrcClient
-    /// </summary>
     public class IrcController
     {
-        public IrcClient Client { get; internal set; }
+        #region Public Properties
 
-        /// <summary>
-        /// The delegate representing a message handler
-        /// </summary>
-        /// <param name="client">The client to handle the message for</param>
-        /// <param name="message">The IrcMessage to handle</param>
-        public delegate void IrcMessageHandler(IrcClient client, IrcController controller, IrcMessage message);
-        /// <summary>
-        /// The handlers configured with this controller associated with the commands they handle
-        /// </summary>
+        public IrcConnector Connector { get; internal set; }
+        public string Nick { get; internal set; }
+        public string UserName { get; internal set; }
+        public string RealName { get; internal set; }
+        public string HostMask { get; internal set; }
+        public string Host { get; internal set; }
+
+
+        #endregion
+
+        #region Public Command Handling
+
+        public delegate void IrcMessageHandler(IrcConnector client, IrcController controller, IrcMessage message);
         public Dictionary<string, IrcMessageHandler> Handlers = new Dictionary<string, IrcMessageHandler>();
 
-        /// <summary>
-        /// The IrcClient this IrcController is attached to
-        /// </summary>
+        #endregion
 
-        private string _unconfirmedNick;
-
-        #region Events
+        #region Public Events
 
         /// <summary>
         /// Fired when a PRIVMSG is received
@@ -48,13 +45,28 @@ namespace smIRCL
 
         #endregion
 
-        public IrcController(bool registerInternalHandlers = true)
+        #region Private Properties
+
+        private string _unconfirmedNick;
+
+        private bool _expectingTermination;
+
+        #endregion
+
+        public IrcController(IrcConnector connector, bool registerInternalHandlers = true)
         {
+            Connector = connector ?? throw new ArgumentNullException(nameof(connector));
+
             if (registerInternalHandlers)
             {
+                connector.Connected += ConnectorOnConnected;
+                connector.MessageReceived += ConnectorOnMessageReceived;
+
                 Handlers.Add("PING", OnPing);
                 Handlers.Add(Numerics.RPL_MYINFO, OnWelcomeEnd);
                 Handlers.Add("ERROR", OnUnrecoverableError);
+                Handlers.Add("NICK", OnNickSet);
+                Handlers.Add(Numerics.RPL_WHOREPLY, OnWhoReply);
 
                 Handlers.Add(Numerics.ERR_NONICKNAMEGIVEN, OnNickError);
                 Handlers.Add(Numerics.ERR_ERRONEUSNICKNAME, OnNickError);
@@ -63,100 +75,124 @@ namespace smIRCL
             }
         }
 
-        /// <summary>
-        /// Attach an IrcClient to this IrcController if one has not been attached at instantiation
-        /// </summary>
-        /// <param name="client">The IrcClient to be attached</param>
-        public void AttachClient(IrcClient client)
-        {
-            if (Client != null) throw new InvalidOperationException("Cannot attach an IrcClient when one is already attached");
-            Client = client;
-            Client.RawMessageReceived += ClientOnRawMessageReceived;
-            Client.Connected += ClientOnConnected;
-        }
+        #region Private Methods
 
-        /// <summary>
-        /// Process and IrcMessage and take appropriate action
-        /// </summary>
-        /// <param name="rawMessage">The string which was parsed into and IrcMessage for message</param>
-        /// <param name="message">The IrcMessage parsed from rawMessage</param>
-        public void ClientOnRawMessageReceived(string rawMessage, IrcMessage message)
+        private void CheckOperationValid()
         {
-            if (message == null) throw new ArgumentNullException(nameof(message));
-
-            if (CheckOperationValid(message.Command == "ERROR"))
+            if (Connector == null || Connector.IsDisposed || !Connector.IsConnected)
             {
-                foreach (KeyValuePair<string, IrcMessageHandler> ircMessageHandler in Handlers.Where(h => h.Key == message.Command))
-                {
-                    new Task(() => ircMessageHandler.Value.Invoke(Client, this, message)).Start();
-                }
+                throw new InvalidOperationException("Connector not available");
             }
         }
 
-        private void ClientOnConnected()
+        #endregion
+
+        #region Public Methods
+
+        public void Quit(string quitMessage = "Client quit")
         {
+            _expectingTermination = true;
+            Connector.Transmit($"QUIT :{quitMessage}");
+            Connector.Dispose();
+        }
+
+        public void SetNick(string newNick)
+        {
+            Connector.Transmit($"NICK :{newNick}");
+        }
+
+        #endregion
+
+        #region Connector Handlers
+
+        private void ConnectorOnConnected()
+        {
+            //See https://modern.ircdocs.horse/index.html#connection-registration
             //TODO If password for connection is set, send first.
-            _unconfirmedNick = Client.ClientConfig.Nick;
-            Client.Transmit($"NICK {Client.ClientConfig.Nick}");
-            Client.Transmit($"USER {Client.ClientConfig.UserName} 0 * :{Client.ClientConfig.RealName}");
+            _unconfirmedNick = Connector.Config.Nick;
+            SetNick(Connector.Config.Nick);
+            Connector.Transmit($"USER {Connector.Config.UserName} 0 * :{Connector.Config.RealName}");
             //TODO If SASL is enabled, authenticate using it
         }
 
-        private bool CheckOperationValid(bool bypassThrow = false)
+        private void ConnectorOnMessageReceived(string rawMessage, IrcMessage message)
         {
-            if (Client == null || Client.IsDisposed || !Client.IsConnected)
-            {
-                if (!bypassThrow)
-                {
-                    throw new InvalidOperationException("Attached IrcClient is not available");
-                }
+            if (message == null) throw new ArgumentNullException(nameof(message));
 
-                return false;
+            if (message.Command == "ERROR" && _expectingTermination)
+            {
+                return;
             }
 
-            return true;
+            CheckOperationValid();
+
+            foreach (KeyValuePair<string, IrcMessageHandler> ircMessageHandler in Handlers.Where(h => h.Key == message.Command))
+            {
+                new Task(() => ircMessageHandler.Value.Invoke(Connector, this, message)).Start();
+            }
         }
 
-
-
+        #endregion
 
         #region Handlers
 
-        private void OnPing(IrcClient client, IrcController controller, IrcMessage message)
+        private void OnPing(IrcConnector client, IrcController controller, IrcMessage message)
         {
-            Client.Transmit($"PONG :{message.Parameters[0]}");
+            Connector.Transmit($"PONG :{message.Parameters[0]}");
         }
 
-        private void OnUnrecoverableError(IrcClient client, IrcController controller, IrcMessage message)
+        private void OnUnrecoverableError(IrcConnector client, IrcController controller, IrcMessage message)
         {
-            Client.Dispose();
+            Connector.Dispose();
         }
 
-        private void OnNickError(IrcClient client, IrcController controller, IrcMessage message)
+        private void OnNickError(IrcConnector client, IrcController controller, IrcMessage message)
         {
-            if (Client.Nick == null)
+            if (Nick == null)
             {
-                if (Client.ClientConfig.AlternativeNicks.Count > 0)
+                if (Connector.Config.AlternativeNicks.Count > 0)
                 {
-                    _unconfirmedNick = Client.ClientConfig.AlternativeNicks.Dequeue();
-                    Client.Transmit($"NICK {_unconfirmedNick}");
+                    _unconfirmedNick = Connector.Config.AlternativeNicks.Dequeue();
+                    Connector.Transmit($"NICK {_unconfirmedNick}");
                 }
                 else
                 {
-                    Client.Quit("Unable to find a usable Nick");
+                    Quit("Unable to find a usable Nick");
                 }
             }
         }
 
-        private void OnNickSet(IrcClient client, IrcController controller, IrcMessage message)
+        private void OnNickSet(IrcConnector client, IrcController controller, IrcMessage message)
         {
-            Client.Nick = message.Parameters[0];
+            if (message.SourceNick == Nick) //Minimum requirement of a source is Nick which is always unique
+            {
+                Nick = message.Parameters[0];
+                Connector.Transmit($"WHO :{Nick}");
+            }
+            else
+            {
+                //TODO update Nick of internally kept user
+            }
         }
 
-        private void OnWelcomeEnd(IrcClient client, IrcController controller, IrcMessage message)
+        private void OnWelcomeEnd(IrcConnector client, IrcController controller, IrcMessage message)
         {
-            Client.Nick = _unconfirmedNick;
+            Nick = _unconfirmedNick;
             _unconfirmedNick = null;
+            Connector.Transmit($"WHO :{Nick}");
+        }
+
+        private void OnWhoReply(IrcConnector client, IrcController controller, IrcMessage message)
+        {
+            if (message.Parameters[5] == Nick)
+            {
+                UserName = message.Parameters[2];
+                Host = message.Parameters[3];
+            }
+            else
+            {
+                //TODO update WHO details of internally kept user
+            }
         }
 
         #endregion

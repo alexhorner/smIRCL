@@ -4,39 +4,25 @@ using System.Linq;
 
 namespace smIRCL
 {
-    /// <summary>
-    /// Represents a parsed IRC message
-    /// </summary>
     public class IrcMessage
     {
-        /// <summary>
-        /// If available, represents a list of tags included in the message, otherwise null
-        /// </summary>
         public List<KeyValuePair<string, string>> Tags { get; set; }
 
-        /// <summary>
-        /// If available, represents the hostmask of a message, otherwise null
-        /// </summary>
-        public string HostMask { get; set; }
 
-        /// <summary>
-        /// The command in the message
-        /// </summary>
+        public string SourceHostMask { get; set; }
+        public string SourceNick { get; set; }
+        public string SourceUserName { get; set; }
+        public string SourceHost { get; set; }
+
+
         public string Command { get; set; }
 
-        /// <summary>
-        /// The parameters of the command
-        /// </summary>
+
         public List<string> Parameters { get; set; }
 
 
 
 
-        /// <summary>
-        /// Parses an IRC message from a string to an IrcMessage object
-        /// </summary>
-        /// <param name="message">The message to parse</param>
-        /// <returns></returns>
         public static IrcMessage Parse(string message)
         {
             if (String.IsNullOrWhiteSpace(message)) return null;
@@ -112,15 +98,30 @@ namespace smIRCL
             string[] messageAndFinalParameter = standardMessage.Split(new[] { " :" }, StringSplitOptions.None); //Split message parts and final parameter
 
             string messagePartsUnsplit = messageAndFinalParameter[0]; //Message parts alone
-            string parameter = messageAndFinalParameter[1]; //Final parameter alone
+            string parameter = messageAndFinalParameter.Length > 1 ? messageAndFinalParameter[1] : null; //Final parameter alone
 
             List<string> messageParts = messagePartsUnsplit.Split(' ').ToList(); //Split message parts into list of parts
 
             #endregion
 
-            #region Extract HostMask
-            string hostMask = messageParts[0].StartsWith(":") ? messageParts[0].TrimStart(':') : null; //If first part is a hostmask, grab it
-            if (hostMask != null) messageParts.RemoveAt(0); //If a hostmask was grabbed, remove it from the parts list
+            #region Extract Source Details
+            string sourceHostMask = messageParts[0].StartsWith(":") ? messageParts[0].TrimStart(':') : null; //If first part is a hostmask, grab it
+            string sourceNick = null;
+            string sourceUserName = null;
+            string sourceHost = null;
+
+            if (sourceHostMask != null)
+            {
+                messageParts.RemoveAt(0); //If a hostmask was grabbed, remove it from the parts list
+
+                string[] detailsAndHost = sourceHostMask.Split('@');
+                if (detailsAndHost.Length > 1) sourceHost = detailsAndHost[1];
+
+                string[] nickAndUserName = detailsAndHost[0].Split('!');
+                if (nickAndUserName.Length > 1) sourceUserName = nickAndUserName[1];
+
+                sourceNick = nickAndUserName[0];
+            }
 
             #endregion
 
@@ -136,17 +137,15 @@ namespace smIRCL
             return new IrcMessage
             {
                 Tags = tags,
-                HostMask = hostMask,
+                SourceHostMask = sourceHostMask,
+                SourceNick = sourceNick,
+                SourceUserName = sourceUserName,
+                SourceHost = sourceHost,
                 Command = command.ToUpper(),
                 Parameters = messageParts
             };
         }
 
-        /// <summary>
-        /// Takes a tag's escaped value and unescapes it
-        /// </summary>
-        /// <param name="tagValue">The escaped value</param>
-        /// <returns></returns>
         private static string UnescapeTagValue(string tagValue)
         {
             string unescapedValue = "";

@@ -9,6 +9,8 @@ namespace smIRCL
 {
     public static class Numerics
     {
+        //All numberics will have your Nick as their first param
+
         //Command Responses
         public const string RPL_WELCOME = "001";
         public const string RPL_YOURHOST = "002";
