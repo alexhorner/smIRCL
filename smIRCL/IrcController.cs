@@ -11,6 +11,7 @@ namespace smIRCL
         #region Public Properties
 
         public IrcConnector Connector { get; internal set; }
+        public readonly List<IrcUser> Users = new List<IrcUser>();
         public readonly List<IrcChannel> Channels = new List<IrcChannel>();
 
         public string Nick { get; internal set; }

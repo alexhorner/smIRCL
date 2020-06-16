@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Threading;
-using Newtonsoft.Json;
 using smIRCL;
 using smIRCL.Config;
 
@@ -10,17 +8,47 @@ namespace smIRCLTest
     {
         static void Main(string[] args)
         {
-            IrcClient client = new IrcClient(new IrcClientConfig
+            IrcConnector connector = new IrcConnector(new IrcConfig
             {
-                ServerHostname = "irc.test.com",
+                ServerHostname = "irc.server.net",
                 ServerPort = 6697,
-                Nick = "MyNick",
-                UserName = "MyUserName",
-                RealName = "Me",
+                Nick = "smIRCL",
+                UserName = "smIRCL",
+                RealName = "smIRCL Demo",
                 UseSsl = true
             });
 
-            Thread.Sleep(-1);
+            IrcController controller = new IrcController(connector);
+
+
+
+            connector.MessageReceived += ConnectorMessageReceived;
+            connector.MessageTransmitted += ConnectorOnMessageTransmitted;
+
+            connector.Connect();
+
+            while (!connector.IsDisposed)
+            {
+                string msg = Console.ReadLine();
+                if (msg == "break")
+                {
+
+                }
+                else
+                {
+                    connector.Transmit(msg);
+                }
+            }
+        }
+
+        private static void ConnectorOnMessageTransmitted(string rawMessage)
+        {
+            Console.WriteLine("<<<    " + rawMessage);
+        }
+
+        private static void ConnectorMessageReceived(string rawMessage, IrcMessage message)
+        {
+            Console.WriteLine(">>>    " + rawMessage);
         }
     }
 }
