@@ -17,7 +17,7 @@ namespace smIRCL
         public string Nick { get; internal set; }
         public string UserName { get; internal set; }
         public string RealName { get; internal set; }
-        public string HostMask { get; internal set; }
+        //public string HostMask { get; internal set; }
         public string Host { get; internal set; }
 
 
@@ -70,11 +70,13 @@ namespace smIRCL
                 Handlers.Add("ERROR", OnUnrecoverableError);
                 Handlers.Add("NICK", OnNickSet);
                 Handlers.Add("JOIN", OnJoin);
+                Handlers.Add("PART", OnPart);
                 Handlers.Add("TOPIC", OnTopicUpdate);
 
                 Handlers.Add(Numerics.RPL_MYINFO, OnWelcomeEnd);
                 Handlers.Add(Numerics.RPL_WHOREPLY, OnWhoReply);
                 Handlers.Add(Numerics.RPL_TOPIC, OnTopicInform);
+                Handlers.Add(Numerics.RPL_HOSTHIDDEN, OnHostMaskCloak);
 
                 Handlers.Add(Numerics.ERR_NONICKNAMEGIVEN, OnNickError);
                 Handlers.Add(Numerics.ERR_ERRONEUSNICKNAME, OnNickError);
@@ -201,6 +203,7 @@ namespace smIRCL
             {
                 UserName = message.Parameters[2];
                 Host = message.Parameters[3];
+                RealName = message.Parameters[7].Split(new[] { ' ' }, 2)[1];
             }
             else
             {
@@ -208,11 +211,16 @@ namespace smIRCL
             }
         }
 
+        private void OnHostMaskCloak(IrcConnector client, IrcController controller, IrcMessage message)
+        {
+            Host = message.Parameters[1];
+        }
+
         private void OnJoin(IrcConnector client, IrcController controller, IrcMessage message)
         {
             if (message.SourceNick == Nick)
             {
-                Channels.Add(new IrcChannel(message.Parameters[0]));
+                if (Channels.All(ch => ch.Name != message.Parameters[0])) Channels.Add(new IrcChannel(message.Parameters[0]));
                 //TODO do a who on the channel
             }
             else

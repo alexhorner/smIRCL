@@ -95,6 +95,7 @@ namespace smIRCL
         public const string RPL_TRACELOG = "261";
         public const string RPL_TRACEEND = "262";
         public const string RPL_TRYAGAIN = "263";
+        public const string RPL_HOSTHIDDEN = "396";
 
         //Error Replies
         public const string ERR_NOSUCHNICK = "401";
