@@ -27,7 +27,8 @@ namespace smIRCL
         #region Public Command Handling
 
         public delegate void IrcMessageHandler(IrcConnector client, IrcController controller, IrcMessage message);
-        public Dictionary<string, IrcMessageHandler> Handlers = new Dictionary<string, IrcMessageHandler>();
+        //public Dictionary<string, IrcMessageHandler> Handlers = new Dictionary<string, IrcMessageHandler>();
+        public IrcHandlerList Handlers = new IrcHandlerList();
 
         #endregion
 
@@ -226,6 +227,22 @@ namespace smIRCL
             }
             else
             {
+                if (Users.All(ch => ch.Nick.ToLowerNick() != message.SourceNick.ToLowerNick()))
+                {
+                    Users.Add(new IrcUser
+                    {
+                        MutualChannels = new List<string>(), //TODO can we get this initially? If not, we need to at least add the joined channel to this list
+                        HostMask = message.SourceHostMask,
+                        Nick = message.SourceNick,
+                        Host = message.SourceHost,
+                        UserName = message.SourceUserName
+                    });
+                    Who(message.SourceNick);
+                }
+                else
+                {
+                    //TODO Update our user to add a mutual channel
+                }
                 //TODO update channel to add user
                 //TODO update user to add channel
             }

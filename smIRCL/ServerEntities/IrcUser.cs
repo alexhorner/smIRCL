@@ -4,9 +4,12 @@ namespace smIRCL.ServerEntities
 {
     public class IrcUser
     {
-        public string Nick { get; set; }
-        public string RealName { get; set; }
-        public string HostMask { get; set; }
-        public List<IrcChannel> Channels { get; set; }
+        
+        public string Nick { get; internal set; }
+        public string UserName { get; internal set; }
+        public string RealName { get; internal set; }
+        public string HostMask { get; internal set; }
+        public string Host { get; internal set; }
+        public List<string> MutualChannels { get; set; }
     }
 }
