@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using smIRCL.Extensions;
 using smIRCL.ServerEntities;
 
 namespace smIRCL
@@ -179,7 +180,7 @@ namespace smIRCL
 
         private void OnNickSet(IrcConnector client, IrcController controller, IrcMessage message)
         {
-            if (message.SourceNick == Nick) //Minimum requirement of a source is Nick which is always unique
+            if (message.SourceNick.ToLowerNick() == Nick.ToLowerNick()) //Minimum requirement of a source is Nick which is always unique
             {
                 Nick = message.Parameters[0];
                 Who(Nick);
@@ -199,7 +200,7 @@ namespace smIRCL
 
         private void OnWhoReply(IrcConnector client, IrcController controller, IrcMessage message)
         {
-            if (message.Parameters[5] == Nick)
+            if (message.Parameters[5].ToLowerNick() == Nick.ToLowerNick())
             {
                 UserName = message.Parameters[2];
                 Host = message.Parameters[3];
@@ -218,7 +219,7 @@ namespace smIRCL
 
         private void OnJoin(IrcConnector client, IrcController controller, IrcMessage message)
         {
-            if (message.SourceNick == Nick)
+            if (message.SourceNick.ToLowerNick() == Nick.ToLowerNick())
             {
                 if (Channels.All(ch => ch.Name != message.Parameters[0])) Channels.Add(new IrcChannel(message.Parameters[0]));
                 //TODO do a who on the channel
@@ -232,7 +233,7 @@ namespace smIRCL
 
         private void OnPart(IrcConnector client, IrcController controller, IrcMessage message)
         {
-            if (message.SourceNick == Nick)
+            if (message.SourceNick.ToLowerNick() == Nick.ToLowerNick())
             {
                 IrcChannel channel = Channels.FirstOrDefault(ch => ch.Name == message.Parameters[0]);
                 if (channel != null) Channels.Remove(channel);
