@@ -77,6 +77,8 @@ namespace smIRCL
 
                 Handlers.Add(Numerics.RPL_MYINFO, OnWelcomeEnd);
                 Handlers.Add(Numerics.RPL_WHOREPLY, OnWhoReply);
+                Handlers.Add(Numerics.RPL_WHOISUSER, OnWhoIsUserReply);
+                Handlers.Add(Numerics.RPL_WHOISCHANNELS, OnWhoIsChannelsReply);
                 Handlers.Add(Numerics.RPL_TOPIC, OnTopicInform);
                 Handlers.Add(Numerics.RPL_HOSTHIDDEN, OnHostMaskCloak);
 
@@ -213,6 +215,53 @@ namespace smIRCL
             }
         }
 
+        private void OnWhoIsUserReply(IrcConnector client, IrcController controller, IrcMessage message)
+        {
+            lock (Users)
+            {
+                if (message.Parameters[1].ToLowerNick() == Nick.ToLowerNick())
+                {
+                    //TODO Check this, is it right?
+                    UserName = message.Parameters[2];
+                    Host = message.Parameters[3];
+                    RealName = message.Parameters[5];
+                }
+                else if (Users.Any(u => u.Nick.ToLowerNick() == message.Parameters[1].ToLowerNick()))
+                {
+                    IrcUser user = Users.FirstOrDefault(u => u.Nick.ToLowerNick() == message.Parameters[1].ToLowerNick());
+                    //TODO update WHO details of internally kept user
+                }
+            }
+        }
+
+        private void OnWhoIsChannelsReply(IrcConnector client, IrcController controller, IrcMessage message)
+        {
+            lock (Users)
+            {
+                if (message.Parameters[1].ToLowerNick() != Nick.ToLowerNick() && Users.Any(u => u.Nick.ToLowerNick() == message.Parameters[1].ToLowerNick()))
+                {
+                    string[] channels = message.Parameters[2].Split(' ');
+                    List<string> trimmedChannels = new List<string>();
+                    foreach (string channel in channels)
+                    {
+                        trimmedChannels.Add(channel.TrimStart('@', '+'));
+                    }
+
+                    lock (Channels)
+                    {
+                        foreach (string channel in trimmedChannels)
+                        {
+                            if (Channels.Any(ch => ch.Name == channel))
+                            {
+                                IrcUser user = Users.FirstOrDefault(u => u.Nick.ToLowerNick() == message.Parameters[1].ToLowerNick());
+                                if(user != null && user.MutualChannels.All(uch => uch != channel)) user.MutualChannels.Add(channel);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
         private void OnHostMaskCloak(IrcConnector client, IrcController controller, IrcMessage message)
         {
             Host = message.Parameters[1];
@@ -220,31 +269,37 @@ namespace smIRCL
 
         private void OnJoin(IrcConnector client, IrcController controller, IrcMessage message)
         {
-            if (message.SourceNick.ToLowerNick() == Nick.ToLowerNick())
+            lock (Channels)
             {
-                if (Channels.All(ch => ch.Name != message.Parameters[0])) Channels.Add(new IrcChannel(message.Parameters[0]));
-                //TODO do a who on the channel
-            }
-            else
-            {
-                if (Users.All(ch => ch.Nick.ToLowerNick() != message.SourceNick.ToLowerNick()))
+                if (message.SourceNick.ToLowerNick() == Nick.ToLowerNick())
                 {
-                    Users.Add(new IrcUser
-                    {
-                        MutualChannels = new List<string>(), //TODO can we get this initially? If not, we need to at least add the joined channel to this list
-                        HostMask = message.SourceHostMask,
-                        Nick = message.SourceNick,
-                        Host = message.SourceHost,
-                        UserName = message.SourceUserName
-                    });
-                    Who(message.SourceNick);
+                    if (Channels.All(ch => ch.Name != message.Parameters[0])) Channels.Add(new IrcChannel(message.Parameters[0]));
+                    //TODO do a who on the channel
                 }
                 else
                 {
-                    //TODO Update our user to add a mutual channel
+                    lock (Users)
+                    {
+                        if (Users.All(ch => ch.Nick.ToLowerNick() != message.SourceNick.ToLowerNick()))
+                        {
+                            Users.Add(new IrcUser
+                            {
+                                MutualChannels = new List<string>(), //TODO can we get this initially? If not, we need to at least add the joined channel to this list
+                                HostMask = message.SourceHostMask,
+                                Nick = message.SourceNick,
+                                Host = message.SourceHost,
+                                UserName = message.SourceUserName
+                            });
+                            Who(message.SourceNick); //TODO maybe we only need a WhoIs?
+                        }
+                        else
+                        {
+                            //TODO Update our user to add a mutual channel
+                        }
+                        //TODO update channel to add user
+                        //TODO update user to add channel
+                    }
                 }
-                //TODO update channel to add user
-                //TODO update user to add channel
             }
         }
 
