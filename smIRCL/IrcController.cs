@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using smIRCL.Extensions;
 using smIRCL.ServerEntities;
 
@@ -62,12 +61,11 @@ namespace smIRCL
         public IrcController(IrcConnector connector, bool registerInternalHandlers = true)
         {
             Connector = connector ?? throw new ArgumentNullException(nameof(connector));
+            connector.Connected += ConnectorOnConnected;
+            connector.MessageReceived += ConnectorOnMessageReceived;
 
             if (registerInternalHandlers)
             {
-                connector.Connected += ConnectorOnConnected;
-                connector.MessageReceived += ConnectorOnMessageReceived;
-
                 Handlers.Add("PING", OnPing);
                 Handlers.Add("ERROR", OnUnrecoverableError);
                 Handlers.Add("NICK", OnNickSet);
@@ -81,6 +79,8 @@ namespace smIRCL
                 Handlers.Add(Numerics.RPL_WHOISCHANNELS, OnWhoIsChannelsReply);
                 Handlers.Add(Numerics.RPL_TOPIC, OnTopicInform);
                 Handlers.Add(Numerics.RPL_HOSTHIDDEN, OnHostMaskCloak);
+                Handlers.Add(Numerics.RPL_NAMREPLY, OnNamesReply);
+                Handlers.Add(Numerics.RPL_ENDOFNAMES, OnNamesEnd);
 
                 Handlers.Add(Numerics.ERR_NONICKNAMEGIVEN, OnNickError);
                 Handlers.Add(Numerics.ERR_ERRONEUSNICKNAME, OnNickError);
@@ -120,6 +120,11 @@ namespace smIRCL
             Connector.Transmit($"WHO :{channelOrNick}");
         }
 
+        public void WhoIs(string nick)
+        {
+            Connector.Transmit($"WHOIS :{nick}");
+        }
+
         #endregion
 
         #region Connector Handlers
@@ -147,7 +152,7 @@ namespace smIRCL
 
             foreach (KeyValuePair<string, IrcMessageHandler> ircMessageHandler in Handlers.Where(h => h.Key == message.Command))
             {
-                new Task(() => ircMessageHandler.Value.Invoke(Connector, this, message)).Start();
+                ircMessageHandler.Value.Invoke(Connector, this, message);
             }
         }
 
@@ -183,35 +188,48 @@ namespace smIRCL
 
         private void OnNickSet(IrcConnector client, IrcController controller, IrcMessage message)
         {
-            if (message.SourceNick.ToLowerNick() == Nick.ToLowerNick()) //Minimum requirement of a source is Nick which is always unique
+            lock (Users)
             {
-                Nick = message.Parameters[0];
-                Who(Nick);
+                if (message.SourceNick.ToLowerNick() == Nick.ToLowerNick()) //Minimum requirement of a source is Nick which is always unique
+                {
+                    Nick = message.Parameters[0];
+                }
+                else if (Users.Any(u => u.Nick.ToLowerNick() == message.SourceNick.ToLowerNick()))
+                {
+                    IrcUser user = Users.FirstOrDefault(u => u.Nick.ToLowerNick() == message.SourceNick.ToLowerNick());
+                    if (user != null) user.Nick = message.Parameters[0];
+                }
             }
-            else
-            {
-                //TODO update Nick of internally kept user
-            }
+            WhoIs(message.Parameters[0]);
         }
 
         private void OnWelcomeEnd(IrcConnector client, IrcController controller, IrcMessage message)
         {
             Nick = _unconfirmedNick;
             _unconfirmedNick = null;
-            Who(Nick);
+            WhoIs(Nick);
         }
 
         private void OnWhoReply(IrcConnector client, IrcController controller, IrcMessage message)
         {
-            if (message.Parameters[5].ToLowerNick() == Nick.ToLowerNick())
+            lock (Users)
             {
-                UserName = message.Parameters[2];
-                Host = message.Parameters[3];
-                RealName = message.Parameters[7].Split(new[] { ' ' }, 2)[1];
-            }
-            else
-            {
-                //TODO update WHO details of internally kept user
+                if (message.Parameters[5].ToLowerNick() == Nick.ToLowerNick())
+                {
+                    UserName = message.Parameters[2];
+                    Host = message.Parameters[3];
+                    RealName = message.Parameters[7].Split(new[] { ' ' }, 2)[1];
+                }
+                else if (Users.Any(u => u.Nick.ToLowerNick() == message.Parameters[5].ToLowerNick()))
+                {
+                    IrcUser user = Users.FirstOrDefault(u => u.Nick.ToLowerNick() == message.Parameters[5].ToLowerNick());
+                    if (user != null)
+                    {
+                        user.UserName = message.Parameters[2];
+                        user.Host = message.Parameters[3];
+                        user.RealName = message.Parameters[7].Split(new[] {' '}, 2)[1];
+                    }
+                }
             }
         }
 
@@ -221,7 +239,6 @@ namespace smIRCL
             {
                 if (message.Parameters[1].ToLowerNick() == Nick.ToLowerNick())
                 {
-                    //TODO Check this, is it right?
                     UserName = message.Parameters[2];
                     Host = message.Parameters[3];
                     RealName = message.Parameters[5];
@@ -229,7 +246,12 @@ namespace smIRCL
                 else if (Users.Any(u => u.Nick.ToLowerNick() == message.Parameters[1].ToLowerNick()))
                 {
                     IrcUser user = Users.FirstOrDefault(u => u.Nick.ToLowerNick() == message.Parameters[1].ToLowerNick());
-                    //TODO update WHO details of internally kept user
+                    if (user != null)
+                    {
+                        user.UserName = message.Parameters[2];
+                        user.Host = message.Parameters[3];
+                        user.RealName = message.Parameters[5];
+                    }
                 }
             }
         }
@@ -269,38 +291,96 @@ namespace smIRCL
 
         private void OnJoin(IrcConnector client, IrcController controller, IrcMessage message)
         {
+            if(message.SourceNick.ToLowerNick() == Nick.ToLowerNick())
+            {
+                IrcChannel channel = new IrcChannel(message.Parameters[0]);
+                lock (Channels)
+                {
+                    if (Channels.All(ch => ch.Name != message.Parameters[0])) Channels.Add(channel);
+                }
+            }
+            else
+            {
+                lock (Users)
+                {
+                    if (Users.All(u => u.Nick.ToLowerNick() != message.SourceNick.ToLowerNick()))
+                    {
+                        Users.Add(new IrcUser
+                        {
+                            MutualChannels = new List<string>(),
+                            HostMask = message.SourceHostMask,
+                            Nick = message.SourceNick,
+                            Host = message.SourceHost,
+                            UserName = message.SourceUserName
+                        });
+                        WhoIs(message.SourceNick);
+                    }
+                    else
+                    {
+                        Users.FirstOrDefault(u => u.Nick.ToLowerNick() == message.SourceNick.ToLowerNick())?.MutualChannels.Add(message.Parameters[0]);
+                    }
+                }
+
+                lock (Channels)
+                {
+                    Channels.FirstOrDefault(ch => ch.Name == message.Parameters[0])?.Users.Add(message.SourceNick);
+                }
+            }
+        }
+
+        private void OnNamesReply(IrcConnector client, IrcController controller, IrcMessage message)
+        {
             lock (Channels)
             {
-                if (message.SourceNick.ToLowerNick() == Nick.ToLowerNick())
+                IrcChannel channel = Channels.FirstOrDefault(ch => ch.Name == message.Parameters[2]);
+                if (channel != null)
                 {
-                    if (Channels.All(ch => ch.Name != message.Parameters[0])) Channels.Add(new IrcChannel(message.Parameters[0]));
-                    //TODO do a who on the channel
-                }
-                else
-                {
+                    if (channel.UserCollectionComplete)
+                    {
+                        channel.UserCollectionComplete = false;
+                        channel.Users = new List<string>();
+                    }
+
+                    string[] users = message.Parameters[3].Split(' ');
+                    
                     lock (Users)
                     {
-                        if (Users.All(ch => ch.Nick.ToLowerNick() != message.SourceNick.ToLowerNick()))
+                        foreach (string user in users)
                         {
-                            Users.Add(new IrcUser
+                            if (user.ToLowerNick() != Nick.ToLowerNick())
                             {
-                                MutualChannels = new List<string>(), //TODO can we get this initially? If not, we need to at least add the joined channel to this list
-                                HostMask = message.SourceHostMask,
-                                Nick = message.SourceNick,
-                                Host = message.SourceHost,
-                                UserName = message.SourceUserName
-                            });
-                            Who(message.SourceNick); //TODO maybe we only need a WhoIs?
+                                channel.Users.Add(user.TrimStart('@', '+'));
+                                if (Users.All(u => u.Nick.ToLower() != user.ToLowerNick()))
+                                {
+                                    Users.Add(new IrcUser
+                                    {
+                                        MutualChannels = new List<string>
+                                        {
+                                            channel.Name
+                                        },
+                                        Nick = user
+                                    });
+                                }
+                                else
+                                {
+                                    Users.FirstOrDefault(u => u.Nick.ToLowerNick() == user.ToLowerNick())?.MutualChannels.Add(channel.Name);
+                                }
+                            }
                         }
-                        else
-                        {
-                            //TODO Update our user to add a mutual channel
-                        }
-                        //TODO update channel to add user
-                        //TODO update user to add channel
                     }
                 }
             }
+        }
+
+        private void OnNamesEnd(IrcConnector client, IrcController controller, IrcMessage message)
+        {
+            lock (Channels)
+            {
+                IrcChannel channel = Channels.FirstOrDefault(ch => ch.Name == message.Parameters[1]);
+                if (channel != null) channel.UserCollectionComplete = true;
+            }
+
+            Who(message.Parameters[1]);
         }
 
         private void OnPart(IrcConnector client, IrcController controller, IrcMessage message)

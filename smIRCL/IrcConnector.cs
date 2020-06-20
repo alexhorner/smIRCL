@@ -168,7 +168,7 @@ namespace smIRCL
             IsDisposed = true;
             IsConnected = false;
             Disconnected?.Invoke();
-            _processingEngine?.Abort();
+            //_processingEngine?.Abort(); //TODO not working as not supported?
             _remoteRx?.Dispose();
             _remoteTx?.Dispose();
             _remoteStream?.Dispose();
@@ -217,9 +217,9 @@ namespace smIRCL
         {
             while (IsConnected)
             {
-                string received = Receive();
+                string received = Receive(); //TODO this isn't actually stopping when the reader is disposed
                 IrcMessage message = IrcMessage.Parse(received);
-                if(message != null) MessageReceived?.Invoke(received, message);
+                if (message != null) MessageReceived?.Invoke(received, message);
             }
         }
     }

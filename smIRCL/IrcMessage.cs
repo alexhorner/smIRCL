@@ -95,10 +95,21 @@ namespace smIRCL
 
             #region Split Parts and Parameter
 
-            string[] messageAndFinalParameter = standardMessage.Split(new[] { " :" }, StringSplitOptions.None); //Split message parts and final parameter
+            string splitParameterBy = " :";
+            int parameterIndex = standardMessage.IndexOf(splitParameterBy);
 
-            string messagePartsUnsplit = messageAndFinalParameter[0]; //Message parts alone
-            string parameter = messageAndFinalParameter.Length > 1 ? messageAndFinalParameter[1] : null; //Final parameter alone
+            string messagePartsUnsplit;
+            string parameter = null;
+
+            if (parameterIndex > -1)
+            {
+                messagePartsUnsplit = standardMessage.Substring(0, parameterIndex);
+                parameter = standardMessage.Substring(parameterIndex + splitParameterBy.Length);
+            }
+            else
+            {
+                messagePartsUnsplit = standardMessage;
+            }
 
             List<string> messageParts = messagePartsUnsplit.Split(' ').ToList(); //Split message parts into list of parts
 
