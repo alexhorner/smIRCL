@@ -17,10 +17,7 @@ namespace smIRCL
 
         public string Command { get; set; }
 
-
         public List<string> Parameters { get; set; }
-
-
 
 
         public static IrcMessage Parse(string message)

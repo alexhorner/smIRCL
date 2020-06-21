@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace smIRCL.ServerEntities
 {
@@ -11,5 +12,6 @@ namespace smIRCL.ServerEntities
         public string HostMask { get; internal set; }
         public string Host { get; internal set; }
         public List<string> MutualChannels { get; set; }
+        public DateTime? LastDirectMessage { get; internal set; } = null;
     }
 }

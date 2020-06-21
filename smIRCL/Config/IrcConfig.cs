@@ -67,6 +67,11 @@ namespace smIRCL.Config
         public bool ConnectOnInstantiation { get; set; } = false;
 
         /// <summary>
+        /// The time an IrcUser will be safe from garbage collection after a Direct Message, with no mutual channels
+        /// </summary>
+        public TimeSpan DirectMessageHoldingPeriod { get; set; } = TimeSpan.FromMinutes(5);
+
+        /// <summary>
         /// Checks this configuration is valid
         /// </summary>
         /// <param name="throwOnValidationError">Whether to throw an exception on a validation error rather than return false</param>

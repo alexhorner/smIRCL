@@ -40,7 +40,7 @@ namespace smIRCL.Extensions
             { '~', '^' }
         };
 
-        public static string ToLowerNick(this string nick)
+        public static string ToIrcLower(this string nick)
         {
             string retNick = "";
 

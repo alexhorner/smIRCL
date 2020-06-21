@@ -10,9 +10,9 @@ namespace smIRCL.ServerEntities
         }
 
         public string Name { get; internal set; }
-        public string Topic { get; set; }
-        public string Modes { get; set; } //TODO retrieve modes and mode changes
-        public List<string> Users { get; set; } = new List<string>();
-        public bool UserCollectionComplete;
+        public string Topic { get; internal set; }
+        public string Modes { get; internal set; } //TODO retrieve modes and mode changes
+        public List<string> Users { get; internal set; } = new List<string>();
+        public bool UserCollectionComplete { get; internal set; }
     }
 }
