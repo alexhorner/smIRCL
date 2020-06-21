@@ -69,6 +69,8 @@ namespace smIRCL
                 Handlers.Add("NICK", OnNickSet);
                 Handlers.Add("JOIN", OnJoin);
                 Handlers.Add("PART", OnPart);
+                Handlers.Add("KICK", OnKick);
+                Handlers.Add("QUIT", OnQuit);
                 Handlers.Add("TOPIC", OnTopicUpdate);
 
                 Handlers.Add(Numerics.RPL_MYINFO, OnWelcomeEnd);
@@ -378,6 +380,48 @@ namespace smIRCL
                 user?.MutualChannels.RemoveAll(ch => ch.ToIrcLower() == message.Parameters[0].ToIrcLower());
                 
                 DoUserGarbageCollection();
+            }
+        }
+
+        private void OnKick(IrcConnector client, IrcController controller, IrcMessage message)
+        {
+            if (message.Parameters[1].ToIrcLower() == Nick.ToIrcLower())
+            {
+                IrcChannel channel = Channels.FirstOrDefault(ch => ch.Name.ToIrcLower() == message.Parameters[0].ToIrcLower());
+                if (channel != null) Channels.Remove(channel);
+
+                List<IrcUser> usersWithMutualChannels = Users.Where(u => u.MutualChannels.Any(ch => ch.ToIrcLower() == message.Parameters[0].ToIrcLower())).ToList();
+                foreach (IrcUser user in usersWithMutualChannels)
+                {
+                    user.MutualChannels.RemoveAll(ch => ch.ToIrcLower() == message.Parameters[0].ToIrcLower());
+                }
+
+                DoUserGarbageCollection();
+            }
+            else
+            {
+                IrcChannel channel = Channels.FirstOrDefault(ch => ch.Name.ToIrcLower() == message.Parameters[0].ToIrcLower());
+                channel?.Users.RemoveAll(u => u.ToIrcLower() == message.Parameters[1].ToIrcLower());
+
+                IrcUser user = Users.FirstOrDefault(u => u.Nick.ToIrcLower() == message.Parameters[1].ToIrcLower());
+                user?.MutualChannels.RemoveAll(ch => ch.ToIrcLower() == message.Parameters[0].ToIrcLower());
+
+                DoUserGarbageCollection();
+            }
+        }
+
+        private void OnQuit(IrcConnector client, IrcController controller, IrcMessage message)
+        {
+            if (message.SourceNick.ToIrcLower() != Nick.ToIrcLower())
+            {
+                List<IrcChannel> mutualChannels = Channels.Where(ch => ch.Users.Any(u => u.ToIrcLower() == message.SourceNick.ToIrcLower())).ToList();
+                foreach (IrcChannel mutualChannel in mutualChannels)
+                {
+                    mutualChannel.Users.RemoveAll(u => u.ToIrcLower() == message.SourceNick.ToIrcLower());
+                }
+
+                IrcUser user = Users.FirstOrDefault(u => u.Nick.ToIrcLower() == message.SourceNick.ToIrcLower());
+                if (user != null) Users.Remove(user);
             }
         }
 
