@@ -130,6 +130,32 @@ namespace smIRCL
             Connector.Transmit($"WHOIS :{nick}");
         }
 
+        public void Join(string channelName)
+        {
+            if (!IrcChannel.IsValidName(channelName))
+            {
+                throw new ArgumentException("Not a valid channel name", nameof(channelName));
+            }
+
+            if (Channels.All(ch => ch.Name.ToIrcLower() != channelName.ToIrcLower()))
+            {
+                Connector.Transmit($"JOIN :{channelName}");
+            }
+        }
+
+        public void Part(string channelName)
+        {
+            if (!IrcChannel.IsValidName(channelName))
+            {
+                throw new ArgumentException("Not a valid channel name", nameof(channelName));
+            }
+
+            if (Channels.Any(ch => ch.Name.ToIrcLower() == channelName.ToIrcLower()))
+            {
+                Connector.Transmit($"PART :{channelName}");
+            }
+        }
+
         #endregion
 
         #region Connector Handlers
@@ -212,6 +238,11 @@ namespace smIRCL
             Nick = _unconfirmedNick;
             _unconfirmedNick = null;
             WhoIs(Nick);
+
+            foreach (string channel in Connector.Config.AutoJoinChannels)
+            {
+                Join(channel);
+            }
         }
 
         private void OnWhoReply(IrcConnector client, IrcController controller, IrcMessage message)

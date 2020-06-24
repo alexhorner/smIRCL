@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using smIRCL.Enums;
+using smIRCL.ServerEntities;
 
 namespace smIRCL.Config
 {
@@ -30,6 +31,11 @@ namespace smIRCL.Config
         /// A list of alternative Nicks if the preferred one is unavailable
         /// </summary>
         public Queue<string> AlternativeNicks { get; set; } = new Queue<string>();
+
+        /// <summary>
+        /// A list of channels to automatically join upon connection completion
+        /// </summary>
+        public List<string> AutoJoinChannels { get; set; } = new List<string>();
 
         /// <summary>
         /// The User name for the client. If unspecified, Nick will be used
@@ -103,6 +109,15 @@ namespace smIRCL.Config
                 if (string.IsNullOrWhiteSpace(nick))
                 {
                     if (throwOnValidationError) throw new Exception($"One of the values in the parameter '{nameof(AlternativeNicks)}' is invalid");
+                    isValid = false;
+                }
+            }
+
+            foreach (string channel in AutoJoinChannels)
+            {
+                if (string.IsNullOrWhiteSpace(channel) || !IrcChannel.IsValidName(channel))
+                {
+                    if (throwOnValidationError) throw new Exception($"One of the values in the parameter '{nameof(AutoJoinChannels)}' is invalid");
                     isValid = false;
                 }
             }
