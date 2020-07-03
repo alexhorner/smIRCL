@@ -14,7 +14,8 @@ namespace smIRCL
         public const string RPL_YOURHOST = "002";
         public const string RPL_CREATED = "003";
         public const string RPL_MYINFO = "004";
-        public const string RPL_BOUNCE = "005";
+        public const string RPL_BOUNCE = "005"; //005 CONFLICT
+        public const string RPL_ISUPPORT = "005"; //005 CONFLICT
         public const string RPL_AWAY = "301";
         public const string RPL_USERHOST = "302";
         public const string RPL_ISON = "303";

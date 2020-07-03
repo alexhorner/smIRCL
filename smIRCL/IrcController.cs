@@ -19,6 +19,9 @@ namespace smIRCL
         public string RealName { get; internal set; }
         public string Host { get; internal set; }
 
+        public List<char> SupportedChannelTypes = new List<char>();
+        public SupportedChannelModes SupportedChannelModes = new SupportedChannelModes();
+
 
         #endregion
 
@@ -81,6 +84,7 @@ namespace smIRCL
                 Handlers.Add(Numerics.RPL_HOSTHIDDEN, OnHostMaskCloak);
                 Handlers.Add(Numerics.RPL_NAMREPLY, OnNamesReply);
                 Handlers.Add(Numerics.RPL_ENDOFNAMES, OnNamesEnd);
+                Handlers.Add(Numerics.RPL_ISUPPORT, OnISupport);
 
                 Handlers.Add(Numerics.ERR_NONICKNAMEGIVEN, OnNickError);
                 Handlers.Add(Numerics.ERR_ERRONEUSNICKNAME, OnNickError);
@@ -466,6 +470,63 @@ namespace smIRCL
         {
             IrcChannel channel = Channels.FirstOrDefault(ch => ch.Name.ToIrcLower() == message.Parameters[0].ToIrcLower());
             if (channel != null) channel.Topic = message.Parameters[1] != "" ? message.Parameters[1] : null;
+        }
+
+        private void OnISupport(IrcConnector client, IrcController controller, IrcMessage message)
+        {
+            foreach (string parameter in message.Parameters)
+            {
+                string[] keyPair = parameter.Split(new[] { '=' }, 2);
+
+                if (keyPair.Length < 2) continue;
+
+                switch (keyPair[0].ToIrcLower())
+                {
+                    case "chantypes":
+                        foreach (char c in keyPair[1])
+                        {
+                            if (SupportedChannelTypes.Any(sct => sct == c)) continue;
+                            SupportedChannelTypes.Add(c);
+                        }
+                        break;
+
+                    case "chanmodes":
+                        string[] chanModeGroups = keyPair[1].Split(','); //0 A, 1 B, 2 C, 3 D
+
+                        int currentChanModeGroup = 0;
+
+                        foreach (string chanModeGroup in chanModeGroups)
+                        {
+                            List<char> chanModeList = null;
+
+                            switch (currentChanModeGroup)
+                            {
+                                case 0:
+                                    chanModeList = SupportedChannelModes.A; 
+                                    break;
+                                case 1:
+                                    chanModeList = SupportedChannelModes.B;
+                                    break;
+                                case 2:
+                                    chanModeList = SupportedChannelModes.C;
+                                    break;
+                                case 3:
+                                    chanModeList = SupportedChannelModes.D;
+                                    break;
+                            }
+
+                            foreach (char chanMode in chanModeGroup)
+                            {
+                                chanModeList?.Add(chanMode);
+                            }
+
+                            currentChanModeGroup++;
+                        }
+
+                        break;
+
+                }
+            }
         }
 
         #endregion
