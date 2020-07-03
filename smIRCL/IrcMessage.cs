@@ -138,7 +138,7 @@ namespace smIRCL
             string command = messageParts[0]; //First (remaining) item in list should be the command, grab it
             messageParts.RemoveAt(0); //Remove command from list after grabbing
 
-            messageParts.Add(parameter); //Add the last parameter to the list which is now just a list of parameters
+            if (parameter != null) messageParts.Add(parameter); //Add the last parameter to the list which is now just a list of parameters
 
             #endregion
 

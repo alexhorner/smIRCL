@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using smIRCL.Enums;
 using smIRCL.Extensions;
 using smIRCL.ServerEntities;
 
@@ -21,6 +22,9 @@ namespace smIRCL
 
         public List<char> SupportedChannelTypes = new List<char>();
         public SupportedChannelModes SupportedChannelModes = new SupportedChannelModes();
+
+        public List<KeyValuePair<string, List<string>>> AvailableCapabilities = new List<KeyValuePair<string, List<string>>>();
+        public List<string> NegotiatedCapabilities = new List<string>();
 
 
         #endregion
@@ -75,6 +79,7 @@ namespace smIRCL
                 Handlers.Add("KICK", OnKick);
                 Handlers.Add("QUIT", OnQuit);
                 Handlers.Add("TOPIC", OnTopicUpdate);
+                Handlers.Add("CAP", OnCapability);
 
                 Handlers.Add(Numerics.RPL_MYINFO, OnWelcomeEnd);
                 Handlers.Add(Numerics.RPL_WHOREPLY, OnWhoReply);
@@ -106,6 +111,35 @@ namespace smIRCL
         private void DoUserGarbageCollection()
         {
             Users.RemoveAll(u => u.MutualChannels.Count == 0 && (u.LastDirectMessage == null || u.LastDirectMessage + Connector.Config.DirectMessageHoldingPeriod < DateTime.Now));
+        }
+
+        private void CompleteCapabilityRequesting()
+        {
+            string capabilityRequest = "";
+
+            if (Connector.Config.AuthMode == AuthMode.SASL) capabilityRequest += "sasl";
+
+            foreach (string capability in Connector.Config.DesiredCapabilities)
+            {
+                if (capabilityRequest != "")
+                {
+                    capabilityRequest += " " + capability.ToIrcLower();
+                }
+                else
+                {
+                    capabilityRequest += capability.ToIrcLower();
+                }
+            }
+
+            if (capabilityRequest != "") Connector.Transmit($"CAP REQ :{capabilityRequest}");
+
+            Connector.Transmit("CAP :END");
+        }
+
+        private void FinaliseCapabilities()
+        {
+            //TODO SASL auth if acknowledged
+            //TODO add support for away-notify for users
         }
 
         #endregion
@@ -167,11 +201,13 @@ namespace smIRCL
         private void ConnectorOnConnected()
         {
             //See https://modern.ircdocs.horse/index.html#connection-registration
-            //TODO If password for connection is set, send first.
+            Connector.Transmit("CAP LS :302");
+            //Capability negotiation will occur in a handler if supported by the server
+            if (!string.IsNullOrWhiteSpace(Connector.Config.ServerPassword)) Connector.Transmit($"PASS :{Connector.Config.ServerPassword}");
             _unconfirmedNick = Connector.Config.Nick;
             SetNick(Connector.Config.Nick);
             Connector.Transmit($"USER {Connector.Config.UserName} 0 * :{Connector.Config.RealName}");
-            //TODO If SASL is enabled, authenticate using it
+            //SASL will be completed by CompleteCapabilityRequesting
         }
 
         private void ConnectorOnMessageReceived(string rawMessage, IrcMessage message)
@@ -526,6 +562,37 @@ namespace smIRCL
                         break;
 
                 }
+            }
+        }
+
+        private void OnCapability(IrcConnector client, IrcController controller, IrcMessage message)
+        {
+            switch (message.Parameters[1].ToIrcLower())
+            {
+                case "ls":
+                    string[] capabilitiesGiven = message.Parameters[message.Parameters.Count - 1].Split(' ');
+
+                    foreach (string cap in capabilitiesGiven)
+                    {
+                        string[] capabilityAndParameters = cap.Split('=');
+                        List<string> parameters = capabilityAndParameters.Length > 1 ? capabilityAndParameters[1].Split(',').ToList() : new List<string>();
+
+                        if (AvailableCapabilities.All(acap => acap.Key != capabilityAndParameters[0])) AvailableCapabilities.Add(new KeyValuePair<string, List<string>>(capabilityAndParameters[0], parameters));
+                    }
+
+                    if (message.Parameters[2] != "*") CompleteCapabilityRequesting();
+                    break;
+
+                case "ack":
+                    string[] capabilitiesAcknowledged = message.Parameters[message.Parameters.Count - 1].Split(' ');
+
+                    foreach (string cap in capabilitiesAcknowledged)
+                    {
+                        if (NegotiatedCapabilities.All(ncap => ncap != cap.ToIrcLower())) NegotiatedCapabilities.Add(cap.ToIrcLower());
+                    }
+
+                    FinaliseCapabilities();
+                    break;
             }
         }
 

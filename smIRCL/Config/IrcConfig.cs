@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using smIRCL.Enums;
+using smIRCL.Extensions;
 using smIRCL.ServerEntities;
 
 namespace smIRCL.Config
@@ -78,6 +79,14 @@ namespace smIRCL.Config
         public TimeSpan DirectMessageHoldingPeriod { get; set; } = TimeSpan.FromMinutes(5);
 
         /// <summary>
+        /// The IRCv3 capabilities to negotiate. Default capabilities are included and should be added to, not replaced. SASL must not be included as it is determined by AuthMode
+        /// </summary>
+        public List<string> DesiredCapabilities = new List<string>
+        {
+            "away-notify"
+        };
+
+        /// <summary>
         /// Checks this configuration is valid
         /// </summary>
         /// <param name="throwOnValidationError">Whether to throw an exception on a validation error rather than return false</param>
@@ -144,6 +153,21 @@ namespace smIRCL.Config
             {
                 if (throwOnValidationError) throw new Exception($"The parameter '{nameof(ReconnectAttempts)}' is less than 0");
                 isValid = false;
+            }
+
+            foreach (string capability in DesiredCapabilities)
+            {
+                if (string.IsNullOrWhiteSpace(capability))
+                {
+                    if (throwOnValidationError) throw new Exception($"One of the values in the parameter '{nameof(DesiredCapabilities)}' is invalid");
+                    isValid = false;
+                }
+
+                if (capability.ToIrcLower() == "sasl")
+                {
+                    if (throwOnValidationError) throw new Exception($"Do not provide SASL as a value in the parameter '{nameof(DesiredCapabilities)}'");
+                    isValid = false;
+                }
             }
 
             return isValid;
