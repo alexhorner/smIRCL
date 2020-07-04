@@ -59,7 +59,10 @@
         "markdownEngineName": "markdig",
         "globalMetadata": {
             "_appFooter": "© 2020 Alexander Horner",
-            "_enableSearch": "true"
+            "_enableSearch": "true",
+            "newFileRepository": {
+                "branch": "master"
+            }
         },
         "noLangKeyword": false,
         "keepFileLink": false,
