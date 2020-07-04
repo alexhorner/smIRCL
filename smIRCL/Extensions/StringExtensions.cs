@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
 
 namespace smIRCL.Extensions
 {
@@ -40,11 +39,16 @@ namespace smIRCL.Extensions
             { '~', '^' }
         };
 
-        public static string ToIrcLower(this string nick)
+        /// <summary>
+        /// Converts strings to IRC lowercase as described in RFC1459
+        /// </summary>
+        /// <param name="str">The string to convert to IRC lowercase</param>
+        /// <returns>The IRC lowercased string</returns>
+        public static string ToIrcLower(this string str)
         {
             string retNick = "";
 
-            foreach (char c in nick)
+            foreach (char c in str)
             {
                 retNick += IrcLowers.TryGetValue(c, out char cLower) ? cLower : c;
             }

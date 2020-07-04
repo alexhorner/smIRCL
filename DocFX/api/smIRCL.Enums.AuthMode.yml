@@ -21,13 +21,15 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: AuthMode
     path: ../smIRCL/Enums/AuthMode.cs
-    startLine: 2
+    startLine: 5
   assemblies:
   - smIRCL
   namespace: smIRCL.Enums
+  summary: "\nAuthentication modes for logging into IRC accounts\n"
+  example: []
   syntax:
-    content: 'public enum AuthMode : int'
-    content.vb: Public Enum AuthMode As Integer
+    content: public enum AuthMode
+    content.vb: Public Enum AuthMode
   modifiers.csharp:
   - public
   - enum
@@ -52,7 +54,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: None
     path: ../smIRCL/Enums/AuthMode.cs
-    startLine: 4
+    startLine: 7
   assemblies:
   - smIRCL
   namespace: smIRCL.Enums
@@ -84,7 +86,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: SASL
     path: ../smIRCL/Enums/AuthMode.cs
-    startLine: 5
+    startLine: 8
   assemblies:
   - smIRCL
   namespace: smIRCL.Enums

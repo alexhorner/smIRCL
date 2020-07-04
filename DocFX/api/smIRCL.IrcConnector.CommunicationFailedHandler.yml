@@ -27,7 +27,7 @@ items:
     content: public delegate void CommunicationFailedHandler(Exception exception);
     parameters:
     - id: exception
-      type: Exception
+      type: System.Exception
     content.vb: Public Delegate Sub CommunicationFailedHandler(exception As Exception)
   modifiers.csharp:
   - public
@@ -41,8 +41,16 @@ references:
   name: smIRCL
   nameWithType: smIRCL
   fullName: smIRCL
-- uid: Exception
+- uid: System.Exception
+  commentId: T:System.Exception
+  parent: System
   isExternal: true
   name: Exception
   nameWithType: Exception
-  fullName: Exception
+  fullName: System.Exception
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System

@@ -21,10 +21,10 @@
       "output": {
         ".html": {
           "relative_path": "api/smIRCL.Config.IrcConfig.html",
-          "hash": "12AVUOK3tATWnkvpFBpknw=="
+          "hash": "j8RO6D/5xqfJ2SNfBM54Mg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -33,10 +33,10 @@
       "output": {
         ".html": {
           "relative_path": "api/smIRCL.Config.html",
-          "hash": "fPK9oimfOqjvc8CcFaMDkw=="
+          "hash": "Jea5ssxjsfI8cPWBb0iacg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -45,10 +45,10 @@
       "output": {
         ".html": {
           "relative_path": "api/smIRCL.Constants.html",
-          "hash": "hZMn6Dt6bXJZQjdnuEIb1g=="
+          "hash": "xediQybNGo+GNyeCWTXang=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -57,10 +57,10 @@
       "output": {
         ".html": {
           "relative_path": "api/smIRCL.Enums.AuthMode.html",
-          "hash": "QRlUH3uRg8CVPmb5pHp2xA=="
+          "hash": "C6aKt0H6yubgS+W0K0rsMA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -69,10 +69,10 @@
       "output": {
         ".html": {
           "relative_path": "api/smIRCL.Enums.html",
-          "hash": "bvtAmTrit19rtukHoe/2fw=="
+          "hash": "/+/KluO4zjkAyPCoUCMI8w=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -81,10 +81,10 @@
       "output": {
         ".html": {
           "relative_path": "api/smIRCL.Exceptions.ConnectionFailureException.html",
-          "hash": "8cEwX6hZTKvL39pkYVsTIA=="
+          "hash": "AGfndcYD+dV/LJhIkBgUUg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -96,7 +96,7 @@
           "hash": "Ky+XQJAopDTJ3R00XWMJ6w=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -105,10 +105,10 @@
       "output": {
         ".html": {
           "relative_path": "api/smIRCL.Extensions.StringExtensions.html",
-          "hash": "kreHSxiLG/ncegTKXXFXmg=="
+          "hash": "zSlSrviG7lZxZuglWBtPMQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -120,7 +120,7 @@
           "hash": "dNSPLVJZ96DgSV0AoQKvTA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -129,10 +129,10 @@
       "output": {
         ".html": {
           "relative_path": "api/smIRCL.IrcConnector.CommunicationFailedHandler.html",
-          "hash": "5z7o6A+qBkVYN+8SSvXG4w=="
+          "hash": "qxV3LaKIK8bblDXqHXIMDQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -156,7 +156,7 @@
           "hash": "7NB4xkVqUcpknXzSEZafqg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -168,7 +168,7 @@
           "hash": "7pdTPn9+2KJ7++nZ6QMTPA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -177,10 +177,10 @@
       "output": {
         ".html": {
           "relative_path": "api/smIRCL.IrcConnector.html",
-          "hash": "w0Oy1I31nqnsPYLkMToGSQ=="
+          "hash": "uIB/YGvqz5V6bpfvH6tAuA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -192,7 +192,7 @@
           "hash": "sZqQKYtMUheHt5DZVHlSuQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -201,10 +201,10 @@
       "output": {
         ".html": {
           "relative_path": "api/smIRCL.IrcController.html",
-          "hash": "zF9Kc6uBtFF6HgFJ0CGJww=="
+          "hash": "nyz1kmnuBDDkMT/AFo2A1Q=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -213,10 +213,10 @@
       "output": {
         ".html": {
           "relative_path": "api/smIRCL.IrcHandlerList.html",
-          "hash": "PiuOlUS2zMWTqe4FZ0hL0A=="
+          "hash": "c+B3z6LimqM5Ko+oeYv3Rg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -225,10 +225,10 @@
       "output": {
         ".html": {
           "relative_path": "api/smIRCL.IrcMessage.html",
-          "hash": "sBPOGWwFiTdsnsWK4HqQjg=="
+          "hash": "0mLkouMmCJLdqGrJTncn/Q=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -237,10 +237,10 @@
       "output": {
         ".html": {
           "relative_path": "api/smIRCL.Numerics.html",
-          "hash": "vp/pitQNKiYwo6nd3h3z7A=="
+          "hash": "ZFZME9juzX8wI1n+FqrYcw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -249,10 +249,10 @@
       "output": {
         ".html": {
           "relative_path": "api/smIRCL.ServerEntities.IrcChannel.html",
-          "hash": "JdW3GzPn+9GP44/0OJ0aKg=="
+          "hash": "VdIJ1xomjrinCoY4rQekWw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -261,10 +261,10 @@
       "output": {
         ".html": {
           "relative_path": "api/smIRCL.ServerEntities.IrcUser.html",
-          "hash": "EgQBj0fc88dFxWNI2W50fg=="
+          "hash": "KEDSgc10V2IVgw+X6cZPmA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -276,7 +276,7 @@
           "hash": "pBi198rwgj1KHD3lKBaGhA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -285,10 +285,10 @@
       "output": {
         ".html": {
           "relative_path": "api/smIRCL.SupportedChannelModes.html",
-          "hash": "7AhDcEzPncJx4SSThVyh0g=="
+          "hash": "TFcOhPXo+ijuPw/lnMI7Dg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -348,7 +348,7 @@
           "hash": "KaLQU+JTQRiml7SMfy+b4A=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -383,7 +383,7 @@
           "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 24,
-          "skipped_file_count": 24
+          "skipped_file_count": 8
         },
         "TocDocumentProcessor": {
           "can_incremental": false,

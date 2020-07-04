@@ -6,6 +6,9 @@ using smIRCL.ServerEntities;
 
 namespace smIRCL.Config
 {
+    /// <summary>
+    /// Generalised IRC configuration with defaults
+    /// </summary>
     public class IrcConfig
     {
         /// <summary>
@@ -39,7 +42,7 @@ namespace smIRCL.Config
         public List<string> AutoJoinChannels { get; set; } = new List<string>();
 
         /// <summary>
-        /// The User name for the client. If unspecified, Nick will be used
+        /// The User name for the client
         /// </summary>
         public string UserName { get; set; }
 

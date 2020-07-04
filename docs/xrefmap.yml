@@ -268,11 +268,11 @@ references:
   commentId: T:smIRCL.Exceptions.ConnectionFailureException
   fullName: smIRCL.Exceptions.ConnectionFailureException
   nameWithType: ConnectionFailureException
-- uid: smIRCL.Exceptions.ConnectionFailureException.#ctor(System.String,Exception)
+- uid: smIRCL.Exceptions.ConnectionFailureException.#ctor(System.String,System.Exception)
   name: ConnectionFailureException(String, Exception)
-  href: api/smIRCL.Exceptions.ConnectionFailureException.html#smIRCL_Exceptions_ConnectionFailureException__ctor_System_String_Exception_
-  commentId: M:smIRCL.Exceptions.ConnectionFailureException.#ctor(System.String,Exception)
-  fullName: smIRCL.Exceptions.ConnectionFailureException.ConnectionFailureException(System.String, Exception)
+  href: api/smIRCL.Exceptions.ConnectionFailureException.html#smIRCL_Exceptions_ConnectionFailureException__ctor_System_String_System_Exception_
+  commentId: M:smIRCL.Exceptions.ConnectionFailureException.#ctor(System.String,System.Exception)
+  fullName: smIRCL.Exceptions.ConnectionFailureException.ConnectionFailureException(System.String, System.Exception)
   nameWithType: ConnectionFailureException.ConnectionFailureException(String, Exception)
 - uid: smIRCL.Exceptions.ConnectionFailureException.#ctor*
   name: ConnectionFailureException

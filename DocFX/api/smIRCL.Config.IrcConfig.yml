@@ -35,18 +35,25 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: IrcConfig
     path: ../smIRCL/Config/IrcConfig.cs
-    startLine: 8
+    startLine: 11
   assemblies:
   - smIRCL
   namespace: smIRCL.Config
+  summary: "\nGeneralised IRC configuration with defaults\n"
+  example: []
   syntax:
-    content: 'public class IrcConfig : object'
-    content.vb: >-
-      Public Class IrcConfig
-
-          Inherits Object
+    content: public class IrcConfig
+    content.vb: Public Class IrcConfig
   inheritance:
   - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
   modifiers.csharp:
   - public
   - class
@@ -71,7 +78,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: ServerHostname
     path: ../smIRCL/Config/IrcConfig.cs
-    startLine: 13
+    startLine: 16
   assemblies:
   - smIRCL
   namespace: smIRCL.Config
@@ -108,7 +115,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: ServerPort
     path: ../smIRCL/Config/IrcConfig.cs
-    startLine: 18
+    startLine: 21
   assemblies:
   - smIRCL
   namespace: smIRCL.Config
@@ -145,7 +152,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: ServerPassword
     path: ../smIRCL/Config/IrcConfig.cs
-    startLine: 23
+    startLine: 26
   assemblies:
   - smIRCL
   namespace: smIRCL.Config
@@ -182,7 +189,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: Nick
     path: ../smIRCL/Config/IrcConfig.cs
-    startLine: 28
+    startLine: 31
   assemblies:
   - smIRCL
   namespace: smIRCL.Config
@@ -219,7 +226,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: AlternativeNicks
     path: ../smIRCL/Config/IrcConfig.cs
-    startLine: 33
+    startLine: 36
   assemblies:
   - smIRCL
   namespace: smIRCL.Config
@@ -229,7 +236,7 @@ items:
     content: public Queue<string> AlternativeNicks { get; set; }
     parameters: []
     return:
-      type: Queue{System.String}
+      type: System.Collections.Generic.Queue{System.String}
     content.vb: Public Property AlternativeNicks As Queue(Of String)
   overload: smIRCL.Config.IrcConfig.AlternativeNicks*
   modifiers.csharp:
@@ -256,7 +263,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: AutoJoinChannels
     path: ../smIRCL/Config/IrcConfig.cs
-    startLine: 38
+    startLine: 41
   assemblies:
   - smIRCL
   namespace: smIRCL.Config
@@ -266,7 +273,7 @@ items:
     content: public List<string> AutoJoinChannels { get; set; }
     parameters: []
     return:
-      type: List{System.String}
+      type: System.Collections.Generic.List{System.String}
     content.vb: Public Property AutoJoinChannels As List(Of String)
   overload: smIRCL.Config.IrcConfig.AutoJoinChannels*
   modifiers.csharp:
@@ -293,11 +300,11 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: UserName
     path: ../smIRCL/Config/IrcConfig.cs
-    startLine: 43
+    startLine: 46
   assemblies:
   - smIRCL
   namespace: smIRCL.Config
-  summary: "\nThe User name for the client. If unspecified, Nick will be used\n"
+  summary: "\nThe User name for the client\n"
   example: []
   syntax:
     content: public string UserName { get; set; }
@@ -330,7 +337,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: RealName
     path: ../smIRCL/Config/IrcConfig.cs
-    startLine: 48
+    startLine: 51
   assemblies:
   - smIRCL
   namespace: smIRCL.Config
@@ -367,7 +374,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: AuthPassword
     path: ../smIRCL/Config/IrcConfig.cs
-    startLine: 53
+    startLine: 56
   assemblies:
   - smIRCL
   namespace: smIRCL.Config
@@ -404,7 +411,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: AuthMode
     path: ../smIRCL/Config/IrcConfig.cs
-    startLine: 58
+    startLine: 61
   assemblies:
   - smIRCL
   namespace: smIRCL.Config
@@ -441,7 +448,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: UseSsl
     path: ../smIRCL/Config/IrcConfig.cs
-    startLine: 63
+    startLine: 66
   assemblies:
   - smIRCL
   namespace: smIRCL.Config
@@ -478,7 +485,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: ReconnectAttempts
     path: ../smIRCL/Config/IrcConfig.cs
-    startLine: 68
+    startLine: 71
   assemblies:
   - smIRCL
   namespace: smIRCL.Config
@@ -515,7 +522,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: ConnectOnInstantiation
     path: ../smIRCL/Config/IrcConfig.cs
-    startLine: 73
+    startLine: 76
   assemblies:
   - smIRCL
   namespace: smIRCL.Config
@@ -552,7 +559,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: DirectMessageHoldingPeriod
     path: ../smIRCL/Config/IrcConfig.cs
-    startLine: 78
+    startLine: 81
   assemblies:
   - smIRCL
   namespace: smIRCL.Config
@@ -562,7 +569,7 @@ items:
     content: public TimeSpan DirectMessageHoldingPeriod { get; set; }
     parameters: []
     return:
-      type: TimeSpan
+      type: System.TimeSpan
     content.vb: Public Property DirectMessageHoldingPeriod As TimeSpan
   overload: smIRCL.Config.IrcConfig.DirectMessageHoldingPeriod*
   modifiers.csharp:
@@ -589,7 +596,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: DesiredCapabilities
     path: ../smIRCL/Config/IrcConfig.cs
-    startLine: 83
+    startLine: 86
   assemblies:
   - smIRCL
   namespace: smIRCL.Config
@@ -598,7 +605,7 @@ items:
   syntax:
     content: public List<string> DesiredCapabilities
     return:
-      type: List{System.String}
+      type: System.Collections.Generic.List{System.String}
     content.vb: Public DesiredCapabilities As List(Of String)
   modifiers.csharp:
   - public
@@ -622,7 +629,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: IsValid
     path: ../smIRCL/Config/IrcConfig.cs
-    startLine: 93
+    startLine: 96
   assemblies:
   - smIRCL
   namespace: smIRCL.Config
@@ -649,12 +656,306 @@ references:
   name: smIRCL.Config
   nameWithType: smIRCL.Config
   fullName: smIRCL.Config
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
 - uid: smIRCL.Config.IrcConfig.ServerHostname*
   commentId: Overload:smIRCL.Config.IrcConfig.ServerHostname
   name: ServerHostname
   nameWithType: IrcConfig.ServerHostname
   fullName: smIRCL.Config.IrcConfig.ServerHostname
 - uid: System.String
+  commentId: T:System.String
+  parent: System
   isExternal: true
   name: String
   nameWithType: String
@@ -665,6 +966,8 @@ references:
   nameWithType: IrcConfig.ServerPort
   fullName: smIRCL.Config.IrcConfig.ServerPort
 - uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
   isExternal: true
   name: Int32
   nameWithType: Int32
@@ -684,20 +987,21 @@ references:
   name: AlternativeNicks
   nameWithType: IrcConfig.AlternativeNicks
   fullName: smIRCL.Config.IrcConfig.AlternativeNicks
-- uid: Queue{System.String}
-  commentId: '!:Queue{System.String}'
-  definition: Queue`1
+- uid: System.Collections.Generic.Queue{System.String}
+  commentId: T:System.Collections.Generic.Queue{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Queue`1
   name: Queue<String>
   nameWithType: Queue<String>
-  fullName: Queue<System.String>
+  fullName: System.Collections.Generic.Queue<System.String>
   nameWithType.vb: Queue(Of String)
-  fullName.vb: Queue(Of System.String)
+  fullName.vb: System.Collections.Generic.Queue(Of System.String)
   name.vb: Queue(Of String)
   spec.csharp:
-  - uid: Queue`1
+  - uid: System.Collections.Generic.Queue`1
     name: Queue
     nameWithType: Queue
-    fullName: Queue
+    fullName: System.Collections.Generic.Queue
     isExternal: true
   - name: <
     nameWithType: <
@@ -711,10 +1015,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: Queue`1
+  - uid: System.Collections.Generic.Queue`1
     name: Queue
     nameWithType: Queue
-    fullName: Queue
+    fullName: System.Collections.Generic.Queue
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -727,64 +1031,71 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: Queue`1
-  commentId: '!:Queue`1'
+- uid: System.Collections.Generic.Queue`1
+  commentId: T:System.Collections.Generic.Queue`1
   isExternal: true
-  name: Queue<>
-  nameWithType: Queue<>
-  fullName: Queue<>
-  nameWithType.vb: Queue(Of )
-  fullName.vb: Queue(Of )
-  name.vb: Queue(Of )
+  name: Queue<T>
+  nameWithType: Queue<T>
+  fullName: System.Collections.Generic.Queue<T>
+  nameWithType.vb: Queue(Of T)
+  fullName.vb: System.Collections.Generic.Queue(Of T)
+  name.vb: Queue(Of T)
   spec.csharp:
-  - uid: Queue`1
+  - uid: System.Collections.Generic.Queue`1
     name: Queue
     nameWithType: Queue
-    fullName: Queue
+    fullName: System.Collections.Generic.Queue
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: T
+    nameWithType: T
+    fullName: T
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: Queue`1
+  - uid: System.Collections.Generic.Queue`1
     name: Queue
     nameWithType: Queue
-    fullName: Queue
+    fullName: System.Collections.Generic.Queue
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: T
+    nameWithType: T
+    fullName: T
   - name: )
     nameWithType: )
     fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
 - uid: smIRCL.Config.IrcConfig.AutoJoinChannels*
   commentId: Overload:smIRCL.Config.IrcConfig.AutoJoinChannels
   name: AutoJoinChannels
   nameWithType: IrcConfig.AutoJoinChannels
   fullName: smIRCL.Config.IrcConfig.AutoJoinChannels
-- uid: List{System.String}
-  commentId: '!:List{System.String}'
-  definition: List`1
+- uid: System.Collections.Generic.List{System.String}
+  commentId: T:System.Collections.Generic.List{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
   name: List<String>
   nameWithType: List<String>
-  fullName: List<System.String>
+  fullName: System.Collections.Generic.List<System.String>
   nameWithType.vb: List(Of String)
-  fullName.vb: List(Of System.String)
+  fullName.vb: System.Collections.Generic.List(Of System.String)
   name.vb: List(Of String)
   spec.csharp:
-  - uid: List`1
+  - uid: System.Collections.Generic.List`1
     name: List
     nameWithType: List
-    fullName: List
+    fullName: System.Collections.Generic.List
     isExternal: true
   - name: <
     nameWithType: <
@@ -798,10 +1109,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: List`1
+  - uid: System.Collections.Generic.List`1
     name: List
     nameWithType: List
-    fullName: List
+    fullName: System.Collections.Generic.List
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -814,41 +1125,42 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: List`1
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
   isExternal: true
-  name: List<>
-  nameWithType: List<>
-  fullName: List<>
-  nameWithType.vb: List(Of )
-  fullName.vb: List(Of )
-  name.vb: List(Of )
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
   spec.csharp:
-  - uid: List`1
+  - uid: System.Collections.Generic.List`1
     name: List
     nameWithType: List
-    fullName: List
+    fullName: System.Collections.Generic.List
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: T
+    nameWithType: T
+    fullName: T
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: List`1
+  - uid: System.Collections.Generic.List`1
     name: List
     nameWithType: List
-    fullName: List
+    fullName: System.Collections.Generic.List
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: ''
-    nameWithType: ''
-    fullName: ''
+  - name: T
+    nameWithType: T
+    fullName: T
   - name: )
     nameWithType: )
     fullName: )
@@ -889,6 +1201,8 @@ references:
   nameWithType: IrcConfig.UseSsl
   fullName: smIRCL.Config.IrcConfig.UseSsl
 - uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
   isExternal: true
   name: Boolean
   nameWithType: Boolean
@@ -908,12 +1222,13 @@ references:
   name: DirectMessageHoldingPeriod
   nameWithType: IrcConfig.DirectMessageHoldingPeriod
   fullName: smIRCL.Config.IrcConfig.DirectMessageHoldingPeriod
-- uid: TimeSpan
-  commentId: '!:TimeSpan'
+- uid: System.TimeSpan
+  commentId: T:System.TimeSpan
+  parent: System
   isExternal: true
   name: TimeSpan
   nameWithType: TimeSpan
-  fullName: TimeSpan
+  fullName: System.TimeSpan
 - uid: smIRCL.Config.IrcConfig.IsValid*
   commentId: Overload:smIRCL.Config.IrcConfig.IsValid
   name: IsValid

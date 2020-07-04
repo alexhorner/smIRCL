@@ -26,7 +26,7 @@
   "smIRCL.Enums.AuthMode.SASL": "smIRCL.Enums.AuthMode.yml",
   "smIRCL.Exceptions": "smIRCL.Exceptions.yml",
   "smIRCL.Exceptions.ConnectionFailureException": "smIRCL.Exceptions.ConnectionFailureException.yml",
-  "smIRCL.Exceptions.ConnectionFailureException.#ctor(System.String,Exception)": "smIRCL.Exceptions.ConnectionFailureException.yml",
+  "smIRCL.Exceptions.ConnectionFailureException.#ctor(System.String,System.Exception)": "smIRCL.Exceptions.ConnectionFailureException.yml",
   "smIRCL.Extensions": "smIRCL.Extensions.yml",
   "smIRCL.Extensions.StringExtensions": "smIRCL.Extensions.StringExtensions.yml",
   "smIRCL.Extensions.StringExtensions.ToIrcLower(System.String)": "smIRCL.Extensions.StringExtensions.yml",

@@ -185,13 +185,18 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: 'public static class Numerics : object'
-    content.vb: >-
-      Public Module Numerics
-
-          Inherits Object
+    content: public static class Numerics
+    content.vb: Public Module Numerics
   inheritance:
   - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
   modifiers.csharp:
   - public
   - static
@@ -222,10 +227,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_WELCOME = null
+    content: public const string RPL_WELCOME = "001"
     return:
       type: System.String
-    content.vb: Public Const RPL_WELCOME As String = Nothing
+    content.vb: Public Const RPL_WELCOME As String = "001"
   modifiers.csharp:
   - public
   - const
@@ -255,10 +260,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_YOURHOST = null
+    content: public const string RPL_YOURHOST = "002"
     return:
       type: System.String
-    content.vb: Public Const RPL_YOURHOST As String = Nothing
+    content.vb: Public Const RPL_YOURHOST As String = "002"
   modifiers.csharp:
   - public
   - const
@@ -288,10 +293,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_CREATED = null
+    content: public const string RPL_CREATED = "003"
     return:
       type: System.String
-    content.vb: Public Const RPL_CREATED As String = Nothing
+    content.vb: Public Const RPL_CREATED As String = "003"
   modifiers.csharp:
   - public
   - const
@@ -321,10 +326,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_MYINFO = null
+    content: public const string RPL_MYINFO = "004"
     return:
       type: System.String
-    content.vb: Public Const RPL_MYINFO As String = Nothing
+    content.vb: Public Const RPL_MYINFO As String = "004"
   modifiers.csharp:
   - public
   - const
@@ -354,10 +359,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_BOUNCE = null
+    content: public const string RPL_BOUNCE = "005"
     return:
       type: System.String
-    content.vb: Public Const RPL_BOUNCE As String = Nothing
+    content.vb: Public Const RPL_BOUNCE As String = "005"
   modifiers.csharp:
   - public
   - const
@@ -387,10 +392,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_ISUPPORT = null
+    content: public const string RPL_ISUPPORT = "005"
     return:
       type: System.String
-    content.vb: Public Const RPL_ISUPPORT As String = Nothing
+    content.vb: Public Const RPL_ISUPPORT As String = "005"
   modifiers.csharp:
   - public
   - const
@@ -420,10 +425,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_AWAY = null
+    content: public const string RPL_AWAY = "301"
     return:
       type: System.String
-    content.vb: Public Const RPL_AWAY As String = Nothing
+    content.vb: Public Const RPL_AWAY As String = "301"
   modifiers.csharp:
   - public
   - const
@@ -453,10 +458,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_USERHOST = null
+    content: public const string RPL_USERHOST = "302"
     return:
       type: System.String
-    content.vb: Public Const RPL_USERHOST As String = Nothing
+    content.vb: Public Const RPL_USERHOST As String = "302"
   modifiers.csharp:
   - public
   - const
@@ -486,10 +491,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_ISON = null
+    content: public const string RPL_ISON = "303"
     return:
       type: System.String
-    content.vb: Public Const RPL_ISON As String = Nothing
+    content.vb: Public Const RPL_ISON As String = "303"
   modifiers.csharp:
   - public
   - const
@@ -519,10 +524,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_UNAWAY = null
+    content: public const string RPL_UNAWAY = "305"
     return:
       type: System.String
-    content.vb: Public Const RPL_UNAWAY As String = Nothing
+    content.vb: Public Const RPL_UNAWAY As String = "305"
   modifiers.csharp:
   - public
   - const
@@ -552,10 +557,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_NOWAWAY = null
+    content: public const string RPL_NOWAWAY = "306"
     return:
       type: System.String
-    content.vb: Public Const RPL_NOWAWAY As String = Nothing
+    content.vb: Public Const RPL_NOWAWAY As String = "306"
   modifiers.csharp:
   - public
   - const
@@ -585,10 +590,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_WHOISUSER = null
+    content: public const string RPL_WHOISUSER = "311"
     return:
       type: System.String
-    content.vb: Public Const RPL_WHOISUSER As String = Nothing
+    content.vb: Public Const RPL_WHOISUSER As String = "311"
   modifiers.csharp:
   - public
   - const
@@ -618,10 +623,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_WHOISSERVER = null
+    content: public const string RPL_WHOISSERVER = "312"
     return:
       type: System.String
-    content.vb: Public Const RPL_WHOISSERVER As String = Nothing
+    content.vb: Public Const RPL_WHOISSERVER As String = "312"
   modifiers.csharp:
   - public
   - const
@@ -651,10 +656,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_WHOISOPERATOR = null
+    content: public const string RPL_WHOISOPERATOR = "313"
     return:
       type: System.String
-    content.vb: Public Const RPL_WHOISOPERATOR As String = Nothing
+    content.vb: Public Const RPL_WHOISOPERATOR As String = "313"
   modifiers.csharp:
   - public
   - const
@@ -684,10 +689,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_WHOWASUSER = null
+    content: public const string RPL_WHOWASUSER = "314"
     return:
       type: System.String
-    content.vb: Public Const RPL_WHOWASUSER As String = Nothing
+    content.vb: Public Const RPL_WHOWASUSER As String = "314"
   modifiers.csharp:
   - public
   - const
@@ -717,10 +722,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_ENDOFWHO = null
+    content: public const string RPL_ENDOFWHO = "315"
     return:
       type: System.String
-    content.vb: Public Const RPL_ENDOFWHO As String = Nothing
+    content.vb: Public Const RPL_ENDOFWHO As String = "315"
   modifiers.csharp:
   - public
   - const
@@ -750,10 +755,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_WHOISIDLE = null
+    content: public const string RPL_WHOISIDLE = "317"
     return:
       type: System.String
-    content.vb: Public Const RPL_WHOISIDLE As String = Nothing
+    content.vb: Public Const RPL_WHOISIDLE As String = "317"
   modifiers.csharp:
   - public
   - const
@@ -783,10 +788,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_ENDOFWHOIS = null
+    content: public const string RPL_ENDOFWHOIS = "318"
     return:
       type: System.String
-    content.vb: Public Const RPL_ENDOFWHOIS As String = Nothing
+    content.vb: Public Const RPL_ENDOFWHOIS As String = "318"
   modifiers.csharp:
   - public
   - const
@@ -816,10 +821,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_WHOISCHANNELS = null
+    content: public const string RPL_WHOISCHANNELS = "319"
     return:
       type: System.String
-    content.vb: Public Const RPL_WHOISCHANNELS As String = Nothing
+    content.vb: Public Const RPL_WHOISCHANNELS As String = "319"
   modifiers.csharp:
   - public
   - const
@@ -849,10 +854,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_RPL_LISTSTART = null
+    content: public const string RPL_RPL_LISTSTART = "321"
     return:
       type: System.String
-    content.vb: Public Const RPL_RPL_LISTSTART As String = Nothing
+    content.vb: Public Const RPL_RPL_LISTSTART As String = "321"
   modifiers.csharp:
   - public
   - const
@@ -882,10 +887,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_LIST = null
+    content: public const string RPL_LIST = "322"
     return:
       type: System.String
-    content.vb: Public Const RPL_LIST As String = Nothing
+    content.vb: Public Const RPL_LIST As String = "322"
   modifiers.csharp:
   - public
   - const
@@ -915,10 +920,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_LISTEND = null
+    content: public const string RPL_LISTEND = "323"
     return:
       type: System.String
-    content.vb: Public Const RPL_LISTEND As String = Nothing
+    content.vb: Public Const RPL_LISTEND As String = "323"
   modifiers.csharp:
   - public
   - const
@@ -948,10 +953,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_CHANNELMODEIS = null
+    content: public const string RPL_CHANNELMODEIS = "324"
     return:
       type: System.String
-    content.vb: Public Const RPL_CHANNELMODEIS As String = Nothing
+    content.vb: Public Const RPL_CHANNELMODEIS As String = "324"
   modifiers.csharp:
   - public
   - const
@@ -981,10 +986,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_UNIQOPIS = null
+    content: public const string RPL_UNIQOPIS = "325"
     return:
       type: System.String
-    content.vb: Public Const RPL_UNIQOPIS As String = Nothing
+    content.vb: Public Const RPL_UNIQOPIS As String = "325"
   modifiers.csharp:
   - public
   - const
@@ -1014,10 +1019,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_NOTOPIC = null
+    content: public const string RPL_NOTOPIC = "331"
     return:
       type: System.String
-    content.vb: Public Const RPL_NOTOPIC As String = Nothing
+    content.vb: Public Const RPL_NOTOPIC As String = "331"
   modifiers.csharp:
   - public
   - const
@@ -1047,10 +1052,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_TOPIC = null
+    content: public const string RPL_TOPIC = "332"
     return:
       type: System.String
-    content.vb: Public Const RPL_TOPIC As String = Nothing
+    content.vb: Public Const RPL_TOPIC As String = "332"
   modifiers.csharp:
   - public
   - const
@@ -1080,10 +1085,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_INVITING = null
+    content: public const string RPL_INVITING = "341"
     return:
       type: System.String
-    content.vb: Public Const RPL_INVITING As String = Nothing
+    content.vb: Public Const RPL_INVITING As String = "341"
   modifiers.csharp:
   - public
   - const
@@ -1113,10 +1118,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_SUMMONING = null
+    content: public const string RPL_SUMMONING = "342"
     return:
       type: System.String
-    content.vb: Public Const RPL_SUMMONING As String = Nothing
+    content.vb: Public Const RPL_SUMMONING As String = "342"
   modifiers.csharp:
   - public
   - const
@@ -1146,10 +1151,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_INVITELIST = null
+    content: public const string RPL_INVITELIST = "346"
     return:
       type: System.String
-    content.vb: Public Const RPL_INVITELIST As String = Nothing
+    content.vb: Public Const RPL_INVITELIST As String = "346"
   modifiers.csharp:
   - public
   - const
@@ -1179,10 +1184,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_ENDOFINVITELIST = null
+    content: public const string RPL_ENDOFINVITELIST = "347"
     return:
       type: System.String
-    content.vb: Public Const RPL_ENDOFINVITELIST As String = Nothing
+    content.vb: Public Const RPL_ENDOFINVITELIST As String = "347"
   modifiers.csharp:
   - public
   - const
@@ -1212,10 +1217,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_EXCEPTLIST = null
+    content: public const string RPL_EXCEPTLIST = "348"
     return:
       type: System.String
-    content.vb: Public Const RPL_EXCEPTLIST As String = Nothing
+    content.vb: Public Const RPL_EXCEPTLIST As String = "348"
   modifiers.csharp:
   - public
   - const
@@ -1245,10 +1250,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_ENDOFEXCEPTLIST = null
+    content: public const string RPL_ENDOFEXCEPTLIST = "349"
     return:
       type: System.String
-    content.vb: Public Const RPL_ENDOFEXCEPTLIST As String = Nothing
+    content.vb: Public Const RPL_ENDOFEXCEPTLIST As String = "349"
   modifiers.csharp:
   - public
   - const
@@ -1278,10 +1283,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_VERSION = null
+    content: public const string RPL_VERSION = "351"
     return:
       type: System.String
-    content.vb: Public Const RPL_VERSION As String = Nothing
+    content.vb: Public Const RPL_VERSION As String = "351"
   modifiers.csharp:
   - public
   - const
@@ -1311,10 +1316,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_WHOREPLY = null
+    content: public const string RPL_WHOREPLY = "352"
     return:
       type: System.String
-    content.vb: Public Const RPL_WHOREPLY As String = Nothing
+    content.vb: Public Const RPL_WHOREPLY As String = "352"
   modifiers.csharp:
   - public
   - const
@@ -1344,10 +1349,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_NAMREPLY = null
+    content: public const string RPL_NAMREPLY = "353"
     return:
       type: System.String
-    content.vb: Public Const RPL_NAMREPLY As String = Nothing
+    content.vb: Public Const RPL_NAMREPLY As String = "353"
   modifiers.csharp:
   - public
   - const
@@ -1377,10 +1382,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_LINKS = null
+    content: public const string RPL_LINKS = "364"
     return:
       type: System.String
-    content.vb: Public Const RPL_LINKS As String = Nothing
+    content.vb: Public Const RPL_LINKS As String = "364"
   modifiers.csharp:
   - public
   - const
@@ -1410,10 +1415,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_ENDOFLINKS = null
+    content: public const string RPL_ENDOFLINKS = "365"
     return:
       type: System.String
-    content.vb: Public Const RPL_ENDOFLINKS As String = Nothing
+    content.vb: Public Const RPL_ENDOFLINKS As String = "365"
   modifiers.csharp:
   - public
   - const
@@ -1443,10 +1448,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_ENDOFNAMES = null
+    content: public const string RPL_ENDOFNAMES = "366"
     return:
       type: System.String
-    content.vb: Public Const RPL_ENDOFNAMES As String = Nothing
+    content.vb: Public Const RPL_ENDOFNAMES As String = "366"
   modifiers.csharp:
   - public
   - const
@@ -1476,10 +1481,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_BANLIST = null
+    content: public const string RPL_BANLIST = "367"
     return:
       type: System.String
-    content.vb: Public Const RPL_BANLIST As String = Nothing
+    content.vb: Public Const RPL_BANLIST As String = "367"
   modifiers.csharp:
   - public
   - const
@@ -1509,10 +1514,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_ENDOFBANLIST = null
+    content: public const string RPL_ENDOFBANLIST = "368"
     return:
       type: System.String
-    content.vb: Public Const RPL_ENDOFBANLIST As String = Nothing
+    content.vb: Public Const RPL_ENDOFBANLIST As String = "368"
   modifiers.csharp:
   - public
   - const
@@ -1542,10 +1547,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_ENDOFWHOWAS = null
+    content: public const string RPL_ENDOFWHOWAS = "369"
     return:
       type: System.String
-    content.vb: Public Const RPL_ENDOFWHOWAS As String = Nothing
+    content.vb: Public Const RPL_ENDOFWHOWAS As String = "369"
   modifiers.csharp:
   - public
   - const
@@ -1575,10 +1580,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_INFO = null
+    content: public const string RPL_INFO = "371"
     return:
       type: System.String
-    content.vb: Public Const RPL_INFO As String = Nothing
+    content.vb: Public Const RPL_INFO As String = "371"
   modifiers.csharp:
   - public
   - const
@@ -1608,10 +1613,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_MOTD = null
+    content: public const string RPL_MOTD = "372"
     return:
       type: System.String
-    content.vb: Public Const RPL_MOTD As String = Nothing
+    content.vb: Public Const RPL_MOTD As String = "372"
   modifiers.csharp:
   - public
   - const
@@ -1641,10 +1646,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_ENDOFINFO = null
+    content: public const string RPL_ENDOFINFO = "374"
     return:
       type: System.String
-    content.vb: Public Const RPL_ENDOFINFO As String = Nothing
+    content.vb: Public Const RPL_ENDOFINFO As String = "374"
   modifiers.csharp:
   - public
   - const
@@ -1674,10 +1679,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_MOTDSTART = null
+    content: public const string RPL_MOTDSTART = "375"
     return:
       type: System.String
-    content.vb: Public Const RPL_MOTDSTART As String = Nothing
+    content.vb: Public Const RPL_MOTDSTART As String = "375"
   modifiers.csharp:
   - public
   - const
@@ -1707,10 +1712,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_ENDOFMOTD = null
+    content: public const string RPL_ENDOFMOTD = "376"
     return:
       type: System.String
-    content.vb: Public Const RPL_ENDOFMOTD As String = Nothing
+    content.vb: Public Const RPL_ENDOFMOTD As String = "376"
   modifiers.csharp:
   - public
   - const
@@ -1740,10 +1745,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_YOUREOPER = null
+    content: public const string RPL_YOUREOPER = "381"
     return:
       type: System.String
-    content.vb: Public Const RPL_YOUREOPER As String = Nothing
+    content.vb: Public Const RPL_YOUREOPER As String = "381"
   modifiers.csharp:
   - public
   - const
@@ -1773,10 +1778,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_REHASHING = null
+    content: public const string RPL_REHASHING = "382"
     return:
       type: System.String
-    content.vb: Public Const RPL_REHASHING As String = Nothing
+    content.vb: Public Const RPL_REHASHING As String = "382"
   modifiers.csharp:
   - public
   - const
@@ -1806,10 +1811,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_YOURESERVICE = null
+    content: public const string RPL_YOURESERVICE = "383"
     return:
       type: System.String
-    content.vb: Public Const RPL_YOURESERVICE As String = Nothing
+    content.vb: Public Const RPL_YOURESERVICE As String = "383"
   modifiers.csharp:
   - public
   - const
@@ -1839,10 +1844,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_TIME = null
+    content: public const string RPL_TIME = "391"
     return:
       type: System.String
-    content.vb: Public Const RPL_TIME As String = Nothing
+    content.vb: Public Const RPL_TIME As String = "391"
   modifiers.csharp:
   - public
   - const
@@ -1872,10 +1877,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_USERSSTART = null
+    content: public const string RPL_USERSSTART = "392"
     return:
       type: System.String
-    content.vb: Public Const RPL_USERSSTART As String = Nothing
+    content.vb: Public Const RPL_USERSSTART As String = "392"
   modifiers.csharp:
   - public
   - const
@@ -1905,10 +1910,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_USERS = null
+    content: public const string RPL_USERS = "393"
     return:
       type: System.String
-    content.vb: Public Const RPL_USERS As String = Nothing
+    content.vb: Public Const RPL_USERS As String = "393"
   modifiers.csharp:
   - public
   - const
@@ -1938,10 +1943,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_ENDOFUSERS = null
+    content: public const string RPL_ENDOFUSERS = "394"
     return:
       type: System.String
-    content.vb: Public Const RPL_ENDOFUSERS As String = Nothing
+    content.vb: Public Const RPL_ENDOFUSERS As String = "394"
   modifiers.csharp:
   - public
   - const
@@ -1971,10 +1976,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_NOUSERS = null
+    content: public const string RPL_NOUSERS = "395"
     return:
       type: System.String
-    content.vb: Public Const RPL_NOUSERS As String = Nothing
+    content.vb: Public Const RPL_NOUSERS As String = "395"
   modifiers.csharp:
   - public
   - const
@@ -2004,10 +2009,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_TRACELINK = null
+    content: public const string RPL_TRACELINK = "200"
     return:
       type: System.String
-    content.vb: Public Const RPL_TRACELINK As String = Nothing
+    content.vb: Public Const RPL_TRACELINK As String = "200"
   modifiers.csharp:
   - public
   - const
@@ -2037,10 +2042,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_TRACECONNECTING = null
+    content: public const string RPL_TRACECONNECTING = "201"
     return:
       type: System.String
-    content.vb: Public Const RPL_TRACECONNECTING As String = Nothing
+    content.vb: Public Const RPL_TRACECONNECTING As String = "201"
   modifiers.csharp:
   - public
   - const
@@ -2070,10 +2075,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_TRACEHANDSHAKE = null
+    content: public const string RPL_TRACEHANDSHAKE = "202"
     return:
       type: System.String
-    content.vb: Public Const RPL_TRACEHANDSHAKE As String = Nothing
+    content.vb: Public Const RPL_TRACEHANDSHAKE As String = "202"
   modifiers.csharp:
   - public
   - const
@@ -2103,10 +2108,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_TRACEUNKNOWN = null
+    content: public const string RPL_TRACEUNKNOWN = "203"
     return:
       type: System.String
-    content.vb: Public Const RPL_TRACEUNKNOWN As String = Nothing
+    content.vb: Public Const RPL_TRACEUNKNOWN As String = "203"
   modifiers.csharp:
   - public
   - const
@@ -2136,10 +2141,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_TRACEOPERATOR = null
+    content: public const string RPL_TRACEOPERATOR = "204"
     return:
       type: System.String
-    content.vb: Public Const RPL_TRACEOPERATOR As String = Nothing
+    content.vb: Public Const RPL_TRACEOPERATOR As String = "204"
   modifiers.csharp:
   - public
   - const
@@ -2169,10 +2174,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_TRACEUSER = null
+    content: public const string RPL_TRACEUSER = "205"
     return:
       type: System.String
-    content.vb: Public Const RPL_TRACEUSER As String = Nothing
+    content.vb: Public Const RPL_TRACEUSER As String = "205"
   modifiers.csharp:
   - public
   - const
@@ -2202,10 +2207,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_TRACESERVER = null
+    content: public const string RPL_TRACESERVER = "206"
     return:
       type: System.String
-    content.vb: Public Const RPL_TRACESERVER As String = Nothing
+    content.vb: Public Const RPL_TRACESERVER As String = "206"
   modifiers.csharp:
   - public
   - const
@@ -2235,10 +2240,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_TRACENEWTYPE = null
+    content: public const string RPL_TRACENEWTYPE = "208"
     return:
       type: System.String
-    content.vb: Public Const RPL_TRACENEWTYPE As String = Nothing
+    content.vb: Public Const RPL_TRACENEWTYPE As String = "208"
   modifiers.csharp:
   - public
   - const
@@ -2268,10 +2273,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_TRACECLASS = null
+    content: public const string RPL_TRACECLASS = "209"
     return:
       type: System.String
-    content.vb: Public Const RPL_TRACECLASS As String = Nothing
+    content.vb: Public Const RPL_TRACECLASS As String = "209"
   modifiers.csharp:
   - public
   - const
@@ -2301,10 +2306,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_TRACERECONNECT = null
+    content: public const string RPL_TRACERECONNECT = "210"
     return:
       type: System.String
-    content.vb: Public Const RPL_TRACERECONNECT As String = Nothing
+    content.vb: Public Const RPL_TRACERECONNECT As String = "210"
   modifiers.csharp:
   - public
   - const
@@ -2334,10 +2339,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_STATSLINKINFO = null
+    content: public const string RPL_STATSLINKINFO = "211"
     return:
       type: System.String
-    content.vb: Public Const RPL_STATSLINKINFO As String = Nothing
+    content.vb: Public Const RPL_STATSLINKINFO As String = "211"
   modifiers.csharp:
   - public
   - const
@@ -2367,10 +2372,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_STATSCOMMANDS = null
+    content: public const string RPL_STATSCOMMANDS = "212"
     return:
       type: System.String
-    content.vb: Public Const RPL_STATSCOMMANDS As String = Nothing
+    content.vb: Public Const RPL_STATSCOMMANDS As String = "212"
   modifiers.csharp:
   - public
   - const
@@ -2400,10 +2405,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_ENDOFSTATS = null
+    content: public const string RPL_ENDOFSTATS = "219"
     return:
       type: System.String
-    content.vb: Public Const RPL_ENDOFSTATS As String = Nothing
+    content.vb: Public Const RPL_ENDOFSTATS As String = "219"
   modifiers.csharp:
   - public
   - const
@@ -2433,10 +2438,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_UMODEIS = null
+    content: public const string RPL_UMODEIS = "221"
     return:
       type: System.String
-    content.vb: Public Const RPL_UMODEIS As String = Nothing
+    content.vb: Public Const RPL_UMODEIS As String = "221"
   modifiers.csharp:
   - public
   - const
@@ -2466,10 +2471,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_SERVLIST = null
+    content: public const string RPL_SERVLIST = "234"
     return:
       type: System.String
-    content.vb: Public Const RPL_SERVLIST As String = Nothing
+    content.vb: Public Const RPL_SERVLIST As String = "234"
   modifiers.csharp:
   - public
   - const
@@ -2499,10 +2504,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_SERVLISTEND = null
+    content: public const string RPL_SERVLISTEND = "235"
     return:
       type: System.String
-    content.vb: Public Const RPL_SERVLISTEND As String = Nothing
+    content.vb: Public Const RPL_SERVLISTEND As String = "235"
   modifiers.csharp:
   - public
   - const
@@ -2532,10 +2537,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_STATSUPTIME = null
+    content: public const string RPL_STATSUPTIME = "242"
     return:
       type: System.String
-    content.vb: Public Const RPL_STATSUPTIME As String = Nothing
+    content.vb: Public Const RPL_STATSUPTIME As String = "242"
   modifiers.csharp:
   - public
   - const
@@ -2565,10 +2570,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_STATSOLINE = null
+    content: public const string RPL_STATSOLINE = "243"
     return:
       type: System.String
-    content.vb: Public Const RPL_STATSOLINE As String = Nothing
+    content.vb: Public Const RPL_STATSOLINE As String = "243"
   modifiers.csharp:
   - public
   - const
@@ -2598,10 +2603,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_LUSERCLIENT = null
+    content: public const string RPL_LUSERCLIENT = "251"
     return:
       type: System.String
-    content.vb: Public Const RPL_LUSERCLIENT As String = Nothing
+    content.vb: Public Const RPL_LUSERCLIENT As String = "251"
   modifiers.csharp:
   - public
   - const
@@ -2631,10 +2636,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_LUSEROP = null
+    content: public const string RPL_LUSEROP = "252"
     return:
       type: System.String
-    content.vb: Public Const RPL_LUSEROP As String = Nothing
+    content.vb: Public Const RPL_LUSEROP As String = "252"
   modifiers.csharp:
   - public
   - const
@@ -2664,10 +2669,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_LUSERUNKNOWN = null
+    content: public const string RPL_LUSERUNKNOWN = "253"
     return:
       type: System.String
-    content.vb: Public Const RPL_LUSERUNKNOWN As String = Nothing
+    content.vb: Public Const RPL_LUSERUNKNOWN As String = "253"
   modifiers.csharp:
   - public
   - const
@@ -2697,10 +2702,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_LUSERCHANNELS = null
+    content: public const string RPL_LUSERCHANNELS = "254"
     return:
       type: System.String
-    content.vb: Public Const RPL_LUSERCHANNELS As String = Nothing
+    content.vb: Public Const RPL_LUSERCHANNELS As String = "254"
   modifiers.csharp:
   - public
   - const
@@ -2730,10 +2735,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_LUSERME = null
+    content: public const string RPL_LUSERME = "255"
     return:
       type: System.String
-    content.vb: Public Const RPL_LUSERME As String = Nothing
+    content.vb: Public Const RPL_LUSERME As String = "255"
   modifiers.csharp:
   - public
   - const
@@ -2763,10 +2768,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_ADMINME = null
+    content: public const string RPL_ADMINME = "256"
     return:
       type: System.String
-    content.vb: Public Const RPL_ADMINME As String = Nothing
+    content.vb: Public Const RPL_ADMINME As String = "256"
   modifiers.csharp:
   - public
   - const
@@ -2796,10 +2801,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_ADMINLOC1 = null
+    content: public const string RPL_ADMINLOC1 = "257"
     return:
       type: System.String
-    content.vb: Public Const RPL_ADMINLOC1 As String = Nothing
+    content.vb: Public Const RPL_ADMINLOC1 As String = "257"
   modifiers.csharp:
   - public
   - const
@@ -2829,10 +2834,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_ADMINLOC2 = null
+    content: public const string RPL_ADMINLOC2 = "258"
     return:
       type: System.String
-    content.vb: Public Const RPL_ADMINLOC2 As String = Nothing
+    content.vb: Public Const RPL_ADMINLOC2 As String = "258"
   modifiers.csharp:
   - public
   - const
@@ -2862,10 +2867,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_ADMINEMAIL = null
+    content: public const string RPL_ADMINEMAIL = "259"
     return:
       type: System.String
-    content.vb: Public Const RPL_ADMINEMAIL As String = Nothing
+    content.vb: Public Const RPL_ADMINEMAIL As String = "259"
   modifiers.csharp:
   - public
   - const
@@ -2895,10 +2900,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_TRACELOG = null
+    content: public const string RPL_TRACELOG = "261"
     return:
       type: System.String
-    content.vb: Public Const RPL_TRACELOG As String = Nothing
+    content.vb: Public Const RPL_TRACELOG As String = "261"
   modifiers.csharp:
   - public
   - const
@@ -2928,10 +2933,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_TRACEEND = null
+    content: public const string RPL_TRACEEND = "262"
     return:
       type: System.String
-    content.vb: Public Const RPL_TRACEEND As String = Nothing
+    content.vb: Public Const RPL_TRACEEND As String = "262"
   modifiers.csharp:
   - public
   - const
@@ -2961,10 +2966,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_TRYAGAIN = null
+    content: public const string RPL_TRYAGAIN = "263"
     return:
       type: System.String
-    content.vb: Public Const RPL_TRYAGAIN As String = Nothing
+    content.vb: Public Const RPL_TRYAGAIN As String = "263"
   modifiers.csharp:
   - public
   - const
@@ -2994,10 +2999,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_HOSTHIDDEN = null
+    content: public const string RPL_HOSTHIDDEN = "396"
     return:
       type: System.String
-    content.vb: Public Const RPL_HOSTHIDDEN As String = Nothing
+    content.vb: Public Const RPL_HOSTHIDDEN As String = "396"
   modifiers.csharp:
   - public
   - const
@@ -3027,10 +3032,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string ERR_NOSUCHNICK = null
+    content: public const string ERR_NOSUCHNICK = "401"
     return:
       type: System.String
-    content.vb: Public Const ERR_NOSUCHNICK As String = Nothing
+    content.vb: Public Const ERR_NOSUCHNICK As String = "401"
   modifiers.csharp:
   - public
   - const
@@ -3060,10 +3065,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string ERR_NOSUCHSERVER = null
+    content: public const string ERR_NOSUCHSERVER = "402"
     return:
       type: System.String
-    content.vb: Public Const ERR_NOSUCHSERVER As String = Nothing
+    content.vb: Public Const ERR_NOSUCHSERVER As String = "402"
   modifiers.csharp:
   - public
   - const
@@ -3093,10 +3098,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string ERR_NOSUCHCHANNEL = null
+    content: public const string ERR_NOSUCHCHANNEL = "403"
     return:
       type: System.String
-    content.vb: Public Const ERR_NOSUCHCHANNEL As String = Nothing
+    content.vb: Public Const ERR_NOSUCHCHANNEL As String = "403"
   modifiers.csharp:
   - public
   - const
@@ -3126,10 +3131,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string ERR_CANNOTSENDTOCHAN = null
+    content: public const string ERR_CANNOTSENDTOCHAN = "404"
     return:
       type: System.String
-    content.vb: Public Const ERR_CANNOTSENDTOCHAN As String = Nothing
+    content.vb: Public Const ERR_CANNOTSENDTOCHAN As String = "404"
   modifiers.csharp:
   - public
   - const
@@ -3159,10 +3164,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string ERR_TOOMANYCHANNELS = null
+    content: public const string ERR_TOOMANYCHANNELS = "405"
     return:
       type: System.String
-    content.vb: Public Const ERR_TOOMANYCHANNELS As String = Nothing
+    content.vb: Public Const ERR_TOOMANYCHANNELS As String = "405"
   modifiers.csharp:
   - public
   - const
@@ -3192,10 +3197,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string ERR_WASNOSUCHNICK = null
+    content: public const string ERR_WASNOSUCHNICK = "406"
     return:
       type: System.String
-    content.vb: Public Const ERR_WASNOSUCHNICK As String = Nothing
+    content.vb: Public Const ERR_WASNOSUCHNICK As String = "406"
   modifiers.csharp:
   - public
   - const
@@ -3225,10 +3230,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string ERR_TOOMANYTARGETS = null
+    content: public const string ERR_TOOMANYTARGETS = "407"
     return:
       type: System.String
-    content.vb: Public Const ERR_TOOMANYTARGETS As String = Nothing
+    content.vb: Public Const ERR_TOOMANYTARGETS As String = "407"
   modifiers.csharp:
   - public
   - const
@@ -3258,10 +3263,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string ERR_NOSUCHSERVICE = null
+    content: public const string ERR_NOSUCHSERVICE = "408"
     return:
       type: System.String
-    content.vb: Public Const ERR_NOSUCHSERVICE As String = Nothing
+    content.vb: Public Const ERR_NOSUCHSERVICE As String = "408"
   modifiers.csharp:
   - public
   - const
@@ -3291,10 +3296,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string ERR_NOORIGIN = null
+    content: public const string ERR_NOORIGIN = "409"
     return:
       type: System.String
-    content.vb: Public Const ERR_NOORIGIN As String = Nothing
+    content.vb: Public Const ERR_NOORIGIN As String = "409"
   modifiers.csharp:
   - public
   - const
@@ -3324,10 +3329,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string ERR_NORECIPIENT = null
+    content: public const string ERR_NORECIPIENT = "411"
     return:
       type: System.String
-    content.vb: Public Const ERR_NORECIPIENT As String = Nothing
+    content.vb: Public Const ERR_NORECIPIENT As String = "411"
   modifiers.csharp:
   - public
   - const
@@ -3357,10 +3362,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string ERR_NOTEXTTOSEND = null
+    content: public const string ERR_NOTEXTTOSEND = "412"
     return:
       type: System.String
-    content.vb: Public Const ERR_NOTEXTTOSEND As String = Nothing
+    content.vb: Public Const ERR_NOTEXTTOSEND As String = "412"
   modifiers.csharp:
   - public
   - const
@@ -3390,10 +3395,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string ERR_NOTOPLEVEL = null
+    content: public const string ERR_NOTOPLEVEL = "413"
     return:
       type: System.String
-    content.vb: Public Const ERR_NOTOPLEVEL As String = Nothing
+    content.vb: Public Const ERR_NOTOPLEVEL As String = "413"
   modifiers.csharp:
   - public
   - const
@@ -3423,10 +3428,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string ERR_WILDTOPLEVEL = null
+    content: public const string ERR_WILDTOPLEVEL = "414"
     return:
       type: System.String
-    content.vb: Public Const ERR_WILDTOPLEVEL As String = Nothing
+    content.vb: Public Const ERR_WILDTOPLEVEL As String = "414"
   modifiers.csharp:
   - public
   - const
@@ -3456,10 +3461,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string ERR_BADMASK = null
+    content: public const string ERR_BADMASK = "415"
     return:
       type: System.String
-    content.vb: Public Const ERR_BADMASK As String = Nothing
+    content.vb: Public Const ERR_BADMASK As String = "415"
   modifiers.csharp:
   - public
   - const
@@ -3489,10 +3494,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string ERR_UNKNOWNCOMMAND = null
+    content: public const string ERR_UNKNOWNCOMMAND = "421"
     return:
       type: System.String
-    content.vb: Public Const ERR_UNKNOWNCOMMAND As String = Nothing
+    content.vb: Public Const ERR_UNKNOWNCOMMAND As String = "421"
   modifiers.csharp:
   - public
   - const
@@ -3522,10 +3527,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string ERR_NOMOTD = null
+    content: public const string ERR_NOMOTD = "422"
     return:
       type: System.String
-    content.vb: Public Const ERR_NOMOTD As String = Nothing
+    content.vb: Public Const ERR_NOMOTD As String = "422"
   modifiers.csharp:
   - public
   - const
@@ -3555,10 +3560,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string ERR_NOADMININFO = null
+    content: public const string ERR_NOADMININFO = "423"
     return:
       type: System.String
-    content.vb: Public Const ERR_NOADMININFO As String = Nothing
+    content.vb: Public Const ERR_NOADMININFO As String = "423"
   modifiers.csharp:
   - public
   - const
@@ -3588,10 +3593,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string ERR_FILEERROR = null
+    content: public const string ERR_FILEERROR = "424"
     return:
       type: System.String
-    content.vb: Public Const ERR_FILEERROR As String = Nothing
+    content.vb: Public Const ERR_FILEERROR As String = "424"
   modifiers.csharp:
   - public
   - const
@@ -3621,10 +3626,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string ERR_NONICKNAMEGIVEN = null
+    content: public const string ERR_NONICKNAMEGIVEN = "431"
     return:
       type: System.String
-    content.vb: Public Const ERR_NONICKNAMEGIVEN As String = Nothing
+    content.vb: Public Const ERR_NONICKNAMEGIVEN As String = "431"
   modifiers.csharp:
   - public
   - const
@@ -3654,10 +3659,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string ERR_ERRONEUSNICKNAME = null
+    content: public const string ERR_ERRONEUSNICKNAME = "432"
     return:
       type: System.String
-    content.vb: Public Const ERR_ERRONEUSNICKNAME As String = Nothing
+    content.vb: Public Const ERR_ERRONEUSNICKNAME As String = "432"
   modifiers.csharp:
   - public
   - const
@@ -3687,10 +3692,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string ERR_NICKNAMEINUSE = null
+    content: public const string ERR_NICKNAMEINUSE = "433"
     return:
       type: System.String
-    content.vb: Public Const ERR_NICKNAMEINUSE As String = Nothing
+    content.vb: Public Const ERR_NICKNAMEINUSE As String = "433"
   modifiers.csharp:
   - public
   - const
@@ -3720,10 +3725,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string ERR_NICKCOLLISION = null
+    content: public const string ERR_NICKCOLLISION = "436"
     return:
       type: System.String
-    content.vb: Public Const ERR_NICKCOLLISION As String = Nothing
+    content.vb: Public Const ERR_NICKCOLLISION As String = "436"
   modifiers.csharp:
   - public
   - const
@@ -3753,10 +3758,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string ERR_UNAVAILRESOURCE = null
+    content: public const string ERR_UNAVAILRESOURCE = "437"
     return:
       type: System.String
-    content.vb: Public Const ERR_UNAVAILRESOURCE As String = Nothing
+    content.vb: Public Const ERR_UNAVAILRESOURCE As String = "437"
   modifiers.csharp:
   - public
   - const
@@ -3786,10 +3791,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string ERR_USERNOTINCHANNEL = null
+    content: public const string ERR_USERNOTINCHANNEL = "441"
     return:
       type: System.String
-    content.vb: Public Const ERR_USERNOTINCHANNEL As String = Nothing
+    content.vb: Public Const ERR_USERNOTINCHANNEL As String = "441"
   modifiers.csharp:
   - public
   - const
@@ -3819,10 +3824,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string ERR_NOTINCHANNEL = null
+    content: public const string ERR_NOTINCHANNEL = "442"
     return:
       type: System.String
-    content.vb: Public Const ERR_NOTINCHANNEL As String = Nothing
+    content.vb: Public Const ERR_NOTINCHANNEL As String = "442"
   modifiers.csharp:
   - public
   - const
@@ -3852,10 +3857,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string ERR_USERONCHANNEL = null
+    content: public const string ERR_USERONCHANNEL = "443"
     return:
       type: System.String
-    content.vb: Public Const ERR_USERONCHANNEL As String = Nothing
+    content.vb: Public Const ERR_USERONCHANNEL As String = "443"
   modifiers.csharp:
   - public
   - const
@@ -3885,10 +3890,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string ERR_NOLOGIN = null
+    content: public const string ERR_NOLOGIN = "444"
     return:
       type: System.String
-    content.vb: Public Const ERR_NOLOGIN As String = Nothing
+    content.vb: Public Const ERR_NOLOGIN As String = "444"
   modifiers.csharp:
   - public
   - const
@@ -3918,10 +3923,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string ERR_SUMMONDISABLED = null
+    content: public const string ERR_SUMMONDISABLED = "445"
     return:
       type: System.String
-    content.vb: Public Const ERR_SUMMONDISABLED As String = Nothing
+    content.vb: Public Const ERR_SUMMONDISABLED As String = "445"
   modifiers.csharp:
   - public
   - const
@@ -3951,10 +3956,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string ERR_USERDISABLED = null
+    content: public const string ERR_USERDISABLED = "446"
     return:
       type: System.String
-    content.vb: Public Const ERR_USERDISABLED As String = Nothing
+    content.vb: Public Const ERR_USERDISABLED As String = "446"
   modifiers.csharp:
   - public
   - const
@@ -3984,10 +3989,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string ERR_NOTREGISTERED = null
+    content: public const string ERR_NOTREGISTERED = "451"
     return:
       type: System.String
-    content.vb: Public Const ERR_NOTREGISTERED As String = Nothing
+    content.vb: Public Const ERR_NOTREGISTERED As String = "451"
   modifiers.csharp:
   - public
   - const
@@ -4017,10 +4022,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string ERR_NEEDMOREPARAMS = null
+    content: public const string ERR_NEEDMOREPARAMS = "461"
     return:
       type: System.String
-    content.vb: Public Const ERR_NEEDMOREPARAMS As String = Nothing
+    content.vb: Public Const ERR_NEEDMOREPARAMS As String = "461"
   modifiers.csharp:
   - public
   - const
@@ -4050,10 +4055,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string ERR_ALREADYREGISTERED = null
+    content: public const string ERR_ALREADYREGISTERED = "462"
     return:
       type: System.String
-    content.vb: Public Const ERR_ALREADYREGISTERED As String = Nothing
+    content.vb: Public Const ERR_ALREADYREGISTERED As String = "462"
   modifiers.csharp:
   - public
   - const
@@ -4083,10 +4088,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string ERR_NOPERMFORHOST = null
+    content: public const string ERR_NOPERMFORHOST = "463"
     return:
       type: System.String
-    content.vb: Public Const ERR_NOPERMFORHOST As String = Nothing
+    content.vb: Public Const ERR_NOPERMFORHOST As String = "463"
   modifiers.csharp:
   - public
   - const
@@ -4116,10 +4121,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string ERR_PASSWDMISMATCH = null
+    content: public const string ERR_PASSWDMISMATCH = "464"
     return:
       type: System.String
-    content.vb: Public Const ERR_PASSWDMISMATCH As String = Nothing
+    content.vb: Public Const ERR_PASSWDMISMATCH As String = "464"
   modifiers.csharp:
   - public
   - const
@@ -4149,10 +4154,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string ERR_YOUREBANNEDCREEP = null
+    content: public const string ERR_YOUREBANNEDCREEP = "465"
     return:
       type: System.String
-    content.vb: Public Const ERR_YOUREBANNEDCREEP As String = Nothing
+    content.vb: Public Const ERR_YOUREBANNEDCREEP As String = "465"
   modifiers.csharp:
   - public
   - const
@@ -4182,10 +4187,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string ERR_YOUWILLBEBANNED = null
+    content: public const string ERR_YOUWILLBEBANNED = "466"
     return:
       type: System.String
-    content.vb: Public Const ERR_YOUWILLBEBANNED As String = Nothing
+    content.vb: Public Const ERR_YOUWILLBEBANNED As String = "466"
   modifiers.csharp:
   - public
   - const
@@ -4215,10 +4220,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string ERR_KEYSET = null
+    content: public const string ERR_KEYSET = "467"
     return:
       type: System.String
-    content.vb: Public Const ERR_KEYSET As String = Nothing
+    content.vb: Public Const ERR_KEYSET As String = "467"
   modifiers.csharp:
   - public
   - const
@@ -4248,10 +4253,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string ERR_CHANNELISFULL = null
+    content: public const string ERR_CHANNELISFULL = "471"
     return:
       type: System.String
-    content.vb: Public Const ERR_CHANNELISFULL As String = Nothing
+    content.vb: Public Const ERR_CHANNELISFULL As String = "471"
   modifiers.csharp:
   - public
   - const
@@ -4281,10 +4286,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string ERR_UNKNOWNMODE = null
+    content: public const string ERR_UNKNOWNMODE = "472"
     return:
       type: System.String
-    content.vb: Public Const ERR_UNKNOWNMODE As String = Nothing
+    content.vb: Public Const ERR_UNKNOWNMODE As String = "472"
   modifiers.csharp:
   - public
   - const
@@ -4314,10 +4319,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string ERR_INVITEONLYCHAN = null
+    content: public const string ERR_INVITEONLYCHAN = "473"
     return:
       type: System.String
-    content.vb: Public Const ERR_INVITEONLYCHAN As String = Nothing
+    content.vb: Public Const ERR_INVITEONLYCHAN As String = "473"
   modifiers.csharp:
   - public
   - const
@@ -4347,10 +4352,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string ERR_BANNEDFROMCHAN = null
+    content: public const string ERR_BANNEDFROMCHAN = "474"
     return:
       type: System.String
-    content.vb: Public Const ERR_BANNEDFROMCHAN As String = Nothing
+    content.vb: Public Const ERR_BANNEDFROMCHAN As String = "474"
   modifiers.csharp:
   - public
   - const
@@ -4380,10 +4385,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string ERR_BADCHANNELKEY = null
+    content: public const string ERR_BADCHANNELKEY = "475"
     return:
       type: System.String
-    content.vb: Public Const ERR_BADCHANNELKEY As String = Nothing
+    content.vb: Public Const ERR_BADCHANNELKEY As String = "475"
   modifiers.csharp:
   - public
   - const
@@ -4413,10 +4418,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string ERR_BADCHANMASK = null
+    content: public const string ERR_BADCHANMASK = "476"
     return:
       type: System.String
-    content.vb: Public Const ERR_BADCHANMASK As String = Nothing
+    content.vb: Public Const ERR_BADCHANMASK As String = "476"
   modifiers.csharp:
   - public
   - const
@@ -4446,10 +4451,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string ERR_NOCHANMODES = null
+    content: public const string ERR_NOCHANMODES = "477"
     return:
       type: System.String
-    content.vb: Public Const ERR_NOCHANMODES As String = Nothing
+    content.vb: Public Const ERR_NOCHANMODES As String = "477"
   modifiers.csharp:
   - public
   - const
@@ -4479,10 +4484,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string ERR_BANLISTFULL = null
+    content: public const string ERR_BANLISTFULL = "478"
     return:
       type: System.String
-    content.vb: Public Const ERR_BANLISTFULL As String = Nothing
+    content.vb: Public Const ERR_BANLISTFULL As String = "478"
   modifiers.csharp:
   - public
   - const
@@ -4512,10 +4517,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string ERR_NOPRIVILEGES = null
+    content: public const string ERR_NOPRIVILEGES = "481"
     return:
       type: System.String
-    content.vb: Public Const ERR_NOPRIVILEGES As String = Nothing
+    content.vb: Public Const ERR_NOPRIVILEGES As String = "481"
   modifiers.csharp:
   - public
   - const
@@ -4545,10 +4550,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string ERR_CHANOPRIVSNEEDED = null
+    content: public const string ERR_CHANOPRIVSNEEDED = "482"
     return:
       type: System.String
-    content.vb: Public Const ERR_CHANOPRIVSNEEDED As String = Nothing
+    content.vb: Public Const ERR_CHANOPRIVSNEEDED As String = "482"
   modifiers.csharp:
   - public
   - const
@@ -4578,10 +4583,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string ERR_CANTKILLSERVER = null
+    content: public const string ERR_CANTKILLSERVER = "483"
     return:
       type: System.String
-    content.vb: Public Const ERR_CANTKILLSERVER As String = Nothing
+    content.vb: Public Const ERR_CANTKILLSERVER As String = "483"
   modifiers.csharp:
   - public
   - const
@@ -4611,10 +4616,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string ERR_RESTRICTED = null
+    content: public const string ERR_RESTRICTED = "484"
     return:
       type: System.String
-    content.vb: Public Const ERR_RESTRICTED As String = Nothing
+    content.vb: Public Const ERR_RESTRICTED As String = "484"
   modifiers.csharp:
   - public
   - const
@@ -4644,10 +4649,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string ERR_UNIQOPPRIVSNEEDED = null
+    content: public const string ERR_UNIQOPPRIVSNEEDED = "485"
     return:
       type: System.String
-    content.vb: Public Const ERR_UNIQOPPRIVSNEEDED As String = Nothing
+    content.vb: Public Const ERR_UNIQOPPRIVSNEEDED As String = "485"
   modifiers.csharp:
   - public
   - const
@@ -4677,10 +4682,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string ERR_NOOPERHOST = null
+    content: public const string ERR_NOOPERHOST = "491"
     return:
       type: System.String
-    content.vb: Public Const ERR_NOOPERHOST As String = Nothing
+    content.vb: Public Const ERR_NOOPERHOST As String = "491"
   modifiers.csharp:
   - public
   - const
@@ -4710,10 +4715,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string ERR_UMODEUNKNOWNFLAG = null
+    content: public const string ERR_UMODEUNKNOWNFLAG = "501"
     return:
       type: System.String
-    content.vb: Public Const ERR_UMODEUNKNOWNFLAG As String = Nothing
+    content.vb: Public Const ERR_UMODEUNKNOWNFLAG As String = "501"
   modifiers.csharp:
   - public
   - const
@@ -4743,10 +4748,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string ERR_USERSDONTMATCH = null
+    content: public const string ERR_USERSDONTMATCH = "502"
     return:
       type: System.String
-    content.vb: Public Const ERR_USERSDONTMATCH As String = Nothing
+    content.vb: Public Const ERR_USERSDONTMATCH As String = "502"
   modifiers.csharp:
   - public
   - const
@@ -4776,10 +4781,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_STATSCLINE = null
+    content: public const string RPL_STATSCLINE = "213"
     return:
       type: System.String
-    content.vb: Public Const RPL_STATSCLINE As String = Nothing
+    content.vb: Public Const RPL_STATSCLINE As String = "213"
   modifiers.csharp:
   - public
   - const
@@ -4809,10 +4814,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_STATSNLINE = null
+    content: public const string RPL_STATSNLINE = "214"
     return:
       type: System.String
-    content.vb: Public Const RPL_STATSNLINE As String = Nothing
+    content.vb: Public Const RPL_STATSNLINE As String = "214"
   modifiers.csharp:
   - public
   - const
@@ -4842,10 +4847,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_STATSILINE = null
+    content: public const string RPL_STATSILINE = "215"
     return:
       type: System.String
-    content.vb: Public Const RPL_STATSILINE As String = Nothing
+    content.vb: Public Const RPL_STATSILINE As String = "215"
   modifiers.csharp:
   - public
   - const
@@ -4875,10 +4880,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_STATSKLINE = null
+    content: public const string RPL_STATSKLINE = "216"
     return:
       type: System.String
-    content.vb: Public Const RPL_STATSKLINE As String = Nothing
+    content.vb: Public Const RPL_STATSKLINE As String = "216"
   modifiers.csharp:
   - public
   - const
@@ -4908,10 +4913,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_STATSQLINE = null
+    content: public const string RPL_STATSQLINE = "217"
     return:
       type: System.String
-    content.vb: Public Const RPL_STATSQLINE As String = Nothing
+    content.vb: Public Const RPL_STATSQLINE As String = "217"
   modifiers.csharp:
   - public
   - const
@@ -4941,10 +4946,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_STATSYLINE = null
+    content: public const string RPL_STATSYLINE = "218"
     return:
       type: System.String
-    content.vb: Public Const RPL_STATSYLINE As String = Nothing
+    content.vb: Public Const RPL_STATSYLINE As String = "218"
   modifiers.csharp:
   - public
   - const
@@ -4974,10 +4979,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_SERVICEINFO = null
+    content: public const string RPL_SERVICEINFO = "231"
     return:
       type: System.String
-    content.vb: Public Const RPL_SERVICEINFO As String = Nothing
+    content.vb: Public Const RPL_SERVICEINFO As String = "231"
   modifiers.csharp:
   - public
   - const
@@ -5007,10 +5012,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_ENDOFSERVICES = null
+    content: public const string RPL_ENDOFSERVICES = "232"
     return:
       type: System.String
-    content.vb: Public Const RPL_ENDOFSERVICES As String = Nothing
+    content.vb: Public Const RPL_ENDOFSERVICES As String = "232"
   modifiers.csharp:
   - public
   - const
@@ -5040,10 +5045,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_SERVICE = null
+    content: public const string RPL_SERVICE = "233"
     return:
       type: System.String
-    content.vb: Public Const RPL_SERVICE As String = Nothing
+    content.vb: Public Const RPL_SERVICE As String = "233"
   modifiers.csharp:
   - public
   - const
@@ -5073,10 +5078,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_STATSVLINE = null
+    content: public const string RPL_STATSVLINE = "240"
     return:
       type: System.String
-    content.vb: Public Const RPL_STATSVLINE As String = Nothing
+    content.vb: Public Const RPL_STATSVLINE As String = "240"
   modifiers.csharp:
   - public
   - const
@@ -5106,10 +5111,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_STATSLLINE = null
+    content: public const string RPL_STATSLLINE = "241"
     return:
       type: System.String
-    content.vb: Public Const RPL_STATSLLINE As String = Nothing
+    content.vb: Public Const RPL_STATSLLINE As String = "241"
   modifiers.csharp:
   - public
   - const
@@ -5139,10 +5144,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_STATSHLINE = null
+    content: public const string RPL_STATSHLINE = "244"
     return:
       type: System.String
-    content.vb: Public Const RPL_STATSHLINE As String = Nothing
+    content.vb: Public Const RPL_STATSHLINE As String = "244"
   modifiers.csharp:
   - public
   - const
@@ -5172,10 +5177,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_STATSSLINE = null
+    content: public const string RPL_STATSSLINE = "244"
     return:
       type: System.String
-    content.vb: Public Const RPL_STATSSLINE As String = Nothing
+    content.vb: Public Const RPL_STATSSLINE As String = "244"
   modifiers.csharp:
   - public
   - const
@@ -5205,10 +5210,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_STATSPING = null
+    content: public const string RPL_STATSPING = "246"
     return:
       type: System.String
-    content.vb: Public Const RPL_STATSPING As String = Nothing
+    content.vb: Public Const RPL_STATSPING As String = "246"
   modifiers.csharp:
   - public
   - const
@@ -5238,10 +5243,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_STATSBLINE = null
+    content: public const string RPL_STATSBLINE = "247"
     return:
       type: System.String
-    content.vb: Public Const RPL_STATSBLINE As String = Nothing
+    content.vb: Public Const RPL_STATSBLINE As String = "247"
   modifiers.csharp:
   - public
   - const
@@ -5271,10 +5276,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_STATSDLINE = null
+    content: public const string RPL_STATSDLINE = "250"
     return:
       type: System.String
-    content.vb: Public Const RPL_STATSDLINE As String = Nothing
+    content.vb: Public Const RPL_STATSDLINE As String = "250"
   modifiers.csharp:
   - public
   - const
@@ -5304,10 +5309,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_NONE = null
+    content: public const string RPL_NONE = "300"
     return:
       type: System.String
-    content.vb: Public Const RPL_NONE As String = Nothing
+    content.vb: Public Const RPL_NONE As String = "300"
   modifiers.csharp:
   - public
   - const
@@ -5337,10 +5342,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_KILLDONE = null
+    content: public const string RPL_KILLDONE = "361"
     return:
       type: System.String
-    content.vb: Public Const RPL_KILLDONE As String = Nothing
+    content.vb: Public Const RPL_KILLDONE As String = "361"
   modifiers.csharp:
   - public
   - const
@@ -5370,10 +5375,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_CLOSING = null
+    content: public const string RPL_CLOSING = "362"
     return:
       type: System.String
-    content.vb: Public Const RPL_CLOSING As String = Nothing
+    content.vb: Public Const RPL_CLOSING As String = "362"
   modifiers.csharp:
   - public
   - const
@@ -5403,10 +5408,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_CLODEEND = null
+    content: public const string RPL_CLODEEND = "363"
     return:
       type: System.String
-    content.vb: Public Const RPL_CLODEEND As String = Nothing
+    content.vb: Public Const RPL_CLODEEND As String = "363"
   modifiers.csharp:
   - public
   - const
@@ -5436,10 +5441,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_INFOSTART = null
+    content: public const string RPL_INFOSTART = "373"
     return:
       type: System.String
-    content.vb: Public Const RPL_INFOSTART As String = Nothing
+    content.vb: Public Const RPL_INFOSTART As String = "373"
   modifiers.csharp:
   - public
   - const
@@ -5469,10 +5474,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string RPL_MYPORTIS = null
+    content: public const string RPL_MYPORTIS = "384"
     return:
       type: System.String
-    content.vb: Public Const RPL_MYPORTIS As String = Nothing
+    content.vb: Public Const RPL_MYPORTIS As String = "384"
   modifiers.csharp:
   - public
   - const
@@ -5502,10 +5507,10 @@ items:
   - smIRCL
   namespace: smIRCL
   syntax:
-    content: public const string ERR_NOSERVICEHOST = null
+    content: public const string ERR_NOSERVICEHOST = "492"
     return:
       type: System.String
-    content.vb: Public Const ERR_NOSERVICEHOST As String = Nothing
+    content.vb: Public Const ERR_NOSERVICEHOST As String = "492"
   modifiers.csharp:
   - public
   - const
@@ -5518,7 +5523,301 @@ references:
   name: smIRCL
   nameWithType: smIRCL
   fullName: smIRCL
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
 - uid: System.String
+  commentId: T:System.String
+  parent: System
   isExternal: true
   name: String
   nameWithType: String

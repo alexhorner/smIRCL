@@ -44,6 +44,8 @@ references:
   nameWithType: smIRCL
   fullName: smIRCL
 - uid: System.String
+  commentId: T:System.String
+  parent: System
   isExternal: true
   name: String
   nameWithType: String
@@ -54,3 +56,9 @@ references:
   name: IrcMessage
   nameWithType: IrcMessage
   fullName: smIRCL.IrcMessage
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
