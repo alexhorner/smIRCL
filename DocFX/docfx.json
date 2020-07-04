@@ -3,29 +3,29 @@
         {
             "src": [
                 {
-                    "files": [ "**/**.csproj" ],
-                    "src": ".."
+                    "src": "..",
+                    "files": [
+                        "**.csproj"
+                    ]
                 }
             ],
-            "dest": "reference",
+            "dest": "api",
             "disableGitFeatures": false,
-            "disableDefaultFilter": false,
-            "filter": "filterConfig.yml"
+            "disableDefaultFilter": false
         }
     ],
     "build": {
         "content": [
             {
                 "files": [
-                    "reference/**.yml",
-                    "reference/index.md"
+                    "api/**.yml",
+                    "api/index.md"
                 ]
             },
             {
                 "files": [
-                    "Concepts/toc.yml",
-                    "Concepts/**.md",
-                    "Concepts/**/toc.yml",
+                    "articles/**.md",
+                    "articles/**/toc.yml",
                     "toc.yml",
                     "*.md"
                 ]
@@ -33,15 +33,34 @@
         ],
         "resource": [
             {
-                "files": [ "images/**" ]
+                "files": [
+                    "images/**"
+                ]
+            }
+        ],
+        "overwrite": [
+            {
+                "files": [
+                    "apidoc/**.md"
+                ],
+                "exclude": [
+                    "obj/**",
+                    "_site/**"
+                ]
             }
         ],
         "dest": "../docs",
         "globalMetadataFiles": [],
         "fileMetadataFiles": [],
-        "template": [ "default" ],
+        "template": [
+            "default"
+        ],
         "postProcessors": [],
         "markdownEngineName": "markdig",
+        "globalMetadata": {
+            "_appFooter": "© 2020 Alexander Horner",
+            "_enableSearch": "true"
+        },
         "noLangKeyword": false,
         "keepFileLink": false,
         "cleanupCacheHistory": false,
