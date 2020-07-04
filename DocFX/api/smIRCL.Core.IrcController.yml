@@ -1,38 +1,38 @@
 ### YamlMime:ManagedReference
 items:
-- uid: smIRCL.IrcController
-  commentId: T:smIRCL.IrcController
+- uid: smIRCL.Core.IrcController
+  commentId: T:smIRCL.Core.IrcController
   id: IrcController
-  parent: smIRCL
+  parent: smIRCL.Core
   children:
-  - smIRCL.IrcController.#ctor(smIRCL.IrcConnector,System.Boolean)
-  - smIRCL.IrcController.AvailableCapabilities
-  - smIRCL.IrcController.Channels
-  - smIRCL.IrcController.Connector
-  - smIRCL.IrcController.Handlers
-  - smIRCL.IrcController.Host
-  - smIRCL.IrcController.Join(System.String)
-  - smIRCL.IrcController.NegotiatedCapabilities
-  - smIRCL.IrcController.Nick
-  - smIRCL.IrcController.Notice
-  - smIRCL.IrcController.Part(System.String)
-  - smIRCL.IrcController.Ping
-  - smIRCL.IrcController.PrivMsg
-  - smIRCL.IrcController.Quit(System.String)
-  - smIRCL.IrcController.RealName
-  - smIRCL.IrcController.SetNick(System.String)
-  - smIRCL.IrcController.SupportedChannelModes
-  - smIRCL.IrcController.SupportedChannelTypes
-  - smIRCL.IrcController.UserName
-  - smIRCL.IrcController.Users
-  - smIRCL.IrcController.Who(System.String)
-  - smIRCL.IrcController.WhoIs(System.String)
+  - smIRCL.Core.IrcController.#ctor(smIRCL.Core.IrcConnector,System.Boolean)
+  - smIRCL.Core.IrcController.AvailableCapabilities
+  - smIRCL.Core.IrcController.Channels
+  - smIRCL.Core.IrcController.Connector
+  - smIRCL.Core.IrcController.Handlers
+  - smIRCL.Core.IrcController.Host
+  - smIRCL.Core.IrcController.Join(System.String)
+  - smIRCL.Core.IrcController.NegotiatedCapabilities
+  - smIRCL.Core.IrcController.Nick
+  - smIRCL.Core.IrcController.Notice
+  - smIRCL.Core.IrcController.Part(System.String)
+  - smIRCL.Core.IrcController.Ping
+  - smIRCL.Core.IrcController.PrivMsg
+  - smIRCL.Core.IrcController.Quit(System.String)
+  - smIRCL.Core.IrcController.RealName
+  - smIRCL.Core.IrcController.SetNick(System.String)
+  - smIRCL.Core.IrcController.SupportedChannelModes
+  - smIRCL.Core.IrcController.SupportedChannelTypes
+  - smIRCL.Core.IrcController.UserName
+  - smIRCL.Core.IrcController.Users
+  - smIRCL.Core.IrcController.Who(System.String)
+  - smIRCL.Core.IrcController.WhoIs(System.String)
   langs:
   - csharp
   - vb
   name: IrcController
   nameWithType: IrcController
-  fullName: smIRCL.IrcController
+  fullName: smIRCL.Core.IrcController
   type: Class
   source:
     remote:
@@ -44,7 +44,7 @@ items:
     startLine: 13
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Core
   summary: "\nA controller which handles the ongoing state of an IRC server connection and allows control over that connection\n"
   example: []
   syntax:
@@ -66,16 +66,16 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: smIRCL.IrcController.Connector
-  commentId: P:smIRCL.IrcController.Connector
+- uid: smIRCL.Core.IrcController.Connector
+  commentId: P:smIRCL.Core.IrcController.Connector
   id: Connector
-  parent: smIRCL.IrcController
+  parent: smIRCL.Core.IrcController
   langs:
   - csharp
   - vb
   name: Connector
   nameWithType: IrcController.Connector
-  fullName: smIRCL.IrcController.Connector
+  fullName: smIRCL.Core.IrcController.Connector
   type: Property
   source:
     remote:
@@ -87,32 +87,32 @@ items:
     startLine: 20
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Core
   summary: "\nThe connector for handling and accessing the IRC server connection\n"
   example: []
   syntax:
     content: public IrcConnector Connector { get; }
     parameters: []
     return:
-      type: smIRCL.IrcConnector
+      type: smIRCL.Core.IrcConnector
     content.vb: Public ReadOnly Property Connector As IrcConnector
-  overload: smIRCL.IrcController.Connector*
+  overload: smIRCL.Core.IrcController.Connector*
   modifiers.csharp:
   - public
   - get
   modifiers.vb:
   - Public
   - ReadOnly
-- uid: smIRCL.IrcController.Users
-  commentId: F:smIRCL.IrcController.Users
+- uid: smIRCL.Core.IrcController.Users
+  commentId: F:smIRCL.Core.IrcController.Users
   id: Users
-  parent: smIRCL.IrcController
+  parent: smIRCL.Core.IrcController
   langs:
   - csharp
   - vb
   name: Users
   nameWithType: IrcController.Users
-  fullName: smIRCL.IrcController.Users
+  fullName: smIRCL.Core.IrcController.Users
   type: Field
   source:
     remote:
@@ -124,7 +124,7 @@ items:
     startLine: 24
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Core
   summary: "\nA list of Users who are within scope of the client\n"
   example: []
   syntax:
@@ -138,16 +138,16 @@ items:
   modifiers.vb:
   - Public
   - ReadOnly
-- uid: smIRCL.IrcController.Channels
-  commentId: F:smIRCL.IrcController.Channels
+- uid: smIRCL.Core.IrcController.Channels
+  commentId: F:smIRCL.Core.IrcController.Channels
   id: Channels
-  parent: smIRCL.IrcController
+  parent: smIRCL.Core.IrcController
   langs:
   - csharp
   - vb
   name: Channels
   nameWithType: IrcController.Channels
-  fullName: smIRCL.IrcController.Channels
+  fullName: smIRCL.Core.IrcController.Channels
   type: Field
   source:
     remote:
@@ -159,7 +159,7 @@ items:
     startLine: 28
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Core
   summary: "\nA list of channels currently joined by the client\n"
   example: []
   syntax:
@@ -173,16 +173,16 @@ items:
   modifiers.vb:
   - Public
   - ReadOnly
-- uid: smIRCL.IrcController.Nick
-  commentId: P:smIRCL.IrcController.Nick
+- uid: smIRCL.Core.IrcController.Nick
+  commentId: P:smIRCL.Core.IrcController.Nick
   id: Nick
-  parent: smIRCL.IrcController
+  parent: smIRCL.Core.IrcController
   langs:
   - csharp
   - vb
   name: Nick
   nameWithType: IrcController.Nick
-  fullName: smIRCL.IrcController.Nick
+  fullName: smIRCL.Core.IrcController.Nick
   type: Property
   source:
     remote:
@@ -194,7 +194,7 @@ items:
     startLine: 33
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Core
   summary: "\nThe Nick of the client\n"
   example: []
   syntax:
@@ -203,23 +203,23 @@ items:
     return:
       type: System.String
     content.vb: Public ReadOnly Property Nick As String
-  overload: smIRCL.IrcController.Nick*
+  overload: smIRCL.Core.IrcController.Nick*
   modifiers.csharp:
   - public
   - get
   modifiers.vb:
   - Public
   - ReadOnly
-- uid: smIRCL.IrcController.UserName
-  commentId: P:smIRCL.IrcController.UserName
+- uid: smIRCL.Core.IrcController.UserName
+  commentId: P:smIRCL.Core.IrcController.UserName
   id: UserName
-  parent: smIRCL.IrcController
+  parent: smIRCL.Core.IrcController
   langs:
   - csharp
   - vb
   name: UserName
   nameWithType: IrcController.UserName
-  fullName: smIRCL.IrcController.UserName
+  fullName: smIRCL.Core.IrcController.UserName
   type: Property
   source:
     remote:
@@ -231,7 +231,7 @@ items:
     startLine: 37
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Core
   summary: "\nThe User name of the client\n"
   example: []
   syntax:
@@ -240,23 +240,23 @@ items:
     return:
       type: System.String
     content.vb: Public ReadOnly Property UserName As String
-  overload: smIRCL.IrcController.UserName*
+  overload: smIRCL.Core.IrcController.UserName*
   modifiers.csharp:
   - public
   - get
   modifiers.vb:
   - Public
   - ReadOnly
-- uid: smIRCL.IrcController.RealName
-  commentId: P:smIRCL.IrcController.RealName
+- uid: smIRCL.Core.IrcController.RealName
+  commentId: P:smIRCL.Core.IrcController.RealName
   id: RealName
-  parent: smIRCL.IrcController
+  parent: smIRCL.Core.IrcController
   langs:
   - csharp
   - vb
   name: RealName
   nameWithType: IrcController.RealName
-  fullName: smIRCL.IrcController.RealName
+  fullName: smIRCL.Core.IrcController.RealName
   type: Property
   source:
     remote:
@@ -268,7 +268,7 @@ items:
     startLine: 41
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Core
   summary: "\nThe Real name (GECOS) of the client\n"
   example: []
   syntax:
@@ -277,23 +277,23 @@ items:
     return:
       type: System.String
     content.vb: Public ReadOnly Property RealName As String
-  overload: smIRCL.IrcController.RealName*
+  overload: smIRCL.Core.IrcController.RealName*
   modifiers.csharp:
   - public
   - get
   modifiers.vb:
   - Public
   - ReadOnly
-- uid: smIRCL.IrcController.Host
-  commentId: P:smIRCL.IrcController.Host
+- uid: smIRCL.Core.IrcController.Host
+  commentId: P:smIRCL.Core.IrcController.Host
   id: Host
-  parent: smIRCL.IrcController
+  parent: smIRCL.Core.IrcController
   langs:
   - csharp
   - vb
   name: Host
   nameWithType: IrcController.Host
-  fullName: smIRCL.IrcController.Host
+  fullName: smIRCL.Core.IrcController.Host
   type: Property
   source:
     remote:
@@ -305,7 +305,7 @@ items:
     startLine: 45
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Core
   summary: "\nThe Hostname or Mask of the client\n"
   example: []
   syntax:
@@ -314,23 +314,23 @@ items:
     return:
       type: System.String
     content.vb: Public ReadOnly Property Host As String
-  overload: smIRCL.IrcController.Host*
+  overload: smIRCL.Core.IrcController.Host*
   modifiers.csharp:
   - public
   - get
   modifiers.vb:
   - Public
   - ReadOnly
-- uid: smIRCL.IrcController.SupportedChannelTypes
-  commentId: F:smIRCL.IrcController.SupportedChannelTypes
+- uid: smIRCL.Core.IrcController.SupportedChannelTypes
+  commentId: F:smIRCL.Core.IrcController.SupportedChannelTypes
   id: SupportedChannelTypes
-  parent: smIRCL.IrcController
+  parent: smIRCL.Core.IrcController
   langs:
   - csharp
   - vb
   name: SupportedChannelTypes
   nameWithType: IrcController.SupportedChannelTypes
-  fullName: smIRCL.IrcController.SupportedChannelTypes
+  fullName: smIRCL.Core.IrcController.SupportedChannelTypes
   type: Field
   source:
     remote:
@@ -342,7 +342,7 @@ items:
     startLine: 50
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Core
   summary: "\nThe channel characters which are valid for the connected server\n"
   example: []
   syntax:
@@ -354,16 +354,16 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: smIRCL.IrcController.SupportedChannelModes
-  commentId: F:smIRCL.IrcController.SupportedChannelModes
+- uid: smIRCL.Core.IrcController.SupportedChannelModes
+  commentId: F:smIRCL.Core.IrcController.SupportedChannelModes
   id: SupportedChannelModes
-  parent: smIRCL.IrcController
+  parent: smIRCL.Core.IrcController
   langs:
   - csharp
   - vb
   name: SupportedChannelModes
   nameWithType: IrcController.SupportedChannelModes
-  fullName: smIRCL.IrcController.SupportedChannelModes
+  fullName: smIRCL.Core.IrcController.SupportedChannelModes
   type: Field
   source:
     remote:
@@ -375,28 +375,28 @@ items:
     startLine: 54
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Core
   summary: "\nThe modes supported for channels for the connected server\n"
   example: []
   syntax:
     content: public SupportedChannelModes SupportedChannelModes
     return:
-      type: SupportedChannelModes
+      type: smIRCL.Core.SupportedChannelModes
     content.vb: Public SupportedChannelModes As SupportedChannelModes
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: smIRCL.IrcController.AvailableCapabilities
-  commentId: F:smIRCL.IrcController.AvailableCapabilities
+- uid: smIRCL.Core.IrcController.AvailableCapabilities
+  commentId: F:smIRCL.Core.IrcController.AvailableCapabilities
   id: AvailableCapabilities
-  parent: smIRCL.IrcController
+  parent: smIRCL.Core.IrcController
   langs:
   - csharp
   - vb
   name: AvailableCapabilities
   nameWithType: IrcController.AvailableCapabilities
-  fullName: smIRCL.IrcController.AvailableCapabilities
+  fullName: smIRCL.Core.IrcController.AvailableCapabilities
   type: Field
   source:
     remote:
@@ -408,7 +408,7 @@ items:
     startLine: 59
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Core
   summary: "\nThe IRCv3 capabilities supported by the server\n"
   example: []
   syntax:
@@ -420,16 +420,16 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: smIRCL.IrcController.NegotiatedCapabilities
-  commentId: F:smIRCL.IrcController.NegotiatedCapabilities
+- uid: smIRCL.Core.IrcController.NegotiatedCapabilities
+  commentId: F:smIRCL.Core.IrcController.NegotiatedCapabilities
   id: NegotiatedCapabilities
-  parent: smIRCL.IrcController
+  parent: smIRCL.Core.IrcController
   langs:
   - csharp
   - vb
   name: NegotiatedCapabilities
   nameWithType: IrcController.NegotiatedCapabilities
-  fullName: smIRCL.IrcController.NegotiatedCapabilities
+  fullName: smIRCL.Core.IrcController.NegotiatedCapabilities
   type: Field
   source:
     remote:
@@ -441,7 +441,7 @@ items:
     startLine: 63
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Core
   summary: "\nThe IRCv3 capabilities negotiated and activated with the server\n"
   example: []
   syntax:
@@ -453,16 +453,16 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: smIRCL.IrcController.Handlers
-  commentId: F:smIRCL.IrcController.Handlers
+- uid: smIRCL.Core.IrcController.Handlers
+  commentId: F:smIRCL.Core.IrcController.Handlers
   id: Handlers
-  parent: smIRCL.IrcController
+  parent: smIRCL.Core.IrcController
   langs:
   - csharp
   - vb
   name: Handlers
   nameWithType: IrcController.Handlers
-  fullName: smIRCL.IrcController.Handlers
+  fullName: smIRCL.Core.IrcController.Handlers
   type: Field
   source:
     remote:
@@ -474,28 +474,28 @@ items:
     startLine: 80
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Core
   summary: "\nThe collection of handlers which handle commands and numerics\n"
   example: []
   syntax:
     content: public IrcHandlerList Handlers
     return:
-      type: smIRCL.IrcHandlerList
+      type: smIRCL.Core.IrcHandlerList
     content.vb: Public Handlers As IrcHandlerList
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: smIRCL.IrcController.PrivMsg
-  commentId: E:smIRCL.IrcController.PrivMsg
+- uid: smIRCL.Core.IrcController.PrivMsg
+  commentId: E:smIRCL.Core.IrcController.PrivMsg
   id: PrivMsg
-  parent: smIRCL.IrcController
+  parent: smIRCL.Core.IrcController
   langs:
   - csharp
   - vb
   name: PrivMsg
   nameWithType: IrcController.PrivMsg
-  fullName: smIRCL.IrcController.PrivMsg
+  fullName: smIRCL.Core.IrcController.PrivMsg
   type: Event
   source:
     remote:
@@ -507,28 +507,28 @@ items:
     startLine: 89
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Core
   summary: "\nFired when a PRIVMSG is received\n"
   example: []
   syntax:
     content: public event IrcController.IrcMessageHandler PrivMsg
     return:
-      type: smIRCL.IrcController.IrcMessageHandler
+      type: smIRCL.Core.IrcController.IrcMessageHandler
     content.vb: Public Event PrivMsg As IrcController.IrcMessageHandler
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: smIRCL.IrcController.Notice
-  commentId: E:smIRCL.IrcController.Notice
+- uid: smIRCL.Core.IrcController.Notice
+  commentId: E:smIRCL.Core.IrcController.Notice
   id: Notice
-  parent: smIRCL.IrcController
+  parent: smIRCL.Core.IrcController
   langs:
   - csharp
   - vb
   name: Notice
   nameWithType: IrcController.Notice
-  fullName: smIRCL.IrcController.Notice
+  fullName: smIRCL.Core.IrcController.Notice
   type: Event
   source:
     remote:
@@ -540,28 +540,28 @@ items:
     startLine: 94
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Core
   summary: "\nFired when a NOTICE is received\n"
   example: []
   syntax:
     content: public event IrcController.IrcMessageHandler Notice
     return:
-      type: smIRCL.IrcController.IrcMessageHandler
+      type: smIRCL.Core.IrcController.IrcMessageHandler
     content.vb: Public Event Notice As IrcController.IrcMessageHandler
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: smIRCL.IrcController.Ping
-  commentId: E:smIRCL.IrcController.Ping
+- uid: smIRCL.Core.IrcController.Ping
+  commentId: E:smIRCL.Core.IrcController.Ping
   id: Ping
-  parent: smIRCL.IrcController
+  parent: smIRCL.Core.IrcController
   langs:
   - csharp
   - vb
   name: Ping
   nameWithType: IrcController.Ping
-  fullName: smIRCL.IrcController.Ping
+  fullName: smIRCL.Core.IrcController.Ping
   type: Event
   source:
     remote:
@@ -573,28 +573,28 @@ items:
     startLine: 99
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Core
   summary: "\nFired when a PING is received\n"
   example: []
   syntax:
     content: public event IrcController.IrcMessageHandler Ping
     return:
-      type: smIRCL.IrcController.IrcMessageHandler
+      type: smIRCL.Core.IrcController.IrcMessageHandler
     content.vb: Public Event Ping As IrcController.IrcMessageHandler
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: smIRCL.IrcController.#ctor(smIRCL.IrcConnector,System.Boolean)
-  commentId: M:smIRCL.IrcController.#ctor(smIRCL.IrcConnector,System.Boolean)
-  id: '#ctor(smIRCL.IrcConnector,System.Boolean)'
-  parent: smIRCL.IrcController
+- uid: smIRCL.Core.IrcController.#ctor(smIRCL.Core.IrcConnector,System.Boolean)
+  commentId: M:smIRCL.Core.IrcController.#ctor(smIRCL.Core.IrcConnector,System.Boolean)
+  id: '#ctor(smIRCL.Core.IrcConnector,System.Boolean)'
+  parent: smIRCL.Core.IrcController
   langs:
   - csharp
   - vb
   name: IrcController(IrcConnector, Boolean)
   nameWithType: IrcController.IrcController(IrcConnector, Boolean)
-  fullName: smIRCL.IrcController.IrcController(smIRCL.IrcConnector, System.Boolean)
+  fullName: smIRCL.Core.IrcController.IrcController(smIRCL.Core.IrcConnector, System.Boolean)
   type: Constructor
   source:
     remote:
@@ -606,34 +606,34 @@ items:
     startLine: 116
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Core
   summary: "\nInstantiates a new controller\n"
   example: []
   syntax:
     content: public IrcController(IrcConnector connector, bool registerInternalHandlers = true)
     parameters:
     - id: connector
-      type: smIRCL.IrcConnector
+      type: smIRCL.Core.IrcConnector
       description: The connector for connecting to the IRC server and retrieving the configuration
     - id: registerInternalHandlers
       type: System.Boolean
       description: Whether to register all the internal state handlers
     content.vb: Public Sub New(connector As IrcConnector, registerInternalHandlers As Boolean = True)
-  overload: smIRCL.IrcController.#ctor*
+  overload: smIRCL.Core.IrcController.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: smIRCL.IrcController.Quit(System.String)
-  commentId: M:smIRCL.IrcController.Quit(System.String)
+- uid: smIRCL.Core.IrcController.Quit(System.String)
+  commentId: M:smIRCL.Core.IrcController.Quit(System.String)
   id: Quit(System.String)
-  parent: smIRCL.IrcController
+  parent: smIRCL.Core.IrcController
   langs:
   - csharp
   - vb
   name: Quit(String)
   nameWithType: IrcController.Quit(String)
-  fullName: smIRCL.IrcController.Quit(System.String)
+  fullName: smIRCL.Core.IrcController.Quit(System.String)
   type: Method
   source:
     remote:
@@ -645,7 +645,7 @@ items:
     startLine: 205
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Core
   summary: "\nSend a QUIT to the server to safely disconnect\n"
   example: []
   syntax:
@@ -655,21 +655,21 @@ items:
       type: System.String
       description: The message for quitting
     content.vb: Public Sub Quit(quitMessage As String = "Client quit")
-  overload: smIRCL.IrcController.Quit*
+  overload: smIRCL.Core.IrcController.Quit*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: smIRCL.IrcController.SetNick(System.String)
-  commentId: M:smIRCL.IrcController.SetNick(System.String)
+- uid: smIRCL.Core.IrcController.SetNick(System.String)
+  commentId: M:smIRCL.Core.IrcController.SetNick(System.String)
   id: SetNick(System.String)
-  parent: smIRCL.IrcController
+  parent: smIRCL.Core.IrcController
   langs:
   - csharp
   - vb
   name: SetNick(String)
   nameWithType: IrcController.SetNick(String)
-  fullName: smIRCL.IrcController.SetNick(System.String)
+  fullName: smIRCL.Core.IrcController.SetNick(System.String)
   type: Method
   source:
     remote:
@@ -681,7 +681,7 @@ items:
     startLine: 216
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Core
   summary: "\nSet a new NICK\n"
   example: []
   syntax:
@@ -691,21 +691,21 @@ items:
       type: System.String
       description: The NICK to request
     content.vb: Public Sub SetNick(newNick As String)
-  overload: smIRCL.IrcController.SetNick*
+  overload: smIRCL.Core.IrcController.SetNick*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: smIRCL.IrcController.Who(System.String)
-  commentId: M:smIRCL.IrcController.Who(System.String)
+- uid: smIRCL.Core.IrcController.Who(System.String)
+  commentId: M:smIRCL.Core.IrcController.Who(System.String)
   id: Who(System.String)
-  parent: smIRCL.IrcController
+  parent: smIRCL.Core.IrcController
   langs:
   - csharp
   - vb
   name: Who(String)
   nameWithType: IrcController.Who(String)
-  fullName: smIRCL.IrcController.Who(System.String)
+  fullName: smIRCL.Core.IrcController.Who(System.String)
   type: Method
   source:
     remote:
@@ -717,7 +717,7 @@ items:
     startLine: 225
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Core
   summary: "\nRequest WHO information on a Channel or Nick to update state cache\n"
   example: []
   syntax:
@@ -727,21 +727,21 @@ items:
       type: System.String
       description: The Channel or Nick to update
     content.vb: Public Sub Who(channelOrNick As String)
-  overload: smIRCL.IrcController.Who*
+  overload: smIRCL.Core.IrcController.Who*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: smIRCL.IrcController.WhoIs(System.String)
-  commentId: M:smIRCL.IrcController.WhoIs(System.String)
+- uid: smIRCL.Core.IrcController.WhoIs(System.String)
+  commentId: M:smIRCL.Core.IrcController.WhoIs(System.String)
   id: WhoIs(System.String)
-  parent: smIRCL.IrcController
+  parent: smIRCL.Core.IrcController
   langs:
   - csharp
   - vb
   name: WhoIs(String)
   nameWithType: IrcController.WhoIs(String)
-  fullName: smIRCL.IrcController.WhoIs(System.String)
+  fullName: smIRCL.Core.IrcController.WhoIs(System.String)
   type: Method
   source:
     remote:
@@ -753,7 +753,7 @@ items:
     startLine: 234
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Core
   summary: "\nRequest WHOIS information on a Nick to update state cache\n"
   example: []
   syntax:
@@ -763,21 +763,21 @@ items:
       type: System.String
       description: The Nick to update
     content.vb: Public Sub WhoIs(nick As String)
-  overload: smIRCL.IrcController.WhoIs*
+  overload: smIRCL.Core.IrcController.WhoIs*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: smIRCL.IrcController.Join(System.String)
-  commentId: M:smIRCL.IrcController.Join(System.String)
+- uid: smIRCL.Core.IrcController.Join(System.String)
+  commentId: M:smIRCL.Core.IrcController.Join(System.String)
   id: Join(System.String)
-  parent: smIRCL.IrcController
+  parent: smIRCL.Core.IrcController
   langs:
   - csharp
   - vb
   name: Join(String)
   nameWithType: IrcController.Join(String)
-  fullName: smIRCL.IrcController.Join(System.String)
+  fullName: smIRCL.Core.IrcController.Join(System.String)
   type: Method
   source:
     remote:
@@ -789,7 +789,7 @@ items:
     startLine: 243
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Core
   summary: "\nRequest a channel JOIN\n"
   example: []
   syntax:
@@ -799,21 +799,21 @@ items:
       type: System.String
       description: The Channel to join
     content.vb: Public Sub Join(channelName As String)
-  overload: smIRCL.IrcController.Join*
+  overload: smIRCL.Core.IrcController.Join*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: smIRCL.IrcController.Part(System.String)
-  commentId: M:smIRCL.IrcController.Part(System.String)
+- uid: smIRCL.Core.IrcController.Part(System.String)
+  commentId: M:smIRCL.Core.IrcController.Part(System.String)
   id: Part(System.String)
-  parent: smIRCL.IrcController
+  parent: smIRCL.Core.IrcController
   langs:
   - csharp
   - vb
   name: Part(String)
   nameWithType: IrcController.Part(String)
-  fullName: smIRCL.IrcController.Part(System.String)
+  fullName: smIRCL.Core.IrcController.Part(System.String)
   type: Method
   source:
     remote:
@@ -825,7 +825,7 @@ items:
     startLine: 260
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Core
   summary: "\nRequest a channel PART\n"
   example: []
   syntax:
@@ -835,17 +835,17 @@ items:
       type: System.String
       description: The Channel to leave
     content.vb: Public Sub Part(channelName As String)
-  overload: smIRCL.IrcController.Part*
+  overload: smIRCL.Core.IrcController.Part*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
 references:
-- uid: smIRCL
-  commentId: N:smIRCL
-  name: smIRCL
-  nameWithType: smIRCL
-  fullName: smIRCL
+- uid: smIRCL.Core
+  commentId: N:smIRCL.Core
+  name: smIRCL.Core
+  nameWithType: smIRCL.Core
+  fullName: smIRCL.Core
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -1138,17 +1138,17 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: smIRCL.IrcController.Connector*
-  commentId: Overload:smIRCL.IrcController.Connector
+- uid: smIRCL.Core.IrcController.Connector*
+  commentId: Overload:smIRCL.Core.IrcController.Connector
   name: Connector
   nameWithType: IrcController.Connector
-  fullName: smIRCL.IrcController.Connector
-- uid: smIRCL.IrcConnector
-  commentId: T:smIRCL.IrcConnector
-  parent: smIRCL
+  fullName: smIRCL.Core.IrcController.Connector
+- uid: smIRCL.Core.IrcConnector
+  commentId: T:smIRCL.Core.IrcConnector
+  parent: smIRCL.Core
   name: IrcConnector
   nameWithType: IrcConnector
-  fullName: smIRCL.IrcConnector
+  fullName: smIRCL.Core.IrcConnector
 - uid: System.Collections.Generic.List{smIRCL.ServerEntities.IrcUser}
   commentId: T:System.Collections.Generic.List{smIRCL.ServerEntities.IrcUser}
   parent: System.Collections.Generic
@@ -1278,11 +1278,11 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: smIRCL.IrcController.Nick*
-  commentId: Overload:smIRCL.IrcController.Nick
+- uid: smIRCL.Core.IrcController.Nick*
+  commentId: Overload:smIRCL.Core.IrcController.Nick
   name: Nick
   nameWithType: IrcController.Nick
-  fullName: smIRCL.IrcController.Nick
+  fullName: smIRCL.Core.IrcController.Nick
 - uid: System.String
   commentId: T:System.String
   parent: System
@@ -1290,21 +1290,21 @@ references:
   name: String
   nameWithType: String
   fullName: System.String
-- uid: smIRCL.IrcController.UserName*
-  commentId: Overload:smIRCL.IrcController.UserName
+- uid: smIRCL.Core.IrcController.UserName*
+  commentId: Overload:smIRCL.Core.IrcController.UserName
   name: UserName
   nameWithType: IrcController.UserName
-  fullName: smIRCL.IrcController.UserName
-- uid: smIRCL.IrcController.RealName*
-  commentId: Overload:smIRCL.IrcController.RealName
+  fullName: smIRCL.Core.IrcController.UserName
+- uid: smIRCL.Core.IrcController.RealName*
+  commentId: Overload:smIRCL.Core.IrcController.RealName
   name: RealName
   nameWithType: IrcController.RealName
-  fullName: smIRCL.IrcController.RealName
-- uid: smIRCL.IrcController.Host*
-  commentId: Overload:smIRCL.IrcController.Host
+  fullName: smIRCL.Core.IrcController.RealName
+- uid: smIRCL.Core.IrcController.Host*
+  commentId: Overload:smIRCL.Core.IrcController.Host
   name: Host
   nameWithType: IrcController.Host
-  fullName: smIRCL.IrcController.Host
+  fullName: smIRCL.Core.IrcController.Host
 - uid: System.Collections.Generic.List{System.Char}
   commentId: T:System.Collections.Generic.List{System.Char}
   parent: System.Collections.Generic
@@ -1349,12 +1349,12 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: SupportedChannelModes
-  commentId: '!:SupportedChannelModes'
-  isExternal: true
+- uid: smIRCL.Core.SupportedChannelModes
+  commentId: T:smIRCL.Core.SupportedChannelModes
+  parent: smIRCL.Core
   name: SupportedChannelModes
   nameWithType: SupportedChannelModes
-  fullName: SupportedChannelModes
+  fullName: smIRCL.Core.SupportedChannelModes
 - uid: System.Collections.Generic.List{System.Collections.Generic.KeyValuePair{System.String,System.Collections.Generic.List{System.String}}}
   commentId: T:System.Collections.Generic.List{System.Collections.Generic.KeyValuePair{System.String,System.Collections.Generic.List{System.String}}}
   parent: System.Collections.Generic
@@ -1503,23 +1503,23 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: smIRCL.IrcHandlerList
-  commentId: T:smIRCL.IrcHandlerList
-  parent: smIRCL
+- uid: smIRCL.Core.IrcHandlerList
+  commentId: T:smIRCL.Core.IrcHandlerList
+  parent: smIRCL.Core
   name: IrcHandlerList
   nameWithType: IrcHandlerList
-  fullName: smIRCL.IrcHandlerList
-- uid: smIRCL.IrcController.IrcMessageHandler
-  commentId: T:smIRCL.IrcController.IrcMessageHandler
-  parent: smIRCL
+  fullName: smIRCL.Core.IrcHandlerList
+- uid: smIRCL.Core.IrcController.IrcMessageHandler
+  commentId: T:smIRCL.Core.IrcController.IrcMessageHandler
+  parent: smIRCL.Core
   name: IrcController.IrcMessageHandler
   nameWithType: IrcController.IrcMessageHandler
-  fullName: smIRCL.IrcController.IrcMessageHandler
-- uid: smIRCL.IrcController.#ctor*
-  commentId: Overload:smIRCL.IrcController.#ctor
+  fullName: smIRCL.Core.IrcController.IrcMessageHandler
+- uid: smIRCL.Core.IrcController.#ctor*
+  commentId: Overload:smIRCL.Core.IrcController.#ctor
   name: IrcController
   nameWithType: IrcController.IrcController
-  fullName: smIRCL.IrcController.IrcController
+  fullName: smIRCL.Core.IrcController.IrcController
 - uid: System.Boolean
   commentId: T:System.Boolean
   parent: System
@@ -1527,33 +1527,33 @@ references:
   name: Boolean
   nameWithType: Boolean
   fullName: System.Boolean
-- uid: smIRCL.IrcController.Quit*
-  commentId: Overload:smIRCL.IrcController.Quit
+- uid: smIRCL.Core.IrcController.Quit*
+  commentId: Overload:smIRCL.Core.IrcController.Quit
   name: Quit
   nameWithType: IrcController.Quit
-  fullName: smIRCL.IrcController.Quit
-- uid: smIRCL.IrcController.SetNick*
-  commentId: Overload:smIRCL.IrcController.SetNick
+  fullName: smIRCL.Core.IrcController.Quit
+- uid: smIRCL.Core.IrcController.SetNick*
+  commentId: Overload:smIRCL.Core.IrcController.SetNick
   name: SetNick
   nameWithType: IrcController.SetNick
-  fullName: smIRCL.IrcController.SetNick
-- uid: smIRCL.IrcController.Who*
-  commentId: Overload:smIRCL.IrcController.Who
+  fullName: smIRCL.Core.IrcController.SetNick
+- uid: smIRCL.Core.IrcController.Who*
+  commentId: Overload:smIRCL.Core.IrcController.Who
   name: Who
   nameWithType: IrcController.Who
-  fullName: smIRCL.IrcController.Who
-- uid: smIRCL.IrcController.WhoIs*
-  commentId: Overload:smIRCL.IrcController.WhoIs
+  fullName: smIRCL.Core.IrcController.Who
+- uid: smIRCL.Core.IrcController.WhoIs*
+  commentId: Overload:smIRCL.Core.IrcController.WhoIs
   name: WhoIs
   nameWithType: IrcController.WhoIs
-  fullName: smIRCL.IrcController.WhoIs
-- uid: smIRCL.IrcController.Join*
-  commentId: Overload:smIRCL.IrcController.Join
+  fullName: smIRCL.Core.IrcController.WhoIs
+- uid: smIRCL.Core.IrcController.Join*
+  commentId: Overload:smIRCL.Core.IrcController.Join
   name: Join
   nameWithType: IrcController.Join
-  fullName: smIRCL.IrcController.Join
-- uid: smIRCL.IrcController.Part*
-  commentId: Overload:smIRCL.IrcController.Part
+  fullName: smIRCL.Core.IrcController.Join
+- uid: smIRCL.Core.IrcController.Part*
+  commentId: Overload:smIRCL.Core.IrcController.Part
   name: Part
   nameWithType: IrcController.Part
-  fullName: smIRCL.IrcController.Part
+  fullName: smIRCL.Core.IrcController.Part

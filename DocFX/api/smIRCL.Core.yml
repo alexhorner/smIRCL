@@ -4,6 +4,14 @@ items:
   commentId: N:smIRCL.Core
   id: smIRCL.Core
   children:
+  - smIRCL.Core.IrcConnector
+  - smIRCL.Core.IrcConnector.CommunicationFailedHandler
+  - smIRCL.Core.IrcConnector.ConnectionStateEventHandler
+  - smIRCL.Core.IrcConnector.MessageHandler
+  - smIRCL.Core.IrcConnector.MessageTransmitHandler
+  - smIRCL.Core.IrcController
+  - smIRCL.Core.IrcController.IrcMessageHandler
+  - smIRCL.Core.IrcHandlerList
   - smIRCL.Core.SupportedChannelModes
   langs:
   - csharp
@@ -15,8 +23,62 @@ items:
   assemblies:
   - smIRCL
 references:
+- uid: smIRCL.Core.IrcConnector
+  commentId: T:smIRCL.Core.IrcConnector
+  parent: smIRCL.Core
+  name: IrcConnector
+  nameWithType: IrcConnector
+  fullName: smIRCL.Core.IrcConnector
+- uid: smIRCL.Core.IrcConnector.ConnectionStateEventHandler
+  commentId: T:smIRCL.Core.IrcConnector.ConnectionStateEventHandler
+  parent: smIRCL.Core
+  name: IrcConnector.ConnectionStateEventHandler
+  nameWithType: IrcConnector.ConnectionStateEventHandler
+  fullName: smIRCL.Core.IrcConnector.ConnectionStateEventHandler
+- uid: smIRCL.Core.IrcConnector.MessageTransmitHandler
+  commentId: T:smIRCL.Core.IrcConnector.MessageTransmitHandler
+  parent: smIRCL.Core
+  name: IrcConnector.MessageTransmitHandler
+  nameWithType: IrcConnector.MessageTransmitHandler
+  fullName: smIRCL.Core.IrcConnector.MessageTransmitHandler
+- uid: smIRCL.Core.IrcConnector.MessageHandler
+  commentId: T:smIRCL.Core.IrcConnector.MessageHandler
+  parent: smIRCL.Core
+  name: IrcConnector.MessageHandler
+  nameWithType: IrcConnector.MessageHandler
+  fullName: smIRCL.Core.IrcConnector.MessageHandler
+- uid: smIRCL.Core.IrcConnector.CommunicationFailedHandler
+  commentId: T:smIRCL.Core.IrcConnector.CommunicationFailedHandler
+  parent: smIRCL.Core
+  name: IrcConnector.CommunicationFailedHandler
+  nameWithType: IrcConnector.CommunicationFailedHandler
+  fullName: smIRCL.Core.IrcConnector.CommunicationFailedHandler
+- uid: smIRCL.Core.IrcController
+  commentId: T:smIRCL.Core.IrcController
+  parent: smIRCL.Core
+  name: IrcController
+  nameWithType: IrcController
+  fullName: smIRCL.Core.IrcController
+- uid: smIRCL.Core.IrcController.IrcMessageHandler
+  commentId: T:smIRCL.Core.IrcController.IrcMessageHandler
+  parent: smIRCL.Core
+  name: IrcController.IrcMessageHandler
+  nameWithType: IrcController.IrcMessageHandler
+  fullName: smIRCL.Core.IrcController.IrcMessageHandler
+- uid: smIRCL.Core.IrcHandlerList
+  commentId: T:smIRCL.Core.IrcHandlerList
+  parent: smIRCL.Core
+  name: IrcHandlerList
+  nameWithType: IrcHandlerList
+  fullName: smIRCL.Core.IrcHandlerList
 - uid: smIRCL.Core.SupportedChannelModes
   commentId: T:smIRCL.Core.SupportedChannelModes
+  parent: smIRCL.Core
   name: SupportedChannelModes
   nameWithType: SupportedChannelModes
   fullName: smIRCL.Core.SupportedChannelModes
+- uid: smIRCL.Core
+  commentId: N:smIRCL.Core
+  name: smIRCL.Core
+  nameWithType: smIRCL.Core
+  fullName: smIRCL.Core

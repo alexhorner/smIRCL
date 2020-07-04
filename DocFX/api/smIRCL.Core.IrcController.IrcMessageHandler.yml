@@ -1,16 +1,16 @@
 ### YamlMime:ManagedReference
 items:
-- uid: smIRCL.IrcController.IrcMessageHandler
-  commentId: T:smIRCL.IrcController.IrcMessageHandler
+- uid: smIRCL.Core.IrcController.IrcMessageHandler
+  commentId: T:smIRCL.Core.IrcController.IrcMessageHandler
   id: IrcController.IrcMessageHandler
-  parent: smIRCL
+  parent: smIRCL.Core
   children: []
   langs:
   - csharp
   - vb
   name: IrcController.IrcMessageHandler
   nameWithType: IrcController.IrcMessageHandler
-  fullName: smIRCL.IrcController.IrcMessageHandler
+  fullName: smIRCL.Core.IrcController.IrcMessageHandler
   type: Delegate
   source:
     remote:
@@ -22,17 +22,17 @@ items:
     startLine: 76
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Core
   summary: "\nAn IRC message handler for commands and numerics\n"
   example: []
   syntax:
     content: public delegate void IrcMessageHandler(IrcConnector connector, IrcController controller, IrcMessage message);
     parameters:
     - id: connector
-      type: smIRCL.IrcConnector
+      type: smIRCL.Core.IrcConnector
       description: The connector which fired the message
     - id: controller
-      type: smIRCL.IrcController
+      type: smIRCL.Core.IrcController
       description: The controller handling the message
     - id: message
       type: smIRCL.ServerEntities.IrcMessage
@@ -45,23 +45,23 @@ items:
   - Public
   - Delegate
 references:
-- uid: smIRCL
-  commentId: N:smIRCL
-  name: smIRCL
-  nameWithType: smIRCL
-  fullName: smIRCL
-- uid: smIRCL.IrcConnector
-  commentId: T:smIRCL.IrcConnector
-  parent: smIRCL
+- uid: smIRCL.Core
+  commentId: N:smIRCL.Core
+  name: smIRCL.Core
+  nameWithType: smIRCL.Core
+  fullName: smIRCL.Core
+- uid: smIRCL.Core.IrcConnector
+  commentId: T:smIRCL.Core.IrcConnector
+  parent: smIRCL.Core
   name: IrcConnector
   nameWithType: IrcConnector
-  fullName: smIRCL.IrcConnector
-- uid: smIRCL.IrcController
-  commentId: T:smIRCL.IrcController
-  parent: smIRCL
+  fullName: smIRCL.Core.IrcConnector
+- uid: smIRCL.Core.IrcController
+  commentId: T:smIRCL.Core.IrcController
+  parent: smIRCL.Core
   name: IrcController
   nameWithType: IrcController
-  fullName: smIRCL.IrcController
+  fullName: smIRCL.Core.IrcController
 - uid: smIRCL.ServerEntities.IrcMessage
   commentId: T:smIRCL.ServerEntities.IrcMessage
   parent: smIRCL.ServerEntities

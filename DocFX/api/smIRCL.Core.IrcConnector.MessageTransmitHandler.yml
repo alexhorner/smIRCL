@@ -1,16 +1,16 @@
 ### YamlMime:ManagedReference
 items:
-- uid: smIRCL.IrcConnector.MessageTransmitHandler
-  commentId: T:smIRCL.IrcConnector.MessageTransmitHandler
+- uid: smIRCL.Core.IrcConnector.MessageTransmitHandler
+  commentId: T:smIRCL.Core.IrcConnector.MessageTransmitHandler
   id: IrcConnector.MessageTransmitHandler
-  parent: smIRCL
+  parent: smIRCL.Core
   children: []
   langs:
   - csharp
   - vb
   name: IrcConnector.MessageTransmitHandler
   nameWithType: IrcConnector.MessageTransmitHandler
-  fullName: smIRCL.IrcConnector.MessageTransmitHandler
+  fullName: smIRCL.Core.IrcConnector.MessageTransmitHandler
   type: Delegate
   source:
     remote:
@@ -22,7 +22,7 @@ items:
     startLine: 55
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Core
   summary: "\nThe handler for a message transmit\n"
   example: []
   syntax:
@@ -39,11 +39,11 @@ items:
   - Public
   - Delegate
 references:
-- uid: smIRCL
-  commentId: N:smIRCL
-  name: smIRCL
-  nameWithType: smIRCL
-  fullName: smIRCL
+- uid: smIRCL.Core
+  commentId: N:smIRCL.Core
+  name: smIRCL.Core
+  nameWithType: smIRCL.Core
+  fullName: smIRCL.Core
 - uid: System.String
   commentId: T:System.String
   parent: System

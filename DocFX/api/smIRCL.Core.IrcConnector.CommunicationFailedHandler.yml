@@ -1,16 +1,16 @@
 ### YamlMime:ManagedReference
 items:
-- uid: smIRCL.IrcConnector.CommunicationFailedHandler
-  commentId: T:smIRCL.IrcConnector.CommunicationFailedHandler
+- uid: smIRCL.Core.IrcConnector.CommunicationFailedHandler
+  commentId: T:smIRCL.Core.IrcConnector.CommunicationFailedHandler
   id: IrcConnector.CommunicationFailedHandler
-  parent: smIRCL
+  parent: smIRCL.Core
   children: []
   langs:
   - csharp
   - vb
   name: IrcConnector.CommunicationFailedHandler
   nameWithType: IrcConnector.CommunicationFailedHandler
-  fullName: smIRCL.IrcConnector.CommunicationFailedHandler
+  fullName: smIRCL.Core.IrcConnector.CommunicationFailedHandler
   type: Delegate
   source:
     remote:
@@ -22,7 +22,7 @@ items:
     startLine: 80
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Core
   summary: "\nThe handler for a message transmit or receive failure\n"
   example: []
   syntax:
@@ -39,11 +39,11 @@ items:
   - Public
   - Delegate
 references:
-- uid: smIRCL
-  commentId: N:smIRCL
-  name: smIRCL
-  nameWithType: smIRCL
-  fullName: smIRCL
+- uid: smIRCL.Core
+  commentId: N:smIRCL.Core
+  name: smIRCL.Core
+  nameWithType: smIRCL.Core
+  fullName: smIRCL.Core
 - uid: System.Exception
   commentId: T:System.Exception
   parent: System

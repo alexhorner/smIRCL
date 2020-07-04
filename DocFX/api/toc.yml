@@ -1,23 +1,4 @@
 ### YamlMime:TableOfContent
-- uid: smIRCL
-  name: smIRCL
-  items:
-  - uid: smIRCL.IrcConnector
-    name: IrcConnector
-  - uid: smIRCL.IrcConnector.CommunicationFailedHandler
-    name: IrcConnector.CommunicationFailedHandler
-  - uid: smIRCL.IrcConnector.ConnectionStateEventHandler
-    name: IrcConnector.ConnectionStateEventHandler
-  - uid: smIRCL.IrcConnector.MessageHandler
-    name: IrcConnector.MessageHandler
-  - uid: smIRCL.IrcConnector.MessageTransmitHandler
-    name: IrcConnector.MessageTransmitHandler
-  - uid: smIRCL.IrcController
-    name: IrcController
-  - uid: smIRCL.IrcController.IrcMessageHandler
-    name: IrcController.IrcMessageHandler
-  - uid: smIRCL.IrcHandlerList
-    name: IrcHandlerList
 - uid: smIRCL.Config
   name: smIRCL.Config
   items:
@@ -33,6 +14,22 @@
 - uid: smIRCL.Core
   name: smIRCL.Core
   items:
+  - uid: smIRCL.Core.IrcConnector
+    name: IrcConnector
+  - uid: smIRCL.Core.IrcConnector.CommunicationFailedHandler
+    name: IrcConnector.CommunicationFailedHandler
+  - uid: smIRCL.Core.IrcConnector.ConnectionStateEventHandler
+    name: IrcConnector.ConnectionStateEventHandler
+  - uid: smIRCL.Core.IrcConnector.MessageHandler
+    name: IrcConnector.MessageHandler
+  - uid: smIRCL.Core.IrcConnector.MessageTransmitHandler
+    name: IrcConnector.MessageTransmitHandler
+  - uid: smIRCL.Core.IrcController
+    name: IrcController
+  - uid: smIRCL.Core.IrcController.IrcMessageHandler
+    name: IrcController.IrcMessageHandler
+  - uid: smIRCL.Core.IrcHandlerList
+    name: IrcHandlerList
   - uid: smIRCL.Core.SupportedChannelModes
     name: SupportedChannelModes
 - uid: smIRCL.Enums

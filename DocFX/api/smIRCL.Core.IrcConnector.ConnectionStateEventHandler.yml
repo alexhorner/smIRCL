@@ -1,16 +1,16 @@
 ### YamlMime:ManagedReference
 items:
-- uid: smIRCL.IrcConnector.ConnectionStateEventHandler
-  commentId: T:smIRCL.IrcConnector.ConnectionStateEventHandler
+- uid: smIRCL.Core.IrcConnector.ConnectionStateEventHandler
+  commentId: T:smIRCL.Core.IrcConnector.ConnectionStateEventHandler
   id: IrcConnector.ConnectionStateEventHandler
-  parent: smIRCL
+  parent: smIRCL.Core
   children: []
   langs:
   - csharp
   - vb
   name: IrcConnector.ConnectionStateEventHandler
   nameWithType: IrcConnector.ConnectionStateEventHandler
-  fullName: smIRCL.IrcConnector.ConnectionStateEventHandler
+  fullName: smIRCL.Core.IrcConnector.ConnectionStateEventHandler
   type: Delegate
   source:
     remote:
@@ -22,7 +22,7 @@ items:
     startLine: 45
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Core
   summary: "\nThe handler for connect and disconnect events\n"
   example: []
   syntax:
@@ -35,8 +35,8 @@ items:
   - Public
   - Delegate
 references:
-- uid: smIRCL
-  commentId: N:smIRCL
-  name: smIRCL
-  nameWithType: smIRCL
-  fullName: smIRCL
+- uid: smIRCL.Core
+  commentId: N:smIRCL.Core
+  name: smIRCL.Core
+  nameWithType: smIRCL.Core
+  fullName: smIRCL.Core

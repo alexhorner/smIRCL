@@ -1,29 +1,29 @@
 ### YamlMime:ManagedReference
 items:
-- uid: smIRCL.IrcConnector
-  commentId: T:smIRCL.IrcConnector
+- uid: smIRCL.Core.IrcConnector
+  commentId: T:smIRCL.Core.IrcConnector
   id: IrcConnector
-  parent: smIRCL
+  parent: smIRCL.Core
   children:
-  - smIRCL.IrcConnector.#ctor(smIRCL.Config.IrcConfig)
-  - smIRCL.IrcConnector.Config
-  - smIRCL.IrcConnector.Connect
-  - smIRCL.IrcConnector.Connected
-  - smIRCL.IrcConnector.Disconnected
-  - smIRCL.IrcConnector.Dispose
-  - smIRCL.IrcConnector.IsConnected
-  - smIRCL.IrcConnector.IsDisposed
-  - smIRCL.IrcConnector.MessageReceived
-  - smIRCL.IrcConnector.MessageTransmitted
-  - smIRCL.IrcConnector.ReceiveFailed
-  - smIRCL.IrcConnector.Transmit(System.String)
-  - smIRCL.IrcConnector.TransmitFailed
+  - smIRCL.Core.IrcConnector.#ctor(smIRCL.Config.IrcConfig)
+  - smIRCL.Core.IrcConnector.Config
+  - smIRCL.Core.IrcConnector.Connect
+  - smIRCL.Core.IrcConnector.Connected
+  - smIRCL.Core.IrcConnector.Disconnected
+  - smIRCL.Core.IrcConnector.Dispose
+  - smIRCL.Core.IrcConnector.IsConnected
+  - smIRCL.Core.IrcConnector.IsDisposed
+  - smIRCL.Core.IrcConnector.MessageReceived
+  - smIRCL.Core.IrcConnector.MessageTransmitted
+  - smIRCL.Core.IrcConnector.ReceiveFailed
+  - smIRCL.Core.IrcConnector.Transmit(System.String)
+  - smIRCL.Core.IrcConnector.TransmitFailed
   langs:
   - csharp
   - vb
   name: IrcConnector
   nameWithType: IrcConnector
-  fullName: smIRCL.IrcConnector
+  fullName: smIRCL.Core.IrcConnector
   type: Class
   source:
     remote:
@@ -35,7 +35,7 @@ items:
     startLine: 11
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Core
   syntax:
     content: 'public class IrcConnector : IDisposable'
     content.vb: >-
@@ -59,16 +59,16 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: smIRCL.IrcConnector.Config
-  commentId: P:smIRCL.IrcConnector.Config
+- uid: smIRCL.Core.IrcConnector.Config
+  commentId: P:smIRCL.Core.IrcConnector.Config
   id: Config
-  parent: smIRCL.IrcConnector
+  parent: smIRCL.Core.IrcConnector
   langs:
   - csharp
   - vb
   name: Config
   nameWithType: IrcConnector.Config
-  fullName: smIRCL.IrcConnector.Config
+  fullName: smIRCL.Core.IrcConnector.Config
   type: Property
   source:
     remote:
@@ -80,7 +80,7 @@ items:
     startLine: 18
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Core
   summary: "\nThe configuration for the IRC server connection and any attached controller\n"
   example: []
   syntax:
@@ -89,23 +89,23 @@ items:
     return:
       type: smIRCL.Config.IrcConfig
     content.vb: Public ReadOnly Property Config As IrcConfig
-  overload: smIRCL.IrcConnector.Config*
+  overload: smIRCL.Core.IrcConnector.Config*
   modifiers.csharp:
   - public
   - get
   modifiers.vb:
   - Public
   - ReadOnly
-- uid: smIRCL.IrcConnector.IsConnected
-  commentId: P:smIRCL.IrcConnector.IsConnected
+- uid: smIRCL.Core.IrcConnector.IsConnected
+  commentId: P:smIRCL.Core.IrcConnector.IsConnected
   id: IsConnected
-  parent: smIRCL.IrcConnector
+  parent: smIRCL.Core.IrcConnector
   langs:
   - csharp
   - vb
   name: IsConnected
   nameWithType: IrcConnector.IsConnected
-  fullName: smIRCL.IrcConnector.IsConnected
+  fullName: smIRCL.Core.IrcConnector.IsConnected
   type: Property
   source:
     remote:
@@ -117,7 +117,7 @@ items:
     startLine: 23
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Core
   summary: "\nWhether there is a live IRC server connection\n"
   example: []
   syntax:
@@ -126,23 +126,23 @@ items:
     return:
       type: System.Boolean
     content.vb: Public ReadOnly Property IsConnected As Boolean
-  overload: smIRCL.IrcConnector.IsConnected*
+  overload: smIRCL.Core.IrcConnector.IsConnected*
   modifiers.csharp:
   - public
   - get
   modifiers.vb:
   - Public
   - ReadOnly
-- uid: smIRCL.IrcConnector.IsDisposed
-  commentId: P:smIRCL.IrcConnector.IsDisposed
+- uid: smIRCL.Core.IrcConnector.IsDisposed
+  commentId: P:smIRCL.Core.IrcConnector.IsDisposed
   id: IsDisposed
-  parent: smIRCL.IrcConnector
+  parent: smIRCL.Core.IrcConnector
   langs:
   - csharp
   - vb
   name: IsDisposed
   nameWithType: IrcConnector.IsDisposed
-  fullName: smIRCL.IrcConnector.IsDisposed
+  fullName: smIRCL.Core.IrcConnector.IsDisposed
   type: Property
   source:
     remote:
@@ -154,7 +154,7 @@ items:
     startLine: 28
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Core
   summary: "\nWhether this connector has been disposed and can no longer be used\n"
   example: []
   syntax:
@@ -163,23 +163,23 @@ items:
     return:
       type: System.Boolean
     content.vb: Public ReadOnly Property IsDisposed As Boolean
-  overload: smIRCL.IrcConnector.IsDisposed*
+  overload: smIRCL.Core.IrcConnector.IsDisposed*
   modifiers.csharp:
   - public
   - get
   modifiers.vb:
   - Public
   - ReadOnly
-- uid: smIRCL.IrcConnector.Connected
-  commentId: E:smIRCL.IrcConnector.Connected
+- uid: smIRCL.Core.IrcConnector.Connected
+  commentId: E:smIRCL.Core.IrcConnector.Connected
   id: Connected
-  parent: smIRCL.IrcConnector
+  parent: smIRCL.Core.IrcConnector
   langs:
   - csharp
   - vb
   name: Connected
   nameWithType: IrcConnector.Connected
-  fullName: smIRCL.IrcConnector.Connected
+  fullName: smIRCL.Core.IrcConnector.Connected
   type: Event
   source:
     remote:
@@ -191,28 +191,28 @@ items:
     startLine: 37
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Core
   summary: "\nFired when a connection to an IRC server is established\n"
   example: []
   syntax:
     content: public event IrcConnector.ConnectionStateEventHandler Connected
     return:
-      type: smIRCL.IrcConnector.ConnectionStateEventHandler
+      type: smIRCL.Core.IrcConnector.ConnectionStateEventHandler
     content.vb: Public Event Connected As IrcConnector.ConnectionStateEventHandler
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: smIRCL.IrcConnector.Disconnected
-  commentId: E:smIRCL.IrcConnector.Disconnected
+- uid: smIRCL.Core.IrcConnector.Disconnected
+  commentId: E:smIRCL.Core.IrcConnector.Disconnected
   id: Disconnected
-  parent: smIRCL.IrcConnector
+  parent: smIRCL.Core.IrcConnector
   langs:
   - csharp
   - vb
   name: Disconnected
   nameWithType: IrcConnector.Disconnected
-  fullName: smIRCL.IrcConnector.Disconnected
+  fullName: smIRCL.Core.IrcConnector.Disconnected
   type: Event
   source:
     remote:
@@ -224,28 +224,28 @@ items:
     startLine: 41
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Core
   summary: "\nFired when a connection to an IRC server is lost\n"
   example: []
   syntax:
     content: public event IrcConnector.ConnectionStateEventHandler Disconnected
     return:
-      type: smIRCL.IrcConnector.ConnectionStateEventHandler
+      type: smIRCL.Core.IrcConnector.ConnectionStateEventHandler
     content.vb: Public Event Disconnected As IrcConnector.ConnectionStateEventHandler
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: smIRCL.IrcConnector.MessageTransmitted
-  commentId: E:smIRCL.IrcConnector.MessageTransmitted
+- uid: smIRCL.Core.IrcConnector.MessageTransmitted
+  commentId: E:smIRCL.Core.IrcConnector.MessageTransmitted
   id: MessageTransmitted
-  parent: smIRCL.IrcConnector
+  parent: smIRCL.Core.IrcConnector
   langs:
   - csharp
   - vb
   name: MessageTransmitted
   nameWithType: IrcConnector.MessageTransmitted
-  fullName: smIRCL.IrcConnector.MessageTransmitted
+  fullName: smIRCL.Core.IrcConnector.MessageTransmitted
   type: Event
   source:
     remote:
@@ -257,28 +257,28 @@ items:
     startLine: 50
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Core
   summary: "\nFired when a message is sent to the IRC server\n"
   example: []
   syntax:
     content: public event IrcConnector.MessageTransmitHandler MessageTransmitted
     return:
-      type: smIRCL.IrcConnector.MessageTransmitHandler
+      type: smIRCL.Core.IrcConnector.MessageTransmitHandler
     content.vb: Public Event MessageTransmitted As IrcConnector.MessageTransmitHandler
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: smIRCL.IrcConnector.MessageReceived
-  commentId: E:smIRCL.IrcConnector.MessageReceived
+- uid: smIRCL.Core.IrcConnector.MessageReceived
+  commentId: E:smIRCL.Core.IrcConnector.MessageReceived
   id: MessageReceived
-  parent: smIRCL.IrcConnector
+  parent: smIRCL.Core.IrcConnector
   langs:
   - csharp
   - vb
   name: MessageReceived
   nameWithType: IrcConnector.MessageReceived
-  fullName: smIRCL.IrcConnector.MessageReceived
+  fullName: smIRCL.Core.IrcConnector.MessageReceived
   type: Event
   source:
     remote:
@@ -290,28 +290,28 @@ items:
     startLine: 60
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Core
   summary: "\nFired when a message is received from the IRC server\n"
   example: []
   syntax:
     content: public event IrcConnector.MessageHandler MessageReceived
     return:
-      type: smIRCL.IrcConnector.MessageHandler
+      type: smIRCL.Core.IrcConnector.MessageHandler
     content.vb: Public Event MessageReceived As IrcConnector.MessageHandler
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: smIRCL.IrcConnector.TransmitFailed
-  commentId: E:smIRCL.IrcConnector.TransmitFailed
+- uid: smIRCL.Core.IrcConnector.TransmitFailed
+  commentId: E:smIRCL.Core.IrcConnector.TransmitFailed
   id: TransmitFailed
-  parent: smIRCL.IrcConnector
+  parent: smIRCL.Core.IrcConnector
   langs:
   - csharp
   - vb
   name: TransmitFailed
   nameWithType: IrcConnector.TransmitFailed
-  fullName: smIRCL.IrcConnector.TransmitFailed
+  fullName: smIRCL.Core.IrcConnector.TransmitFailed
   type: Event
   source:
     remote:
@@ -323,28 +323,28 @@ items:
     startLine: 71
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Core
   summary: "\nFired when a transmit fails to complete\n"
   example: []
   syntax:
     content: public event IrcConnector.CommunicationFailedHandler TransmitFailed
     return:
-      type: smIRCL.IrcConnector.CommunicationFailedHandler
+      type: smIRCL.Core.IrcConnector.CommunicationFailedHandler
     content.vb: Public Event TransmitFailed As IrcConnector.CommunicationFailedHandler
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: smIRCL.IrcConnector.ReceiveFailed
-  commentId: E:smIRCL.IrcConnector.ReceiveFailed
+- uid: smIRCL.Core.IrcConnector.ReceiveFailed
+  commentId: E:smIRCL.Core.IrcConnector.ReceiveFailed
   id: ReceiveFailed
-  parent: smIRCL.IrcConnector
+  parent: smIRCL.Core.IrcConnector
   langs:
   - csharp
   - vb
   name: ReceiveFailed
   nameWithType: IrcConnector.ReceiveFailed
-  fullName: smIRCL.IrcConnector.ReceiveFailed
+  fullName: smIRCL.Core.IrcConnector.ReceiveFailed
   type: Event
   source:
     remote:
@@ -356,28 +356,28 @@ items:
     startLine: 75
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Core
   summary: "\nFired when a receive fails to complete\n"
   example: []
   syntax:
     content: public event IrcConnector.CommunicationFailedHandler ReceiveFailed
     return:
-      type: smIRCL.IrcConnector.CommunicationFailedHandler
+      type: smIRCL.Core.IrcConnector.CommunicationFailedHandler
     content.vb: Public Event ReceiveFailed As IrcConnector.CommunicationFailedHandler
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: smIRCL.IrcConnector.#ctor(smIRCL.Config.IrcConfig)
-  commentId: M:smIRCL.IrcConnector.#ctor(smIRCL.Config.IrcConfig)
+- uid: smIRCL.Core.IrcConnector.#ctor(smIRCL.Config.IrcConfig)
+  commentId: M:smIRCL.Core.IrcConnector.#ctor(smIRCL.Config.IrcConfig)
   id: '#ctor(smIRCL.Config.IrcConfig)'
-  parent: smIRCL.IrcConnector
+  parent: smIRCL.Core.IrcConnector
   langs:
   - csharp
   - vb
   name: IrcConnector(IrcConfig)
   nameWithType: IrcConnector.IrcConnector(IrcConfig)
-  fullName: smIRCL.IrcConnector.IrcConnector(smIRCL.Config.IrcConfig)
+  fullName: smIRCL.Core.IrcConnector.IrcConnector(smIRCL.Config.IrcConfig)
   type: Constructor
   source:
     remote:
@@ -389,7 +389,7 @@ items:
     startLine: 103
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Core
   summary: "\nInstantiates a new IRC server connector\n"
   example: []
   syntax:
@@ -399,21 +399,21 @@ items:
       type: smIRCL.Config.IrcConfig
       description: The configuration for the IRC server connection and any controller attached
     content.vb: Public Sub New(config As IrcConfig)
-  overload: smIRCL.IrcConnector.#ctor*
+  overload: smIRCL.Core.IrcConnector.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: smIRCL.IrcConnector.Connect
-  commentId: M:smIRCL.IrcConnector.Connect
+- uid: smIRCL.Core.IrcConnector.Connect
+  commentId: M:smIRCL.Core.IrcConnector.Connect
   id: Connect
-  parent: smIRCL.IrcConnector
+  parent: smIRCL.Core.IrcConnector
   langs:
   - csharp
   - vb
   name: Connect()
   nameWithType: IrcConnector.Connect()
-  fullName: smIRCL.IrcConnector.Connect()
+  fullName: smIRCL.Core.IrcConnector.Connect()
   type: Method
   source:
     remote:
@@ -425,27 +425,27 @@ items:
     startLine: 120
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Core
   summary: "\nBegin establishing a connection to the configured IRC server\n"
   example: []
   syntax:
     content: public void Connect()
     content.vb: Public Sub Connect
-  overload: smIRCL.IrcConnector.Connect*
+  overload: smIRCL.Core.IrcConnector.Connect*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: smIRCL.IrcConnector.Dispose
-  commentId: M:smIRCL.IrcConnector.Dispose
+- uid: smIRCL.Core.IrcConnector.Dispose
+  commentId: M:smIRCL.Core.IrcConnector.Dispose
   id: Dispose
-  parent: smIRCL.IrcConnector
+  parent: smIRCL.Core.IrcConnector
   langs:
   - csharp
   - vb
   name: Dispose()
   nameWithType: IrcConnector.Dispose()
-  fullName: smIRCL.IrcConnector.Dispose()
+  fullName: smIRCL.Core.IrcConnector.Dispose()
   type: Method
   source:
     remote:
@@ -457,29 +457,29 @@ items:
     startLine: 217
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Core
   summary: "\nDisconnect from the IRC server if connected and dispose\n"
   example: []
   syntax:
     content: public void Dispose()
     content.vb: Public Sub Dispose
-  overload: smIRCL.IrcConnector.Dispose*
+  overload: smIRCL.Core.IrcConnector.Dispose*
   implements:
   - System.IDisposable.Dispose
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: smIRCL.IrcConnector.Transmit(System.String)
-  commentId: M:smIRCL.IrcConnector.Transmit(System.String)
+- uid: smIRCL.Core.IrcConnector.Transmit(System.String)
+  commentId: M:smIRCL.Core.IrcConnector.Transmit(System.String)
   id: Transmit(System.String)
-  parent: smIRCL.IrcConnector
+  parent: smIRCL.Core.IrcConnector
   langs:
   - csharp
   - vb
   name: Transmit(String)
   nameWithType: IrcConnector.Transmit(String)
-  fullName: smIRCL.IrcConnector.Transmit(System.String)
+  fullName: smIRCL.Core.IrcConnector.Transmit(System.String)
   type: Method
   source:
     remote:
@@ -491,7 +491,7 @@ items:
     startLine: 233
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Core
   summary: "\nTransmit a raw message to the IRC server\n"
   example: []
   syntax:
@@ -501,17 +501,17 @@ items:
       type: System.String
       description: The raw IRC message to transmit
     content.vb: Public Sub Transmit(data As String)
-  overload: smIRCL.IrcConnector.Transmit*
+  overload: smIRCL.Core.IrcConnector.Transmit*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
 references:
-- uid: smIRCL
-  commentId: N:smIRCL
-  name: smIRCL
-  nameWithType: smIRCL
-  fullName: smIRCL
+- uid: smIRCL.Core
+  commentId: N:smIRCL.Core
+  name: smIRCL.Core
+  nameWithType: smIRCL.Core
+  fullName: smIRCL.Core
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -811,11 +811,11 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: smIRCL.IrcConnector.Config*
-  commentId: Overload:smIRCL.IrcConnector.Config
+- uid: smIRCL.Core.IrcConnector.Config*
+  commentId: Overload:smIRCL.Core.IrcConnector.Config
   name: Config
   nameWithType: IrcConnector.Config
-  fullName: smIRCL.IrcConnector.Config
+  fullName: smIRCL.Core.IrcConnector.Config
 - uid: smIRCL.Config.IrcConfig
   commentId: T:smIRCL.Config.IrcConfig
   parent: smIRCL.Config
@@ -827,11 +827,11 @@ references:
   name: smIRCL.Config
   nameWithType: smIRCL.Config
   fullName: smIRCL.Config
-- uid: smIRCL.IrcConnector.IsConnected*
-  commentId: Overload:smIRCL.IrcConnector.IsConnected
+- uid: smIRCL.Core.IrcConnector.IsConnected*
+  commentId: Overload:smIRCL.Core.IrcConnector.IsConnected
   name: IsConnected
   nameWithType: IrcConnector.IsConnected
-  fullName: smIRCL.IrcConnector.IsConnected
+  fullName: smIRCL.Core.IrcConnector.IsConnected
 - uid: System.Boolean
   commentId: T:System.Boolean
   parent: System
@@ -839,50 +839,50 @@ references:
   name: Boolean
   nameWithType: Boolean
   fullName: System.Boolean
-- uid: smIRCL.IrcConnector.IsDisposed*
-  commentId: Overload:smIRCL.IrcConnector.IsDisposed
+- uid: smIRCL.Core.IrcConnector.IsDisposed*
+  commentId: Overload:smIRCL.Core.IrcConnector.IsDisposed
   name: IsDisposed
   nameWithType: IrcConnector.IsDisposed
-  fullName: smIRCL.IrcConnector.IsDisposed
-- uid: smIRCL.IrcConnector.ConnectionStateEventHandler
-  commentId: T:smIRCL.IrcConnector.ConnectionStateEventHandler
-  parent: smIRCL
+  fullName: smIRCL.Core.IrcConnector.IsDisposed
+- uid: smIRCL.Core.IrcConnector.ConnectionStateEventHandler
+  commentId: T:smIRCL.Core.IrcConnector.ConnectionStateEventHandler
+  parent: smIRCL.Core
   name: IrcConnector.ConnectionStateEventHandler
   nameWithType: IrcConnector.ConnectionStateEventHandler
-  fullName: smIRCL.IrcConnector.ConnectionStateEventHandler
-- uid: smIRCL.IrcConnector.MessageTransmitHandler
-  commentId: T:smIRCL.IrcConnector.MessageTransmitHandler
-  parent: smIRCL
+  fullName: smIRCL.Core.IrcConnector.ConnectionStateEventHandler
+- uid: smIRCL.Core.IrcConnector.MessageTransmitHandler
+  commentId: T:smIRCL.Core.IrcConnector.MessageTransmitHandler
+  parent: smIRCL.Core
   name: IrcConnector.MessageTransmitHandler
   nameWithType: IrcConnector.MessageTransmitHandler
-  fullName: smIRCL.IrcConnector.MessageTransmitHandler
-- uid: smIRCL.IrcConnector.MessageHandler
-  commentId: T:smIRCL.IrcConnector.MessageHandler
-  parent: smIRCL
+  fullName: smIRCL.Core.IrcConnector.MessageTransmitHandler
+- uid: smIRCL.Core.IrcConnector.MessageHandler
+  commentId: T:smIRCL.Core.IrcConnector.MessageHandler
+  parent: smIRCL.Core
   name: IrcConnector.MessageHandler
   nameWithType: IrcConnector.MessageHandler
-  fullName: smIRCL.IrcConnector.MessageHandler
-- uid: smIRCL.IrcConnector.CommunicationFailedHandler
-  commentId: T:smIRCL.IrcConnector.CommunicationFailedHandler
-  parent: smIRCL
+  fullName: smIRCL.Core.IrcConnector.MessageHandler
+- uid: smIRCL.Core.IrcConnector.CommunicationFailedHandler
+  commentId: T:smIRCL.Core.IrcConnector.CommunicationFailedHandler
+  parent: smIRCL.Core
   name: IrcConnector.CommunicationFailedHandler
   nameWithType: IrcConnector.CommunicationFailedHandler
-  fullName: smIRCL.IrcConnector.CommunicationFailedHandler
-- uid: smIRCL.IrcConnector.#ctor*
-  commentId: Overload:smIRCL.IrcConnector.#ctor
+  fullName: smIRCL.Core.IrcConnector.CommunicationFailedHandler
+- uid: smIRCL.Core.IrcConnector.#ctor*
+  commentId: Overload:smIRCL.Core.IrcConnector.#ctor
   name: IrcConnector
   nameWithType: IrcConnector.IrcConnector
-  fullName: smIRCL.IrcConnector.IrcConnector
-- uid: smIRCL.IrcConnector.Connect*
-  commentId: Overload:smIRCL.IrcConnector.Connect
+  fullName: smIRCL.Core.IrcConnector.IrcConnector
+- uid: smIRCL.Core.IrcConnector.Connect*
+  commentId: Overload:smIRCL.Core.IrcConnector.Connect
   name: Connect
   nameWithType: IrcConnector.Connect
-  fullName: smIRCL.IrcConnector.Connect
-- uid: smIRCL.IrcConnector.Dispose*
-  commentId: Overload:smIRCL.IrcConnector.Dispose
+  fullName: smIRCL.Core.IrcConnector.Connect
+- uid: smIRCL.Core.IrcConnector.Dispose*
+  commentId: Overload:smIRCL.Core.IrcConnector.Dispose
   name: Dispose
   nameWithType: IrcConnector.Dispose
-  fullName: smIRCL.IrcConnector.Dispose
+  fullName: smIRCL.Core.IrcConnector.Dispose
 - uid: System.IDisposable.Dispose
   commentId: M:System.IDisposable.Dispose
   parent: System.IDisposable
@@ -914,11 +914,11 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: smIRCL.IrcConnector.Transmit*
-  commentId: Overload:smIRCL.IrcConnector.Transmit
+- uid: smIRCL.Core.IrcConnector.Transmit*
+  commentId: Overload:smIRCL.Core.IrcConnector.Transmit
   name: Transmit
   nameWithType: IrcConnector.Transmit
-  fullName: smIRCL.IrcConnector.Transmit
+  fullName: smIRCL.Core.IrcConnector.Transmit
 - uid: System.String
   commentId: T:System.String
   parent: System
