@@ -1,29 +1,66 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using smIRCL.Constants;
 using smIRCL.Enums;
 using smIRCL.Extensions;
 using smIRCL.ServerEntities;
 
-namespace smIRCL
+namespace smIRCL.Core
 {
+    /// <summary>
+    /// A controller which handles the ongoing state of an IRC server connection and allows control over that connection
+    /// </summary>
     public class IrcController
     {
         #region Public Properties
 
+        /// <summary>
+        /// The connector for handling and accessing the IRC server connection
+        /// </summary>
         public IrcConnector Connector { get; internal set; }
+        /// <summary>
+        /// A list of Users who are within scope of the client
+        /// </summary>
         public readonly List<IrcUser> Users = new List<IrcUser>();
+        /// <summary>
+        /// A list of channels currently joined by the client
+        /// </summary>
         public readonly List<IrcChannel> Channels = new List<IrcChannel>();
 
+        /// <summary>
+        /// The Nick of the client
+        /// </summary>
         public string Nick { get; internal set; }
+        /// <summary>
+        /// The User name of the client
+        /// </summary>
         public string UserName { get; internal set; }
+        /// <summary>
+        /// The Real name (GECOS) of the client
+        /// </summary>
         public string RealName { get; internal set; }
+        /// <summary>
+        /// The Hostname or Mask of the client
+        /// </summary>
         public string Host { get; internal set; }
 
+        /// <summary>
+        /// The channel characters which are valid for the connected server
+        /// </summary>
         public List<char> SupportedChannelTypes = new List<char>();
+        /// <summary>
+        /// The modes supported for channels for the connected server
+        /// </summary>
         public SupportedChannelModes SupportedChannelModes = new SupportedChannelModes();
 
+        /// <summary>
+        /// The IRCv3 capabilities supported by the server
+        /// </summary>
         public List<KeyValuePair<string, List<string>>> AvailableCapabilities = new List<KeyValuePair<string, List<string>>>();
+        /// <summary>
+        /// The IRCv3 capabilities negotiated and activated with the server
+        /// </summary>
         public List<string> NegotiatedCapabilities = new List<string>();
 
 
@@ -31,7 +68,16 @@ namespace smIRCL
 
         #region Public Command Handling
 
-        public delegate void IrcMessageHandler(IrcConnector client, IrcController controller, IrcMessage message);
+        /// <summary>
+        /// An IRC message handler for commands and numerics
+        /// </summary>
+        /// <param name="connector">The connector which fired the message</param>
+        /// <param name="controller">The controller handling the message</param>
+        /// <param name="message">THe message received</param>
+        public delegate void IrcMessageHandler(IrcConnector connector, IrcController controller, IrcMessage message);
+        /// <summary>
+        /// The collection of handlers which handle commands and numerics
+        /// </summary>
         public IrcHandlerList Handlers = new IrcHandlerList();
 
         #endregion
@@ -63,6 +109,11 @@ namespace smIRCL
 
         #endregion
 
+        /// <summary>
+        /// Instantiates a new controller
+        /// </summary>
+        /// <param name="connector">The connector for connecting to the IRC server and retrieving the configuration</param>
+        /// <param name="registerInternalHandlers">Whether to register all the internal state handlers</param>
         public IrcController(IrcConnector connector, bool registerInternalHandlers = true)
         {
             Connector = connector ?? throw new ArgumentNullException(nameof(connector));
@@ -72,6 +123,8 @@ namespace smIRCL
             if (registerInternalHandlers)
             {
                 Handlers.Add("PING", OnPing);
+                Handlers.Add("PRIVMSG", OnPrivMsg);
+                Handlers.Add("NOTICE", OnNotice);
                 Handlers.Add("ERROR", OnUnrecoverableError);
                 Handlers.Add("NICK", OnNickSet);
                 Handlers.Add("JOIN", OnJoin);
@@ -146,6 +199,10 @@ namespace smIRCL
 
         #region Public Methods
 
+        /// <summary>
+        /// Send a QUIT to the server to safely disconnect
+        /// </summary>
+        /// <param name="quitMessage">The message for quitting</param>
         public void Quit(string quitMessage = "Client quit")
         {
             _expectingTermination = true;
@@ -153,21 +210,37 @@ namespace smIRCL
             Connector.Dispose();
         }
 
+        /// <summary>
+        /// Set a new NICK
+        /// </summary>
+        /// <param name="newNick">The NICK to request</param>
         public void SetNick(string newNick)
         {
             Connector.Transmit($"NICK :{newNick}");
         }
 
+        /// <summary>
+        /// Request WHO information on a Channel or Nick to update state cache
+        /// </summary>
+        /// <param name="channelOrNick">The Channel or Nick to update</param>
         public void Who(string channelOrNick)
         {
             Connector.Transmit($"WHO :{channelOrNick}");
         }
 
+        /// <summary>
+        /// Request WHOIS information on a Nick to update state cache
+        /// </summary>
+        /// <param name="nick">The Nick to update</param>
         public void WhoIs(string nick)
         {
             Connector.Transmit($"WHOIS :{nick}");
         }
 
+        /// <summary>
+        /// Request a channel JOIN
+        /// </summary>
+        /// <param name="channelName">The Channel to join</param>
         public void Join(string channelName)
         {
             if (!IrcChannel.IsValidName(channelName))
@@ -181,6 +254,10 @@ namespace smIRCL
             }
         }
 
+        /// <summary>
+        /// Request a channel PART
+        /// </summary>
+        /// <param name="channelName">The Channel to leave</param>
         public void Part(string channelName)
         {
             if (!IrcChannel.IsValidName(channelName))
@@ -231,18 +308,28 @@ namespace smIRCL
 
         #region Handlers
 
-        private void OnPing(IrcConnector client, IrcController controller, IrcMessage message)
+        private void OnPing(IrcConnector connector, IrcController controller, IrcMessage message)
         {
             Connector.Transmit($"PONG :{message.Parameters[0]}");
             Ping?.Invoke(client, controller, message);
         }
 
-        private void OnUnrecoverableError(IrcConnector client, IrcController controller, IrcMessage message)
+        private void OnPrivMsg(IrcConnector connector, IrcController controller, IrcMessage message)
+        {
+            PrivMsg?.Invoke(connector, controller, message);
+        }
+
+        private void OnNotice(IrcConnector connector, IrcController controller, IrcMessage message)
+        {
+            Notice?.Invoke(connector, controller, message);
+        }
+
+        private void OnUnrecoverableError(IrcConnector connector, IrcController controller, IrcMessage message)
         {
             Connector.Dispose();
         }
 
-        private void OnNickError(IrcConnector client, IrcController controller, IrcMessage message)
+        private void OnNickError(IrcConnector connector, IrcController controller, IrcMessage message)
         {
             if (Nick == null)
             {
@@ -258,7 +345,7 @@ namespace smIRCL
             }
         }
 
-        private void OnNickSet(IrcConnector client, IrcController controller, IrcMessage message)
+        private void OnNickSet(IrcConnector connector, IrcController controller, IrcMessage message)
         {
             if (message.SourceNick.ToIrcLower() == Nick.ToIrcLower()) //Minimum requirement of a source is Nick which is always unique
             {
@@ -273,7 +360,7 @@ namespace smIRCL
             WhoIs(message.Parameters[0]);
         }
 
-        private void OnWelcomeEnd(IrcConnector client, IrcController controller, IrcMessage message)
+        private void OnWelcomeEnd(IrcConnector connector, IrcController controller, IrcMessage message)
         {
             Nick = _unconfirmedNick;
             _unconfirmedNick = null;
@@ -285,7 +372,7 @@ namespace smIRCL
             }
         }
 
-        private void OnWhoReply(IrcConnector client, IrcController controller, IrcMessage message)
+        private void OnWhoReply(IrcConnector connector, IrcController controller, IrcMessage message)
         {
             if (message.Parameters[5].ToIrcLower() == Nick.ToIrcLower())
             {
@@ -305,7 +392,7 @@ namespace smIRCL
             }
         }
 
-        private void OnWhoIsUserReply(IrcConnector client, IrcController controller, IrcMessage message)
+        private void OnWhoIsUserReply(IrcConnector connector, IrcController controller, IrcMessage message)
         {
             if (message.Parameters[1].ToIrcLower() == Nick.ToIrcLower())
             {
@@ -325,7 +412,7 @@ namespace smIRCL
             }
         }
 
-        private void OnWhoIsChannelsReply(IrcConnector client, IrcController controller, IrcMessage message)
+        private void OnWhoIsChannelsReply(IrcConnector connector, IrcController controller, IrcMessage message)
         {
             if (message.Parameters[1].ToIrcLower() != Nick.ToIrcLower() && Users.Any(u => u.Nick.ToIrcLower() == message.Parameters[1].ToIrcLower()))
             {
@@ -347,12 +434,12 @@ namespace smIRCL
             }
         }
 
-        private void OnHostMaskCloak(IrcConnector client, IrcController controller, IrcMessage message)
+        private void OnHostMaskCloak(IrcConnector connector, IrcController controller, IrcMessage message)
         {
             Host = message.Parameters[1];
         }
 
-        private void OnJoin(IrcConnector client, IrcController controller, IrcMessage message)
+        private void OnJoin(IrcConnector connector, IrcController controller, IrcMessage message)
         {
             if(message.SourceNick.ToIrcLower() == Nick.ToIrcLower())
             {
@@ -381,7 +468,7 @@ namespace smIRCL
             }
         }
 
-        private void OnNamesReply(IrcConnector client, IrcController controller, IrcMessage message)
+        private void OnNamesReply(IrcConnector connector, IrcController controller, IrcMessage message)
         {
             IrcChannel channel = Channels.FirstOrDefault(ch => ch.Name.ToIrcLower() == message.Parameters[2].ToIrcLower());
             if (channel != null)
@@ -419,7 +506,7 @@ namespace smIRCL
             }
         }
 
-        private void OnNamesEnd(IrcConnector client, IrcController controller, IrcMessage message)
+        private void OnNamesEnd(IrcConnector connector, IrcController controller, IrcMessage message)
         {
             IrcChannel channel = Channels.FirstOrDefault(ch => ch.Name.ToIrcLower() == message.Parameters[1].ToIrcLower());
             if (channel != null) channel.UserCollectionComplete = true;
@@ -427,7 +514,7 @@ namespace smIRCL
             Who(message.Parameters[1]);
         }
 
-        private void OnPart(IrcConnector client, IrcController controller, IrcMessage message)
+        private void OnPart(IrcConnector connector, IrcController controller, IrcMessage message)
         {
             if (message.SourceNick.ToIrcLower() == Nick.ToIrcLower())
             {
@@ -454,7 +541,7 @@ namespace smIRCL
             }
         }
 
-        private void OnKick(IrcConnector client, IrcController controller, IrcMessage message)
+        private void OnKick(IrcConnector connector, IrcController controller, IrcMessage message)
         {
             if (message.Parameters[1].ToIrcLower() == Nick.ToIrcLower())
             {
@@ -481,7 +568,7 @@ namespace smIRCL
             }
         }
 
-        private void OnQuit(IrcConnector client, IrcController controller, IrcMessage message)
+        private void OnQuit(IrcConnector connector, IrcController controller, IrcMessage message)
         {
             if (message.SourceNick.ToIrcLower() != Nick.ToIrcLower())
             {
@@ -496,19 +583,19 @@ namespace smIRCL
             }
         }
 
-        private void OnTopicInform(IrcConnector client, IrcController controller, IrcMessage message)
+        private void OnTopicInform(IrcConnector connector, IrcController controller, IrcMessage message)
         {
             IrcChannel channel = Channels.FirstOrDefault(ch => ch.Name.ToIrcLower() == message.Parameters[1].ToIrcLower());
             if (channel != null) channel.Topic = message.Parameters[2];
         }
 
-        private void OnTopicUpdate(IrcConnector client, IrcController controller, IrcMessage message)
+        private void OnTopicUpdate(IrcConnector connector, IrcController controller, IrcMessage message)
         {
             IrcChannel channel = Channels.FirstOrDefault(ch => ch.Name.ToIrcLower() == message.Parameters[0].ToIrcLower());
             if (channel != null) channel.Topic = message.Parameters[1] != "" ? message.Parameters[1] : null;
         }
 
-        private void OnISupport(IrcConnector client, IrcController controller, IrcMessage message)
+        private void OnISupport(IrcConnector connector, IrcController controller, IrcMessage message)
         {
             foreach (string parameter in message.Parameters)
             {
@@ -565,7 +652,7 @@ namespace smIRCL
             }
         }
 
-        private void OnCapability(IrcConnector client, IrcController controller, IrcMessage message)
+        private void OnCapability(IrcConnector connector, IrcController controller, IrcMessage message)
         {
             switch (message.Parameters[1].ToIrcLower())
             {

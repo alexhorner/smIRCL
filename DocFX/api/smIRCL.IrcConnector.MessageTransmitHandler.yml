@@ -14,20 +14,23 @@ items:
   type: Delegate
   source:
     remote:
-      path: smIRCL/IrcConnector.cs
+      path: smIRCL/Core/IrcConnector.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: MessageTransmitHandler
-    path: ../smIRCL/IrcConnector.cs
-    startLine: 30
+    path: ../smIRCL/Core/IrcConnector.cs
+    startLine: 55
   assemblies:
   - smIRCL
   namespace: smIRCL
+  summary: "\nThe handler for a message transmit\n"
+  example: []
   syntax:
     content: public delegate void MessageTransmitHandler(string rawMessage);
     parameters:
     - id: rawMessage
       type: System.String
+      description: The raw IRC message transmitted
     content.vb: Public Delegate Sub MessageTransmitHandler(rawMessage As String)
   modifiers.csharp:
   - public

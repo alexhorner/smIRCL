@@ -1,25 +1,54 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using smIRCL.Constants;
 
-namespace smIRCL
+namespace smIRCL.ServerEntities
 {
+    /// <summary>
+    /// An IRC message received from an IRC server in its parsed parts
+    /// </summary>
     public class IrcMessage
     {
+        /// <summary>
+        /// IRCv3 message tags and their values
+        /// </summary>
         public List<KeyValuePair<string, string>> Tags { get; set; }
 
 
+        /// <summary>
+        /// The hostmask of the message sender
+        /// </summary>
         public string SourceHostMask { get; set; }
+        /// <summary>
+        /// The Nick of the message sender
+        /// </summary>
         public string SourceNick { get; set; }
+        /// <summary>
+        /// The User name of the message sender
+        /// </summary>
         public string SourceUserName { get; set; }
+        /// <summary>
+        /// The hostname of the message sender
+        /// </summary>
         public string SourceHost { get; set; }
 
 
+        /// <summary>
+        /// The IRC command issued
+        /// </summary>
         public string Command { get; set; }
-
+        /// <summary>
+        /// Parameters to the IRC command issued
+        /// </summary>
         public List<string> Parameters { get; set; }
 
 
+        /// <summary>
+        /// Parses a raw IRC message from a string to its appropriate parts
+        /// </summary>
+        /// <param name="message">The raw IRC message to parse</param>
+        /// <returns>The parsed object representing all parts of the raw message</returns>
         public static IrcMessage Parse(string message)
         {
             if (String.IsNullOrWhiteSpace(message)) return null;
@@ -154,6 +183,7 @@ namespace smIRCL
             };
         }
 
+
         private static string UnescapeTagValue(string tagValue)
         {
             string unescapedValue = "";
@@ -175,7 +205,7 @@ namespace smIRCL
                         char next = escaped.Dequeue();
                         string full = current.ToString() + next.ToString();
 
-                        unescapedValue += Constants.TagEscapeDictionary.Any(te => te.Key == full) ? Constants.TagEscapeDictionary[full] : next.ToString();
+                        unescapedValue += GeneralConstants.TagEscapeDictionary.Any(te => te.Key == full) ? GeneralConstants.TagEscapeDictionary[full] : next.ToString();
                     }
                 }
                 else

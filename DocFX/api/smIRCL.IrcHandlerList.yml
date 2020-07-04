@@ -15,15 +15,17 @@ items:
   type: Class
   source:
     remote:
-      path: smIRCL/IrcHandlerList.cs
+      path: smIRCL/Core/IrcHandlerList.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: IrcHandlerList
-    path: ../smIRCL/IrcHandlerList.cs
-    startLine: 4
+    path: ../smIRCL/Core/IrcHandlerList.cs
+    startLine: 7
   assemblies:
   - smIRCL
   namespace: smIRCL
+  summary: "\nA collection of IRC message handlers for a controller\n"
+  example: []
   syntax:
     content: 'public class IrcHandlerList : List<KeyValuePair<string, IrcController.IrcMessageHandler>>, IList<KeyValuePair<string, IrcController.IrcMessageHandler>>, ICollection<KeyValuePair<string, IrcController.IrcMessageHandler>>, IReadOnlyList<KeyValuePair<string, IrcController.IrcMessageHandler>>, IReadOnlyCollection<KeyValuePair<string, IrcController.IrcMessageHandler>>, IEnumerable<KeyValuePair<string, IrcController.IrcMessageHandler>>, IList, ICollection, IEnumerable'
     content.vb: >-
@@ -134,22 +136,26 @@ items:
   type: Method
   source:
     remote:
-      path: smIRCL/IrcHandlerList.cs
+      path: smIRCL/Core/IrcHandlerList.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: Add
-    path: ../smIRCL/IrcHandlerList.cs
-    startLine: 6
+    path: ../smIRCL/Core/IrcHandlerList.cs
+    startLine: 14
   assemblies:
   - smIRCL
   namespace: smIRCL
+  summary: "\nAdds a message handler to the collection\n"
+  example: []
   syntax:
     content: public void Add(string eventName, IrcController.IrcMessageHandler handler)
     parameters:
     - id: eventName
       type: System.String
+      description: the IRC command or numeric the handler should respond to
     - id: handler
       type: smIRCL.IrcController.IrcMessageHandler
+      description: The handler to call when the named event is received
     content.vb: Public Sub Add(eventName As String, handler As IrcController.IrcMessageHandler)
   overload: smIRCL.IrcHandlerList.Add*
   modifiers.csharp:

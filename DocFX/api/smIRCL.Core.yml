@@ -1,0 +1,22 @@
+### YamlMime:ManagedReference
+items:
+- uid: smIRCL.Core
+  commentId: N:smIRCL.Core
+  id: smIRCL.Core
+  children:
+  - smIRCL.Core.SupportedChannelModes
+  langs:
+  - csharp
+  - vb
+  name: smIRCL.Core
+  nameWithType: smIRCL.Core
+  fullName: smIRCL.Core
+  type: Namespace
+  assemblies:
+  - smIRCL
+references:
+- uid: smIRCL.Core.SupportedChannelModes
+  commentId: T:smIRCL.Core.SupportedChannelModes
+  name: SupportedChannelModes
+  nameWithType: SupportedChannelModes
+  fullName: smIRCL.Core.SupportedChannelModes

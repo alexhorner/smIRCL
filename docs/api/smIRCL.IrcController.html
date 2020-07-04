@@ -83,7 +83,8 @@
   
   <h1 id="smIRCL_IrcController" data-uid="smIRCL.IrcController" class="text-break">Class IrcController
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>A controller which handles the ongoing state of an IRC server connection and allows control over that connection</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -127,11 +128,12 @@
     <a href="https://github.com/alexhorner/smIRCL/new/master/apiSpec/new?filename=smIRCL_IrcController__ctor_smIRCL_IrcConnector_System_Boolean_.md&amp;value=---%0Auid%3A%20smIRCL.IrcController.%23ctor(smIRCL.IrcConnector%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/alexhorner/smIRCL/blob/master/smIRCL/IrcController.cs/#L66">View Source</a>
+    <a href="https://github.com/alexhorner/smIRCL/blob/master/smIRCL/Core/IrcController.cs/#L117">View Source</a>
   </span>
   <a id="smIRCL_IrcController__ctor_" data-uid="smIRCL.IrcController.#ctor*"></a>
   <h4 id="smIRCL_IrcController__ctor_smIRCL_IrcConnector_System_Boolean_" data-uid="smIRCL.IrcController.#ctor(smIRCL.IrcConnector,System.Boolean)">IrcController(IrcConnector, Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Instantiates a new controller</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -150,12 +152,14 @@
       <tr>
         <td><a class="xref" href="smIRCL.IrcConnector.html">IrcConnector</a></td>
         <td><span class="parametername">connector</span></td>
-        <td></td>
+        <td><p>The connector for connecting to the IRC server and retrieving the configuration</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">registerInternalHandlers</span></td>
-        <td></td>
+        <td><p>Whether to register all the internal state handlers</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -166,10 +170,11 @@
     <a href="https://github.com/alexhorner/smIRCL/new/master/apiSpec/new?filename=smIRCL_IrcController_AvailableCapabilities.md&amp;value=---%0Auid%3A%20smIRCL.IrcController.AvailableCapabilities%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/alexhorner/smIRCL/blob/master/smIRCL/IrcController.cs/#L26">View Source</a>
+    <a href="https://github.com/alexhorner/smIRCL/blob/master/smIRCL/Core/IrcController.cs/#L60">View Source</a>
   </span>
   <h4 id="smIRCL_IrcController_AvailableCapabilities" data-uid="smIRCL.IrcController.AvailableCapabilities">AvailableCapabilities</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The IRCv3 capabilities supported by the server</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -195,10 +200,11 @@
     <a href="https://github.com/alexhorner/smIRCL/new/master/apiSpec/new?filename=smIRCL_IrcController_Channels.md&amp;value=---%0Auid%3A%20smIRCL.IrcController.Channels%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/alexhorner/smIRCL/blob/master/smIRCL/IrcController.cs/#L16">View Source</a>
+    <a href="https://github.com/alexhorner/smIRCL/blob/master/smIRCL/Core/IrcController.cs/#L29">View Source</a>
   </span>
   <h4 id="smIRCL_IrcController_Channels" data-uid="smIRCL.IrcController.Channels">Channels</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A list of channels currently joined by the client</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -224,10 +230,11 @@
     <a href="https://github.com/alexhorner/smIRCL/new/master/apiSpec/new?filename=smIRCL_IrcController_Handlers.md&amp;value=---%0Auid%3A%20smIRCL.IrcController.Handlers%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/alexhorner/smIRCL/blob/master/smIRCL/IrcController.cs/#L35">View Source</a>
+    <a href="https://github.com/alexhorner/smIRCL/blob/master/smIRCL/Core/IrcController.cs/#L81">View Source</a>
   </span>
   <h4 id="smIRCL_IrcController_Handlers" data-uid="smIRCL.IrcController.Handlers">Handlers</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The collection of handlers which handle commands and numerics</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -253,10 +260,11 @@
     <a href="https://github.com/alexhorner/smIRCL/new/master/apiSpec/new?filename=smIRCL_IrcController_NegotiatedCapabilities.md&amp;value=---%0Auid%3A%20smIRCL.IrcController.NegotiatedCapabilities%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/alexhorner/smIRCL/blob/master/smIRCL/IrcController.cs/#L27">View Source</a>
+    <a href="https://github.com/alexhorner/smIRCL/blob/master/smIRCL/Core/IrcController.cs/#L64">View Source</a>
   </span>
   <h4 id="smIRCL_IrcController_NegotiatedCapabilities" data-uid="smIRCL.IrcController.NegotiatedCapabilities">NegotiatedCapabilities</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The IRCv3 capabilities negotiated and activated with the server</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -282,10 +290,11 @@
     <a href="https://github.com/alexhorner/smIRCL/new/master/apiSpec/new?filename=smIRCL_IrcController_SupportedChannelModes.md&amp;value=---%0Auid%3A%20smIRCL.IrcController.SupportedChannelModes%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/alexhorner/smIRCL/blob/master/smIRCL/IrcController.cs/#L24">View Source</a>
+    <a href="https://github.com/alexhorner/smIRCL/blob/master/smIRCL/Core/IrcController.cs/#L55">View Source</a>
   </span>
   <h4 id="smIRCL_IrcController_SupportedChannelModes" data-uid="smIRCL.IrcController.SupportedChannelModes">SupportedChannelModes</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The modes supported for channels for the connected server</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -301,7 +310,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="smIRCL.SupportedChannelModes.html">SupportedChannelModes</a></td>
+        <td><span class="xref">SupportedChannelModes</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -311,10 +320,11 @@
     <a href="https://github.com/alexhorner/smIRCL/new/master/apiSpec/new?filename=smIRCL_IrcController_SupportedChannelTypes.md&amp;value=---%0Auid%3A%20smIRCL.IrcController.SupportedChannelTypes%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/alexhorner/smIRCL/blob/master/smIRCL/IrcController.cs/#L23">View Source</a>
+    <a href="https://github.com/alexhorner/smIRCL/blob/master/smIRCL/Core/IrcController.cs/#L51">View Source</a>
   </span>
   <h4 id="smIRCL_IrcController_SupportedChannelTypes" data-uid="smIRCL.IrcController.SupportedChannelTypes">SupportedChannelTypes</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The channel characters which are valid for the connected server</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -340,10 +350,11 @@
     <a href="https://github.com/alexhorner/smIRCL/new/master/apiSpec/new?filename=smIRCL_IrcController_Users.md&amp;value=---%0Auid%3A%20smIRCL.IrcController.Users%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/alexhorner/smIRCL/blob/master/smIRCL/IrcController.cs/#L15">View Source</a>
+    <a href="https://github.com/alexhorner/smIRCL/blob/master/smIRCL/Core/IrcController.cs/#L25">View Source</a>
   </span>
   <h4 id="smIRCL_IrcController_Users" data-uid="smIRCL.IrcController.Users">Users</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A list of Users who are within scope of the client</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -371,11 +382,12 @@
     <a href="https://github.com/alexhorner/smIRCL/new/master/apiSpec/new?filename=smIRCL_IrcController_Connector.md&amp;value=---%0Auid%3A%20smIRCL.IrcController.Connector%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/alexhorner/smIRCL/blob/master/smIRCL/IrcController.cs/#L14">View Source</a>
+    <a href="https://github.com/alexhorner/smIRCL/blob/master/smIRCL/Core/IrcController.cs/#L21">View Source</a>
   </span>
   <a id="smIRCL_IrcController_Connector_" data-uid="smIRCL.IrcController.Connector*"></a>
   <h4 id="smIRCL_IrcController_Connector" data-uid="smIRCL.IrcController.Connector">Connector</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The connector for handling and accessing the IRC server connection</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -401,11 +413,12 @@
     <a href="https://github.com/alexhorner/smIRCL/new/master/apiSpec/new?filename=smIRCL_IrcController_Host.md&amp;value=---%0Auid%3A%20smIRCL.IrcController.Host%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/alexhorner/smIRCL/blob/master/smIRCL/IrcController.cs/#L21">View Source</a>
+    <a href="https://github.com/alexhorner/smIRCL/blob/master/smIRCL/Core/IrcController.cs/#L46">View Source</a>
   </span>
   <a id="smIRCL_IrcController_Host_" data-uid="smIRCL.IrcController.Host*"></a>
   <h4 id="smIRCL_IrcController_Host" data-uid="smIRCL.IrcController.Host">Host</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The Hostname or Mask of the client</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -431,11 +444,12 @@
     <a href="https://github.com/alexhorner/smIRCL/new/master/apiSpec/new?filename=smIRCL_IrcController_Nick.md&amp;value=---%0Auid%3A%20smIRCL.IrcController.Nick%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/alexhorner/smIRCL/blob/master/smIRCL/IrcController.cs/#L18">View Source</a>
+    <a href="https://github.com/alexhorner/smIRCL/blob/master/smIRCL/Core/IrcController.cs/#L34">View Source</a>
   </span>
   <a id="smIRCL_IrcController_Nick_" data-uid="smIRCL.IrcController.Nick*"></a>
   <h4 id="smIRCL_IrcController_Nick" data-uid="smIRCL.IrcController.Nick">Nick</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The Nick of the client</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -461,11 +475,12 @@
     <a href="https://github.com/alexhorner/smIRCL/new/master/apiSpec/new?filename=smIRCL_IrcController_RealName.md&amp;value=---%0Auid%3A%20smIRCL.IrcController.RealName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/alexhorner/smIRCL/blob/master/smIRCL/IrcController.cs/#L20">View Source</a>
+    <a href="https://github.com/alexhorner/smIRCL/blob/master/smIRCL/Core/IrcController.cs/#L42">View Source</a>
   </span>
   <a id="smIRCL_IrcController_RealName_" data-uid="smIRCL.IrcController.RealName*"></a>
   <h4 id="smIRCL_IrcController_RealName" data-uid="smIRCL.IrcController.RealName">RealName</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The Real name (GECOS) of the client</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -491,11 +506,12 @@
     <a href="https://github.com/alexhorner/smIRCL/new/master/apiSpec/new?filename=smIRCL_IrcController_UserName.md&amp;value=---%0Auid%3A%20smIRCL.IrcController.UserName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/alexhorner/smIRCL/blob/master/smIRCL/IrcController.cs/#L19">View Source</a>
+    <a href="https://github.com/alexhorner/smIRCL/blob/master/smIRCL/Core/IrcController.cs/#L38">View Source</a>
   </span>
   <a id="smIRCL_IrcController_UserName_" data-uid="smIRCL.IrcController.UserName*"></a>
   <h4 id="smIRCL_IrcController_UserName" data-uid="smIRCL.IrcController.UserName">UserName</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The User name of the client</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -523,11 +539,12 @@
     <a href="https://github.com/alexhorner/smIRCL/new/master/apiSpec/new?filename=smIRCL_IrcController_Join_System_String_.md&amp;value=---%0Auid%3A%20smIRCL.IrcController.Join(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/alexhorner/smIRCL/blob/master/smIRCL/IrcController.cs/#L171">View Source</a>
+    <a href="https://github.com/alexhorner/smIRCL/blob/master/smIRCL/Core/IrcController.cs/#L244">View Source</a>
   </span>
   <a id="smIRCL_IrcController_Join_" data-uid="smIRCL.IrcController.Join*"></a>
   <h4 id="smIRCL_IrcController_Join_System_String_" data-uid="smIRCL.IrcController.Join(System.String)">Join(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Request a channel JOIN</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -546,7 +563,8 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">channelName</span></td>
-        <td></td>
+        <td><p>The Channel to join</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -555,11 +573,12 @@
     <a href="https://github.com/alexhorner/smIRCL/new/master/apiSpec/new?filename=smIRCL_IrcController_Part_System_String_.md&amp;value=---%0Auid%3A%20smIRCL.IrcController.Part(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/alexhorner/smIRCL/blob/master/smIRCL/IrcController.cs/#L184">View Source</a>
+    <a href="https://github.com/alexhorner/smIRCL/blob/master/smIRCL/Core/IrcController.cs/#L261">View Source</a>
   </span>
   <a id="smIRCL_IrcController_Part_" data-uid="smIRCL.IrcController.Part*"></a>
   <h4 id="smIRCL_IrcController_Part_System_String_" data-uid="smIRCL.IrcController.Part(System.String)">Part(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Request a channel PART</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -578,7 +597,8 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">channelName</span></td>
-        <td></td>
+        <td><p>The Channel to leave</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -587,11 +607,12 @@
     <a href="https://github.com/alexhorner/smIRCL/new/master/apiSpec/new?filename=smIRCL_IrcController_Quit_System_String_.md&amp;value=---%0Auid%3A%20smIRCL.IrcController.Quit(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/alexhorner/smIRCL/blob/master/smIRCL/IrcController.cs/#L149">View Source</a>
+    <a href="https://github.com/alexhorner/smIRCL/blob/master/smIRCL/Core/IrcController.cs/#L206">View Source</a>
   </span>
   <a id="smIRCL_IrcController_Quit_" data-uid="smIRCL.IrcController.Quit*"></a>
   <h4 id="smIRCL_IrcController_Quit_System_String_" data-uid="smIRCL.IrcController.Quit(System.String)">Quit(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Send a QUIT to the server to safely disconnect</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -610,7 +631,8 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">quitMessage</span></td>
-        <td></td>
+        <td><p>The message for quitting</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -619,11 +641,12 @@
     <a href="https://github.com/alexhorner/smIRCL/new/master/apiSpec/new?filename=smIRCL_IrcController_SetNick_System_String_.md&amp;value=---%0Auid%3A%20smIRCL.IrcController.SetNick(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/alexhorner/smIRCL/blob/master/smIRCL/IrcController.cs/#L156">View Source</a>
+    <a href="https://github.com/alexhorner/smIRCL/blob/master/smIRCL/Core/IrcController.cs/#L217">View Source</a>
   </span>
   <a id="smIRCL_IrcController_SetNick_" data-uid="smIRCL.IrcController.SetNick*"></a>
   <h4 id="smIRCL_IrcController_SetNick_System_String_" data-uid="smIRCL.IrcController.SetNick(System.String)">SetNick(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Set a new NICK</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -642,7 +665,8 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">newNick</span></td>
-        <td></td>
+        <td><p>The NICK to request</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -651,11 +675,12 @@
     <a href="https://github.com/alexhorner/smIRCL/new/master/apiSpec/new?filename=smIRCL_IrcController_Who_System_String_.md&amp;value=---%0Auid%3A%20smIRCL.IrcController.Who(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/alexhorner/smIRCL/blob/master/smIRCL/IrcController.cs/#L161">View Source</a>
+    <a href="https://github.com/alexhorner/smIRCL/blob/master/smIRCL/Core/IrcController.cs/#L226">View Source</a>
   </span>
   <a id="smIRCL_IrcController_Who_" data-uid="smIRCL.IrcController.Who*"></a>
   <h4 id="smIRCL_IrcController_Who_System_String_" data-uid="smIRCL.IrcController.Who(System.String)">Who(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Request WHO information on a Channel or Nick to update state cache</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -674,7 +699,8 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">channelOrNick</span></td>
-        <td></td>
+        <td><p>The Channel or Nick to update</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -683,11 +709,12 @@
     <a href="https://github.com/alexhorner/smIRCL/new/master/apiSpec/new?filename=smIRCL_IrcController_WhoIs_System_String_.md&amp;value=---%0Auid%3A%20smIRCL.IrcController.WhoIs(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/alexhorner/smIRCL/blob/master/smIRCL/IrcController.cs/#L166">View Source</a>
+    <a href="https://github.com/alexhorner/smIRCL/blob/master/smIRCL/Core/IrcController.cs/#L235">View Source</a>
   </span>
   <a id="smIRCL_IrcController_WhoIs_" data-uid="smIRCL.IrcController.WhoIs*"></a>
   <h4 id="smIRCL_IrcController_WhoIs_System_String_" data-uid="smIRCL.IrcController.WhoIs(System.String)">WhoIs(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Request WHOIS information on a Nick to update state cache</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -706,7 +733,8 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">nick</span></td>
-        <td></td>
+        <td><p>The Nick to update</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -717,7 +745,7 @@
     <a href="https://github.com/alexhorner/smIRCL/new/master/apiSpec/new?filename=smIRCL_IrcController_Notice.md&amp;value=---%0Auid%3A%20smIRCL.IrcController.Notice%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/alexhorner/smIRCL/blob/master/smIRCL/IrcController.cs/#L49">View Source</a>
+    <a href="https://github.com/alexhorner/smIRCL/blob/master/smIRCL/Core/IrcController.cs/#L95">View Source</a>
   </span>
   <h4 id="smIRCL_IrcController_Notice" data-uid="smIRCL.IrcController.Notice">Notice</h4>
   <div class="markdown level1 summary"><p>Fired when a NOTICE is received</p>
@@ -747,7 +775,7 @@
     <a href="https://github.com/alexhorner/smIRCL/new/master/apiSpec/new?filename=smIRCL_IrcController_Ping.md&amp;value=---%0Auid%3A%20smIRCL.IrcController.Ping%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/alexhorner/smIRCL/blob/master/smIRCL/IrcController.cs/#L54">View Source</a>
+    <a href="https://github.com/alexhorner/smIRCL/blob/master/smIRCL/Core/IrcController.cs/#L100">View Source</a>
   </span>
   <h4 id="smIRCL_IrcController_Ping" data-uid="smIRCL.IrcController.Ping">Ping</h4>
   <div class="markdown level1 summary"><p>Fired when a PING is received</p>
@@ -777,7 +805,7 @@
     <a href="https://github.com/alexhorner/smIRCL/new/master/apiSpec/new?filename=smIRCL_IrcController_PrivMsg.md&amp;value=---%0Auid%3A%20smIRCL.IrcController.PrivMsg%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/alexhorner/smIRCL/blob/master/smIRCL/IrcController.cs/#L44">View Source</a>
+    <a href="https://github.com/alexhorner/smIRCL/blob/master/smIRCL/Core/IrcController.cs/#L90">View Source</a>
   </span>
   <h4 id="smIRCL_IrcController_PrivMsg" data-uid="smIRCL.IrcController.PrivMsg">PrivMsg</h4>
   <div class="markdown level1 summary"><p>Fired when a PRIVMSG is received</p>
@@ -813,7 +841,7 @@
                     <a href="https://github.com/alexhorner/smIRCL/new/master/apiSpec/new?filename=smIRCL_IrcController.md&amp;value=---%0Auid%3A%20smIRCL.IrcController%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/alexhorner/smIRCL/blob/master/smIRCL/IrcController.cs/#L10" class="contribution-link">View Source</a>
+                    <a href="https://github.com/alexhorner/smIRCL/blob/master/smIRCL/Core/IrcController.cs/#L14" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

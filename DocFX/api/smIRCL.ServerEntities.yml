@@ -5,6 +5,7 @@ items:
   id: smIRCL.ServerEntities
   children:
   - smIRCL.ServerEntities.IrcChannel
+  - smIRCL.ServerEntities.IrcMessage
   - smIRCL.ServerEntities.IrcUser
   langs:
   - csharp
@@ -21,8 +22,19 @@ references:
   name: IrcChannel
   nameWithType: IrcChannel
   fullName: smIRCL.ServerEntities.IrcChannel
+- uid: smIRCL.ServerEntities.IrcMessage
+  commentId: T:smIRCL.ServerEntities.IrcMessage
+  parent: smIRCL.ServerEntities
+  name: IrcMessage
+  nameWithType: IrcMessage
+  fullName: smIRCL.ServerEntities.IrcMessage
 - uid: smIRCL.ServerEntities.IrcUser
   commentId: T:smIRCL.ServerEntities.IrcUser
   name: IrcUser
   nameWithType: IrcUser
   fullName: smIRCL.ServerEntities.IrcUser
+- uid: smIRCL.ServerEntities
+  commentId: N:smIRCL.ServerEntities
+  name: smIRCL.ServerEntities
+  nameWithType: smIRCL.ServerEntities
+  fullName: smIRCL.ServerEntities

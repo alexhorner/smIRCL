@@ -1,32 +1,33 @@
 ### YamlMime:ManagedReference
 items:
-- uid: smIRCL.Extensions.StringExtensions
-  commentId: T:smIRCL.Extensions.StringExtensions
-  id: StringExtensions
-  parent: smIRCL.Extensions
+- uid: smIRCL.Constants.GeneralConstants
+  commentId: T:smIRCL.Constants.GeneralConstants
+  id: GeneralConstants
+  parent: smIRCL.Constants
   children:
-  - smIRCL.Extensions.StringExtensions.ToIrcLower(System.String)
+  - smIRCL.Constants.GeneralConstants.IrcLowers
+  - smIRCL.Constants.GeneralConstants.TagEscapeDictionary
   langs:
   - csharp
   - vb
-  name: StringExtensions
-  nameWithType: StringExtensions
-  fullName: smIRCL.Extensions.StringExtensions
+  name: GeneralConstants
+  nameWithType: GeneralConstants
+  fullName: smIRCL.Constants.GeneralConstants
   type: Class
   source:
     remote:
-      path: smIRCL/Extensions/StringExtensions.cs
+      path: smIRCL/Constants/GeneralConstants.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
-    id: StringExtensions
-    path: ../smIRCL/Extensions/StringExtensions.cs
+    id: GeneralConstants
+    path: ../smIRCL/Constants/GeneralConstants.cs
     startLine: 4
   assemblies:
   - smIRCL
-  namespace: smIRCL.Extensions
+  namespace: smIRCL.Constants
   syntax:
-    content: public static class StringExtensions
-    content.vb: Public Module StringExtensions
+    content: public static class GeneralConstants
+    content.vb: Public Module GeneralConstants
   inheritance:
   - System.Object
   inheritedMembers:
@@ -44,45 +45,72 @@ items:
   modifiers.vb:
   - Public
   - Module
-- uid: smIRCL.Extensions.StringExtensions.ToIrcLower(System.String)
-  commentId: M:smIRCL.Extensions.StringExtensions.ToIrcLower(System.String)
-  id: ToIrcLower(System.String)
-  isExtensionMethod: true
-  parent: smIRCL.Extensions.StringExtensions
+- uid: smIRCL.Constants.GeneralConstants.TagEscapeDictionary
+  commentId: F:smIRCL.Constants.GeneralConstants.TagEscapeDictionary
+  id: TagEscapeDictionary
+  parent: smIRCL.Constants.GeneralConstants
   langs:
   - csharp
   - vb
-  name: ToIrcLower(String)
-  nameWithType: StringExtensions.ToIrcLower(String)
-  fullName: smIRCL.Extensions.StringExtensions.ToIrcLower(System.String)
-  type: Method
+  name: TagEscapeDictionary
+  nameWithType: GeneralConstants.TagEscapeDictionary
+  fullName: smIRCL.Constants.GeneralConstants.TagEscapeDictionary
+  type: Field
   source:
     remote:
-      path: smIRCL/Extensions/StringExtensions.cs
+      path: smIRCL/Constants/GeneralConstants.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
-    id: ToIrcLower
-    path: ../smIRCL/Extensions/StringExtensions.cs
-    startLine: 11
+    id: TagEscapeDictionary
+    path: ../smIRCL/Constants/GeneralConstants.cs
+    startLine: 9
   assemblies:
   - smIRCL
-  namespace: smIRCL.Extensions
-  summary: "\nConverts strings to IRC lowercase as described in RFC1459\n"
+  namespace: smIRCL.Constants
+  summary: "\nElements of IRCv3 Tags when escaping\n"
   example: []
   syntax:
-    content: public static string ToIrcLower(this string str)
-    parameters:
-    - id: str
-      type: System.String
-      description: The string to convert to IRC lowercase
+    content: public static readonly Dictionary<string, string> TagEscapeDictionary
     return:
-      type: System.String
-      description: The IRC lowercased string
-    content.vb: >-
-      <ExtensionAttribute>
-
-      Public Shared Function ToIrcLower(str As String) As String
-  overload: smIRCL.Extensions.StringExtensions.ToIrcLower*
+      type: System.Collections.Generic.Dictionary{System.String,System.String}
+    content.vb: Public Shared ReadOnly TagEscapeDictionary As Dictionary(Of String, String)
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: smIRCL.Constants.GeneralConstants.IrcLowers
+  commentId: F:smIRCL.Constants.GeneralConstants.IrcLowers
+  id: IrcLowers
+  parent: smIRCL.Constants.GeneralConstants
+  langs:
+  - csharp
+  - vb
+  name: IrcLowers
+  nameWithType: GeneralConstants.IrcLowers
+  fullName: smIRCL.Constants.GeneralConstants.IrcLowers
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Constants/GeneralConstants.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: IrcLowers
+    path: ../smIRCL/Constants/GeneralConstants.cs
+    startLine: 21
+  assemblies:
+  - smIRCL
+  namespace: smIRCL.Constants
+  summary: "\nThe IRC lowercase mapping as described in in RFC1459\n"
+  example: []
+  syntax:
+    content: public static Dictionary<char, char> IrcLowers
+    return:
+      type: System.Collections.Generic.Dictionary{System.Char,System.Char}
+    content.vb: Public Shared IrcLowers As Dictionary(Of Char, Char)
   modifiers.csharp:
   - public
   - static
@@ -90,11 +118,11 @@ items:
   - Public
   - Shared
 references:
-- uid: smIRCL.Extensions
-  commentId: N:smIRCL.Extensions
-  name: smIRCL.Extensions
-  nameWithType: smIRCL.Extensions
-  fullName: smIRCL.Extensions
+- uid: smIRCL.Constants
+  commentId: N:smIRCL.Constants
+  name: smIRCL.Constants
+  nameWithType: smIRCL.Constants
+  fullName: smIRCL.Constants
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -387,15 +415,180 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: smIRCL.Extensions.StringExtensions.ToIrcLower*
-  commentId: Overload:smIRCL.Extensions.StringExtensions.ToIrcLower
-  name: ToIrcLower
-  nameWithType: StringExtensions.ToIrcLower
-  fullName: smIRCL.Extensions.StringExtensions.ToIrcLower
-- uid: System.String
-  commentId: T:System.String
-  parent: System
+- uid: System.Collections.Generic.Dictionary{System.String,System.String}
+  commentId: T:System.Collections.Generic.Dictionary{System.String,System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  name: Dictionary<String, String>
+  nameWithType: Dictionary<String, String>
+  fullName: System.Collections.Generic.Dictionary<System.String, System.String>
+  nameWithType.vb: Dictionary(Of String, String)
+  fullName.vb: System.Collections.Generic.Dictionary(Of System.String, System.String)
+  name.vb: Dictionary(Of String, String)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
   isExternal: true
-  name: String
-  nameWithType: String
-  fullName: System.String
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: System.Collections.Generic.Dictionary{System.Char,System.Char}
+  commentId: T:System.Collections.Generic.Dictionary{System.Char,System.Char}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  name: Dictionary<Char, Char>
+  nameWithType: Dictionary<Char, Char>
+  fullName: System.Collections.Generic.Dictionary<System.Char, System.Char>
+  nameWithType.vb: Dictionary(Of Char, Char)
+  fullName.vb: System.Collections.Generic.Dictionary(Of System.Char, System.Char)
+  name.vb: Dictionary(Of Char, Char)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Char
+    name: Char
+    nameWithType: Char
+    fullName: System.Char
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Char
+    name: Char
+    nameWithType: Char
+    fullName: System.Char
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Char
+    name: Char
+    nameWithType: Char
+    fullName: System.Char
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Char
+    name: Char
+    nameWithType: Char
+    fullName: System.Char
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )

@@ -14,15 +14,17 @@ items:
   type: Delegate
   source:
     remote:
-      path: smIRCL/IrcConnector.cs
+      path: smIRCL/Core/IrcConnector.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: ConnectionStateEventHandler
-    path: ../smIRCL/IrcConnector.cs
-    startLine: 26
+    path: ../smIRCL/Core/IrcConnector.cs
+    startLine: 45
   assemblies:
   - smIRCL
   namespace: smIRCL
+  summary: "\nThe handler for connect and disconnect events\n"
+  example: []
   syntax:
     content: public delegate void ConnectionStateEventHandler();
     content.vb: Public Delegate Sub ConnectionStateEventHandler

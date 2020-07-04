@@ -14,20 +14,23 @@ items:
   type: Delegate
   source:
     remote:
-      path: smIRCL/IrcConnector.cs
+      path: smIRCL/Core/IrcConnector.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: CommunicationFailedHandler
-    path: ../smIRCL/IrcConnector.cs
-    startLine: 39
+    path: ../smIRCL/Core/IrcConnector.cs
+    startLine: 80
   assemblies:
   - smIRCL
   namespace: smIRCL
+  summary: "\nThe handler for a message transmit or receive failure\n"
+  example: []
   syntax:
     content: public delegate void CommunicationFailedHandler(Exception exception);
     parameters:
     - id: exception
       type: System.Exception
+      description: The exception describing the failure
     content.vb: Public Delegate Sub CommunicationFailedHandler(exception As Exception)
   modifiers.csharp:
   - public

@@ -3,11 +3,11 @@
 // ReSharper disable UnusedMember.Global
 // ReSharper disable StringLiteralTypo
 
-namespace smIRCL
+namespace smIRCL.Constants
 {
     public static class Numerics
     {
-        //All numberics will have your Nick as their first param
+        //All numerics will have your Nick as their first param
 
         //Command Responses
         public const string RPL_WELCOME = "001";
@@ -153,7 +153,9 @@ namespace smIRCL
 
         //Reserved numerics
         //1. no longer in use
+
         //2. reserved for future planned use
+
         //3. in current use but are part of a non-generic 'feature' of the current IRC server
         public const string RPL_STATSCLINE = "213";
         public const string RPL_STATSNLINE = "214";

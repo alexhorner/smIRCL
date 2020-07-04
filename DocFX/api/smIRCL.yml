@@ -4,7 +4,6 @@ items:
   commentId: N:smIRCL
   id: smIRCL
   children:
-  - smIRCL.Constants
   - smIRCL.IrcConnector
   - smIRCL.IrcConnector.CommunicationFailedHandler
   - smIRCL.IrcConnector.ConnectionStateEventHandler
@@ -13,9 +12,6 @@ items:
   - smIRCL.IrcController
   - smIRCL.IrcController.IrcMessageHandler
   - smIRCL.IrcHandlerList
-  - smIRCL.IrcMessage
-  - smIRCL.Numerics
-  - smIRCL.SupportedChannelModes
   langs:
   - csharp
   - vb
@@ -26,11 +22,6 @@ items:
   assemblies:
   - smIRCL
 references:
-- uid: smIRCL.Constants
-  commentId: T:smIRCL.Constants
-  name: Constants
-  nameWithType: Constants
-  fullName: smIRCL.Constants
 - uid: smIRCL.IrcConnector
   commentId: T:smIRCL.IrcConnector
   parent: smIRCL
@@ -79,23 +70,6 @@ references:
   name: IrcHandlerList
   nameWithType: IrcHandlerList
   fullName: smIRCL.IrcHandlerList
-- uid: smIRCL.IrcMessage
-  commentId: T:smIRCL.IrcMessage
-  parent: smIRCL
-  name: IrcMessage
-  nameWithType: IrcMessage
-  fullName: smIRCL.IrcMessage
-- uid: smIRCL.Numerics
-  commentId: T:smIRCL.Numerics
-  name: Numerics
-  nameWithType: Numerics
-  fullName: smIRCL.Numerics
-- uid: smIRCL.SupportedChannelModes
-  commentId: T:smIRCL.SupportedChannelModes
-  parent: smIRCL
-  name: SupportedChannelModes
-  nameWithType: SupportedChannelModes
-  fullName: smIRCL.SupportedChannelModes
 - uid: smIRCL
   commentId: N:smIRCL
   name: smIRCL

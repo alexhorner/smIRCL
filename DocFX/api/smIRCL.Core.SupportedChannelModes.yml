@@ -1,32 +1,34 @@
 ### YamlMime:ManagedReference
 items:
-- uid: smIRCL.SupportedChannelModes
-  commentId: T:smIRCL.SupportedChannelModes
+- uid: smIRCL.Core.SupportedChannelModes
+  commentId: T:smIRCL.Core.SupportedChannelModes
   id: SupportedChannelModes
-  parent: smIRCL
+  parent: smIRCL.Core
   children:
-  - smIRCL.SupportedChannelModes.A
-  - smIRCL.SupportedChannelModes.B
-  - smIRCL.SupportedChannelModes.C
-  - smIRCL.SupportedChannelModes.D
+  - smIRCL.Core.SupportedChannelModes.A
+  - smIRCL.Core.SupportedChannelModes.B
+  - smIRCL.Core.SupportedChannelModes.C
+  - smIRCL.Core.SupportedChannelModes.D
   langs:
   - csharp
   - vb
   name: SupportedChannelModes
   nameWithType: SupportedChannelModes
-  fullName: smIRCL.SupportedChannelModes
+  fullName: smIRCL.Core.SupportedChannelModes
   type: Class
   source:
     remote:
-      path: smIRCL/SupportedChannelModes.cs
+      path: smIRCL/Core/SupportedChannelModes.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: SupportedChannelModes
-    path: ../smIRCL/SupportedChannelModes.cs
-    startLine: 4
+    path: ../smIRCL/Core/SupportedChannelModes.cs
+    startLine: 7
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Core
+  summary: "\nThe channel modes supported by the connected IRC server, split into their type groups\n"
+  example: []
   syntax:
     content: public class SupportedChannelModes
     content.vb: Public Class SupportedChannelModes
@@ -46,140 +48,140 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: smIRCL.SupportedChannelModes.A
-  commentId: P:smIRCL.SupportedChannelModes.A
+- uid: smIRCL.Core.SupportedChannelModes.A
+  commentId: P:smIRCL.Core.SupportedChannelModes.A
   id: A
-  parent: smIRCL.SupportedChannelModes
+  parent: smIRCL.Core.SupportedChannelModes
   langs:
   - csharp
   - vb
   name: A
   nameWithType: SupportedChannelModes.A
-  fullName: smIRCL.SupportedChannelModes.A
+  fullName: smIRCL.Core.SupportedChannelModes.A
   type: Property
   source:
     remote:
-      path: smIRCL/SupportedChannelModes.cs
+      path: smIRCL/Core/SupportedChannelModes.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: A
-    path: ../smIRCL/SupportedChannelModes.cs
-    startLine: 6
+    path: ../smIRCL/Core/SupportedChannelModes.cs
+    startLine: 9
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Core
   syntax:
     content: public List<char> A { get; set; }
     parameters: []
     return:
       type: System.Collections.Generic.List{System.Char}
     content.vb: Public Property A As List(Of Char)
-  overload: smIRCL.SupportedChannelModes.A*
+  overload: smIRCL.Core.SupportedChannelModes.A*
   modifiers.csharp:
   - public
   - get
   - set
   modifiers.vb:
   - Public
-- uid: smIRCL.SupportedChannelModes.B
-  commentId: P:smIRCL.SupportedChannelModes.B
+- uid: smIRCL.Core.SupportedChannelModes.B
+  commentId: P:smIRCL.Core.SupportedChannelModes.B
   id: B
-  parent: smIRCL.SupportedChannelModes
+  parent: smIRCL.Core.SupportedChannelModes
   langs:
   - csharp
   - vb
   name: B
   nameWithType: SupportedChannelModes.B
-  fullName: smIRCL.SupportedChannelModes.B
+  fullName: smIRCL.Core.SupportedChannelModes.B
   type: Property
   source:
     remote:
-      path: smIRCL/SupportedChannelModes.cs
+      path: smIRCL/Core/SupportedChannelModes.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: B
-    path: ../smIRCL/SupportedChannelModes.cs
-    startLine: 7
+    path: ../smIRCL/Core/SupportedChannelModes.cs
+    startLine: 10
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Core
   syntax:
     content: public List<char> B { get; set; }
     parameters: []
     return:
       type: System.Collections.Generic.List{System.Char}
     content.vb: Public Property B As List(Of Char)
-  overload: smIRCL.SupportedChannelModes.B*
+  overload: smIRCL.Core.SupportedChannelModes.B*
   modifiers.csharp:
   - public
   - get
   - set
   modifiers.vb:
   - Public
-- uid: smIRCL.SupportedChannelModes.C
-  commentId: P:smIRCL.SupportedChannelModes.C
+- uid: smIRCL.Core.SupportedChannelModes.C
+  commentId: P:smIRCL.Core.SupportedChannelModes.C
   id: C
-  parent: smIRCL.SupportedChannelModes
+  parent: smIRCL.Core.SupportedChannelModes
   langs:
   - csharp
   - vb
   name: C
   nameWithType: SupportedChannelModes.C
-  fullName: smIRCL.SupportedChannelModes.C
+  fullName: smIRCL.Core.SupportedChannelModes.C
   type: Property
   source:
     remote:
-      path: smIRCL/SupportedChannelModes.cs
+      path: smIRCL/Core/SupportedChannelModes.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: C
-    path: ../smIRCL/SupportedChannelModes.cs
-    startLine: 8
+    path: ../smIRCL/Core/SupportedChannelModes.cs
+    startLine: 11
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Core
   syntax:
     content: public List<char> C { get; set; }
     parameters: []
     return:
       type: System.Collections.Generic.List{System.Char}
     content.vb: Public Property C As List(Of Char)
-  overload: smIRCL.SupportedChannelModes.C*
+  overload: smIRCL.Core.SupportedChannelModes.C*
   modifiers.csharp:
   - public
   - get
   - set
   modifiers.vb:
   - Public
-- uid: smIRCL.SupportedChannelModes.D
-  commentId: P:smIRCL.SupportedChannelModes.D
+- uid: smIRCL.Core.SupportedChannelModes.D
+  commentId: P:smIRCL.Core.SupportedChannelModes.D
   id: D
-  parent: smIRCL.SupportedChannelModes
+  parent: smIRCL.Core.SupportedChannelModes
   langs:
   - csharp
   - vb
   name: D
   nameWithType: SupportedChannelModes.D
-  fullName: smIRCL.SupportedChannelModes.D
+  fullName: smIRCL.Core.SupportedChannelModes.D
   type: Property
   source:
     remote:
-      path: smIRCL/SupportedChannelModes.cs
+      path: smIRCL/Core/SupportedChannelModes.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: D
-    path: ../smIRCL/SupportedChannelModes.cs
-    startLine: 9
+    path: ../smIRCL/Core/SupportedChannelModes.cs
+    startLine: 12
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Core
   syntax:
     content: public List<char> D { get; set; }
     parameters: []
     return:
       type: System.Collections.Generic.List{System.Char}
     content.vb: Public Property D As List(Of Char)
-  overload: smIRCL.SupportedChannelModes.D*
+  overload: smIRCL.Core.SupportedChannelModes.D*
   modifiers.csharp:
   - public
   - get
@@ -187,11 +189,11 @@ items:
   modifiers.vb:
   - Public
 references:
-- uid: smIRCL
-  commentId: N:smIRCL
-  name: smIRCL
-  nameWithType: smIRCL
-  fullName: smIRCL
+- uid: smIRCL.Core
+  commentId: N:smIRCL.Core
+  name: smIRCL.Core
+  nameWithType: smIRCL.Core
+  fullName: smIRCL.Core
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -484,11 +486,11 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: smIRCL.SupportedChannelModes.A*
-  commentId: Overload:smIRCL.SupportedChannelModes.A
+- uid: smIRCL.Core.SupportedChannelModes.A*
+  commentId: Overload:smIRCL.Core.SupportedChannelModes.A
   name: A
   nameWithType: SupportedChannelModes.A
-  fullName: smIRCL.SupportedChannelModes.A
+  fullName: smIRCL.Core.SupportedChannelModes.A
 - uid: System.Collections.Generic.List{System.Char}
   commentId: T:System.Collections.Generic.List{System.Char}
   parent: System.Collections.Generic
@@ -578,18 +580,18 @@ references:
   name: System.Collections.Generic
   nameWithType: System.Collections.Generic
   fullName: System.Collections.Generic
-- uid: smIRCL.SupportedChannelModes.B*
-  commentId: Overload:smIRCL.SupportedChannelModes.B
+- uid: smIRCL.Core.SupportedChannelModes.B*
+  commentId: Overload:smIRCL.Core.SupportedChannelModes.B
   name: B
   nameWithType: SupportedChannelModes.B
-  fullName: smIRCL.SupportedChannelModes.B
-- uid: smIRCL.SupportedChannelModes.C*
-  commentId: Overload:smIRCL.SupportedChannelModes.C
+  fullName: smIRCL.Core.SupportedChannelModes.B
+- uid: smIRCL.Core.SupportedChannelModes.C*
+  commentId: Overload:smIRCL.Core.SupportedChannelModes.C
   name: C
   nameWithType: SupportedChannelModes.C
-  fullName: smIRCL.SupportedChannelModes.C
-- uid: smIRCL.SupportedChannelModes.D*
-  commentId: Overload:smIRCL.SupportedChannelModes.D
+  fullName: smIRCL.Core.SupportedChannelModes.C
+- uid: smIRCL.Core.SupportedChannelModes.D*
+  commentId: Overload:smIRCL.Core.SupportedChannelModes.D
   name: D
   nameWithType: SupportedChannelModes.D
-  fullName: smIRCL.SupportedChannelModes.D
+  fullName: smIRCL.Core.SupportedChannelModes.D

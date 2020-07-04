@@ -12,7 +12,7 @@
           "hash": "0ABv2dbkM9MxXXmz36vFdQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -41,11 +41,59 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/smIRCL.Constants.GeneralConstants.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/smIRCL.Constants.GeneralConstants.html",
+          "hash": "hnM98/B3SCMvaFR4n8ui5g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/smIRCL.Constants.Numerics.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/smIRCL.Constants.Numerics.html",
+          "hash": "weJfNTE5Xh+CVYS8Bdg2AQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/smIRCL.Constants.yml",
       "output": {
         ".html": {
           "relative_path": "api/smIRCL.Constants.html",
-          "hash": "xediQybNGo+GNyeCWTXang=="
+          "hash": "N0yEoYskhvKRWKQY1T8z3w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/smIRCL.Core.SupportedChannelModes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/smIRCL.Core.SupportedChannelModes.html",
+          "hash": "Umn1DF9fpFTlj8ogkEE56w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/smIRCL.Core.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/smIRCL.Core.html",
+          "hash": "K4q+/iLnLoQjuue6PSHQ8Q=="
         }
       },
       "is_incremental": false,
@@ -105,7 +153,7 @@
       "output": {
         ".html": {
           "relative_path": "api/smIRCL.Extensions.StringExtensions.html",
-          "hash": "zSlSrviG7lZxZuglWBtPMQ=="
+          "hash": "Xg9bALoMF8cSN/seJEjRsQ=="
         }
       },
       "is_incremental": false,
@@ -129,7 +177,7 @@
       "output": {
         ".html": {
           "relative_path": "api/smIRCL.IrcConnector.CommunicationFailedHandler.html",
-          "hash": "qxV3LaKIK8bblDXqHXIMDQ=="
+          "hash": "8p3cYeub8WLYfGff4+Ajgg=="
         }
       },
       "is_incremental": false,
@@ -141,10 +189,10 @@
       "output": {
         ".html": {
           "relative_path": "api/smIRCL.IrcConnector.ConnectionStateEventHandler.html",
-          "hash": "1K0AFqURjHNKnDdzeeuRug=="
+          "hash": "BlrdVjYgwIeho39xcVAMfw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -153,7 +201,7 @@
       "output": {
         ".html": {
           "relative_path": "api/smIRCL.IrcConnector.MessageHandler.html",
-          "hash": "7NB4xkVqUcpknXzSEZafqg=="
+          "hash": "kggj+x5MIfa5f+xPpj4eXA=="
         }
       },
       "is_incremental": false,
@@ -165,7 +213,7 @@
       "output": {
         ".html": {
           "relative_path": "api/smIRCL.IrcConnector.MessageTransmitHandler.html",
-          "hash": "7pdTPn9+2KJ7++nZ6QMTPA=="
+          "hash": "DkDb9c5GdKA11bsz6N+zqg=="
         }
       },
       "is_incremental": false,
@@ -177,7 +225,7 @@
       "output": {
         ".html": {
           "relative_path": "api/smIRCL.IrcConnector.html",
-          "hash": "uIB/YGvqz5V6bpfvH6tAuA=="
+          "hash": "qzeCKy/FrZyUHfJqeuVoeg=="
         }
       },
       "is_incremental": false,
@@ -189,7 +237,7 @@
       "output": {
         ".html": {
           "relative_path": "api/smIRCL.IrcController.IrcMessageHandler.html",
-          "hash": "sZqQKYtMUheHt5DZVHlSuQ=="
+          "hash": "MMlmhJh5YIiXhqYDVoo8lA=="
         }
       },
       "is_incremental": false,
@@ -201,7 +249,7 @@
       "output": {
         ".html": {
           "relative_path": "api/smIRCL.IrcController.html",
-          "hash": "nyz1kmnuBDDkMT/AFo2A1Q=="
+          "hash": "/pJoe8Fmvc7BhcrHfL7vZw=="
         }
       },
       "is_incremental": false,
@@ -213,31 +261,7 @@
       "output": {
         ".html": {
           "relative_path": "api/smIRCL.IrcHandlerList.html",
-          "hash": "c+B3z6LimqM5Ko+oeYv3Rg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/smIRCL.IrcMessage.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/smIRCL.IrcMessage.html",
-          "hash": "0mLkouMmCJLdqGrJTncn/Q=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/smIRCL.Numerics.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/smIRCL.Numerics.html",
-          "hash": "ZFZME9juzX8wI1n+FqrYcw=="
+          "hash": "rz/lkj4IgZ+CL8KxPQ2cpg=="
         }
       },
       "is_incremental": false,
@@ -250,6 +274,18 @@
         ".html": {
           "relative_path": "api/smIRCL.ServerEntities.IrcChannel.html",
           "hash": "VdIJ1xomjrinCoY4rQekWw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/smIRCL.ServerEntities.IrcMessage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/smIRCL.ServerEntities.IrcMessage.html",
+          "hash": "H06KMLTSRZuZuPUtzF+B5A=="
         }
       },
       "is_incremental": false,
@@ -273,19 +309,7 @@
       "output": {
         ".html": {
           "relative_path": "api/smIRCL.ServerEntities.html",
-          "hash": "pBi198rwgj1KHD3lKBaGhA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/smIRCL.SupportedChannelModes.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/smIRCL.SupportedChannelModes.html",
-          "hash": "TFcOhPXo+ijuPw/lnMI7Dg=="
+          "hash": "WpfbSnT6295onE860xD/Kw=="
         }
       },
       "is_incremental": false,
@@ -297,7 +321,7 @@
       "output": {
         ".html": {
           "relative_path": "api/smIRCL.html",
-          "hash": "kN7F/cJac8th4LN2NNjatg=="
+          "hash": "NNU3AxoW4DhPsrsja/cDGA=="
         }
       },
       "is_incremental": false,
@@ -309,7 +333,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "LnW0TG6sgGyVO3NmHqDQKQ=="
+          "hash": "TnyHc26OyspNbnJDPEPZgQ=="
         }
       },
       "is_incremental": false,
@@ -382,8 +406,8 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 24,
-          "skipped_file_count": 8
+          "total_file_count": 26,
+          "skipped_file_count": 9
         },
         "TocDocumentProcessor": {
           "can_incremental": false,

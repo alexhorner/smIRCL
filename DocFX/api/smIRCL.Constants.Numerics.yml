@@ -1,189 +1,189 @@
 ### YamlMime:ManagedReference
 items:
-- uid: smIRCL.Numerics
-  commentId: T:smIRCL.Numerics
+- uid: smIRCL.Constants.Numerics
+  commentId: T:smIRCL.Constants.Numerics
   id: Numerics
-  parent: smIRCL
+  parent: smIRCL.Constants
   children:
-  - smIRCL.Numerics.ERR_ALREADYREGISTERED
-  - smIRCL.Numerics.ERR_BADCHANMASK
-  - smIRCL.Numerics.ERR_BADCHANNELKEY
-  - smIRCL.Numerics.ERR_BADMASK
-  - smIRCL.Numerics.ERR_BANLISTFULL
-  - smIRCL.Numerics.ERR_BANNEDFROMCHAN
-  - smIRCL.Numerics.ERR_CANNOTSENDTOCHAN
-  - smIRCL.Numerics.ERR_CANTKILLSERVER
-  - smIRCL.Numerics.ERR_CHANNELISFULL
-  - smIRCL.Numerics.ERR_CHANOPRIVSNEEDED
-  - smIRCL.Numerics.ERR_ERRONEUSNICKNAME
-  - smIRCL.Numerics.ERR_FILEERROR
-  - smIRCL.Numerics.ERR_INVITEONLYCHAN
-  - smIRCL.Numerics.ERR_KEYSET
-  - smIRCL.Numerics.ERR_NEEDMOREPARAMS
-  - smIRCL.Numerics.ERR_NICKCOLLISION
-  - smIRCL.Numerics.ERR_NICKNAMEINUSE
-  - smIRCL.Numerics.ERR_NOADMININFO
-  - smIRCL.Numerics.ERR_NOCHANMODES
-  - smIRCL.Numerics.ERR_NOLOGIN
-  - smIRCL.Numerics.ERR_NOMOTD
-  - smIRCL.Numerics.ERR_NONICKNAMEGIVEN
-  - smIRCL.Numerics.ERR_NOOPERHOST
-  - smIRCL.Numerics.ERR_NOORIGIN
-  - smIRCL.Numerics.ERR_NOPERMFORHOST
-  - smIRCL.Numerics.ERR_NOPRIVILEGES
-  - smIRCL.Numerics.ERR_NORECIPIENT
-  - smIRCL.Numerics.ERR_NOSERVICEHOST
-  - smIRCL.Numerics.ERR_NOSUCHCHANNEL
-  - smIRCL.Numerics.ERR_NOSUCHNICK
-  - smIRCL.Numerics.ERR_NOSUCHSERVER
-  - smIRCL.Numerics.ERR_NOSUCHSERVICE
-  - smIRCL.Numerics.ERR_NOTEXTTOSEND
-  - smIRCL.Numerics.ERR_NOTINCHANNEL
-  - smIRCL.Numerics.ERR_NOTOPLEVEL
-  - smIRCL.Numerics.ERR_NOTREGISTERED
-  - smIRCL.Numerics.ERR_PASSWDMISMATCH
-  - smIRCL.Numerics.ERR_RESTRICTED
-  - smIRCL.Numerics.ERR_SUMMONDISABLED
-  - smIRCL.Numerics.ERR_TOOMANYCHANNELS
-  - smIRCL.Numerics.ERR_TOOMANYTARGETS
-  - smIRCL.Numerics.ERR_UMODEUNKNOWNFLAG
-  - smIRCL.Numerics.ERR_UNAVAILRESOURCE
-  - smIRCL.Numerics.ERR_UNIQOPPRIVSNEEDED
-  - smIRCL.Numerics.ERR_UNKNOWNCOMMAND
-  - smIRCL.Numerics.ERR_UNKNOWNMODE
-  - smIRCL.Numerics.ERR_USERDISABLED
-  - smIRCL.Numerics.ERR_USERNOTINCHANNEL
-  - smIRCL.Numerics.ERR_USERONCHANNEL
-  - smIRCL.Numerics.ERR_USERSDONTMATCH
-  - smIRCL.Numerics.ERR_WASNOSUCHNICK
-  - smIRCL.Numerics.ERR_WILDTOPLEVEL
-  - smIRCL.Numerics.ERR_YOUREBANNEDCREEP
-  - smIRCL.Numerics.ERR_YOUWILLBEBANNED
-  - smIRCL.Numerics.RPL_ADMINEMAIL
-  - smIRCL.Numerics.RPL_ADMINLOC1
-  - smIRCL.Numerics.RPL_ADMINLOC2
-  - smIRCL.Numerics.RPL_ADMINME
-  - smIRCL.Numerics.RPL_AWAY
-  - smIRCL.Numerics.RPL_BANLIST
-  - smIRCL.Numerics.RPL_BOUNCE
-  - smIRCL.Numerics.RPL_CHANNELMODEIS
-  - smIRCL.Numerics.RPL_CLODEEND
-  - smIRCL.Numerics.RPL_CLOSING
-  - smIRCL.Numerics.RPL_CREATED
-  - smIRCL.Numerics.RPL_ENDOFBANLIST
-  - smIRCL.Numerics.RPL_ENDOFEXCEPTLIST
-  - smIRCL.Numerics.RPL_ENDOFINFO
-  - smIRCL.Numerics.RPL_ENDOFINVITELIST
-  - smIRCL.Numerics.RPL_ENDOFLINKS
-  - smIRCL.Numerics.RPL_ENDOFMOTD
-  - smIRCL.Numerics.RPL_ENDOFNAMES
-  - smIRCL.Numerics.RPL_ENDOFSERVICES
-  - smIRCL.Numerics.RPL_ENDOFSTATS
-  - smIRCL.Numerics.RPL_ENDOFUSERS
-  - smIRCL.Numerics.RPL_ENDOFWHO
-  - smIRCL.Numerics.RPL_ENDOFWHOIS
-  - smIRCL.Numerics.RPL_ENDOFWHOWAS
-  - smIRCL.Numerics.RPL_EXCEPTLIST
-  - smIRCL.Numerics.RPL_HOSTHIDDEN
-  - smIRCL.Numerics.RPL_INFO
-  - smIRCL.Numerics.RPL_INFOSTART
-  - smIRCL.Numerics.RPL_INVITELIST
-  - smIRCL.Numerics.RPL_INVITING
-  - smIRCL.Numerics.RPL_ISON
-  - smIRCL.Numerics.RPL_ISUPPORT
-  - smIRCL.Numerics.RPL_KILLDONE
-  - smIRCL.Numerics.RPL_LINKS
-  - smIRCL.Numerics.RPL_LIST
-  - smIRCL.Numerics.RPL_LISTEND
-  - smIRCL.Numerics.RPL_LUSERCHANNELS
-  - smIRCL.Numerics.RPL_LUSERCLIENT
-  - smIRCL.Numerics.RPL_LUSERME
-  - smIRCL.Numerics.RPL_LUSEROP
-  - smIRCL.Numerics.RPL_LUSERUNKNOWN
-  - smIRCL.Numerics.RPL_MOTD
-  - smIRCL.Numerics.RPL_MOTDSTART
-  - smIRCL.Numerics.RPL_MYINFO
-  - smIRCL.Numerics.RPL_MYPORTIS
-  - smIRCL.Numerics.RPL_NAMREPLY
-  - smIRCL.Numerics.RPL_NONE
-  - smIRCL.Numerics.RPL_NOTOPIC
-  - smIRCL.Numerics.RPL_NOUSERS
-  - smIRCL.Numerics.RPL_NOWAWAY
-  - smIRCL.Numerics.RPL_REHASHING
-  - smIRCL.Numerics.RPL_RPL_LISTSTART
-  - smIRCL.Numerics.RPL_SERVICE
-  - smIRCL.Numerics.RPL_SERVICEINFO
-  - smIRCL.Numerics.RPL_SERVLIST
-  - smIRCL.Numerics.RPL_SERVLISTEND
-  - smIRCL.Numerics.RPL_STATSBLINE
-  - smIRCL.Numerics.RPL_STATSCLINE
-  - smIRCL.Numerics.RPL_STATSCOMMANDS
-  - smIRCL.Numerics.RPL_STATSDLINE
-  - smIRCL.Numerics.RPL_STATSHLINE
-  - smIRCL.Numerics.RPL_STATSILINE
-  - smIRCL.Numerics.RPL_STATSKLINE
-  - smIRCL.Numerics.RPL_STATSLINKINFO
-  - smIRCL.Numerics.RPL_STATSLLINE
-  - smIRCL.Numerics.RPL_STATSNLINE
-  - smIRCL.Numerics.RPL_STATSOLINE
-  - smIRCL.Numerics.RPL_STATSPING
-  - smIRCL.Numerics.RPL_STATSQLINE
-  - smIRCL.Numerics.RPL_STATSSLINE
-  - smIRCL.Numerics.RPL_STATSUPTIME
-  - smIRCL.Numerics.RPL_STATSVLINE
-  - smIRCL.Numerics.RPL_STATSYLINE
-  - smIRCL.Numerics.RPL_SUMMONING
-  - smIRCL.Numerics.RPL_TIME
-  - smIRCL.Numerics.RPL_TOPIC
-  - smIRCL.Numerics.RPL_TRACECLASS
-  - smIRCL.Numerics.RPL_TRACECONNECTING
-  - smIRCL.Numerics.RPL_TRACEEND
-  - smIRCL.Numerics.RPL_TRACEHANDSHAKE
-  - smIRCL.Numerics.RPL_TRACELINK
-  - smIRCL.Numerics.RPL_TRACELOG
-  - smIRCL.Numerics.RPL_TRACENEWTYPE
-  - smIRCL.Numerics.RPL_TRACEOPERATOR
-  - smIRCL.Numerics.RPL_TRACERECONNECT
-  - smIRCL.Numerics.RPL_TRACESERVER
-  - smIRCL.Numerics.RPL_TRACEUNKNOWN
-  - smIRCL.Numerics.RPL_TRACEUSER
-  - smIRCL.Numerics.RPL_TRYAGAIN
-  - smIRCL.Numerics.RPL_UMODEIS
-  - smIRCL.Numerics.RPL_UNAWAY
-  - smIRCL.Numerics.RPL_UNIQOPIS
-  - smIRCL.Numerics.RPL_USERHOST
-  - smIRCL.Numerics.RPL_USERS
-  - smIRCL.Numerics.RPL_USERSSTART
-  - smIRCL.Numerics.RPL_VERSION
-  - smIRCL.Numerics.RPL_WELCOME
-  - smIRCL.Numerics.RPL_WHOISCHANNELS
-  - smIRCL.Numerics.RPL_WHOISIDLE
-  - smIRCL.Numerics.RPL_WHOISOPERATOR
-  - smIRCL.Numerics.RPL_WHOISSERVER
-  - smIRCL.Numerics.RPL_WHOISUSER
-  - smIRCL.Numerics.RPL_WHOREPLY
-  - smIRCL.Numerics.RPL_WHOWASUSER
-  - smIRCL.Numerics.RPL_YOUREOPER
-  - smIRCL.Numerics.RPL_YOURESERVICE
-  - smIRCL.Numerics.RPL_YOURHOST
+  - smIRCL.Constants.Numerics.ERR_ALREADYREGISTERED
+  - smIRCL.Constants.Numerics.ERR_BADCHANMASK
+  - smIRCL.Constants.Numerics.ERR_BADCHANNELKEY
+  - smIRCL.Constants.Numerics.ERR_BADMASK
+  - smIRCL.Constants.Numerics.ERR_BANLISTFULL
+  - smIRCL.Constants.Numerics.ERR_BANNEDFROMCHAN
+  - smIRCL.Constants.Numerics.ERR_CANNOTSENDTOCHAN
+  - smIRCL.Constants.Numerics.ERR_CANTKILLSERVER
+  - smIRCL.Constants.Numerics.ERR_CHANNELISFULL
+  - smIRCL.Constants.Numerics.ERR_CHANOPRIVSNEEDED
+  - smIRCL.Constants.Numerics.ERR_ERRONEUSNICKNAME
+  - smIRCL.Constants.Numerics.ERR_FILEERROR
+  - smIRCL.Constants.Numerics.ERR_INVITEONLYCHAN
+  - smIRCL.Constants.Numerics.ERR_KEYSET
+  - smIRCL.Constants.Numerics.ERR_NEEDMOREPARAMS
+  - smIRCL.Constants.Numerics.ERR_NICKCOLLISION
+  - smIRCL.Constants.Numerics.ERR_NICKNAMEINUSE
+  - smIRCL.Constants.Numerics.ERR_NOADMININFO
+  - smIRCL.Constants.Numerics.ERR_NOCHANMODES
+  - smIRCL.Constants.Numerics.ERR_NOLOGIN
+  - smIRCL.Constants.Numerics.ERR_NOMOTD
+  - smIRCL.Constants.Numerics.ERR_NONICKNAMEGIVEN
+  - smIRCL.Constants.Numerics.ERR_NOOPERHOST
+  - smIRCL.Constants.Numerics.ERR_NOORIGIN
+  - smIRCL.Constants.Numerics.ERR_NOPERMFORHOST
+  - smIRCL.Constants.Numerics.ERR_NOPRIVILEGES
+  - smIRCL.Constants.Numerics.ERR_NORECIPIENT
+  - smIRCL.Constants.Numerics.ERR_NOSERVICEHOST
+  - smIRCL.Constants.Numerics.ERR_NOSUCHCHANNEL
+  - smIRCL.Constants.Numerics.ERR_NOSUCHNICK
+  - smIRCL.Constants.Numerics.ERR_NOSUCHSERVER
+  - smIRCL.Constants.Numerics.ERR_NOSUCHSERVICE
+  - smIRCL.Constants.Numerics.ERR_NOTEXTTOSEND
+  - smIRCL.Constants.Numerics.ERR_NOTINCHANNEL
+  - smIRCL.Constants.Numerics.ERR_NOTOPLEVEL
+  - smIRCL.Constants.Numerics.ERR_NOTREGISTERED
+  - smIRCL.Constants.Numerics.ERR_PASSWDMISMATCH
+  - smIRCL.Constants.Numerics.ERR_RESTRICTED
+  - smIRCL.Constants.Numerics.ERR_SUMMONDISABLED
+  - smIRCL.Constants.Numerics.ERR_TOOMANYCHANNELS
+  - smIRCL.Constants.Numerics.ERR_TOOMANYTARGETS
+  - smIRCL.Constants.Numerics.ERR_UMODEUNKNOWNFLAG
+  - smIRCL.Constants.Numerics.ERR_UNAVAILRESOURCE
+  - smIRCL.Constants.Numerics.ERR_UNIQOPPRIVSNEEDED
+  - smIRCL.Constants.Numerics.ERR_UNKNOWNCOMMAND
+  - smIRCL.Constants.Numerics.ERR_UNKNOWNMODE
+  - smIRCL.Constants.Numerics.ERR_USERDISABLED
+  - smIRCL.Constants.Numerics.ERR_USERNOTINCHANNEL
+  - smIRCL.Constants.Numerics.ERR_USERONCHANNEL
+  - smIRCL.Constants.Numerics.ERR_USERSDONTMATCH
+  - smIRCL.Constants.Numerics.ERR_WASNOSUCHNICK
+  - smIRCL.Constants.Numerics.ERR_WILDTOPLEVEL
+  - smIRCL.Constants.Numerics.ERR_YOUREBANNEDCREEP
+  - smIRCL.Constants.Numerics.ERR_YOUWILLBEBANNED
+  - smIRCL.Constants.Numerics.RPL_ADMINEMAIL
+  - smIRCL.Constants.Numerics.RPL_ADMINLOC1
+  - smIRCL.Constants.Numerics.RPL_ADMINLOC2
+  - smIRCL.Constants.Numerics.RPL_ADMINME
+  - smIRCL.Constants.Numerics.RPL_AWAY
+  - smIRCL.Constants.Numerics.RPL_BANLIST
+  - smIRCL.Constants.Numerics.RPL_BOUNCE
+  - smIRCL.Constants.Numerics.RPL_CHANNELMODEIS
+  - smIRCL.Constants.Numerics.RPL_CLODEEND
+  - smIRCL.Constants.Numerics.RPL_CLOSING
+  - smIRCL.Constants.Numerics.RPL_CREATED
+  - smIRCL.Constants.Numerics.RPL_ENDOFBANLIST
+  - smIRCL.Constants.Numerics.RPL_ENDOFEXCEPTLIST
+  - smIRCL.Constants.Numerics.RPL_ENDOFINFO
+  - smIRCL.Constants.Numerics.RPL_ENDOFINVITELIST
+  - smIRCL.Constants.Numerics.RPL_ENDOFLINKS
+  - smIRCL.Constants.Numerics.RPL_ENDOFMOTD
+  - smIRCL.Constants.Numerics.RPL_ENDOFNAMES
+  - smIRCL.Constants.Numerics.RPL_ENDOFSERVICES
+  - smIRCL.Constants.Numerics.RPL_ENDOFSTATS
+  - smIRCL.Constants.Numerics.RPL_ENDOFUSERS
+  - smIRCL.Constants.Numerics.RPL_ENDOFWHO
+  - smIRCL.Constants.Numerics.RPL_ENDOFWHOIS
+  - smIRCL.Constants.Numerics.RPL_ENDOFWHOWAS
+  - smIRCL.Constants.Numerics.RPL_EXCEPTLIST
+  - smIRCL.Constants.Numerics.RPL_HOSTHIDDEN
+  - smIRCL.Constants.Numerics.RPL_INFO
+  - smIRCL.Constants.Numerics.RPL_INFOSTART
+  - smIRCL.Constants.Numerics.RPL_INVITELIST
+  - smIRCL.Constants.Numerics.RPL_INVITING
+  - smIRCL.Constants.Numerics.RPL_ISON
+  - smIRCL.Constants.Numerics.RPL_ISUPPORT
+  - smIRCL.Constants.Numerics.RPL_KILLDONE
+  - smIRCL.Constants.Numerics.RPL_LINKS
+  - smIRCL.Constants.Numerics.RPL_LIST
+  - smIRCL.Constants.Numerics.RPL_LISTEND
+  - smIRCL.Constants.Numerics.RPL_LUSERCHANNELS
+  - smIRCL.Constants.Numerics.RPL_LUSERCLIENT
+  - smIRCL.Constants.Numerics.RPL_LUSERME
+  - smIRCL.Constants.Numerics.RPL_LUSEROP
+  - smIRCL.Constants.Numerics.RPL_LUSERUNKNOWN
+  - smIRCL.Constants.Numerics.RPL_MOTD
+  - smIRCL.Constants.Numerics.RPL_MOTDSTART
+  - smIRCL.Constants.Numerics.RPL_MYINFO
+  - smIRCL.Constants.Numerics.RPL_MYPORTIS
+  - smIRCL.Constants.Numerics.RPL_NAMREPLY
+  - smIRCL.Constants.Numerics.RPL_NONE
+  - smIRCL.Constants.Numerics.RPL_NOTOPIC
+  - smIRCL.Constants.Numerics.RPL_NOUSERS
+  - smIRCL.Constants.Numerics.RPL_NOWAWAY
+  - smIRCL.Constants.Numerics.RPL_REHASHING
+  - smIRCL.Constants.Numerics.RPL_RPL_LISTSTART
+  - smIRCL.Constants.Numerics.RPL_SERVICE
+  - smIRCL.Constants.Numerics.RPL_SERVICEINFO
+  - smIRCL.Constants.Numerics.RPL_SERVLIST
+  - smIRCL.Constants.Numerics.RPL_SERVLISTEND
+  - smIRCL.Constants.Numerics.RPL_STATSBLINE
+  - smIRCL.Constants.Numerics.RPL_STATSCLINE
+  - smIRCL.Constants.Numerics.RPL_STATSCOMMANDS
+  - smIRCL.Constants.Numerics.RPL_STATSDLINE
+  - smIRCL.Constants.Numerics.RPL_STATSHLINE
+  - smIRCL.Constants.Numerics.RPL_STATSILINE
+  - smIRCL.Constants.Numerics.RPL_STATSKLINE
+  - smIRCL.Constants.Numerics.RPL_STATSLINKINFO
+  - smIRCL.Constants.Numerics.RPL_STATSLLINE
+  - smIRCL.Constants.Numerics.RPL_STATSNLINE
+  - smIRCL.Constants.Numerics.RPL_STATSOLINE
+  - smIRCL.Constants.Numerics.RPL_STATSPING
+  - smIRCL.Constants.Numerics.RPL_STATSQLINE
+  - smIRCL.Constants.Numerics.RPL_STATSSLINE
+  - smIRCL.Constants.Numerics.RPL_STATSUPTIME
+  - smIRCL.Constants.Numerics.RPL_STATSVLINE
+  - smIRCL.Constants.Numerics.RPL_STATSYLINE
+  - smIRCL.Constants.Numerics.RPL_SUMMONING
+  - smIRCL.Constants.Numerics.RPL_TIME
+  - smIRCL.Constants.Numerics.RPL_TOPIC
+  - smIRCL.Constants.Numerics.RPL_TRACECLASS
+  - smIRCL.Constants.Numerics.RPL_TRACECONNECTING
+  - smIRCL.Constants.Numerics.RPL_TRACEEND
+  - smIRCL.Constants.Numerics.RPL_TRACEHANDSHAKE
+  - smIRCL.Constants.Numerics.RPL_TRACELINK
+  - smIRCL.Constants.Numerics.RPL_TRACELOG
+  - smIRCL.Constants.Numerics.RPL_TRACENEWTYPE
+  - smIRCL.Constants.Numerics.RPL_TRACEOPERATOR
+  - smIRCL.Constants.Numerics.RPL_TRACERECONNECT
+  - smIRCL.Constants.Numerics.RPL_TRACESERVER
+  - smIRCL.Constants.Numerics.RPL_TRACEUNKNOWN
+  - smIRCL.Constants.Numerics.RPL_TRACEUSER
+  - smIRCL.Constants.Numerics.RPL_TRYAGAIN
+  - smIRCL.Constants.Numerics.RPL_UMODEIS
+  - smIRCL.Constants.Numerics.RPL_UNAWAY
+  - smIRCL.Constants.Numerics.RPL_UNIQOPIS
+  - smIRCL.Constants.Numerics.RPL_USERHOST
+  - smIRCL.Constants.Numerics.RPL_USERS
+  - smIRCL.Constants.Numerics.RPL_USERSSTART
+  - smIRCL.Constants.Numerics.RPL_VERSION
+  - smIRCL.Constants.Numerics.RPL_WELCOME
+  - smIRCL.Constants.Numerics.RPL_WHOISCHANNELS
+  - smIRCL.Constants.Numerics.RPL_WHOISIDLE
+  - smIRCL.Constants.Numerics.RPL_WHOISOPERATOR
+  - smIRCL.Constants.Numerics.RPL_WHOISSERVER
+  - smIRCL.Constants.Numerics.RPL_WHOISUSER
+  - smIRCL.Constants.Numerics.RPL_WHOREPLY
+  - smIRCL.Constants.Numerics.RPL_WHOWASUSER
+  - smIRCL.Constants.Numerics.RPL_YOUREOPER
+  - smIRCL.Constants.Numerics.RPL_YOURESERVICE
+  - smIRCL.Constants.Numerics.RPL_YOURHOST
   langs:
   - csharp
   - vb
   name: Numerics
   nameWithType: Numerics
-  fullName: smIRCL.Numerics
+  fullName: smIRCL.Constants.Numerics
   type: Class
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: Numerics
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 7
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public static class Numerics
     content.vb: Public Module Numerics
@@ -204,28 +204,28 @@ items:
   modifiers.vb:
   - Public
   - Module
-- uid: smIRCL.Numerics.RPL_WELCOME
-  commentId: F:smIRCL.Numerics.RPL_WELCOME
+- uid: smIRCL.Constants.Numerics.RPL_WELCOME
+  commentId: F:smIRCL.Constants.Numerics.RPL_WELCOME
   id: RPL_WELCOME
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_WELCOME
   nameWithType: Numerics.RPL_WELCOME
-  fullName: smIRCL.Numerics.RPL_WELCOME
+  fullName: smIRCL.Constants.Numerics.RPL_WELCOME
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_WELCOME
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 12
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_WELCOME = "001"
     return:
@@ -237,28 +237,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_YOURHOST
-  commentId: F:smIRCL.Numerics.RPL_YOURHOST
+- uid: smIRCL.Constants.Numerics.RPL_YOURHOST
+  commentId: F:smIRCL.Constants.Numerics.RPL_YOURHOST
   id: RPL_YOURHOST
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_YOURHOST
   nameWithType: Numerics.RPL_YOURHOST
-  fullName: smIRCL.Numerics.RPL_YOURHOST
+  fullName: smIRCL.Constants.Numerics.RPL_YOURHOST
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_YOURHOST
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 13
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_YOURHOST = "002"
     return:
@@ -270,28 +270,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_CREATED
-  commentId: F:smIRCL.Numerics.RPL_CREATED
+- uid: smIRCL.Constants.Numerics.RPL_CREATED
+  commentId: F:smIRCL.Constants.Numerics.RPL_CREATED
   id: RPL_CREATED
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_CREATED
   nameWithType: Numerics.RPL_CREATED
-  fullName: smIRCL.Numerics.RPL_CREATED
+  fullName: smIRCL.Constants.Numerics.RPL_CREATED
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_CREATED
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 14
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_CREATED = "003"
     return:
@@ -303,28 +303,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_MYINFO
-  commentId: F:smIRCL.Numerics.RPL_MYINFO
+- uid: smIRCL.Constants.Numerics.RPL_MYINFO
+  commentId: F:smIRCL.Constants.Numerics.RPL_MYINFO
   id: RPL_MYINFO
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_MYINFO
   nameWithType: Numerics.RPL_MYINFO
-  fullName: smIRCL.Numerics.RPL_MYINFO
+  fullName: smIRCL.Constants.Numerics.RPL_MYINFO
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_MYINFO
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 15
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_MYINFO = "004"
     return:
@@ -336,28 +336,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_BOUNCE
-  commentId: F:smIRCL.Numerics.RPL_BOUNCE
+- uid: smIRCL.Constants.Numerics.RPL_BOUNCE
+  commentId: F:smIRCL.Constants.Numerics.RPL_BOUNCE
   id: RPL_BOUNCE
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_BOUNCE
   nameWithType: Numerics.RPL_BOUNCE
-  fullName: smIRCL.Numerics.RPL_BOUNCE
+  fullName: smIRCL.Constants.Numerics.RPL_BOUNCE
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_BOUNCE
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 16
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_BOUNCE = "005"
     return:
@@ -369,28 +369,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_ISUPPORT
-  commentId: F:smIRCL.Numerics.RPL_ISUPPORT
+- uid: smIRCL.Constants.Numerics.RPL_ISUPPORT
+  commentId: F:smIRCL.Constants.Numerics.RPL_ISUPPORT
   id: RPL_ISUPPORT
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_ISUPPORT
   nameWithType: Numerics.RPL_ISUPPORT
-  fullName: smIRCL.Numerics.RPL_ISUPPORT
+  fullName: smIRCL.Constants.Numerics.RPL_ISUPPORT
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_ISUPPORT
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 17
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_ISUPPORT = "005"
     return:
@@ -402,28 +402,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_AWAY
-  commentId: F:smIRCL.Numerics.RPL_AWAY
+- uid: smIRCL.Constants.Numerics.RPL_AWAY
+  commentId: F:smIRCL.Constants.Numerics.RPL_AWAY
   id: RPL_AWAY
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_AWAY
   nameWithType: Numerics.RPL_AWAY
-  fullName: smIRCL.Numerics.RPL_AWAY
+  fullName: smIRCL.Constants.Numerics.RPL_AWAY
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_AWAY
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 18
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_AWAY = "301"
     return:
@@ -435,28 +435,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_USERHOST
-  commentId: F:smIRCL.Numerics.RPL_USERHOST
+- uid: smIRCL.Constants.Numerics.RPL_USERHOST
+  commentId: F:smIRCL.Constants.Numerics.RPL_USERHOST
   id: RPL_USERHOST
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_USERHOST
   nameWithType: Numerics.RPL_USERHOST
-  fullName: smIRCL.Numerics.RPL_USERHOST
+  fullName: smIRCL.Constants.Numerics.RPL_USERHOST
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_USERHOST
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 19
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_USERHOST = "302"
     return:
@@ -468,28 +468,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_ISON
-  commentId: F:smIRCL.Numerics.RPL_ISON
+- uid: smIRCL.Constants.Numerics.RPL_ISON
+  commentId: F:smIRCL.Constants.Numerics.RPL_ISON
   id: RPL_ISON
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_ISON
   nameWithType: Numerics.RPL_ISON
-  fullName: smIRCL.Numerics.RPL_ISON
+  fullName: smIRCL.Constants.Numerics.RPL_ISON
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_ISON
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 20
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_ISON = "303"
     return:
@@ -501,28 +501,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_UNAWAY
-  commentId: F:smIRCL.Numerics.RPL_UNAWAY
+- uid: smIRCL.Constants.Numerics.RPL_UNAWAY
+  commentId: F:smIRCL.Constants.Numerics.RPL_UNAWAY
   id: RPL_UNAWAY
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_UNAWAY
   nameWithType: Numerics.RPL_UNAWAY
-  fullName: smIRCL.Numerics.RPL_UNAWAY
+  fullName: smIRCL.Constants.Numerics.RPL_UNAWAY
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_UNAWAY
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 21
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_UNAWAY = "305"
     return:
@@ -534,28 +534,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_NOWAWAY
-  commentId: F:smIRCL.Numerics.RPL_NOWAWAY
+- uid: smIRCL.Constants.Numerics.RPL_NOWAWAY
+  commentId: F:smIRCL.Constants.Numerics.RPL_NOWAWAY
   id: RPL_NOWAWAY
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_NOWAWAY
   nameWithType: Numerics.RPL_NOWAWAY
-  fullName: smIRCL.Numerics.RPL_NOWAWAY
+  fullName: smIRCL.Constants.Numerics.RPL_NOWAWAY
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_NOWAWAY
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 22
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_NOWAWAY = "306"
     return:
@@ -567,28 +567,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_WHOISUSER
-  commentId: F:smIRCL.Numerics.RPL_WHOISUSER
+- uid: smIRCL.Constants.Numerics.RPL_WHOISUSER
+  commentId: F:smIRCL.Constants.Numerics.RPL_WHOISUSER
   id: RPL_WHOISUSER
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_WHOISUSER
   nameWithType: Numerics.RPL_WHOISUSER
-  fullName: smIRCL.Numerics.RPL_WHOISUSER
+  fullName: smIRCL.Constants.Numerics.RPL_WHOISUSER
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_WHOISUSER
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 23
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_WHOISUSER = "311"
     return:
@@ -600,28 +600,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_WHOISSERVER
-  commentId: F:smIRCL.Numerics.RPL_WHOISSERVER
+- uid: smIRCL.Constants.Numerics.RPL_WHOISSERVER
+  commentId: F:smIRCL.Constants.Numerics.RPL_WHOISSERVER
   id: RPL_WHOISSERVER
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_WHOISSERVER
   nameWithType: Numerics.RPL_WHOISSERVER
-  fullName: smIRCL.Numerics.RPL_WHOISSERVER
+  fullName: smIRCL.Constants.Numerics.RPL_WHOISSERVER
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_WHOISSERVER
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 24
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_WHOISSERVER = "312"
     return:
@@ -633,28 +633,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_WHOISOPERATOR
-  commentId: F:smIRCL.Numerics.RPL_WHOISOPERATOR
+- uid: smIRCL.Constants.Numerics.RPL_WHOISOPERATOR
+  commentId: F:smIRCL.Constants.Numerics.RPL_WHOISOPERATOR
   id: RPL_WHOISOPERATOR
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_WHOISOPERATOR
   nameWithType: Numerics.RPL_WHOISOPERATOR
-  fullName: smIRCL.Numerics.RPL_WHOISOPERATOR
+  fullName: smIRCL.Constants.Numerics.RPL_WHOISOPERATOR
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_WHOISOPERATOR
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 25
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_WHOISOPERATOR = "313"
     return:
@@ -666,28 +666,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_WHOWASUSER
-  commentId: F:smIRCL.Numerics.RPL_WHOWASUSER
+- uid: smIRCL.Constants.Numerics.RPL_WHOWASUSER
+  commentId: F:smIRCL.Constants.Numerics.RPL_WHOWASUSER
   id: RPL_WHOWASUSER
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_WHOWASUSER
   nameWithType: Numerics.RPL_WHOWASUSER
-  fullName: smIRCL.Numerics.RPL_WHOWASUSER
+  fullName: smIRCL.Constants.Numerics.RPL_WHOWASUSER
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_WHOWASUSER
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 26
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_WHOWASUSER = "314"
     return:
@@ -699,28 +699,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_ENDOFWHO
-  commentId: F:smIRCL.Numerics.RPL_ENDOFWHO
+- uid: smIRCL.Constants.Numerics.RPL_ENDOFWHO
+  commentId: F:smIRCL.Constants.Numerics.RPL_ENDOFWHO
   id: RPL_ENDOFWHO
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_ENDOFWHO
   nameWithType: Numerics.RPL_ENDOFWHO
-  fullName: smIRCL.Numerics.RPL_ENDOFWHO
+  fullName: smIRCL.Constants.Numerics.RPL_ENDOFWHO
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_ENDOFWHO
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 27
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_ENDOFWHO = "315"
     return:
@@ -732,28 +732,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_WHOISIDLE
-  commentId: F:smIRCL.Numerics.RPL_WHOISIDLE
+- uid: smIRCL.Constants.Numerics.RPL_WHOISIDLE
+  commentId: F:smIRCL.Constants.Numerics.RPL_WHOISIDLE
   id: RPL_WHOISIDLE
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_WHOISIDLE
   nameWithType: Numerics.RPL_WHOISIDLE
-  fullName: smIRCL.Numerics.RPL_WHOISIDLE
+  fullName: smIRCL.Constants.Numerics.RPL_WHOISIDLE
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_WHOISIDLE
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 28
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_WHOISIDLE = "317"
     return:
@@ -765,28 +765,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_ENDOFWHOIS
-  commentId: F:smIRCL.Numerics.RPL_ENDOFWHOIS
+- uid: smIRCL.Constants.Numerics.RPL_ENDOFWHOIS
+  commentId: F:smIRCL.Constants.Numerics.RPL_ENDOFWHOIS
   id: RPL_ENDOFWHOIS
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_ENDOFWHOIS
   nameWithType: Numerics.RPL_ENDOFWHOIS
-  fullName: smIRCL.Numerics.RPL_ENDOFWHOIS
+  fullName: smIRCL.Constants.Numerics.RPL_ENDOFWHOIS
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_ENDOFWHOIS
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 29
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_ENDOFWHOIS = "318"
     return:
@@ -798,28 +798,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_WHOISCHANNELS
-  commentId: F:smIRCL.Numerics.RPL_WHOISCHANNELS
+- uid: smIRCL.Constants.Numerics.RPL_WHOISCHANNELS
+  commentId: F:smIRCL.Constants.Numerics.RPL_WHOISCHANNELS
   id: RPL_WHOISCHANNELS
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_WHOISCHANNELS
   nameWithType: Numerics.RPL_WHOISCHANNELS
-  fullName: smIRCL.Numerics.RPL_WHOISCHANNELS
+  fullName: smIRCL.Constants.Numerics.RPL_WHOISCHANNELS
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_WHOISCHANNELS
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 30
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_WHOISCHANNELS = "319"
     return:
@@ -831,28 +831,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_RPL_LISTSTART
-  commentId: F:smIRCL.Numerics.RPL_RPL_LISTSTART
+- uid: smIRCL.Constants.Numerics.RPL_RPL_LISTSTART
+  commentId: F:smIRCL.Constants.Numerics.RPL_RPL_LISTSTART
   id: RPL_RPL_LISTSTART
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_RPL_LISTSTART
   nameWithType: Numerics.RPL_RPL_LISTSTART
-  fullName: smIRCL.Numerics.RPL_RPL_LISTSTART
+  fullName: smIRCL.Constants.Numerics.RPL_RPL_LISTSTART
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_RPL_LISTSTART
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 31
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_RPL_LISTSTART = "321"
     return:
@@ -864,28 +864,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_LIST
-  commentId: F:smIRCL.Numerics.RPL_LIST
+- uid: smIRCL.Constants.Numerics.RPL_LIST
+  commentId: F:smIRCL.Constants.Numerics.RPL_LIST
   id: RPL_LIST
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_LIST
   nameWithType: Numerics.RPL_LIST
-  fullName: smIRCL.Numerics.RPL_LIST
+  fullName: smIRCL.Constants.Numerics.RPL_LIST
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_LIST
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 32
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_LIST = "322"
     return:
@@ -897,28 +897,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_LISTEND
-  commentId: F:smIRCL.Numerics.RPL_LISTEND
+- uid: smIRCL.Constants.Numerics.RPL_LISTEND
+  commentId: F:smIRCL.Constants.Numerics.RPL_LISTEND
   id: RPL_LISTEND
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_LISTEND
   nameWithType: Numerics.RPL_LISTEND
-  fullName: smIRCL.Numerics.RPL_LISTEND
+  fullName: smIRCL.Constants.Numerics.RPL_LISTEND
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_LISTEND
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 33
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_LISTEND = "323"
     return:
@@ -930,28 +930,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_CHANNELMODEIS
-  commentId: F:smIRCL.Numerics.RPL_CHANNELMODEIS
+- uid: smIRCL.Constants.Numerics.RPL_CHANNELMODEIS
+  commentId: F:smIRCL.Constants.Numerics.RPL_CHANNELMODEIS
   id: RPL_CHANNELMODEIS
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_CHANNELMODEIS
   nameWithType: Numerics.RPL_CHANNELMODEIS
-  fullName: smIRCL.Numerics.RPL_CHANNELMODEIS
+  fullName: smIRCL.Constants.Numerics.RPL_CHANNELMODEIS
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_CHANNELMODEIS
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 34
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_CHANNELMODEIS = "324"
     return:
@@ -963,28 +963,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_UNIQOPIS
-  commentId: F:smIRCL.Numerics.RPL_UNIQOPIS
+- uid: smIRCL.Constants.Numerics.RPL_UNIQOPIS
+  commentId: F:smIRCL.Constants.Numerics.RPL_UNIQOPIS
   id: RPL_UNIQOPIS
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_UNIQOPIS
   nameWithType: Numerics.RPL_UNIQOPIS
-  fullName: smIRCL.Numerics.RPL_UNIQOPIS
+  fullName: smIRCL.Constants.Numerics.RPL_UNIQOPIS
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_UNIQOPIS
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 35
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_UNIQOPIS = "325"
     return:
@@ -996,28 +996,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_NOTOPIC
-  commentId: F:smIRCL.Numerics.RPL_NOTOPIC
+- uid: smIRCL.Constants.Numerics.RPL_NOTOPIC
+  commentId: F:smIRCL.Constants.Numerics.RPL_NOTOPIC
   id: RPL_NOTOPIC
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_NOTOPIC
   nameWithType: Numerics.RPL_NOTOPIC
-  fullName: smIRCL.Numerics.RPL_NOTOPIC
+  fullName: smIRCL.Constants.Numerics.RPL_NOTOPIC
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_NOTOPIC
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 36
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_NOTOPIC = "331"
     return:
@@ -1029,28 +1029,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_TOPIC
-  commentId: F:smIRCL.Numerics.RPL_TOPIC
+- uid: smIRCL.Constants.Numerics.RPL_TOPIC
+  commentId: F:smIRCL.Constants.Numerics.RPL_TOPIC
   id: RPL_TOPIC
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_TOPIC
   nameWithType: Numerics.RPL_TOPIC
-  fullName: smIRCL.Numerics.RPL_TOPIC
+  fullName: smIRCL.Constants.Numerics.RPL_TOPIC
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_TOPIC
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 37
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_TOPIC = "332"
     return:
@@ -1062,28 +1062,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_INVITING
-  commentId: F:smIRCL.Numerics.RPL_INVITING
+- uid: smIRCL.Constants.Numerics.RPL_INVITING
+  commentId: F:smIRCL.Constants.Numerics.RPL_INVITING
   id: RPL_INVITING
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_INVITING
   nameWithType: Numerics.RPL_INVITING
-  fullName: smIRCL.Numerics.RPL_INVITING
+  fullName: smIRCL.Constants.Numerics.RPL_INVITING
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_INVITING
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 38
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_INVITING = "341"
     return:
@@ -1095,28 +1095,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_SUMMONING
-  commentId: F:smIRCL.Numerics.RPL_SUMMONING
+- uid: smIRCL.Constants.Numerics.RPL_SUMMONING
+  commentId: F:smIRCL.Constants.Numerics.RPL_SUMMONING
   id: RPL_SUMMONING
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_SUMMONING
   nameWithType: Numerics.RPL_SUMMONING
-  fullName: smIRCL.Numerics.RPL_SUMMONING
+  fullName: smIRCL.Constants.Numerics.RPL_SUMMONING
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_SUMMONING
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 39
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_SUMMONING = "342"
     return:
@@ -1128,28 +1128,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_INVITELIST
-  commentId: F:smIRCL.Numerics.RPL_INVITELIST
+- uid: smIRCL.Constants.Numerics.RPL_INVITELIST
+  commentId: F:smIRCL.Constants.Numerics.RPL_INVITELIST
   id: RPL_INVITELIST
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_INVITELIST
   nameWithType: Numerics.RPL_INVITELIST
-  fullName: smIRCL.Numerics.RPL_INVITELIST
+  fullName: smIRCL.Constants.Numerics.RPL_INVITELIST
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_INVITELIST
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 40
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_INVITELIST = "346"
     return:
@@ -1161,28 +1161,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_ENDOFINVITELIST
-  commentId: F:smIRCL.Numerics.RPL_ENDOFINVITELIST
+- uid: smIRCL.Constants.Numerics.RPL_ENDOFINVITELIST
+  commentId: F:smIRCL.Constants.Numerics.RPL_ENDOFINVITELIST
   id: RPL_ENDOFINVITELIST
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_ENDOFINVITELIST
   nameWithType: Numerics.RPL_ENDOFINVITELIST
-  fullName: smIRCL.Numerics.RPL_ENDOFINVITELIST
+  fullName: smIRCL.Constants.Numerics.RPL_ENDOFINVITELIST
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_ENDOFINVITELIST
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 41
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_ENDOFINVITELIST = "347"
     return:
@@ -1194,28 +1194,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_EXCEPTLIST
-  commentId: F:smIRCL.Numerics.RPL_EXCEPTLIST
+- uid: smIRCL.Constants.Numerics.RPL_EXCEPTLIST
+  commentId: F:smIRCL.Constants.Numerics.RPL_EXCEPTLIST
   id: RPL_EXCEPTLIST
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_EXCEPTLIST
   nameWithType: Numerics.RPL_EXCEPTLIST
-  fullName: smIRCL.Numerics.RPL_EXCEPTLIST
+  fullName: smIRCL.Constants.Numerics.RPL_EXCEPTLIST
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_EXCEPTLIST
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 42
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_EXCEPTLIST = "348"
     return:
@@ -1227,28 +1227,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_ENDOFEXCEPTLIST
-  commentId: F:smIRCL.Numerics.RPL_ENDOFEXCEPTLIST
+- uid: smIRCL.Constants.Numerics.RPL_ENDOFEXCEPTLIST
+  commentId: F:smIRCL.Constants.Numerics.RPL_ENDOFEXCEPTLIST
   id: RPL_ENDOFEXCEPTLIST
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_ENDOFEXCEPTLIST
   nameWithType: Numerics.RPL_ENDOFEXCEPTLIST
-  fullName: smIRCL.Numerics.RPL_ENDOFEXCEPTLIST
+  fullName: smIRCL.Constants.Numerics.RPL_ENDOFEXCEPTLIST
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_ENDOFEXCEPTLIST
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 43
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_ENDOFEXCEPTLIST = "349"
     return:
@@ -1260,28 +1260,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_VERSION
-  commentId: F:smIRCL.Numerics.RPL_VERSION
+- uid: smIRCL.Constants.Numerics.RPL_VERSION
+  commentId: F:smIRCL.Constants.Numerics.RPL_VERSION
   id: RPL_VERSION
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_VERSION
   nameWithType: Numerics.RPL_VERSION
-  fullName: smIRCL.Numerics.RPL_VERSION
+  fullName: smIRCL.Constants.Numerics.RPL_VERSION
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_VERSION
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 44
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_VERSION = "351"
     return:
@@ -1293,28 +1293,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_WHOREPLY
-  commentId: F:smIRCL.Numerics.RPL_WHOREPLY
+- uid: smIRCL.Constants.Numerics.RPL_WHOREPLY
+  commentId: F:smIRCL.Constants.Numerics.RPL_WHOREPLY
   id: RPL_WHOREPLY
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_WHOREPLY
   nameWithType: Numerics.RPL_WHOREPLY
-  fullName: smIRCL.Numerics.RPL_WHOREPLY
+  fullName: smIRCL.Constants.Numerics.RPL_WHOREPLY
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_WHOREPLY
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 45
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_WHOREPLY = "352"
     return:
@@ -1326,28 +1326,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_NAMREPLY
-  commentId: F:smIRCL.Numerics.RPL_NAMREPLY
+- uid: smIRCL.Constants.Numerics.RPL_NAMREPLY
+  commentId: F:smIRCL.Constants.Numerics.RPL_NAMREPLY
   id: RPL_NAMREPLY
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_NAMREPLY
   nameWithType: Numerics.RPL_NAMREPLY
-  fullName: smIRCL.Numerics.RPL_NAMREPLY
+  fullName: smIRCL.Constants.Numerics.RPL_NAMREPLY
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_NAMREPLY
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 46
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_NAMREPLY = "353"
     return:
@@ -1359,28 +1359,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_LINKS
-  commentId: F:smIRCL.Numerics.RPL_LINKS
+- uid: smIRCL.Constants.Numerics.RPL_LINKS
+  commentId: F:smIRCL.Constants.Numerics.RPL_LINKS
   id: RPL_LINKS
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_LINKS
   nameWithType: Numerics.RPL_LINKS
-  fullName: smIRCL.Numerics.RPL_LINKS
+  fullName: smIRCL.Constants.Numerics.RPL_LINKS
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_LINKS
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 47
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_LINKS = "364"
     return:
@@ -1392,28 +1392,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_ENDOFLINKS
-  commentId: F:smIRCL.Numerics.RPL_ENDOFLINKS
+- uid: smIRCL.Constants.Numerics.RPL_ENDOFLINKS
+  commentId: F:smIRCL.Constants.Numerics.RPL_ENDOFLINKS
   id: RPL_ENDOFLINKS
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_ENDOFLINKS
   nameWithType: Numerics.RPL_ENDOFLINKS
-  fullName: smIRCL.Numerics.RPL_ENDOFLINKS
+  fullName: smIRCL.Constants.Numerics.RPL_ENDOFLINKS
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_ENDOFLINKS
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 48
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_ENDOFLINKS = "365"
     return:
@@ -1425,28 +1425,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_ENDOFNAMES
-  commentId: F:smIRCL.Numerics.RPL_ENDOFNAMES
+- uid: smIRCL.Constants.Numerics.RPL_ENDOFNAMES
+  commentId: F:smIRCL.Constants.Numerics.RPL_ENDOFNAMES
   id: RPL_ENDOFNAMES
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_ENDOFNAMES
   nameWithType: Numerics.RPL_ENDOFNAMES
-  fullName: smIRCL.Numerics.RPL_ENDOFNAMES
+  fullName: smIRCL.Constants.Numerics.RPL_ENDOFNAMES
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_ENDOFNAMES
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 49
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_ENDOFNAMES = "366"
     return:
@@ -1458,28 +1458,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_BANLIST
-  commentId: F:smIRCL.Numerics.RPL_BANLIST
+- uid: smIRCL.Constants.Numerics.RPL_BANLIST
+  commentId: F:smIRCL.Constants.Numerics.RPL_BANLIST
   id: RPL_BANLIST
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_BANLIST
   nameWithType: Numerics.RPL_BANLIST
-  fullName: smIRCL.Numerics.RPL_BANLIST
+  fullName: smIRCL.Constants.Numerics.RPL_BANLIST
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_BANLIST
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 50
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_BANLIST = "367"
     return:
@@ -1491,28 +1491,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_ENDOFBANLIST
-  commentId: F:smIRCL.Numerics.RPL_ENDOFBANLIST
+- uid: smIRCL.Constants.Numerics.RPL_ENDOFBANLIST
+  commentId: F:smIRCL.Constants.Numerics.RPL_ENDOFBANLIST
   id: RPL_ENDOFBANLIST
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_ENDOFBANLIST
   nameWithType: Numerics.RPL_ENDOFBANLIST
-  fullName: smIRCL.Numerics.RPL_ENDOFBANLIST
+  fullName: smIRCL.Constants.Numerics.RPL_ENDOFBANLIST
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_ENDOFBANLIST
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 51
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_ENDOFBANLIST = "368"
     return:
@@ -1524,28 +1524,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_ENDOFWHOWAS
-  commentId: F:smIRCL.Numerics.RPL_ENDOFWHOWAS
+- uid: smIRCL.Constants.Numerics.RPL_ENDOFWHOWAS
+  commentId: F:smIRCL.Constants.Numerics.RPL_ENDOFWHOWAS
   id: RPL_ENDOFWHOWAS
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_ENDOFWHOWAS
   nameWithType: Numerics.RPL_ENDOFWHOWAS
-  fullName: smIRCL.Numerics.RPL_ENDOFWHOWAS
+  fullName: smIRCL.Constants.Numerics.RPL_ENDOFWHOWAS
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_ENDOFWHOWAS
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 52
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_ENDOFWHOWAS = "369"
     return:
@@ -1557,28 +1557,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_INFO
-  commentId: F:smIRCL.Numerics.RPL_INFO
+- uid: smIRCL.Constants.Numerics.RPL_INFO
+  commentId: F:smIRCL.Constants.Numerics.RPL_INFO
   id: RPL_INFO
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_INFO
   nameWithType: Numerics.RPL_INFO
-  fullName: smIRCL.Numerics.RPL_INFO
+  fullName: smIRCL.Constants.Numerics.RPL_INFO
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_INFO
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 53
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_INFO = "371"
     return:
@@ -1590,28 +1590,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_MOTD
-  commentId: F:smIRCL.Numerics.RPL_MOTD
+- uid: smIRCL.Constants.Numerics.RPL_MOTD
+  commentId: F:smIRCL.Constants.Numerics.RPL_MOTD
   id: RPL_MOTD
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_MOTD
   nameWithType: Numerics.RPL_MOTD
-  fullName: smIRCL.Numerics.RPL_MOTD
+  fullName: smIRCL.Constants.Numerics.RPL_MOTD
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_MOTD
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 54
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_MOTD = "372"
     return:
@@ -1623,28 +1623,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_ENDOFINFO
-  commentId: F:smIRCL.Numerics.RPL_ENDOFINFO
+- uid: smIRCL.Constants.Numerics.RPL_ENDOFINFO
+  commentId: F:smIRCL.Constants.Numerics.RPL_ENDOFINFO
   id: RPL_ENDOFINFO
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_ENDOFINFO
   nameWithType: Numerics.RPL_ENDOFINFO
-  fullName: smIRCL.Numerics.RPL_ENDOFINFO
+  fullName: smIRCL.Constants.Numerics.RPL_ENDOFINFO
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_ENDOFINFO
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 55
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_ENDOFINFO = "374"
     return:
@@ -1656,28 +1656,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_MOTDSTART
-  commentId: F:smIRCL.Numerics.RPL_MOTDSTART
+- uid: smIRCL.Constants.Numerics.RPL_MOTDSTART
+  commentId: F:smIRCL.Constants.Numerics.RPL_MOTDSTART
   id: RPL_MOTDSTART
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_MOTDSTART
   nameWithType: Numerics.RPL_MOTDSTART
-  fullName: smIRCL.Numerics.RPL_MOTDSTART
+  fullName: smIRCL.Constants.Numerics.RPL_MOTDSTART
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_MOTDSTART
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 56
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_MOTDSTART = "375"
     return:
@@ -1689,28 +1689,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_ENDOFMOTD
-  commentId: F:smIRCL.Numerics.RPL_ENDOFMOTD
+- uid: smIRCL.Constants.Numerics.RPL_ENDOFMOTD
+  commentId: F:smIRCL.Constants.Numerics.RPL_ENDOFMOTD
   id: RPL_ENDOFMOTD
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_ENDOFMOTD
   nameWithType: Numerics.RPL_ENDOFMOTD
-  fullName: smIRCL.Numerics.RPL_ENDOFMOTD
+  fullName: smIRCL.Constants.Numerics.RPL_ENDOFMOTD
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_ENDOFMOTD
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 57
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_ENDOFMOTD = "376"
     return:
@@ -1722,28 +1722,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_YOUREOPER
-  commentId: F:smIRCL.Numerics.RPL_YOUREOPER
+- uid: smIRCL.Constants.Numerics.RPL_YOUREOPER
+  commentId: F:smIRCL.Constants.Numerics.RPL_YOUREOPER
   id: RPL_YOUREOPER
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_YOUREOPER
   nameWithType: Numerics.RPL_YOUREOPER
-  fullName: smIRCL.Numerics.RPL_YOUREOPER
+  fullName: smIRCL.Constants.Numerics.RPL_YOUREOPER
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_YOUREOPER
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 58
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_YOUREOPER = "381"
     return:
@@ -1755,28 +1755,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_REHASHING
-  commentId: F:smIRCL.Numerics.RPL_REHASHING
+- uid: smIRCL.Constants.Numerics.RPL_REHASHING
+  commentId: F:smIRCL.Constants.Numerics.RPL_REHASHING
   id: RPL_REHASHING
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_REHASHING
   nameWithType: Numerics.RPL_REHASHING
-  fullName: smIRCL.Numerics.RPL_REHASHING
+  fullName: smIRCL.Constants.Numerics.RPL_REHASHING
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_REHASHING
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 59
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_REHASHING = "382"
     return:
@@ -1788,28 +1788,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_YOURESERVICE
-  commentId: F:smIRCL.Numerics.RPL_YOURESERVICE
+- uid: smIRCL.Constants.Numerics.RPL_YOURESERVICE
+  commentId: F:smIRCL.Constants.Numerics.RPL_YOURESERVICE
   id: RPL_YOURESERVICE
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_YOURESERVICE
   nameWithType: Numerics.RPL_YOURESERVICE
-  fullName: smIRCL.Numerics.RPL_YOURESERVICE
+  fullName: smIRCL.Constants.Numerics.RPL_YOURESERVICE
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_YOURESERVICE
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 60
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_YOURESERVICE = "383"
     return:
@@ -1821,28 +1821,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_TIME
-  commentId: F:smIRCL.Numerics.RPL_TIME
+- uid: smIRCL.Constants.Numerics.RPL_TIME
+  commentId: F:smIRCL.Constants.Numerics.RPL_TIME
   id: RPL_TIME
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_TIME
   nameWithType: Numerics.RPL_TIME
-  fullName: smIRCL.Numerics.RPL_TIME
+  fullName: smIRCL.Constants.Numerics.RPL_TIME
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_TIME
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 61
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_TIME = "391"
     return:
@@ -1854,28 +1854,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_USERSSTART
-  commentId: F:smIRCL.Numerics.RPL_USERSSTART
+- uid: smIRCL.Constants.Numerics.RPL_USERSSTART
+  commentId: F:smIRCL.Constants.Numerics.RPL_USERSSTART
   id: RPL_USERSSTART
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_USERSSTART
   nameWithType: Numerics.RPL_USERSSTART
-  fullName: smIRCL.Numerics.RPL_USERSSTART
+  fullName: smIRCL.Constants.Numerics.RPL_USERSSTART
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_USERSSTART
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 62
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_USERSSTART = "392"
     return:
@@ -1887,28 +1887,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_USERS
-  commentId: F:smIRCL.Numerics.RPL_USERS
+- uid: smIRCL.Constants.Numerics.RPL_USERS
+  commentId: F:smIRCL.Constants.Numerics.RPL_USERS
   id: RPL_USERS
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_USERS
   nameWithType: Numerics.RPL_USERS
-  fullName: smIRCL.Numerics.RPL_USERS
+  fullName: smIRCL.Constants.Numerics.RPL_USERS
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_USERS
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 63
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_USERS = "393"
     return:
@@ -1920,28 +1920,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_ENDOFUSERS
-  commentId: F:smIRCL.Numerics.RPL_ENDOFUSERS
+- uid: smIRCL.Constants.Numerics.RPL_ENDOFUSERS
+  commentId: F:smIRCL.Constants.Numerics.RPL_ENDOFUSERS
   id: RPL_ENDOFUSERS
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_ENDOFUSERS
   nameWithType: Numerics.RPL_ENDOFUSERS
-  fullName: smIRCL.Numerics.RPL_ENDOFUSERS
+  fullName: smIRCL.Constants.Numerics.RPL_ENDOFUSERS
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_ENDOFUSERS
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 64
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_ENDOFUSERS = "394"
     return:
@@ -1953,28 +1953,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_NOUSERS
-  commentId: F:smIRCL.Numerics.RPL_NOUSERS
+- uid: smIRCL.Constants.Numerics.RPL_NOUSERS
+  commentId: F:smIRCL.Constants.Numerics.RPL_NOUSERS
   id: RPL_NOUSERS
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_NOUSERS
   nameWithType: Numerics.RPL_NOUSERS
-  fullName: smIRCL.Numerics.RPL_NOUSERS
+  fullName: smIRCL.Constants.Numerics.RPL_NOUSERS
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_NOUSERS
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 65
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_NOUSERS = "395"
     return:
@@ -1986,28 +1986,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_TRACELINK
-  commentId: F:smIRCL.Numerics.RPL_TRACELINK
+- uid: smIRCL.Constants.Numerics.RPL_TRACELINK
+  commentId: F:smIRCL.Constants.Numerics.RPL_TRACELINK
   id: RPL_TRACELINK
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_TRACELINK
   nameWithType: Numerics.RPL_TRACELINK
-  fullName: smIRCL.Numerics.RPL_TRACELINK
+  fullName: smIRCL.Constants.Numerics.RPL_TRACELINK
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_TRACELINK
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 66
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_TRACELINK = "200"
     return:
@@ -2019,28 +2019,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_TRACECONNECTING
-  commentId: F:smIRCL.Numerics.RPL_TRACECONNECTING
+- uid: smIRCL.Constants.Numerics.RPL_TRACECONNECTING
+  commentId: F:smIRCL.Constants.Numerics.RPL_TRACECONNECTING
   id: RPL_TRACECONNECTING
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_TRACECONNECTING
   nameWithType: Numerics.RPL_TRACECONNECTING
-  fullName: smIRCL.Numerics.RPL_TRACECONNECTING
+  fullName: smIRCL.Constants.Numerics.RPL_TRACECONNECTING
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_TRACECONNECTING
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 67
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_TRACECONNECTING = "201"
     return:
@@ -2052,28 +2052,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_TRACEHANDSHAKE
-  commentId: F:smIRCL.Numerics.RPL_TRACEHANDSHAKE
+- uid: smIRCL.Constants.Numerics.RPL_TRACEHANDSHAKE
+  commentId: F:smIRCL.Constants.Numerics.RPL_TRACEHANDSHAKE
   id: RPL_TRACEHANDSHAKE
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_TRACEHANDSHAKE
   nameWithType: Numerics.RPL_TRACEHANDSHAKE
-  fullName: smIRCL.Numerics.RPL_TRACEHANDSHAKE
+  fullName: smIRCL.Constants.Numerics.RPL_TRACEHANDSHAKE
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_TRACEHANDSHAKE
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 68
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_TRACEHANDSHAKE = "202"
     return:
@@ -2085,28 +2085,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_TRACEUNKNOWN
-  commentId: F:smIRCL.Numerics.RPL_TRACEUNKNOWN
+- uid: smIRCL.Constants.Numerics.RPL_TRACEUNKNOWN
+  commentId: F:smIRCL.Constants.Numerics.RPL_TRACEUNKNOWN
   id: RPL_TRACEUNKNOWN
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_TRACEUNKNOWN
   nameWithType: Numerics.RPL_TRACEUNKNOWN
-  fullName: smIRCL.Numerics.RPL_TRACEUNKNOWN
+  fullName: smIRCL.Constants.Numerics.RPL_TRACEUNKNOWN
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_TRACEUNKNOWN
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 69
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_TRACEUNKNOWN = "203"
     return:
@@ -2118,28 +2118,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_TRACEOPERATOR
-  commentId: F:smIRCL.Numerics.RPL_TRACEOPERATOR
+- uid: smIRCL.Constants.Numerics.RPL_TRACEOPERATOR
+  commentId: F:smIRCL.Constants.Numerics.RPL_TRACEOPERATOR
   id: RPL_TRACEOPERATOR
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_TRACEOPERATOR
   nameWithType: Numerics.RPL_TRACEOPERATOR
-  fullName: smIRCL.Numerics.RPL_TRACEOPERATOR
+  fullName: smIRCL.Constants.Numerics.RPL_TRACEOPERATOR
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_TRACEOPERATOR
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 70
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_TRACEOPERATOR = "204"
     return:
@@ -2151,28 +2151,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_TRACEUSER
-  commentId: F:smIRCL.Numerics.RPL_TRACEUSER
+- uid: smIRCL.Constants.Numerics.RPL_TRACEUSER
+  commentId: F:smIRCL.Constants.Numerics.RPL_TRACEUSER
   id: RPL_TRACEUSER
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_TRACEUSER
   nameWithType: Numerics.RPL_TRACEUSER
-  fullName: smIRCL.Numerics.RPL_TRACEUSER
+  fullName: smIRCL.Constants.Numerics.RPL_TRACEUSER
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_TRACEUSER
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 71
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_TRACEUSER = "205"
     return:
@@ -2184,28 +2184,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_TRACESERVER
-  commentId: F:smIRCL.Numerics.RPL_TRACESERVER
+- uid: smIRCL.Constants.Numerics.RPL_TRACESERVER
+  commentId: F:smIRCL.Constants.Numerics.RPL_TRACESERVER
   id: RPL_TRACESERVER
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_TRACESERVER
   nameWithType: Numerics.RPL_TRACESERVER
-  fullName: smIRCL.Numerics.RPL_TRACESERVER
+  fullName: smIRCL.Constants.Numerics.RPL_TRACESERVER
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_TRACESERVER
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 72
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_TRACESERVER = "206"
     return:
@@ -2217,28 +2217,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_TRACENEWTYPE
-  commentId: F:smIRCL.Numerics.RPL_TRACENEWTYPE
+- uid: smIRCL.Constants.Numerics.RPL_TRACENEWTYPE
+  commentId: F:smIRCL.Constants.Numerics.RPL_TRACENEWTYPE
   id: RPL_TRACENEWTYPE
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_TRACENEWTYPE
   nameWithType: Numerics.RPL_TRACENEWTYPE
-  fullName: smIRCL.Numerics.RPL_TRACENEWTYPE
+  fullName: smIRCL.Constants.Numerics.RPL_TRACENEWTYPE
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_TRACENEWTYPE
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 73
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_TRACENEWTYPE = "208"
     return:
@@ -2250,28 +2250,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_TRACECLASS
-  commentId: F:smIRCL.Numerics.RPL_TRACECLASS
+- uid: smIRCL.Constants.Numerics.RPL_TRACECLASS
+  commentId: F:smIRCL.Constants.Numerics.RPL_TRACECLASS
   id: RPL_TRACECLASS
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_TRACECLASS
   nameWithType: Numerics.RPL_TRACECLASS
-  fullName: smIRCL.Numerics.RPL_TRACECLASS
+  fullName: smIRCL.Constants.Numerics.RPL_TRACECLASS
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_TRACECLASS
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 74
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_TRACECLASS = "209"
     return:
@@ -2283,28 +2283,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_TRACERECONNECT
-  commentId: F:smIRCL.Numerics.RPL_TRACERECONNECT
+- uid: smIRCL.Constants.Numerics.RPL_TRACERECONNECT
+  commentId: F:smIRCL.Constants.Numerics.RPL_TRACERECONNECT
   id: RPL_TRACERECONNECT
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_TRACERECONNECT
   nameWithType: Numerics.RPL_TRACERECONNECT
-  fullName: smIRCL.Numerics.RPL_TRACERECONNECT
+  fullName: smIRCL.Constants.Numerics.RPL_TRACERECONNECT
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_TRACERECONNECT
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 75
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_TRACERECONNECT = "210"
     return:
@@ -2316,28 +2316,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_STATSLINKINFO
-  commentId: F:smIRCL.Numerics.RPL_STATSLINKINFO
+- uid: smIRCL.Constants.Numerics.RPL_STATSLINKINFO
+  commentId: F:smIRCL.Constants.Numerics.RPL_STATSLINKINFO
   id: RPL_STATSLINKINFO
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_STATSLINKINFO
   nameWithType: Numerics.RPL_STATSLINKINFO
-  fullName: smIRCL.Numerics.RPL_STATSLINKINFO
+  fullName: smIRCL.Constants.Numerics.RPL_STATSLINKINFO
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_STATSLINKINFO
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 76
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_STATSLINKINFO = "211"
     return:
@@ -2349,28 +2349,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_STATSCOMMANDS
-  commentId: F:smIRCL.Numerics.RPL_STATSCOMMANDS
+- uid: smIRCL.Constants.Numerics.RPL_STATSCOMMANDS
+  commentId: F:smIRCL.Constants.Numerics.RPL_STATSCOMMANDS
   id: RPL_STATSCOMMANDS
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_STATSCOMMANDS
   nameWithType: Numerics.RPL_STATSCOMMANDS
-  fullName: smIRCL.Numerics.RPL_STATSCOMMANDS
+  fullName: smIRCL.Constants.Numerics.RPL_STATSCOMMANDS
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_STATSCOMMANDS
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 77
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_STATSCOMMANDS = "212"
     return:
@@ -2382,28 +2382,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_ENDOFSTATS
-  commentId: F:smIRCL.Numerics.RPL_ENDOFSTATS
+- uid: smIRCL.Constants.Numerics.RPL_ENDOFSTATS
+  commentId: F:smIRCL.Constants.Numerics.RPL_ENDOFSTATS
   id: RPL_ENDOFSTATS
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_ENDOFSTATS
   nameWithType: Numerics.RPL_ENDOFSTATS
-  fullName: smIRCL.Numerics.RPL_ENDOFSTATS
+  fullName: smIRCL.Constants.Numerics.RPL_ENDOFSTATS
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_ENDOFSTATS
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 78
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_ENDOFSTATS = "219"
     return:
@@ -2415,28 +2415,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_UMODEIS
-  commentId: F:smIRCL.Numerics.RPL_UMODEIS
+- uid: smIRCL.Constants.Numerics.RPL_UMODEIS
+  commentId: F:smIRCL.Constants.Numerics.RPL_UMODEIS
   id: RPL_UMODEIS
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_UMODEIS
   nameWithType: Numerics.RPL_UMODEIS
-  fullName: smIRCL.Numerics.RPL_UMODEIS
+  fullName: smIRCL.Constants.Numerics.RPL_UMODEIS
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_UMODEIS
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 79
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_UMODEIS = "221"
     return:
@@ -2448,28 +2448,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_SERVLIST
-  commentId: F:smIRCL.Numerics.RPL_SERVLIST
+- uid: smIRCL.Constants.Numerics.RPL_SERVLIST
+  commentId: F:smIRCL.Constants.Numerics.RPL_SERVLIST
   id: RPL_SERVLIST
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_SERVLIST
   nameWithType: Numerics.RPL_SERVLIST
-  fullName: smIRCL.Numerics.RPL_SERVLIST
+  fullName: smIRCL.Constants.Numerics.RPL_SERVLIST
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_SERVLIST
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 80
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_SERVLIST = "234"
     return:
@@ -2481,28 +2481,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_SERVLISTEND
-  commentId: F:smIRCL.Numerics.RPL_SERVLISTEND
+- uid: smIRCL.Constants.Numerics.RPL_SERVLISTEND
+  commentId: F:smIRCL.Constants.Numerics.RPL_SERVLISTEND
   id: RPL_SERVLISTEND
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_SERVLISTEND
   nameWithType: Numerics.RPL_SERVLISTEND
-  fullName: smIRCL.Numerics.RPL_SERVLISTEND
+  fullName: smIRCL.Constants.Numerics.RPL_SERVLISTEND
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_SERVLISTEND
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 81
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_SERVLISTEND = "235"
     return:
@@ -2514,28 +2514,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_STATSUPTIME
-  commentId: F:smIRCL.Numerics.RPL_STATSUPTIME
+- uid: smIRCL.Constants.Numerics.RPL_STATSUPTIME
+  commentId: F:smIRCL.Constants.Numerics.RPL_STATSUPTIME
   id: RPL_STATSUPTIME
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_STATSUPTIME
   nameWithType: Numerics.RPL_STATSUPTIME
-  fullName: smIRCL.Numerics.RPL_STATSUPTIME
+  fullName: smIRCL.Constants.Numerics.RPL_STATSUPTIME
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_STATSUPTIME
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 82
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_STATSUPTIME = "242"
     return:
@@ -2547,28 +2547,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_STATSOLINE
-  commentId: F:smIRCL.Numerics.RPL_STATSOLINE
+- uid: smIRCL.Constants.Numerics.RPL_STATSOLINE
+  commentId: F:smIRCL.Constants.Numerics.RPL_STATSOLINE
   id: RPL_STATSOLINE
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_STATSOLINE
   nameWithType: Numerics.RPL_STATSOLINE
-  fullName: smIRCL.Numerics.RPL_STATSOLINE
+  fullName: smIRCL.Constants.Numerics.RPL_STATSOLINE
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_STATSOLINE
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 83
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_STATSOLINE = "243"
     return:
@@ -2580,28 +2580,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_LUSERCLIENT
-  commentId: F:smIRCL.Numerics.RPL_LUSERCLIENT
+- uid: smIRCL.Constants.Numerics.RPL_LUSERCLIENT
+  commentId: F:smIRCL.Constants.Numerics.RPL_LUSERCLIENT
   id: RPL_LUSERCLIENT
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_LUSERCLIENT
   nameWithType: Numerics.RPL_LUSERCLIENT
-  fullName: smIRCL.Numerics.RPL_LUSERCLIENT
+  fullName: smIRCL.Constants.Numerics.RPL_LUSERCLIENT
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_LUSERCLIENT
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 84
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_LUSERCLIENT = "251"
     return:
@@ -2613,28 +2613,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_LUSEROP
-  commentId: F:smIRCL.Numerics.RPL_LUSEROP
+- uid: smIRCL.Constants.Numerics.RPL_LUSEROP
+  commentId: F:smIRCL.Constants.Numerics.RPL_LUSEROP
   id: RPL_LUSEROP
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_LUSEROP
   nameWithType: Numerics.RPL_LUSEROP
-  fullName: smIRCL.Numerics.RPL_LUSEROP
+  fullName: smIRCL.Constants.Numerics.RPL_LUSEROP
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_LUSEROP
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 85
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_LUSEROP = "252"
     return:
@@ -2646,28 +2646,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_LUSERUNKNOWN
-  commentId: F:smIRCL.Numerics.RPL_LUSERUNKNOWN
+- uid: smIRCL.Constants.Numerics.RPL_LUSERUNKNOWN
+  commentId: F:smIRCL.Constants.Numerics.RPL_LUSERUNKNOWN
   id: RPL_LUSERUNKNOWN
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_LUSERUNKNOWN
   nameWithType: Numerics.RPL_LUSERUNKNOWN
-  fullName: smIRCL.Numerics.RPL_LUSERUNKNOWN
+  fullName: smIRCL.Constants.Numerics.RPL_LUSERUNKNOWN
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_LUSERUNKNOWN
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 86
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_LUSERUNKNOWN = "253"
     return:
@@ -2679,28 +2679,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_LUSERCHANNELS
-  commentId: F:smIRCL.Numerics.RPL_LUSERCHANNELS
+- uid: smIRCL.Constants.Numerics.RPL_LUSERCHANNELS
+  commentId: F:smIRCL.Constants.Numerics.RPL_LUSERCHANNELS
   id: RPL_LUSERCHANNELS
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_LUSERCHANNELS
   nameWithType: Numerics.RPL_LUSERCHANNELS
-  fullName: smIRCL.Numerics.RPL_LUSERCHANNELS
+  fullName: smIRCL.Constants.Numerics.RPL_LUSERCHANNELS
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_LUSERCHANNELS
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 87
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_LUSERCHANNELS = "254"
     return:
@@ -2712,28 +2712,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_LUSERME
-  commentId: F:smIRCL.Numerics.RPL_LUSERME
+- uid: smIRCL.Constants.Numerics.RPL_LUSERME
+  commentId: F:smIRCL.Constants.Numerics.RPL_LUSERME
   id: RPL_LUSERME
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_LUSERME
   nameWithType: Numerics.RPL_LUSERME
-  fullName: smIRCL.Numerics.RPL_LUSERME
+  fullName: smIRCL.Constants.Numerics.RPL_LUSERME
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_LUSERME
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 88
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_LUSERME = "255"
     return:
@@ -2745,28 +2745,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_ADMINME
-  commentId: F:smIRCL.Numerics.RPL_ADMINME
+- uid: smIRCL.Constants.Numerics.RPL_ADMINME
+  commentId: F:smIRCL.Constants.Numerics.RPL_ADMINME
   id: RPL_ADMINME
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_ADMINME
   nameWithType: Numerics.RPL_ADMINME
-  fullName: smIRCL.Numerics.RPL_ADMINME
+  fullName: smIRCL.Constants.Numerics.RPL_ADMINME
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_ADMINME
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 89
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_ADMINME = "256"
     return:
@@ -2778,28 +2778,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_ADMINLOC1
-  commentId: F:smIRCL.Numerics.RPL_ADMINLOC1
+- uid: smIRCL.Constants.Numerics.RPL_ADMINLOC1
+  commentId: F:smIRCL.Constants.Numerics.RPL_ADMINLOC1
   id: RPL_ADMINLOC1
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_ADMINLOC1
   nameWithType: Numerics.RPL_ADMINLOC1
-  fullName: smIRCL.Numerics.RPL_ADMINLOC1
+  fullName: smIRCL.Constants.Numerics.RPL_ADMINLOC1
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_ADMINLOC1
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 90
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_ADMINLOC1 = "257"
     return:
@@ -2811,28 +2811,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_ADMINLOC2
-  commentId: F:smIRCL.Numerics.RPL_ADMINLOC2
+- uid: smIRCL.Constants.Numerics.RPL_ADMINLOC2
+  commentId: F:smIRCL.Constants.Numerics.RPL_ADMINLOC2
   id: RPL_ADMINLOC2
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_ADMINLOC2
   nameWithType: Numerics.RPL_ADMINLOC2
-  fullName: smIRCL.Numerics.RPL_ADMINLOC2
+  fullName: smIRCL.Constants.Numerics.RPL_ADMINLOC2
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_ADMINLOC2
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 91
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_ADMINLOC2 = "258"
     return:
@@ -2844,28 +2844,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_ADMINEMAIL
-  commentId: F:smIRCL.Numerics.RPL_ADMINEMAIL
+- uid: smIRCL.Constants.Numerics.RPL_ADMINEMAIL
+  commentId: F:smIRCL.Constants.Numerics.RPL_ADMINEMAIL
   id: RPL_ADMINEMAIL
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_ADMINEMAIL
   nameWithType: Numerics.RPL_ADMINEMAIL
-  fullName: smIRCL.Numerics.RPL_ADMINEMAIL
+  fullName: smIRCL.Constants.Numerics.RPL_ADMINEMAIL
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_ADMINEMAIL
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 92
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_ADMINEMAIL = "259"
     return:
@@ -2877,28 +2877,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_TRACELOG
-  commentId: F:smIRCL.Numerics.RPL_TRACELOG
+- uid: smIRCL.Constants.Numerics.RPL_TRACELOG
+  commentId: F:smIRCL.Constants.Numerics.RPL_TRACELOG
   id: RPL_TRACELOG
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_TRACELOG
   nameWithType: Numerics.RPL_TRACELOG
-  fullName: smIRCL.Numerics.RPL_TRACELOG
+  fullName: smIRCL.Constants.Numerics.RPL_TRACELOG
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_TRACELOG
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 93
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_TRACELOG = "261"
     return:
@@ -2910,28 +2910,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_TRACEEND
-  commentId: F:smIRCL.Numerics.RPL_TRACEEND
+- uid: smIRCL.Constants.Numerics.RPL_TRACEEND
+  commentId: F:smIRCL.Constants.Numerics.RPL_TRACEEND
   id: RPL_TRACEEND
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_TRACEEND
   nameWithType: Numerics.RPL_TRACEEND
-  fullName: smIRCL.Numerics.RPL_TRACEEND
+  fullName: smIRCL.Constants.Numerics.RPL_TRACEEND
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_TRACEEND
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 94
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_TRACEEND = "262"
     return:
@@ -2943,28 +2943,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_TRYAGAIN
-  commentId: F:smIRCL.Numerics.RPL_TRYAGAIN
+- uid: smIRCL.Constants.Numerics.RPL_TRYAGAIN
+  commentId: F:smIRCL.Constants.Numerics.RPL_TRYAGAIN
   id: RPL_TRYAGAIN
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_TRYAGAIN
   nameWithType: Numerics.RPL_TRYAGAIN
-  fullName: smIRCL.Numerics.RPL_TRYAGAIN
+  fullName: smIRCL.Constants.Numerics.RPL_TRYAGAIN
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_TRYAGAIN
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 95
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_TRYAGAIN = "263"
     return:
@@ -2976,28 +2976,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_HOSTHIDDEN
-  commentId: F:smIRCL.Numerics.RPL_HOSTHIDDEN
+- uid: smIRCL.Constants.Numerics.RPL_HOSTHIDDEN
+  commentId: F:smIRCL.Constants.Numerics.RPL_HOSTHIDDEN
   id: RPL_HOSTHIDDEN
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_HOSTHIDDEN
   nameWithType: Numerics.RPL_HOSTHIDDEN
-  fullName: smIRCL.Numerics.RPL_HOSTHIDDEN
+  fullName: smIRCL.Constants.Numerics.RPL_HOSTHIDDEN
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_HOSTHIDDEN
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 96
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_HOSTHIDDEN = "396"
     return:
@@ -3009,28 +3009,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.ERR_NOSUCHNICK
-  commentId: F:smIRCL.Numerics.ERR_NOSUCHNICK
+- uid: smIRCL.Constants.Numerics.ERR_NOSUCHNICK
+  commentId: F:smIRCL.Constants.Numerics.ERR_NOSUCHNICK
   id: ERR_NOSUCHNICK
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: ERR_NOSUCHNICK
   nameWithType: Numerics.ERR_NOSUCHNICK
-  fullName: smIRCL.Numerics.ERR_NOSUCHNICK
+  fullName: smIRCL.Constants.Numerics.ERR_NOSUCHNICK
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_NOSUCHNICK
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 99
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string ERR_NOSUCHNICK = "401"
     return:
@@ -3042,28 +3042,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.ERR_NOSUCHSERVER
-  commentId: F:smIRCL.Numerics.ERR_NOSUCHSERVER
+- uid: smIRCL.Constants.Numerics.ERR_NOSUCHSERVER
+  commentId: F:smIRCL.Constants.Numerics.ERR_NOSUCHSERVER
   id: ERR_NOSUCHSERVER
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: ERR_NOSUCHSERVER
   nameWithType: Numerics.ERR_NOSUCHSERVER
-  fullName: smIRCL.Numerics.ERR_NOSUCHSERVER
+  fullName: smIRCL.Constants.Numerics.ERR_NOSUCHSERVER
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_NOSUCHSERVER
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 100
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string ERR_NOSUCHSERVER = "402"
     return:
@@ -3075,28 +3075,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.ERR_NOSUCHCHANNEL
-  commentId: F:smIRCL.Numerics.ERR_NOSUCHCHANNEL
+- uid: smIRCL.Constants.Numerics.ERR_NOSUCHCHANNEL
+  commentId: F:smIRCL.Constants.Numerics.ERR_NOSUCHCHANNEL
   id: ERR_NOSUCHCHANNEL
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: ERR_NOSUCHCHANNEL
   nameWithType: Numerics.ERR_NOSUCHCHANNEL
-  fullName: smIRCL.Numerics.ERR_NOSUCHCHANNEL
+  fullName: smIRCL.Constants.Numerics.ERR_NOSUCHCHANNEL
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_NOSUCHCHANNEL
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 101
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string ERR_NOSUCHCHANNEL = "403"
     return:
@@ -3108,28 +3108,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.ERR_CANNOTSENDTOCHAN
-  commentId: F:smIRCL.Numerics.ERR_CANNOTSENDTOCHAN
+- uid: smIRCL.Constants.Numerics.ERR_CANNOTSENDTOCHAN
+  commentId: F:smIRCL.Constants.Numerics.ERR_CANNOTSENDTOCHAN
   id: ERR_CANNOTSENDTOCHAN
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: ERR_CANNOTSENDTOCHAN
   nameWithType: Numerics.ERR_CANNOTSENDTOCHAN
-  fullName: smIRCL.Numerics.ERR_CANNOTSENDTOCHAN
+  fullName: smIRCL.Constants.Numerics.ERR_CANNOTSENDTOCHAN
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_CANNOTSENDTOCHAN
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 102
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string ERR_CANNOTSENDTOCHAN = "404"
     return:
@@ -3141,28 +3141,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.ERR_TOOMANYCHANNELS
-  commentId: F:smIRCL.Numerics.ERR_TOOMANYCHANNELS
+- uid: smIRCL.Constants.Numerics.ERR_TOOMANYCHANNELS
+  commentId: F:smIRCL.Constants.Numerics.ERR_TOOMANYCHANNELS
   id: ERR_TOOMANYCHANNELS
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: ERR_TOOMANYCHANNELS
   nameWithType: Numerics.ERR_TOOMANYCHANNELS
-  fullName: smIRCL.Numerics.ERR_TOOMANYCHANNELS
+  fullName: smIRCL.Constants.Numerics.ERR_TOOMANYCHANNELS
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_TOOMANYCHANNELS
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 103
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string ERR_TOOMANYCHANNELS = "405"
     return:
@@ -3174,28 +3174,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.ERR_WASNOSUCHNICK
-  commentId: F:smIRCL.Numerics.ERR_WASNOSUCHNICK
+- uid: smIRCL.Constants.Numerics.ERR_WASNOSUCHNICK
+  commentId: F:smIRCL.Constants.Numerics.ERR_WASNOSUCHNICK
   id: ERR_WASNOSUCHNICK
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: ERR_WASNOSUCHNICK
   nameWithType: Numerics.ERR_WASNOSUCHNICK
-  fullName: smIRCL.Numerics.ERR_WASNOSUCHNICK
+  fullName: smIRCL.Constants.Numerics.ERR_WASNOSUCHNICK
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_WASNOSUCHNICK
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 104
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string ERR_WASNOSUCHNICK = "406"
     return:
@@ -3207,28 +3207,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.ERR_TOOMANYTARGETS
-  commentId: F:smIRCL.Numerics.ERR_TOOMANYTARGETS
+- uid: smIRCL.Constants.Numerics.ERR_TOOMANYTARGETS
+  commentId: F:smIRCL.Constants.Numerics.ERR_TOOMANYTARGETS
   id: ERR_TOOMANYTARGETS
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: ERR_TOOMANYTARGETS
   nameWithType: Numerics.ERR_TOOMANYTARGETS
-  fullName: smIRCL.Numerics.ERR_TOOMANYTARGETS
+  fullName: smIRCL.Constants.Numerics.ERR_TOOMANYTARGETS
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_TOOMANYTARGETS
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 105
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string ERR_TOOMANYTARGETS = "407"
     return:
@@ -3240,28 +3240,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.ERR_NOSUCHSERVICE
-  commentId: F:smIRCL.Numerics.ERR_NOSUCHSERVICE
+- uid: smIRCL.Constants.Numerics.ERR_NOSUCHSERVICE
+  commentId: F:smIRCL.Constants.Numerics.ERR_NOSUCHSERVICE
   id: ERR_NOSUCHSERVICE
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: ERR_NOSUCHSERVICE
   nameWithType: Numerics.ERR_NOSUCHSERVICE
-  fullName: smIRCL.Numerics.ERR_NOSUCHSERVICE
+  fullName: smIRCL.Constants.Numerics.ERR_NOSUCHSERVICE
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_NOSUCHSERVICE
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 106
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string ERR_NOSUCHSERVICE = "408"
     return:
@@ -3273,28 +3273,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.ERR_NOORIGIN
-  commentId: F:smIRCL.Numerics.ERR_NOORIGIN
+- uid: smIRCL.Constants.Numerics.ERR_NOORIGIN
+  commentId: F:smIRCL.Constants.Numerics.ERR_NOORIGIN
   id: ERR_NOORIGIN
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: ERR_NOORIGIN
   nameWithType: Numerics.ERR_NOORIGIN
-  fullName: smIRCL.Numerics.ERR_NOORIGIN
+  fullName: smIRCL.Constants.Numerics.ERR_NOORIGIN
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_NOORIGIN
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 107
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string ERR_NOORIGIN = "409"
     return:
@@ -3306,28 +3306,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.ERR_NORECIPIENT
-  commentId: F:smIRCL.Numerics.ERR_NORECIPIENT
+- uid: smIRCL.Constants.Numerics.ERR_NORECIPIENT
+  commentId: F:smIRCL.Constants.Numerics.ERR_NORECIPIENT
   id: ERR_NORECIPIENT
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: ERR_NORECIPIENT
   nameWithType: Numerics.ERR_NORECIPIENT
-  fullName: smIRCL.Numerics.ERR_NORECIPIENT
+  fullName: smIRCL.Constants.Numerics.ERR_NORECIPIENT
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_NORECIPIENT
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 108
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string ERR_NORECIPIENT = "411"
     return:
@@ -3339,28 +3339,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.ERR_NOTEXTTOSEND
-  commentId: F:smIRCL.Numerics.ERR_NOTEXTTOSEND
+- uid: smIRCL.Constants.Numerics.ERR_NOTEXTTOSEND
+  commentId: F:smIRCL.Constants.Numerics.ERR_NOTEXTTOSEND
   id: ERR_NOTEXTTOSEND
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: ERR_NOTEXTTOSEND
   nameWithType: Numerics.ERR_NOTEXTTOSEND
-  fullName: smIRCL.Numerics.ERR_NOTEXTTOSEND
+  fullName: smIRCL.Constants.Numerics.ERR_NOTEXTTOSEND
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_NOTEXTTOSEND
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 109
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string ERR_NOTEXTTOSEND = "412"
     return:
@@ -3372,28 +3372,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.ERR_NOTOPLEVEL
-  commentId: F:smIRCL.Numerics.ERR_NOTOPLEVEL
+- uid: smIRCL.Constants.Numerics.ERR_NOTOPLEVEL
+  commentId: F:smIRCL.Constants.Numerics.ERR_NOTOPLEVEL
   id: ERR_NOTOPLEVEL
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: ERR_NOTOPLEVEL
   nameWithType: Numerics.ERR_NOTOPLEVEL
-  fullName: smIRCL.Numerics.ERR_NOTOPLEVEL
+  fullName: smIRCL.Constants.Numerics.ERR_NOTOPLEVEL
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_NOTOPLEVEL
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 110
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string ERR_NOTOPLEVEL = "413"
     return:
@@ -3405,28 +3405,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.ERR_WILDTOPLEVEL
-  commentId: F:smIRCL.Numerics.ERR_WILDTOPLEVEL
+- uid: smIRCL.Constants.Numerics.ERR_WILDTOPLEVEL
+  commentId: F:smIRCL.Constants.Numerics.ERR_WILDTOPLEVEL
   id: ERR_WILDTOPLEVEL
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: ERR_WILDTOPLEVEL
   nameWithType: Numerics.ERR_WILDTOPLEVEL
-  fullName: smIRCL.Numerics.ERR_WILDTOPLEVEL
+  fullName: smIRCL.Constants.Numerics.ERR_WILDTOPLEVEL
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_WILDTOPLEVEL
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 111
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string ERR_WILDTOPLEVEL = "414"
     return:
@@ -3438,28 +3438,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.ERR_BADMASK
-  commentId: F:smIRCL.Numerics.ERR_BADMASK
+- uid: smIRCL.Constants.Numerics.ERR_BADMASK
+  commentId: F:smIRCL.Constants.Numerics.ERR_BADMASK
   id: ERR_BADMASK
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: ERR_BADMASK
   nameWithType: Numerics.ERR_BADMASK
-  fullName: smIRCL.Numerics.ERR_BADMASK
+  fullName: smIRCL.Constants.Numerics.ERR_BADMASK
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_BADMASK
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 112
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string ERR_BADMASK = "415"
     return:
@@ -3471,28 +3471,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.ERR_UNKNOWNCOMMAND
-  commentId: F:smIRCL.Numerics.ERR_UNKNOWNCOMMAND
+- uid: smIRCL.Constants.Numerics.ERR_UNKNOWNCOMMAND
+  commentId: F:smIRCL.Constants.Numerics.ERR_UNKNOWNCOMMAND
   id: ERR_UNKNOWNCOMMAND
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: ERR_UNKNOWNCOMMAND
   nameWithType: Numerics.ERR_UNKNOWNCOMMAND
-  fullName: smIRCL.Numerics.ERR_UNKNOWNCOMMAND
+  fullName: smIRCL.Constants.Numerics.ERR_UNKNOWNCOMMAND
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_UNKNOWNCOMMAND
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 113
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string ERR_UNKNOWNCOMMAND = "421"
     return:
@@ -3504,28 +3504,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.ERR_NOMOTD
-  commentId: F:smIRCL.Numerics.ERR_NOMOTD
+- uid: smIRCL.Constants.Numerics.ERR_NOMOTD
+  commentId: F:smIRCL.Constants.Numerics.ERR_NOMOTD
   id: ERR_NOMOTD
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: ERR_NOMOTD
   nameWithType: Numerics.ERR_NOMOTD
-  fullName: smIRCL.Numerics.ERR_NOMOTD
+  fullName: smIRCL.Constants.Numerics.ERR_NOMOTD
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_NOMOTD
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 114
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string ERR_NOMOTD = "422"
     return:
@@ -3537,28 +3537,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.ERR_NOADMININFO
-  commentId: F:smIRCL.Numerics.ERR_NOADMININFO
+- uid: smIRCL.Constants.Numerics.ERR_NOADMININFO
+  commentId: F:smIRCL.Constants.Numerics.ERR_NOADMININFO
   id: ERR_NOADMININFO
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: ERR_NOADMININFO
   nameWithType: Numerics.ERR_NOADMININFO
-  fullName: smIRCL.Numerics.ERR_NOADMININFO
+  fullName: smIRCL.Constants.Numerics.ERR_NOADMININFO
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_NOADMININFO
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 115
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string ERR_NOADMININFO = "423"
     return:
@@ -3570,28 +3570,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.ERR_FILEERROR
-  commentId: F:smIRCL.Numerics.ERR_FILEERROR
+- uid: smIRCL.Constants.Numerics.ERR_FILEERROR
+  commentId: F:smIRCL.Constants.Numerics.ERR_FILEERROR
   id: ERR_FILEERROR
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: ERR_FILEERROR
   nameWithType: Numerics.ERR_FILEERROR
-  fullName: smIRCL.Numerics.ERR_FILEERROR
+  fullName: smIRCL.Constants.Numerics.ERR_FILEERROR
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_FILEERROR
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 116
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string ERR_FILEERROR = "424"
     return:
@@ -3603,28 +3603,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.ERR_NONICKNAMEGIVEN
-  commentId: F:smIRCL.Numerics.ERR_NONICKNAMEGIVEN
+- uid: smIRCL.Constants.Numerics.ERR_NONICKNAMEGIVEN
+  commentId: F:smIRCL.Constants.Numerics.ERR_NONICKNAMEGIVEN
   id: ERR_NONICKNAMEGIVEN
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: ERR_NONICKNAMEGIVEN
   nameWithType: Numerics.ERR_NONICKNAMEGIVEN
-  fullName: smIRCL.Numerics.ERR_NONICKNAMEGIVEN
+  fullName: smIRCL.Constants.Numerics.ERR_NONICKNAMEGIVEN
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_NONICKNAMEGIVEN
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 117
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string ERR_NONICKNAMEGIVEN = "431"
     return:
@@ -3636,28 +3636,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.ERR_ERRONEUSNICKNAME
-  commentId: F:smIRCL.Numerics.ERR_ERRONEUSNICKNAME
+- uid: smIRCL.Constants.Numerics.ERR_ERRONEUSNICKNAME
+  commentId: F:smIRCL.Constants.Numerics.ERR_ERRONEUSNICKNAME
   id: ERR_ERRONEUSNICKNAME
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: ERR_ERRONEUSNICKNAME
   nameWithType: Numerics.ERR_ERRONEUSNICKNAME
-  fullName: smIRCL.Numerics.ERR_ERRONEUSNICKNAME
+  fullName: smIRCL.Constants.Numerics.ERR_ERRONEUSNICKNAME
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_ERRONEUSNICKNAME
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 118
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string ERR_ERRONEUSNICKNAME = "432"
     return:
@@ -3669,28 +3669,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.ERR_NICKNAMEINUSE
-  commentId: F:smIRCL.Numerics.ERR_NICKNAMEINUSE
+- uid: smIRCL.Constants.Numerics.ERR_NICKNAMEINUSE
+  commentId: F:smIRCL.Constants.Numerics.ERR_NICKNAMEINUSE
   id: ERR_NICKNAMEINUSE
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: ERR_NICKNAMEINUSE
   nameWithType: Numerics.ERR_NICKNAMEINUSE
-  fullName: smIRCL.Numerics.ERR_NICKNAMEINUSE
+  fullName: smIRCL.Constants.Numerics.ERR_NICKNAMEINUSE
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_NICKNAMEINUSE
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 119
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string ERR_NICKNAMEINUSE = "433"
     return:
@@ -3702,28 +3702,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.ERR_NICKCOLLISION
-  commentId: F:smIRCL.Numerics.ERR_NICKCOLLISION
+- uid: smIRCL.Constants.Numerics.ERR_NICKCOLLISION
+  commentId: F:smIRCL.Constants.Numerics.ERR_NICKCOLLISION
   id: ERR_NICKCOLLISION
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: ERR_NICKCOLLISION
   nameWithType: Numerics.ERR_NICKCOLLISION
-  fullName: smIRCL.Numerics.ERR_NICKCOLLISION
+  fullName: smIRCL.Constants.Numerics.ERR_NICKCOLLISION
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_NICKCOLLISION
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 120
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string ERR_NICKCOLLISION = "436"
     return:
@@ -3735,28 +3735,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.ERR_UNAVAILRESOURCE
-  commentId: F:smIRCL.Numerics.ERR_UNAVAILRESOURCE
+- uid: smIRCL.Constants.Numerics.ERR_UNAVAILRESOURCE
+  commentId: F:smIRCL.Constants.Numerics.ERR_UNAVAILRESOURCE
   id: ERR_UNAVAILRESOURCE
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: ERR_UNAVAILRESOURCE
   nameWithType: Numerics.ERR_UNAVAILRESOURCE
-  fullName: smIRCL.Numerics.ERR_UNAVAILRESOURCE
+  fullName: smIRCL.Constants.Numerics.ERR_UNAVAILRESOURCE
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_UNAVAILRESOURCE
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 121
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string ERR_UNAVAILRESOURCE = "437"
     return:
@@ -3768,28 +3768,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.ERR_USERNOTINCHANNEL
-  commentId: F:smIRCL.Numerics.ERR_USERNOTINCHANNEL
+- uid: smIRCL.Constants.Numerics.ERR_USERNOTINCHANNEL
+  commentId: F:smIRCL.Constants.Numerics.ERR_USERNOTINCHANNEL
   id: ERR_USERNOTINCHANNEL
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: ERR_USERNOTINCHANNEL
   nameWithType: Numerics.ERR_USERNOTINCHANNEL
-  fullName: smIRCL.Numerics.ERR_USERNOTINCHANNEL
+  fullName: smIRCL.Constants.Numerics.ERR_USERNOTINCHANNEL
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_USERNOTINCHANNEL
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 122
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string ERR_USERNOTINCHANNEL = "441"
     return:
@@ -3801,28 +3801,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.ERR_NOTINCHANNEL
-  commentId: F:smIRCL.Numerics.ERR_NOTINCHANNEL
+- uid: smIRCL.Constants.Numerics.ERR_NOTINCHANNEL
+  commentId: F:smIRCL.Constants.Numerics.ERR_NOTINCHANNEL
   id: ERR_NOTINCHANNEL
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: ERR_NOTINCHANNEL
   nameWithType: Numerics.ERR_NOTINCHANNEL
-  fullName: smIRCL.Numerics.ERR_NOTINCHANNEL
+  fullName: smIRCL.Constants.Numerics.ERR_NOTINCHANNEL
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_NOTINCHANNEL
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 123
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string ERR_NOTINCHANNEL = "442"
     return:
@@ -3834,28 +3834,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.ERR_USERONCHANNEL
-  commentId: F:smIRCL.Numerics.ERR_USERONCHANNEL
+- uid: smIRCL.Constants.Numerics.ERR_USERONCHANNEL
+  commentId: F:smIRCL.Constants.Numerics.ERR_USERONCHANNEL
   id: ERR_USERONCHANNEL
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: ERR_USERONCHANNEL
   nameWithType: Numerics.ERR_USERONCHANNEL
-  fullName: smIRCL.Numerics.ERR_USERONCHANNEL
+  fullName: smIRCL.Constants.Numerics.ERR_USERONCHANNEL
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_USERONCHANNEL
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 124
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string ERR_USERONCHANNEL = "443"
     return:
@@ -3867,28 +3867,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.ERR_NOLOGIN
-  commentId: F:smIRCL.Numerics.ERR_NOLOGIN
+- uid: smIRCL.Constants.Numerics.ERR_NOLOGIN
+  commentId: F:smIRCL.Constants.Numerics.ERR_NOLOGIN
   id: ERR_NOLOGIN
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: ERR_NOLOGIN
   nameWithType: Numerics.ERR_NOLOGIN
-  fullName: smIRCL.Numerics.ERR_NOLOGIN
+  fullName: smIRCL.Constants.Numerics.ERR_NOLOGIN
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_NOLOGIN
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 125
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string ERR_NOLOGIN = "444"
     return:
@@ -3900,28 +3900,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.ERR_SUMMONDISABLED
-  commentId: F:smIRCL.Numerics.ERR_SUMMONDISABLED
+- uid: smIRCL.Constants.Numerics.ERR_SUMMONDISABLED
+  commentId: F:smIRCL.Constants.Numerics.ERR_SUMMONDISABLED
   id: ERR_SUMMONDISABLED
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: ERR_SUMMONDISABLED
   nameWithType: Numerics.ERR_SUMMONDISABLED
-  fullName: smIRCL.Numerics.ERR_SUMMONDISABLED
+  fullName: smIRCL.Constants.Numerics.ERR_SUMMONDISABLED
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_SUMMONDISABLED
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 126
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string ERR_SUMMONDISABLED = "445"
     return:
@@ -3933,28 +3933,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.ERR_USERDISABLED
-  commentId: F:smIRCL.Numerics.ERR_USERDISABLED
+- uid: smIRCL.Constants.Numerics.ERR_USERDISABLED
+  commentId: F:smIRCL.Constants.Numerics.ERR_USERDISABLED
   id: ERR_USERDISABLED
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: ERR_USERDISABLED
   nameWithType: Numerics.ERR_USERDISABLED
-  fullName: smIRCL.Numerics.ERR_USERDISABLED
+  fullName: smIRCL.Constants.Numerics.ERR_USERDISABLED
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_USERDISABLED
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 127
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string ERR_USERDISABLED = "446"
     return:
@@ -3966,28 +3966,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.ERR_NOTREGISTERED
-  commentId: F:smIRCL.Numerics.ERR_NOTREGISTERED
+- uid: smIRCL.Constants.Numerics.ERR_NOTREGISTERED
+  commentId: F:smIRCL.Constants.Numerics.ERR_NOTREGISTERED
   id: ERR_NOTREGISTERED
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: ERR_NOTREGISTERED
   nameWithType: Numerics.ERR_NOTREGISTERED
-  fullName: smIRCL.Numerics.ERR_NOTREGISTERED
+  fullName: smIRCL.Constants.Numerics.ERR_NOTREGISTERED
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_NOTREGISTERED
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 128
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string ERR_NOTREGISTERED = "451"
     return:
@@ -3999,28 +3999,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.ERR_NEEDMOREPARAMS
-  commentId: F:smIRCL.Numerics.ERR_NEEDMOREPARAMS
+- uid: smIRCL.Constants.Numerics.ERR_NEEDMOREPARAMS
+  commentId: F:smIRCL.Constants.Numerics.ERR_NEEDMOREPARAMS
   id: ERR_NEEDMOREPARAMS
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: ERR_NEEDMOREPARAMS
   nameWithType: Numerics.ERR_NEEDMOREPARAMS
-  fullName: smIRCL.Numerics.ERR_NEEDMOREPARAMS
+  fullName: smIRCL.Constants.Numerics.ERR_NEEDMOREPARAMS
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_NEEDMOREPARAMS
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 129
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string ERR_NEEDMOREPARAMS = "461"
     return:
@@ -4032,28 +4032,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.ERR_ALREADYREGISTERED
-  commentId: F:smIRCL.Numerics.ERR_ALREADYREGISTERED
+- uid: smIRCL.Constants.Numerics.ERR_ALREADYREGISTERED
+  commentId: F:smIRCL.Constants.Numerics.ERR_ALREADYREGISTERED
   id: ERR_ALREADYREGISTERED
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: ERR_ALREADYREGISTERED
   nameWithType: Numerics.ERR_ALREADYREGISTERED
-  fullName: smIRCL.Numerics.ERR_ALREADYREGISTERED
+  fullName: smIRCL.Constants.Numerics.ERR_ALREADYREGISTERED
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_ALREADYREGISTERED
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 130
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string ERR_ALREADYREGISTERED = "462"
     return:
@@ -4065,28 +4065,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.ERR_NOPERMFORHOST
-  commentId: F:smIRCL.Numerics.ERR_NOPERMFORHOST
+- uid: smIRCL.Constants.Numerics.ERR_NOPERMFORHOST
+  commentId: F:smIRCL.Constants.Numerics.ERR_NOPERMFORHOST
   id: ERR_NOPERMFORHOST
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: ERR_NOPERMFORHOST
   nameWithType: Numerics.ERR_NOPERMFORHOST
-  fullName: smIRCL.Numerics.ERR_NOPERMFORHOST
+  fullName: smIRCL.Constants.Numerics.ERR_NOPERMFORHOST
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_NOPERMFORHOST
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 131
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string ERR_NOPERMFORHOST = "463"
     return:
@@ -4098,28 +4098,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.ERR_PASSWDMISMATCH
-  commentId: F:smIRCL.Numerics.ERR_PASSWDMISMATCH
+- uid: smIRCL.Constants.Numerics.ERR_PASSWDMISMATCH
+  commentId: F:smIRCL.Constants.Numerics.ERR_PASSWDMISMATCH
   id: ERR_PASSWDMISMATCH
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: ERR_PASSWDMISMATCH
   nameWithType: Numerics.ERR_PASSWDMISMATCH
-  fullName: smIRCL.Numerics.ERR_PASSWDMISMATCH
+  fullName: smIRCL.Constants.Numerics.ERR_PASSWDMISMATCH
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_PASSWDMISMATCH
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 132
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string ERR_PASSWDMISMATCH = "464"
     return:
@@ -4131,28 +4131,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.ERR_YOUREBANNEDCREEP
-  commentId: F:smIRCL.Numerics.ERR_YOUREBANNEDCREEP
+- uid: smIRCL.Constants.Numerics.ERR_YOUREBANNEDCREEP
+  commentId: F:smIRCL.Constants.Numerics.ERR_YOUREBANNEDCREEP
   id: ERR_YOUREBANNEDCREEP
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: ERR_YOUREBANNEDCREEP
   nameWithType: Numerics.ERR_YOUREBANNEDCREEP
-  fullName: smIRCL.Numerics.ERR_YOUREBANNEDCREEP
+  fullName: smIRCL.Constants.Numerics.ERR_YOUREBANNEDCREEP
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_YOUREBANNEDCREEP
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 133
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string ERR_YOUREBANNEDCREEP = "465"
     return:
@@ -4164,28 +4164,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.ERR_YOUWILLBEBANNED
-  commentId: F:smIRCL.Numerics.ERR_YOUWILLBEBANNED
+- uid: smIRCL.Constants.Numerics.ERR_YOUWILLBEBANNED
+  commentId: F:smIRCL.Constants.Numerics.ERR_YOUWILLBEBANNED
   id: ERR_YOUWILLBEBANNED
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: ERR_YOUWILLBEBANNED
   nameWithType: Numerics.ERR_YOUWILLBEBANNED
-  fullName: smIRCL.Numerics.ERR_YOUWILLBEBANNED
+  fullName: smIRCL.Constants.Numerics.ERR_YOUWILLBEBANNED
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_YOUWILLBEBANNED
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 134
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string ERR_YOUWILLBEBANNED = "466"
     return:
@@ -4197,28 +4197,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.ERR_KEYSET
-  commentId: F:smIRCL.Numerics.ERR_KEYSET
+- uid: smIRCL.Constants.Numerics.ERR_KEYSET
+  commentId: F:smIRCL.Constants.Numerics.ERR_KEYSET
   id: ERR_KEYSET
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: ERR_KEYSET
   nameWithType: Numerics.ERR_KEYSET
-  fullName: smIRCL.Numerics.ERR_KEYSET
+  fullName: smIRCL.Constants.Numerics.ERR_KEYSET
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_KEYSET
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 135
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string ERR_KEYSET = "467"
     return:
@@ -4230,28 +4230,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.ERR_CHANNELISFULL
-  commentId: F:smIRCL.Numerics.ERR_CHANNELISFULL
+- uid: smIRCL.Constants.Numerics.ERR_CHANNELISFULL
+  commentId: F:smIRCL.Constants.Numerics.ERR_CHANNELISFULL
   id: ERR_CHANNELISFULL
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: ERR_CHANNELISFULL
   nameWithType: Numerics.ERR_CHANNELISFULL
-  fullName: smIRCL.Numerics.ERR_CHANNELISFULL
+  fullName: smIRCL.Constants.Numerics.ERR_CHANNELISFULL
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_CHANNELISFULL
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 136
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string ERR_CHANNELISFULL = "471"
     return:
@@ -4263,28 +4263,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.ERR_UNKNOWNMODE
-  commentId: F:smIRCL.Numerics.ERR_UNKNOWNMODE
+- uid: smIRCL.Constants.Numerics.ERR_UNKNOWNMODE
+  commentId: F:smIRCL.Constants.Numerics.ERR_UNKNOWNMODE
   id: ERR_UNKNOWNMODE
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: ERR_UNKNOWNMODE
   nameWithType: Numerics.ERR_UNKNOWNMODE
-  fullName: smIRCL.Numerics.ERR_UNKNOWNMODE
+  fullName: smIRCL.Constants.Numerics.ERR_UNKNOWNMODE
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_UNKNOWNMODE
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 137
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string ERR_UNKNOWNMODE = "472"
     return:
@@ -4296,28 +4296,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.ERR_INVITEONLYCHAN
-  commentId: F:smIRCL.Numerics.ERR_INVITEONLYCHAN
+- uid: smIRCL.Constants.Numerics.ERR_INVITEONLYCHAN
+  commentId: F:smIRCL.Constants.Numerics.ERR_INVITEONLYCHAN
   id: ERR_INVITEONLYCHAN
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: ERR_INVITEONLYCHAN
   nameWithType: Numerics.ERR_INVITEONLYCHAN
-  fullName: smIRCL.Numerics.ERR_INVITEONLYCHAN
+  fullName: smIRCL.Constants.Numerics.ERR_INVITEONLYCHAN
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_INVITEONLYCHAN
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 138
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string ERR_INVITEONLYCHAN = "473"
     return:
@@ -4329,28 +4329,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.ERR_BANNEDFROMCHAN
-  commentId: F:smIRCL.Numerics.ERR_BANNEDFROMCHAN
+- uid: smIRCL.Constants.Numerics.ERR_BANNEDFROMCHAN
+  commentId: F:smIRCL.Constants.Numerics.ERR_BANNEDFROMCHAN
   id: ERR_BANNEDFROMCHAN
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: ERR_BANNEDFROMCHAN
   nameWithType: Numerics.ERR_BANNEDFROMCHAN
-  fullName: smIRCL.Numerics.ERR_BANNEDFROMCHAN
+  fullName: smIRCL.Constants.Numerics.ERR_BANNEDFROMCHAN
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_BANNEDFROMCHAN
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 139
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string ERR_BANNEDFROMCHAN = "474"
     return:
@@ -4362,28 +4362,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.ERR_BADCHANNELKEY
-  commentId: F:smIRCL.Numerics.ERR_BADCHANNELKEY
+- uid: smIRCL.Constants.Numerics.ERR_BADCHANNELKEY
+  commentId: F:smIRCL.Constants.Numerics.ERR_BADCHANNELKEY
   id: ERR_BADCHANNELKEY
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: ERR_BADCHANNELKEY
   nameWithType: Numerics.ERR_BADCHANNELKEY
-  fullName: smIRCL.Numerics.ERR_BADCHANNELKEY
+  fullName: smIRCL.Constants.Numerics.ERR_BADCHANNELKEY
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_BADCHANNELKEY
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 140
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string ERR_BADCHANNELKEY = "475"
     return:
@@ -4395,28 +4395,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.ERR_BADCHANMASK
-  commentId: F:smIRCL.Numerics.ERR_BADCHANMASK
+- uid: smIRCL.Constants.Numerics.ERR_BADCHANMASK
+  commentId: F:smIRCL.Constants.Numerics.ERR_BADCHANMASK
   id: ERR_BADCHANMASK
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: ERR_BADCHANMASK
   nameWithType: Numerics.ERR_BADCHANMASK
-  fullName: smIRCL.Numerics.ERR_BADCHANMASK
+  fullName: smIRCL.Constants.Numerics.ERR_BADCHANMASK
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_BADCHANMASK
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 141
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string ERR_BADCHANMASK = "476"
     return:
@@ -4428,28 +4428,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.ERR_NOCHANMODES
-  commentId: F:smIRCL.Numerics.ERR_NOCHANMODES
+- uid: smIRCL.Constants.Numerics.ERR_NOCHANMODES
+  commentId: F:smIRCL.Constants.Numerics.ERR_NOCHANMODES
   id: ERR_NOCHANMODES
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: ERR_NOCHANMODES
   nameWithType: Numerics.ERR_NOCHANMODES
-  fullName: smIRCL.Numerics.ERR_NOCHANMODES
+  fullName: smIRCL.Constants.Numerics.ERR_NOCHANMODES
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_NOCHANMODES
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 142
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string ERR_NOCHANMODES = "477"
     return:
@@ -4461,28 +4461,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.ERR_BANLISTFULL
-  commentId: F:smIRCL.Numerics.ERR_BANLISTFULL
+- uid: smIRCL.Constants.Numerics.ERR_BANLISTFULL
+  commentId: F:smIRCL.Constants.Numerics.ERR_BANLISTFULL
   id: ERR_BANLISTFULL
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: ERR_BANLISTFULL
   nameWithType: Numerics.ERR_BANLISTFULL
-  fullName: smIRCL.Numerics.ERR_BANLISTFULL
+  fullName: smIRCL.Constants.Numerics.ERR_BANLISTFULL
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_BANLISTFULL
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 143
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string ERR_BANLISTFULL = "478"
     return:
@@ -4494,28 +4494,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.ERR_NOPRIVILEGES
-  commentId: F:smIRCL.Numerics.ERR_NOPRIVILEGES
+- uid: smIRCL.Constants.Numerics.ERR_NOPRIVILEGES
+  commentId: F:smIRCL.Constants.Numerics.ERR_NOPRIVILEGES
   id: ERR_NOPRIVILEGES
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: ERR_NOPRIVILEGES
   nameWithType: Numerics.ERR_NOPRIVILEGES
-  fullName: smIRCL.Numerics.ERR_NOPRIVILEGES
+  fullName: smIRCL.Constants.Numerics.ERR_NOPRIVILEGES
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_NOPRIVILEGES
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 144
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string ERR_NOPRIVILEGES = "481"
     return:
@@ -4527,28 +4527,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.ERR_CHANOPRIVSNEEDED
-  commentId: F:smIRCL.Numerics.ERR_CHANOPRIVSNEEDED
+- uid: smIRCL.Constants.Numerics.ERR_CHANOPRIVSNEEDED
+  commentId: F:smIRCL.Constants.Numerics.ERR_CHANOPRIVSNEEDED
   id: ERR_CHANOPRIVSNEEDED
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: ERR_CHANOPRIVSNEEDED
   nameWithType: Numerics.ERR_CHANOPRIVSNEEDED
-  fullName: smIRCL.Numerics.ERR_CHANOPRIVSNEEDED
+  fullName: smIRCL.Constants.Numerics.ERR_CHANOPRIVSNEEDED
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_CHANOPRIVSNEEDED
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 145
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string ERR_CHANOPRIVSNEEDED = "482"
     return:
@@ -4560,28 +4560,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.ERR_CANTKILLSERVER
-  commentId: F:smIRCL.Numerics.ERR_CANTKILLSERVER
+- uid: smIRCL.Constants.Numerics.ERR_CANTKILLSERVER
+  commentId: F:smIRCL.Constants.Numerics.ERR_CANTKILLSERVER
   id: ERR_CANTKILLSERVER
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: ERR_CANTKILLSERVER
   nameWithType: Numerics.ERR_CANTKILLSERVER
-  fullName: smIRCL.Numerics.ERR_CANTKILLSERVER
+  fullName: smIRCL.Constants.Numerics.ERR_CANTKILLSERVER
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_CANTKILLSERVER
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 146
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string ERR_CANTKILLSERVER = "483"
     return:
@@ -4593,28 +4593,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.ERR_RESTRICTED
-  commentId: F:smIRCL.Numerics.ERR_RESTRICTED
+- uid: smIRCL.Constants.Numerics.ERR_RESTRICTED
+  commentId: F:smIRCL.Constants.Numerics.ERR_RESTRICTED
   id: ERR_RESTRICTED
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: ERR_RESTRICTED
   nameWithType: Numerics.ERR_RESTRICTED
-  fullName: smIRCL.Numerics.ERR_RESTRICTED
+  fullName: smIRCL.Constants.Numerics.ERR_RESTRICTED
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_RESTRICTED
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 147
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string ERR_RESTRICTED = "484"
     return:
@@ -4626,28 +4626,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.ERR_UNIQOPPRIVSNEEDED
-  commentId: F:smIRCL.Numerics.ERR_UNIQOPPRIVSNEEDED
+- uid: smIRCL.Constants.Numerics.ERR_UNIQOPPRIVSNEEDED
+  commentId: F:smIRCL.Constants.Numerics.ERR_UNIQOPPRIVSNEEDED
   id: ERR_UNIQOPPRIVSNEEDED
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: ERR_UNIQOPPRIVSNEEDED
   nameWithType: Numerics.ERR_UNIQOPPRIVSNEEDED
-  fullName: smIRCL.Numerics.ERR_UNIQOPPRIVSNEEDED
+  fullName: smIRCL.Constants.Numerics.ERR_UNIQOPPRIVSNEEDED
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_UNIQOPPRIVSNEEDED
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 148
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string ERR_UNIQOPPRIVSNEEDED = "485"
     return:
@@ -4659,28 +4659,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.ERR_NOOPERHOST
-  commentId: F:smIRCL.Numerics.ERR_NOOPERHOST
+- uid: smIRCL.Constants.Numerics.ERR_NOOPERHOST
+  commentId: F:smIRCL.Constants.Numerics.ERR_NOOPERHOST
   id: ERR_NOOPERHOST
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: ERR_NOOPERHOST
   nameWithType: Numerics.ERR_NOOPERHOST
-  fullName: smIRCL.Numerics.ERR_NOOPERHOST
+  fullName: smIRCL.Constants.Numerics.ERR_NOOPERHOST
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_NOOPERHOST
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 149
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string ERR_NOOPERHOST = "491"
     return:
@@ -4692,28 +4692,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.ERR_UMODEUNKNOWNFLAG
-  commentId: F:smIRCL.Numerics.ERR_UMODEUNKNOWNFLAG
+- uid: smIRCL.Constants.Numerics.ERR_UMODEUNKNOWNFLAG
+  commentId: F:smIRCL.Constants.Numerics.ERR_UMODEUNKNOWNFLAG
   id: ERR_UMODEUNKNOWNFLAG
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: ERR_UMODEUNKNOWNFLAG
   nameWithType: Numerics.ERR_UMODEUNKNOWNFLAG
-  fullName: smIRCL.Numerics.ERR_UMODEUNKNOWNFLAG
+  fullName: smIRCL.Constants.Numerics.ERR_UMODEUNKNOWNFLAG
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_UMODEUNKNOWNFLAG
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 150
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string ERR_UMODEUNKNOWNFLAG = "501"
     return:
@@ -4725,28 +4725,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.ERR_USERSDONTMATCH
-  commentId: F:smIRCL.Numerics.ERR_USERSDONTMATCH
+- uid: smIRCL.Constants.Numerics.ERR_USERSDONTMATCH
+  commentId: F:smIRCL.Constants.Numerics.ERR_USERSDONTMATCH
   id: ERR_USERSDONTMATCH
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: ERR_USERSDONTMATCH
   nameWithType: Numerics.ERR_USERSDONTMATCH
-  fullName: smIRCL.Numerics.ERR_USERSDONTMATCH
+  fullName: smIRCL.Constants.Numerics.ERR_USERSDONTMATCH
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_USERSDONTMATCH
-    path: ../smIRCL/Numerics.cs
+    path: ../smIRCL/Constants/Numerics.cs
     startLine: 151
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string ERR_USERSDONTMATCH = "502"
     return:
@@ -4758,28 +4758,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_STATSCLINE
-  commentId: F:smIRCL.Numerics.RPL_STATSCLINE
+- uid: smIRCL.Constants.Numerics.RPL_STATSCLINE
+  commentId: F:smIRCL.Constants.Numerics.RPL_STATSCLINE
   id: RPL_STATSCLINE
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_STATSCLINE
   nameWithType: Numerics.RPL_STATSCLINE
-  fullName: smIRCL.Numerics.RPL_STATSCLINE
+  fullName: smIRCL.Constants.Numerics.RPL_STATSCLINE
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_STATSCLINE
-    path: ../smIRCL/Numerics.cs
-    startLine: 157
+    path: ../smIRCL/Constants/Numerics.cs
+    startLine: 159
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_STATSCLINE = "213"
     return:
@@ -4791,28 +4791,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_STATSNLINE
-  commentId: F:smIRCL.Numerics.RPL_STATSNLINE
+- uid: smIRCL.Constants.Numerics.RPL_STATSNLINE
+  commentId: F:smIRCL.Constants.Numerics.RPL_STATSNLINE
   id: RPL_STATSNLINE
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_STATSNLINE
   nameWithType: Numerics.RPL_STATSNLINE
-  fullName: smIRCL.Numerics.RPL_STATSNLINE
+  fullName: smIRCL.Constants.Numerics.RPL_STATSNLINE
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_STATSNLINE
-    path: ../smIRCL/Numerics.cs
-    startLine: 158
+    path: ../smIRCL/Constants/Numerics.cs
+    startLine: 160
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_STATSNLINE = "214"
     return:
@@ -4824,28 +4824,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_STATSILINE
-  commentId: F:smIRCL.Numerics.RPL_STATSILINE
+- uid: smIRCL.Constants.Numerics.RPL_STATSILINE
+  commentId: F:smIRCL.Constants.Numerics.RPL_STATSILINE
   id: RPL_STATSILINE
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_STATSILINE
   nameWithType: Numerics.RPL_STATSILINE
-  fullName: smIRCL.Numerics.RPL_STATSILINE
+  fullName: smIRCL.Constants.Numerics.RPL_STATSILINE
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_STATSILINE
-    path: ../smIRCL/Numerics.cs
-    startLine: 159
+    path: ../smIRCL/Constants/Numerics.cs
+    startLine: 161
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_STATSILINE = "215"
     return:
@@ -4857,28 +4857,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_STATSKLINE
-  commentId: F:smIRCL.Numerics.RPL_STATSKLINE
+- uid: smIRCL.Constants.Numerics.RPL_STATSKLINE
+  commentId: F:smIRCL.Constants.Numerics.RPL_STATSKLINE
   id: RPL_STATSKLINE
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_STATSKLINE
   nameWithType: Numerics.RPL_STATSKLINE
-  fullName: smIRCL.Numerics.RPL_STATSKLINE
+  fullName: smIRCL.Constants.Numerics.RPL_STATSKLINE
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_STATSKLINE
-    path: ../smIRCL/Numerics.cs
-    startLine: 160
+    path: ../smIRCL/Constants/Numerics.cs
+    startLine: 162
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_STATSKLINE = "216"
     return:
@@ -4890,28 +4890,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_STATSQLINE
-  commentId: F:smIRCL.Numerics.RPL_STATSQLINE
+- uid: smIRCL.Constants.Numerics.RPL_STATSQLINE
+  commentId: F:smIRCL.Constants.Numerics.RPL_STATSQLINE
   id: RPL_STATSQLINE
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_STATSQLINE
   nameWithType: Numerics.RPL_STATSQLINE
-  fullName: smIRCL.Numerics.RPL_STATSQLINE
+  fullName: smIRCL.Constants.Numerics.RPL_STATSQLINE
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_STATSQLINE
-    path: ../smIRCL/Numerics.cs
-    startLine: 161
+    path: ../smIRCL/Constants/Numerics.cs
+    startLine: 163
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_STATSQLINE = "217"
     return:
@@ -4923,28 +4923,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_STATSYLINE
-  commentId: F:smIRCL.Numerics.RPL_STATSYLINE
+- uid: smIRCL.Constants.Numerics.RPL_STATSYLINE
+  commentId: F:smIRCL.Constants.Numerics.RPL_STATSYLINE
   id: RPL_STATSYLINE
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_STATSYLINE
   nameWithType: Numerics.RPL_STATSYLINE
-  fullName: smIRCL.Numerics.RPL_STATSYLINE
+  fullName: smIRCL.Constants.Numerics.RPL_STATSYLINE
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_STATSYLINE
-    path: ../smIRCL/Numerics.cs
-    startLine: 162
+    path: ../smIRCL/Constants/Numerics.cs
+    startLine: 164
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_STATSYLINE = "218"
     return:
@@ -4956,28 +4956,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_SERVICEINFO
-  commentId: F:smIRCL.Numerics.RPL_SERVICEINFO
+- uid: smIRCL.Constants.Numerics.RPL_SERVICEINFO
+  commentId: F:smIRCL.Constants.Numerics.RPL_SERVICEINFO
   id: RPL_SERVICEINFO
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_SERVICEINFO
   nameWithType: Numerics.RPL_SERVICEINFO
-  fullName: smIRCL.Numerics.RPL_SERVICEINFO
+  fullName: smIRCL.Constants.Numerics.RPL_SERVICEINFO
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_SERVICEINFO
-    path: ../smIRCL/Numerics.cs
-    startLine: 163
+    path: ../smIRCL/Constants/Numerics.cs
+    startLine: 165
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_SERVICEINFO = "231"
     return:
@@ -4989,28 +4989,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_ENDOFSERVICES
-  commentId: F:smIRCL.Numerics.RPL_ENDOFSERVICES
+- uid: smIRCL.Constants.Numerics.RPL_ENDOFSERVICES
+  commentId: F:smIRCL.Constants.Numerics.RPL_ENDOFSERVICES
   id: RPL_ENDOFSERVICES
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_ENDOFSERVICES
   nameWithType: Numerics.RPL_ENDOFSERVICES
-  fullName: smIRCL.Numerics.RPL_ENDOFSERVICES
+  fullName: smIRCL.Constants.Numerics.RPL_ENDOFSERVICES
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_ENDOFSERVICES
-    path: ../smIRCL/Numerics.cs
-    startLine: 164
+    path: ../smIRCL/Constants/Numerics.cs
+    startLine: 166
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_ENDOFSERVICES = "232"
     return:
@@ -5022,28 +5022,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_SERVICE
-  commentId: F:smIRCL.Numerics.RPL_SERVICE
+- uid: smIRCL.Constants.Numerics.RPL_SERVICE
+  commentId: F:smIRCL.Constants.Numerics.RPL_SERVICE
   id: RPL_SERVICE
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_SERVICE
   nameWithType: Numerics.RPL_SERVICE
-  fullName: smIRCL.Numerics.RPL_SERVICE
+  fullName: smIRCL.Constants.Numerics.RPL_SERVICE
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_SERVICE
-    path: ../smIRCL/Numerics.cs
-    startLine: 165
+    path: ../smIRCL/Constants/Numerics.cs
+    startLine: 167
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_SERVICE = "233"
     return:
@@ -5055,28 +5055,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_STATSVLINE
-  commentId: F:smIRCL.Numerics.RPL_STATSVLINE
+- uid: smIRCL.Constants.Numerics.RPL_STATSVLINE
+  commentId: F:smIRCL.Constants.Numerics.RPL_STATSVLINE
   id: RPL_STATSVLINE
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_STATSVLINE
   nameWithType: Numerics.RPL_STATSVLINE
-  fullName: smIRCL.Numerics.RPL_STATSVLINE
+  fullName: smIRCL.Constants.Numerics.RPL_STATSVLINE
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_STATSVLINE
-    path: ../smIRCL/Numerics.cs
-    startLine: 166
+    path: ../smIRCL/Constants/Numerics.cs
+    startLine: 168
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_STATSVLINE = "240"
     return:
@@ -5088,28 +5088,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_STATSLLINE
-  commentId: F:smIRCL.Numerics.RPL_STATSLLINE
+- uid: smIRCL.Constants.Numerics.RPL_STATSLLINE
+  commentId: F:smIRCL.Constants.Numerics.RPL_STATSLLINE
   id: RPL_STATSLLINE
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_STATSLLINE
   nameWithType: Numerics.RPL_STATSLLINE
-  fullName: smIRCL.Numerics.RPL_STATSLLINE
+  fullName: smIRCL.Constants.Numerics.RPL_STATSLLINE
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_STATSLLINE
-    path: ../smIRCL/Numerics.cs
-    startLine: 167
+    path: ../smIRCL/Constants/Numerics.cs
+    startLine: 169
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_STATSLLINE = "241"
     return:
@@ -5121,28 +5121,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_STATSHLINE
-  commentId: F:smIRCL.Numerics.RPL_STATSHLINE
+- uid: smIRCL.Constants.Numerics.RPL_STATSHLINE
+  commentId: F:smIRCL.Constants.Numerics.RPL_STATSHLINE
   id: RPL_STATSHLINE
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_STATSHLINE
   nameWithType: Numerics.RPL_STATSHLINE
-  fullName: smIRCL.Numerics.RPL_STATSHLINE
+  fullName: smIRCL.Constants.Numerics.RPL_STATSHLINE
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_STATSHLINE
-    path: ../smIRCL/Numerics.cs
-    startLine: 168
+    path: ../smIRCL/Constants/Numerics.cs
+    startLine: 170
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_STATSHLINE = "244"
     return:
@@ -5154,28 +5154,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_STATSSLINE
-  commentId: F:smIRCL.Numerics.RPL_STATSSLINE
+- uid: smIRCL.Constants.Numerics.RPL_STATSSLINE
+  commentId: F:smIRCL.Constants.Numerics.RPL_STATSSLINE
   id: RPL_STATSSLINE
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_STATSSLINE
   nameWithType: Numerics.RPL_STATSSLINE
-  fullName: smIRCL.Numerics.RPL_STATSSLINE
+  fullName: smIRCL.Constants.Numerics.RPL_STATSSLINE
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_STATSSLINE
-    path: ../smIRCL/Numerics.cs
-    startLine: 169
+    path: ../smIRCL/Constants/Numerics.cs
+    startLine: 171
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_STATSSLINE = "244"
     return:
@@ -5187,28 +5187,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_STATSPING
-  commentId: F:smIRCL.Numerics.RPL_STATSPING
+- uid: smIRCL.Constants.Numerics.RPL_STATSPING
+  commentId: F:smIRCL.Constants.Numerics.RPL_STATSPING
   id: RPL_STATSPING
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_STATSPING
   nameWithType: Numerics.RPL_STATSPING
-  fullName: smIRCL.Numerics.RPL_STATSPING
+  fullName: smIRCL.Constants.Numerics.RPL_STATSPING
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_STATSPING
-    path: ../smIRCL/Numerics.cs
-    startLine: 170
+    path: ../smIRCL/Constants/Numerics.cs
+    startLine: 172
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_STATSPING = "246"
     return:
@@ -5220,28 +5220,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_STATSBLINE
-  commentId: F:smIRCL.Numerics.RPL_STATSBLINE
+- uid: smIRCL.Constants.Numerics.RPL_STATSBLINE
+  commentId: F:smIRCL.Constants.Numerics.RPL_STATSBLINE
   id: RPL_STATSBLINE
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_STATSBLINE
   nameWithType: Numerics.RPL_STATSBLINE
-  fullName: smIRCL.Numerics.RPL_STATSBLINE
+  fullName: smIRCL.Constants.Numerics.RPL_STATSBLINE
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_STATSBLINE
-    path: ../smIRCL/Numerics.cs
-    startLine: 171
+    path: ../smIRCL/Constants/Numerics.cs
+    startLine: 173
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_STATSBLINE = "247"
     return:
@@ -5253,28 +5253,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_STATSDLINE
-  commentId: F:smIRCL.Numerics.RPL_STATSDLINE
+- uid: smIRCL.Constants.Numerics.RPL_STATSDLINE
+  commentId: F:smIRCL.Constants.Numerics.RPL_STATSDLINE
   id: RPL_STATSDLINE
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_STATSDLINE
   nameWithType: Numerics.RPL_STATSDLINE
-  fullName: smIRCL.Numerics.RPL_STATSDLINE
+  fullName: smIRCL.Constants.Numerics.RPL_STATSDLINE
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_STATSDLINE
-    path: ../smIRCL/Numerics.cs
-    startLine: 172
+    path: ../smIRCL/Constants/Numerics.cs
+    startLine: 174
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_STATSDLINE = "250"
     return:
@@ -5286,28 +5286,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_NONE
-  commentId: F:smIRCL.Numerics.RPL_NONE
+- uid: smIRCL.Constants.Numerics.RPL_NONE
+  commentId: F:smIRCL.Constants.Numerics.RPL_NONE
   id: RPL_NONE
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_NONE
   nameWithType: Numerics.RPL_NONE
-  fullName: smIRCL.Numerics.RPL_NONE
+  fullName: smIRCL.Constants.Numerics.RPL_NONE
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_NONE
-    path: ../smIRCL/Numerics.cs
-    startLine: 173
+    path: ../smIRCL/Constants/Numerics.cs
+    startLine: 175
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_NONE = "300"
     return:
@@ -5319,28 +5319,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_KILLDONE
-  commentId: F:smIRCL.Numerics.RPL_KILLDONE
+- uid: smIRCL.Constants.Numerics.RPL_KILLDONE
+  commentId: F:smIRCL.Constants.Numerics.RPL_KILLDONE
   id: RPL_KILLDONE
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_KILLDONE
   nameWithType: Numerics.RPL_KILLDONE
-  fullName: smIRCL.Numerics.RPL_KILLDONE
+  fullName: smIRCL.Constants.Numerics.RPL_KILLDONE
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_KILLDONE
-    path: ../smIRCL/Numerics.cs
-    startLine: 174
+    path: ../smIRCL/Constants/Numerics.cs
+    startLine: 176
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_KILLDONE = "361"
     return:
@@ -5352,28 +5352,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_CLOSING
-  commentId: F:smIRCL.Numerics.RPL_CLOSING
+- uid: smIRCL.Constants.Numerics.RPL_CLOSING
+  commentId: F:smIRCL.Constants.Numerics.RPL_CLOSING
   id: RPL_CLOSING
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_CLOSING
   nameWithType: Numerics.RPL_CLOSING
-  fullName: smIRCL.Numerics.RPL_CLOSING
+  fullName: smIRCL.Constants.Numerics.RPL_CLOSING
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_CLOSING
-    path: ../smIRCL/Numerics.cs
-    startLine: 175
+    path: ../smIRCL/Constants/Numerics.cs
+    startLine: 177
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_CLOSING = "362"
     return:
@@ -5385,28 +5385,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_CLODEEND
-  commentId: F:smIRCL.Numerics.RPL_CLODEEND
+- uid: smIRCL.Constants.Numerics.RPL_CLODEEND
+  commentId: F:smIRCL.Constants.Numerics.RPL_CLODEEND
   id: RPL_CLODEEND
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_CLODEEND
   nameWithType: Numerics.RPL_CLODEEND
-  fullName: smIRCL.Numerics.RPL_CLODEEND
+  fullName: smIRCL.Constants.Numerics.RPL_CLODEEND
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_CLODEEND
-    path: ../smIRCL/Numerics.cs
-    startLine: 176
+    path: ../smIRCL/Constants/Numerics.cs
+    startLine: 178
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_CLODEEND = "363"
     return:
@@ -5418,28 +5418,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_INFOSTART
-  commentId: F:smIRCL.Numerics.RPL_INFOSTART
+- uid: smIRCL.Constants.Numerics.RPL_INFOSTART
+  commentId: F:smIRCL.Constants.Numerics.RPL_INFOSTART
   id: RPL_INFOSTART
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_INFOSTART
   nameWithType: Numerics.RPL_INFOSTART
-  fullName: smIRCL.Numerics.RPL_INFOSTART
+  fullName: smIRCL.Constants.Numerics.RPL_INFOSTART
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_INFOSTART
-    path: ../smIRCL/Numerics.cs
-    startLine: 177
+    path: ../smIRCL/Constants/Numerics.cs
+    startLine: 179
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_INFOSTART = "373"
     return:
@@ -5451,28 +5451,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.RPL_MYPORTIS
-  commentId: F:smIRCL.Numerics.RPL_MYPORTIS
+- uid: smIRCL.Constants.Numerics.RPL_MYPORTIS
+  commentId: F:smIRCL.Constants.Numerics.RPL_MYPORTIS
   id: RPL_MYPORTIS
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: RPL_MYPORTIS
   nameWithType: Numerics.RPL_MYPORTIS
-  fullName: smIRCL.Numerics.RPL_MYPORTIS
+  fullName: smIRCL.Constants.Numerics.RPL_MYPORTIS
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_MYPORTIS
-    path: ../smIRCL/Numerics.cs
-    startLine: 178
+    path: ../smIRCL/Constants/Numerics.cs
+    startLine: 180
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string RPL_MYPORTIS = "384"
     return:
@@ -5484,28 +5484,28 @@ items:
   modifiers.vb:
   - Public
   - Const
-- uid: smIRCL.Numerics.ERR_NOSERVICEHOST
-  commentId: F:smIRCL.Numerics.ERR_NOSERVICEHOST
+- uid: smIRCL.Constants.Numerics.ERR_NOSERVICEHOST
+  commentId: F:smIRCL.Constants.Numerics.ERR_NOSERVICEHOST
   id: ERR_NOSERVICEHOST
-  parent: smIRCL.Numerics
+  parent: smIRCL.Constants.Numerics
   langs:
   - csharp
   - vb
   name: ERR_NOSERVICEHOST
   nameWithType: Numerics.ERR_NOSERVICEHOST
-  fullName: smIRCL.Numerics.ERR_NOSERVICEHOST
+  fullName: smIRCL.Constants.Numerics.ERR_NOSERVICEHOST
   type: Field
   source:
     remote:
-      path: smIRCL/Numerics.cs
+      path: smIRCL/Constants/Numerics.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_NOSERVICEHOST
-    path: ../smIRCL/Numerics.cs
-    startLine: 179
+    path: ../smIRCL/Constants/Numerics.cs
+    startLine: 181
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.Constants
   syntax:
     content: public const string ERR_NOSERVICEHOST = "492"
     return:
@@ -5518,11 +5518,11 @@ items:
   - Public
   - Const
 references:
-- uid: smIRCL
-  commentId: N:smIRCL
-  name: smIRCL
-  nameWithType: smIRCL
-  fullName: smIRCL
+- uid: smIRCL.Constants
+  commentId: N:smIRCL.Constants
+  name: smIRCL.Constants
+  nameWithType: smIRCL.Constants
+  fullName: smIRCL.Constants
 - uid: System.Object
   commentId: T:System.Object
   parent: System

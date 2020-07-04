@@ -27,12 +27,12 @@ items:
   type: Class
   source:
     remote:
-      path: smIRCL/IrcConnector.cs
+      path: smIRCL/Core/IrcConnector.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: IrcConnector
-    path: ../smIRCL/IrcConnector.cs
-    startLine: 10
+    path: ../smIRCL/Core/IrcConnector.cs
+    startLine: 11
   assemblies:
   - smIRCL
   namespace: smIRCL
@@ -72,15 +72,17 @@ items:
   type: Property
   source:
     remote:
-      path: smIRCL/IrcConnector.cs
+      path: smIRCL/Core/IrcConnector.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: Config
-    path: ../smIRCL/IrcConnector.cs
-    startLine: 14
+    path: ../smIRCL/Core/IrcConnector.cs
+    startLine: 18
   assemblies:
   - smIRCL
   namespace: smIRCL
+  summary: "\nThe configuration for the IRC server connection and any attached controller\n"
+  example: []
   syntax:
     content: public IrcConfig Config { get; }
     parameters: []
@@ -107,15 +109,17 @@ items:
   type: Property
   source:
     remote:
-      path: smIRCL/IrcConnector.cs
+      path: smIRCL/Core/IrcConnector.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: IsConnected
-    path: ../smIRCL/IrcConnector.cs
-    startLine: 16
+    path: ../smIRCL/Core/IrcConnector.cs
+    startLine: 23
   assemblies:
   - smIRCL
   namespace: smIRCL
+  summary: "\nWhether there is a live IRC server connection\n"
+  example: []
   syntax:
     content: public bool IsConnected { get; }
     parameters: []
@@ -142,15 +146,17 @@ items:
   type: Property
   source:
     remote:
-      path: smIRCL/IrcConnector.cs
+      path: smIRCL/Core/IrcConnector.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: IsDisposed
-    path: ../smIRCL/IrcConnector.cs
-    startLine: 18
+    path: ../smIRCL/Core/IrcConnector.cs
+    startLine: 28
   assemblies:
   - smIRCL
   namespace: smIRCL
+  summary: "\nWhether this connector has been disposed and can no longer be used\n"
+  example: []
   syntax:
     content: public bool IsDisposed { get; }
     parameters: []
@@ -177,15 +183,17 @@ items:
   type: Event
   source:
     remote:
-      path: smIRCL/IrcConnector.cs
+      path: smIRCL/Core/IrcConnector.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: Connected
-    path: ../smIRCL/IrcConnector.cs
-    startLine: 24
+    path: ../smIRCL/Core/IrcConnector.cs
+    startLine: 37
   assemblies:
   - smIRCL
   namespace: smIRCL
+  summary: "\nFired when a connection to an IRC server is established\n"
+  example: []
   syntax:
     content: public event IrcConnector.ConnectionStateEventHandler Connected
     return:
@@ -208,15 +216,17 @@ items:
   type: Event
   source:
     remote:
-      path: smIRCL/IrcConnector.cs
+      path: smIRCL/Core/IrcConnector.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: Disconnected
-    path: ../smIRCL/IrcConnector.cs
-    startLine: 25
+    path: ../smIRCL/Core/IrcConnector.cs
+    startLine: 41
   assemblies:
   - smIRCL
   namespace: smIRCL
+  summary: "\nFired when a connection to an IRC server is lost\n"
+  example: []
   syntax:
     content: public event IrcConnector.ConnectionStateEventHandler Disconnected
     return:
@@ -239,15 +249,17 @@ items:
   type: Event
   source:
     remote:
-      path: smIRCL/IrcConnector.cs
+      path: smIRCL/Core/IrcConnector.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: MessageTransmitted
-    path: ../smIRCL/IrcConnector.cs
-    startLine: 29
+    path: ../smIRCL/Core/IrcConnector.cs
+    startLine: 50
   assemblies:
   - smIRCL
   namespace: smIRCL
+  summary: "\nFired when a message is sent to the IRC server\n"
+  example: []
   syntax:
     content: public event IrcConnector.MessageTransmitHandler MessageTransmitted
     return:
@@ -270,15 +282,17 @@ items:
   type: Event
   source:
     remote:
-      path: smIRCL/IrcConnector.cs
+      path: smIRCL/Core/IrcConnector.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: MessageReceived
-    path: ../smIRCL/IrcConnector.cs
-    startLine: 33
+    path: ../smIRCL/Core/IrcConnector.cs
+    startLine: 60
   assemblies:
   - smIRCL
   namespace: smIRCL
+  summary: "\nFired when a message is received from the IRC server\n"
+  example: []
   syntax:
     content: public event IrcConnector.MessageHandler MessageReceived
     return:
@@ -301,15 +315,17 @@ items:
   type: Event
   source:
     remote:
-      path: smIRCL/IrcConnector.cs
+      path: smIRCL/Core/IrcConnector.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: TransmitFailed
-    path: ../smIRCL/IrcConnector.cs
-    startLine: 37
+    path: ../smIRCL/Core/IrcConnector.cs
+    startLine: 71
   assemblies:
   - smIRCL
   namespace: smIRCL
+  summary: "\nFired when a transmit fails to complete\n"
+  example: []
   syntax:
     content: public event IrcConnector.CommunicationFailedHandler TransmitFailed
     return:
@@ -332,15 +348,17 @@ items:
   type: Event
   source:
     remote:
-      path: smIRCL/IrcConnector.cs
+      path: smIRCL/Core/IrcConnector.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: ReceiveFailed
-    path: ../smIRCL/IrcConnector.cs
-    startLine: 38
+    path: ../smIRCL/Core/IrcConnector.cs
+    startLine: 75
   assemblies:
   - smIRCL
   namespace: smIRCL
+  summary: "\nFired when a receive fails to complete\n"
+  example: []
   syntax:
     content: public event IrcConnector.CommunicationFailedHandler ReceiveFailed
     return:
@@ -363,20 +381,23 @@ items:
   type: Constructor
   source:
     remote:
-      path: smIRCL/IrcConnector.cs
+      path: smIRCL/Core/IrcConnector.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: .ctor
-    path: ../smIRCL/IrcConnector.cs
-    startLine: 58
+    path: ../smIRCL/Core/IrcConnector.cs
+    startLine: 103
   assemblies:
   - smIRCL
   namespace: smIRCL
+  summary: "\nInstantiates a new IRC server connector\n"
+  example: []
   syntax:
     content: public IrcConnector(IrcConfig config)
     parameters:
     - id: config
       type: smIRCL.Config.IrcConfig
+      description: The configuration for the IRC server connection and any controller attached
     content.vb: Public Sub New(config As IrcConfig)
   overload: smIRCL.IrcConnector.#ctor*
   modifiers.csharp:
@@ -396,15 +417,17 @@ items:
   type: Method
   source:
     remote:
-      path: smIRCL/IrcConnector.cs
+      path: smIRCL/Core/IrcConnector.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: Connect
-    path: ../smIRCL/IrcConnector.cs
-    startLine: 71
+    path: ../smIRCL/Core/IrcConnector.cs
+    startLine: 120
   assemblies:
   - smIRCL
   namespace: smIRCL
+  summary: "\nBegin establishing a connection to the configured IRC server\n"
+  example: []
   syntax:
     content: public void Connect()
     content.vb: Public Sub Connect
@@ -426,15 +449,17 @@ items:
   type: Method
   source:
     remote:
-      path: smIRCL/IrcConnector.cs
+      path: smIRCL/Core/IrcConnector.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: Dispose
-    path: ../smIRCL/IrcConnector.cs
-    startLine: 165
+    path: ../smIRCL/Core/IrcConnector.cs
+    startLine: 217
   assemblies:
   - smIRCL
   namespace: smIRCL
+  summary: "\nDisconnect from the IRC server if connected and dispose\n"
+  example: []
   syntax:
     content: public void Dispose()
     content.vb: Public Sub Dispose
@@ -458,20 +483,23 @@ items:
   type: Method
   source:
     remote:
-      path: smIRCL/IrcConnector.cs
+      path: smIRCL/Core/IrcConnector.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: Transmit
-    path: ../smIRCL/IrcConnector.cs
-    startLine: 177
+    path: ../smIRCL/Core/IrcConnector.cs
+    startLine: 233
   assemblies:
   - smIRCL
   namespace: smIRCL
+  summary: "\nTransmit a raw message to the IRC server\n"
+  example: []
   syntax:
     content: public void Transmit(string data)
     parameters:
     - id: data
       type: System.String
+      description: The raw IRC message to transmit
     content.vb: Public Sub Transmit(data As String)
   overload: smIRCL.IrcConnector.Transmit*
   modifiers.csharp:

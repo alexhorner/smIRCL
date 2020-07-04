@@ -1,36 +1,38 @@
 ### YamlMime:ManagedReference
 items:
-- uid: smIRCL.IrcMessage
-  commentId: T:smIRCL.IrcMessage
+- uid: smIRCL.ServerEntities.IrcMessage
+  commentId: T:smIRCL.ServerEntities.IrcMessage
   id: IrcMessage
-  parent: smIRCL
+  parent: smIRCL.ServerEntities
   children:
-  - smIRCL.IrcMessage.Command
-  - smIRCL.IrcMessage.Parameters
-  - smIRCL.IrcMessage.Parse(System.String)
-  - smIRCL.IrcMessage.SourceHost
-  - smIRCL.IrcMessage.SourceHostMask
-  - smIRCL.IrcMessage.SourceNick
-  - smIRCL.IrcMessage.SourceUserName
-  - smIRCL.IrcMessage.Tags
+  - smIRCL.ServerEntities.IrcMessage.Command
+  - smIRCL.ServerEntities.IrcMessage.Parameters
+  - smIRCL.ServerEntities.IrcMessage.Parse(System.String)
+  - smIRCL.ServerEntities.IrcMessage.SourceHost
+  - smIRCL.ServerEntities.IrcMessage.SourceHostMask
+  - smIRCL.ServerEntities.IrcMessage.SourceNick
+  - smIRCL.ServerEntities.IrcMessage.SourceUserName
+  - smIRCL.ServerEntities.IrcMessage.Tags
   langs:
   - csharp
   - vb
   name: IrcMessage
   nameWithType: IrcMessage
-  fullName: smIRCL.IrcMessage
+  fullName: smIRCL.ServerEntities.IrcMessage
   type: Class
   source:
     remote:
-      path: smIRCL/IrcMessage.cs
+      path: smIRCL/ServerEntities/IrcMessage.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: IrcMessage
-    path: ../smIRCL/IrcMessage.cs
-    startLine: 6
+    path: ../smIRCL/ServerEntities/IrcMessage.cs
+    startLine: 10
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.ServerEntities
+  summary: "\nAn IRC message received from an IRC server in its parsed parts\n"
+  example: []
   syntax:
     content: public class IrcMessage
     content.vb: Public Class IrcMessage
@@ -50,282 +52,300 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: smIRCL.IrcMessage.Tags
-  commentId: P:smIRCL.IrcMessage.Tags
+- uid: smIRCL.ServerEntities.IrcMessage.Tags
+  commentId: P:smIRCL.ServerEntities.IrcMessage.Tags
   id: Tags
-  parent: smIRCL.IrcMessage
+  parent: smIRCL.ServerEntities.IrcMessage
   langs:
   - csharp
   - vb
   name: Tags
   nameWithType: IrcMessage.Tags
-  fullName: smIRCL.IrcMessage.Tags
+  fullName: smIRCL.ServerEntities.IrcMessage.Tags
   type: Property
   source:
     remote:
-      path: smIRCL/IrcMessage.cs
+      path: smIRCL/ServerEntities/IrcMessage.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: Tags
-    path: ../smIRCL/IrcMessage.cs
-    startLine: 8
+    path: ../smIRCL/ServerEntities/IrcMessage.cs
+    startLine: 15
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.ServerEntities
+  summary: "\nIRCv3 message tags and their values\n"
+  example: []
   syntax:
     content: public List<KeyValuePair<string, string>> Tags { get; set; }
     parameters: []
     return:
       type: System.Collections.Generic.List{System.Collections.Generic.KeyValuePair{System.String,System.String}}
     content.vb: Public Property Tags As List(Of KeyValuePair(Of String, String))
-  overload: smIRCL.IrcMessage.Tags*
+  overload: smIRCL.ServerEntities.IrcMessage.Tags*
   modifiers.csharp:
   - public
   - get
   - set
   modifiers.vb:
   - Public
-- uid: smIRCL.IrcMessage.SourceHostMask
-  commentId: P:smIRCL.IrcMessage.SourceHostMask
+- uid: smIRCL.ServerEntities.IrcMessage.SourceHostMask
+  commentId: P:smIRCL.ServerEntities.IrcMessage.SourceHostMask
   id: SourceHostMask
-  parent: smIRCL.IrcMessage
+  parent: smIRCL.ServerEntities.IrcMessage
   langs:
   - csharp
   - vb
   name: SourceHostMask
   nameWithType: IrcMessage.SourceHostMask
-  fullName: smIRCL.IrcMessage.SourceHostMask
+  fullName: smIRCL.ServerEntities.IrcMessage.SourceHostMask
   type: Property
   source:
     remote:
-      path: smIRCL/IrcMessage.cs
+      path: smIRCL/ServerEntities/IrcMessage.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: SourceHostMask
-    path: ../smIRCL/IrcMessage.cs
-    startLine: 11
+    path: ../smIRCL/ServerEntities/IrcMessage.cs
+    startLine: 21
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.ServerEntities
+  summary: "\nThe hostmask of the message sender\n"
+  example: []
   syntax:
     content: public string SourceHostMask { get; set; }
     parameters: []
     return:
       type: System.String
     content.vb: Public Property SourceHostMask As String
-  overload: smIRCL.IrcMessage.SourceHostMask*
+  overload: smIRCL.ServerEntities.IrcMessage.SourceHostMask*
   modifiers.csharp:
   - public
   - get
   - set
   modifiers.vb:
   - Public
-- uid: smIRCL.IrcMessage.SourceNick
-  commentId: P:smIRCL.IrcMessage.SourceNick
+- uid: smIRCL.ServerEntities.IrcMessage.SourceNick
+  commentId: P:smIRCL.ServerEntities.IrcMessage.SourceNick
   id: SourceNick
-  parent: smIRCL.IrcMessage
+  parent: smIRCL.ServerEntities.IrcMessage
   langs:
   - csharp
   - vb
   name: SourceNick
   nameWithType: IrcMessage.SourceNick
-  fullName: smIRCL.IrcMessage.SourceNick
+  fullName: smIRCL.ServerEntities.IrcMessage.SourceNick
   type: Property
   source:
     remote:
-      path: smIRCL/IrcMessage.cs
+      path: smIRCL/ServerEntities/IrcMessage.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: SourceNick
-    path: ../smIRCL/IrcMessage.cs
-    startLine: 12
+    path: ../smIRCL/ServerEntities/IrcMessage.cs
+    startLine: 25
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.ServerEntities
+  summary: "\nThe Nick of the message sender\n"
+  example: []
   syntax:
     content: public string SourceNick { get; set; }
     parameters: []
     return:
       type: System.String
     content.vb: Public Property SourceNick As String
-  overload: smIRCL.IrcMessage.SourceNick*
+  overload: smIRCL.ServerEntities.IrcMessage.SourceNick*
   modifiers.csharp:
   - public
   - get
   - set
   modifiers.vb:
   - Public
-- uid: smIRCL.IrcMessage.SourceUserName
-  commentId: P:smIRCL.IrcMessage.SourceUserName
+- uid: smIRCL.ServerEntities.IrcMessage.SourceUserName
+  commentId: P:smIRCL.ServerEntities.IrcMessage.SourceUserName
   id: SourceUserName
-  parent: smIRCL.IrcMessage
+  parent: smIRCL.ServerEntities.IrcMessage
   langs:
   - csharp
   - vb
   name: SourceUserName
   nameWithType: IrcMessage.SourceUserName
-  fullName: smIRCL.IrcMessage.SourceUserName
+  fullName: smIRCL.ServerEntities.IrcMessage.SourceUserName
   type: Property
   source:
     remote:
-      path: smIRCL/IrcMessage.cs
+      path: smIRCL/ServerEntities/IrcMessage.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: SourceUserName
-    path: ../smIRCL/IrcMessage.cs
-    startLine: 13
+    path: ../smIRCL/ServerEntities/IrcMessage.cs
+    startLine: 29
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.ServerEntities
+  summary: "\nThe User name of the message sender\n"
+  example: []
   syntax:
     content: public string SourceUserName { get; set; }
     parameters: []
     return:
       type: System.String
     content.vb: Public Property SourceUserName As String
-  overload: smIRCL.IrcMessage.SourceUserName*
+  overload: smIRCL.ServerEntities.IrcMessage.SourceUserName*
   modifiers.csharp:
   - public
   - get
   - set
   modifiers.vb:
   - Public
-- uid: smIRCL.IrcMessage.SourceHost
-  commentId: P:smIRCL.IrcMessage.SourceHost
+- uid: smIRCL.ServerEntities.IrcMessage.SourceHost
+  commentId: P:smIRCL.ServerEntities.IrcMessage.SourceHost
   id: SourceHost
-  parent: smIRCL.IrcMessage
+  parent: smIRCL.ServerEntities.IrcMessage
   langs:
   - csharp
   - vb
   name: SourceHost
   nameWithType: IrcMessage.SourceHost
-  fullName: smIRCL.IrcMessage.SourceHost
+  fullName: smIRCL.ServerEntities.IrcMessage.SourceHost
   type: Property
   source:
     remote:
-      path: smIRCL/IrcMessage.cs
+      path: smIRCL/ServerEntities/IrcMessage.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: SourceHost
-    path: ../smIRCL/IrcMessage.cs
-    startLine: 14
+    path: ../smIRCL/ServerEntities/IrcMessage.cs
+    startLine: 33
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.ServerEntities
+  summary: "\nThe hostname of the message sender\n"
+  example: []
   syntax:
     content: public string SourceHost { get; set; }
     parameters: []
     return:
       type: System.String
     content.vb: Public Property SourceHost As String
-  overload: smIRCL.IrcMessage.SourceHost*
+  overload: smIRCL.ServerEntities.IrcMessage.SourceHost*
   modifiers.csharp:
   - public
   - get
   - set
   modifiers.vb:
   - Public
-- uid: smIRCL.IrcMessage.Command
-  commentId: P:smIRCL.IrcMessage.Command
+- uid: smIRCL.ServerEntities.IrcMessage.Command
+  commentId: P:smIRCL.ServerEntities.IrcMessage.Command
   id: Command
-  parent: smIRCL.IrcMessage
+  parent: smIRCL.ServerEntities.IrcMessage
   langs:
   - csharp
   - vb
   name: Command
   nameWithType: IrcMessage.Command
-  fullName: smIRCL.IrcMessage.Command
+  fullName: smIRCL.ServerEntities.IrcMessage.Command
   type: Property
   source:
     remote:
-      path: smIRCL/IrcMessage.cs
+      path: smIRCL/ServerEntities/IrcMessage.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: Command
-    path: ../smIRCL/IrcMessage.cs
-    startLine: 17
+    path: ../smIRCL/ServerEntities/IrcMessage.cs
+    startLine: 39
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.ServerEntities
+  summary: "\nThe IRC command issued\n"
+  example: []
   syntax:
     content: public string Command { get; set; }
     parameters: []
     return:
       type: System.String
     content.vb: Public Property Command As String
-  overload: smIRCL.IrcMessage.Command*
+  overload: smIRCL.ServerEntities.IrcMessage.Command*
   modifiers.csharp:
   - public
   - get
   - set
   modifiers.vb:
   - Public
-- uid: smIRCL.IrcMessage.Parameters
-  commentId: P:smIRCL.IrcMessage.Parameters
+- uid: smIRCL.ServerEntities.IrcMessage.Parameters
+  commentId: P:smIRCL.ServerEntities.IrcMessage.Parameters
   id: Parameters
-  parent: smIRCL.IrcMessage
+  parent: smIRCL.ServerEntities.IrcMessage
   langs:
   - csharp
   - vb
   name: Parameters
   nameWithType: IrcMessage.Parameters
-  fullName: smIRCL.IrcMessage.Parameters
+  fullName: smIRCL.ServerEntities.IrcMessage.Parameters
   type: Property
   source:
     remote:
-      path: smIRCL/IrcMessage.cs
+      path: smIRCL/ServerEntities/IrcMessage.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: Parameters
-    path: ../smIRCL/IrcMessage.cs
-    startLine: 19
+    path: ../smIRCL/ServerEntities/IrcMessage.cs
+    startLine: 43
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.ServerEntities
+  summary: "\nParameters to the IRC command issued\n"
+  example: []
   syntax:
     content: public List<string> Parameters { get; set; }
     parameters: []
     return:
       type: System.Collections.Generic.List{System.String}
     content.vb: Public Property Parameters As List(Of String)
-  overload: smIRCL.IrcMessage.Parameters*
+  overload: smIRCL.ServerEntities.IrcMessage.Parameters*
   modifiers.csharp:
   - public
   - get
   - set
   modifiers.vb:
   - Public
-- uid: smIRCL.IrcMessage.Parse(System.String)
-  commentId: M:smIRCL.IrcMessage.Parse(System.String)
+- uid: smIRCL.ServerEntities.IrcMessage.Parse(System.String)
+  commentId: M:smIRCL.ServerEntities.IrcMessage.Parse(System.String)
   id: Parse(System.String)
-  parent: smIRCL.IrcMessage
+  parent: smIRCL.ServerEntities.IrcMessage
   langs:
   - csharp
   - vb
   name: Parse(String)
   nameWithType: IrcMessage.Parse(String)
-  fullName: smIRCL.IrcMessage.Parse(System.String)
+  fullName: smIRCL.ServerEntities.IrcMessage.Parse(System.String)
   type: Method
   source:
     remote:
-      path: smIRCL/IrcMessage.cs
+      path: smIRCL/ServerEntities/IrcMessage.cs
       branch: master
       repo: https://github.com/alexhorner/smIRCL.git
     id: Parse
-    path: ../smIRCL/IrcMessage.cs
-    startLine: 22
+    path: ../smIRCL/ServerEntities/IrcMessage.cs
+    startLine: 51
   assemblies:
   - smIRCL
-  namespace: smIRCL
+  namespace: smIRCL.ServerEntities
+  summary: "\nParses a raw IRC message from a string to its appropriate parts\n"
+  example: []
   syntax:
     content: public static IrcMessage Parse(string message)
     parameters:
     - id: message
       type: System.String
+      description: The raw IRC message to parse
     return:
-      type: smIRCL.IrcMessage
+      type: smIRCL.ServerEntities.IrcMessage
+      description: The parsed object representing all parts of the raw message
     content.vb: Public Shared Function Parse(message As String) As IrcMessage
-  overload: smIRCL.IrcMessage.Parse*
+  overload: smIRCL.ServerEntities.IrcMessage.Parse*
   modifiers.csharp:
   - public
   - static
@@ -333,11 +353,11 @@ items:
   - Public
   - Shared
 references:
-- uid: smIRCL
-  commentId: N:smIRCL
-  name: smIRCL
-  nameWithType: smIRCL
-  fullName: smIRCL
+- uid: smIRCL.ServerEntities
+  commentId: N:smIRCL.ServerEntities
+  name: smIRCL.ServerEntities
+  nameWithType: smIRCL.ServerEntities
+  fullName: smIRCL.ServerEntities
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -630,11 +650,11 @@ references:
   name: System
   nameWithType: System
   fullName: System
-- uid: smIRCL.IrcMessage.Tags*
-  commentId: Overload:smIRCL.IrcMessage.Tags
+- uid: smIRCL.ServerEntities.IrcMessage.Tags*
+  commentId: Overload:smIRCL.ServerEntities.IrcMessage.Tags
   name: Tags
   nameWithType: IrcMessage.Tags
-  fullName: smIRCL.IrcMessage.Tags
+  fullName: smIRCL.ServerEntities.IrcMessage.Tags
 - uid: System.Collections.Generic.List{System.Collections.Generic.KeyValuePair{System.String,System.String}}
   commentId: T:System.Collections.Generic.List{System.Collections.Generic.KeyValuePair{System.String,System.String}}
   parent: System.Collections.Generic
@@ -762,11 +782,11 @@ references:
   name: System.Collections.Generic
   nameWithType: System.Collections.Generic
   fullName: System.Collections.Generic
-- uid: smIRCL.IrcMessage.SourceHostMask*
-  commentId: Overload:smIRCL.IrcMessage.SourceHostMask
+- uid: smIRCL.ServerEntities.IrcMessage.SourceHostMask*
+  commentId: Overload:smIRCL.ServerEntities.IrcMessage.SourceHostMask
   name: SourceHostMask
   nameWithType: IrcMessage.SourceHostMask
-  fullName: smIRCL.IrcMessage.SourceHostMask
+  fullName: smIRCL.ServerEntities.IrcMessage.SourceHostMask
 - uid: System.String
   commentId: T:System.String
   parent: System
@@ -774,31 +794,31 @@ references:
   name: String
   nameWithType: String
   fullName: System.String
-- uid: smIRCL.IrcMessage.SourceNick*
-  commentId: Overload:smIRCL.IrcMessage.SourceNick
+- uid: smIRCL.ServerEntities.IrcMessage.SourceNick*
+  commentId: Overload:smIRCL.ServerEntities.IrcMessage.SourceNick
   name: SourceNick
   nameWithType: IrcMessage.SourceNick
-  fullName: smIRCL.IrcMessage.SourceNick
-- uid: smIRCL.IrcMessage.SourceUserName*
-  commentId: Overload:smIRCL.IrcMessage.SourceUserName
+  fullName: smIRCL.ServerEntities.IrcMessage.SourceNick
+- uid: smIRCL.ServerEntities.IrcMessage.SourceUserName*
+  commentId: Overload:smIRCL.ServerEntities.IrcMessage.SourceUserName
   name: SourceUserName
   nameWithType: IrcMessage.SourceUserName
-  fullName: smIRCL.IrcMessage.SourceUserName
-- uid: smIRCL.IrcMessage.SourceHost*
-  commentId: Overload:smIRCL.IrcMessage.SourceHost
+  fullName: smIRCL.ServerEntities.IrcMessage.SourceUserName
+- uid: smIRCL.ServerEntities.IrcMessage.SourceHost*
+  commentId: Overload:smIRCL.ServerEntities.IrcMessage.SourceHost
   name: SourceHost
   nameWithType: IrcMessage.SourceHost
-  fullName: smIRCL.IrcMessage.SourceHost
-- uid: smIRCL.IrcMessage.Command*
-  commentId: Overload:smIRCL.IrcMessage.Command
+  fullName: smIRCL.ServerEntities.IrcMessage.SourceHost
+- uid: smIRCL.ServerEntities.IrcMessage.Command*
+  commentId: Overload:smIRCL.ServerEntities.IrcMessage.Command
   name: Command
   nameWithType: IrcMessage.Command
-  fullName: smIRCL.IrcMessage.Command
-- uid: smIRCL.IrcMessage.Parameters*
-  commentId: Overload:smIRCL.IrcMessage.Parameters
+  fullName: smIRCL.ServerEntities.IrcMessage.Command
+- uid: smIRCL.ServerEntities.IrcMessage.Parameters*
+  commentId: Overload:smIRCL.ServerEntities.IrcMessage.Parameters
   name: Parameters
   nameWithType: IrcMessage.Parameters
-  fullName: smIRCL.IrcMessage.Parameters
+  fullName: smIRCL.ServerEntities.IrcMessage.Parameters
 - uid: System.Collections.Generic.List{System.String}
   commentId: T:System.Collections.Generic.List{System.String}
   parent: System.Collections.Generic
@@ -843,14 +863,14 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: smIRCL.IrcMessage.Parse*
-  commentId: Overload:smIRCL.IrcMessage.Parse
+- uid: smIRCL.ServerEntities.IrcMessage.Parse*
+  commentId: Overload:smIRCL.ServerEntities.IrcMessage.Parse
   name: Parse
   nameWithType: IrcMessage.Parse
-  fullName: smIRCL.IrcMessage.Parse
-- uid: smIRCL.IrcMessage
-  commentId: T:smIRCL.IrcMessage
-  parent: smIRCL
+  fullName: smIRCL.ServerEntities.IrcMessage.Parse
+- uid: smIRCL.ServerEntities.IrcMessage
+  commentId: T:smIRCL.ServerEntities.IrcMessage
+  parent: smIRCL.ServerEntities
   name: IrcMessage
   nameWithType: IrcMessage
-  fullName: smIRCL.IrcMessage
+  fullName: smIRCL.ServerEntities.IrcMessage

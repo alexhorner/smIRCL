@@ -2,8 +2,6 @@
 - uid: smIRCL
   name: smIRCL
   items:
-  - uid: smIRCL.Constants
-    name: Constants
   - uid: smIRCL.IrcConnector
     name: IrcConnector
   - uid: smIRCL.IrcConnector.CommunicationFailedHandler
@@ -20,17 +18,23 @@
     name: IrcController.IrcMessageHandler
   - uid: smIRCL.IrcHandlerList
     name: IrcHandlerList
-  - uid: smIRCL.IrcMessage
-    name: IrcMessage
-  - uid: smIRCL.Numerics
-    name: Numerics
-  - uid: smIRCL.SupportedChannelModes
-    name: SupportedChannelModes
 - uid: smIRCL.Config
   name: smIRCL.Config
   items:
   - uid: smIRCL.Config.IrcConfig
     name: IrcConfig
+- uid: smIRCL.Constants
+  name: smIRCL.Constants
+  items:
+  - uid: smIRCL.Constants.GeneralConstants
+    name: GeneralConstants
+  - uid: smIRCL.Constants.Numerics
+    name: Numerics
+- uid: smIRCL.Core
+  name: smIRCL.Core
+  items:
+  - uid: smIRCL.Core.SupportedChannelModes
+    name: SupportedChannelModes
 - uid: smIRCL.Enums
   name: smIRCL.Enums
   items:
@@ -51,5 +55,7 @@
   items:
   - uid: smIRCL.ServerEntities.IrcChannel
     name: IrcChannel
+  - uid: smIRCL.ServerEntities.IrcMessage
+    name: IrcMessage
   - uid: smIRCL.ServerEntities.IrcUser
     name: IrcUser

@@ -5,38 +5,79 @@ using System.Net.Sockets;
 using System.Threading;
 using smIRCL.Config;
 using smIRCL.Exceptions;
+using smIRCL.ServerEntities;
 
-namespace smIRCL
+namespace smIRCL.Core
 {
     public class IrcConnector : IDisposable
     {
         #region Public Properties
 
+        /// <summary>
+        /// The configuration for the IRC server connection and any attached controller
+        /// </summary>
         public IrcConfig Config { get; internal set; }
 
+        /// <summary>
+        /// Whether there is a live IRC server connection
+        /// </summary>
         public bool IsConnected { get; internal set; }
 
+        /// <summary>
+        /// Whether this connector has been disposed and can no longer be used
+        /// </summary>
         public bool IsDisposed { get; internal set; }
 
         #endregion
 
         #region Events
-        
+
+        /// <summary>
+        /// Fired when a connection to an IRC server is established
+        /// </summary>
         public event ConnectionStateEventHandler Connected;
+        /// <summary>
+        /// Fired when a connection to an IRC server is lost
+        /// </summary>
         public event ConnectionStateEventHandler Disconnected;
+        /// <summary>
+        /// The handler for connect and disconnect events
+        /// </summary>
         public delegate void ConnectionStateEventHandler();
 
-
+        /// <summary>
+        /// Fired when a message is sent to the IRC server
+        /// </summary>
         public event MessageTransmitHandler MessageTransmitted;
+        /// <summary>
+        /// The handler for a message transmit
+        /// </summary>
+        /// <param name="rawMessage">The raw IRC message transmitted</param>
         public delegate void MessageTransmitHandler(string rawMessage);
 
-
+        /// <summary>
+        /// Fired when a message is received from the IRC server
+        /// </summary>
         public event MessageHandler MessageReceived;
+        /// <summary>
+        /// The handler for a message receive
+        /// </summary>
+        /// <param name="rawMessage">The raw IRC message received</param>
+        /// <param name="message">The parsed IRC message received</param>
         public delegate void MessageHandler(string rawMessage, IrcMessage message);
 
-
+        /// <summary>
+        /// Fired when a transmit fails to complete
+        /// </summary>
         public event CommunicationFailedHandler TransmitFailed;
+        /// <summary>
+        /// Fired when a receive fails to complete
+        /// </summary>
         public event CommunicationFailedHandler ReceiveFailed;
+        /// <summary>
+        /// The handler for a message transmit or receive failure
+        /// </summary>
+        /// <param name="exception">The exception describing the failure</param>
         public delegate void CommunicationFailedHandler(Exception exception);
 
         #endregion
@@ -56,6 +97,10 @@ namespace smIRCL
         #endregion
 
 
+        /// <summary>
+        /// Instantiates a new IRC server connector
+        /// </summary>
+        /// <param name="config">The configuration for the IRC server connection and any controller attached</param>
         public IrcConnector(IrcConfig config)
         {
             config.IsValid(true);
@@ -68,7 +113,11 @@ namespace smIRCL
         }
 
 
+        #region Public Methods
 
+        /// <summary>
+        /// Begin establishing a connection to the configured IRC server
+        /// </summary>
         public void Connect()
         {
             CancelIfDisposed();
@@ -163,6 +212,9 @@ namespace smIRCL
             }
         }
 
+        /// <summary>
+        /// Disconnect from the IRC server if connected and dispose
+        /// </summary>
         public void Dispose()
         {
             IsDisposed = true;
@@ -175,6 +227,10 @@ namespace smIRCL
             _remote?.Dispose();
         }
 
+        /// <summary>
+        /// Transmit a raw message to the IRC server
+        /// </summary>
+        /// <param name="data">The raw IRC message to transmit</param>
         public void Transmit(string data)
         {
             CancelIfDisposed();
@@ -191,7 +247,9 @@ namespace smIRCL
             }
         }
 
+        #endregion
 
+        #region Private Methods
 
         private void CancelIfDisposed()
         {
@@ -222,5 +280,7 @@ namespace smIRCL
                 if (message != null) MessageReceived?.Invoke(received, message);
             }
         }
+
+        #endregion
     }
 }
