@@ -77,6 +77,102 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/smIRCL.Core.IrcConnector.CommunicationFailedHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/smIRCL.Core.IrcConnector.CommunicationFailedHandler.html",
+          "hash": "cmLlQ1SFo3EiPcs2mjj21Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/smIRCL.Core.IrcConnector.ConnectionStateEventHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/smIRCL.Core.IrcConnector.ConnectionStateEventHandler.html",
+          "hash": "3GS4nVFOGi6R1+UWMSMRaQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/smIRCL.Core.IrcConnector.MessageHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/smIRCL.Core.IrcConnector.MessageHandler.html",
+          "hash": "7CUT7BRxd8D4yQouzQ8ZoA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/smIRCL.Core.IrcConnector.MessageTransmitHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/smIRCL.Core.IrcConnector.MessageTransmitHandler.html",
+          "hash": "MQShd3hDoVGPBaCFdc9Bmw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/smIRCL.Core.IrcConnector.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/smIRCL.Core.IrcConnector.html",
+          "hash": "3JfuJ8V4WB84HKQuPF35Eg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/smIRCL.Core.IrcController.IrcMessageHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/smIRCL.Core.IrcController.IrcMessageHandler.html",
+          "hash": "jLqbr08Gs82OD83Ax5JXHA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/smIRCL.Core.IrcController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/smIRCL.Core.IrcController.html",
+          "hash": "FHxKlKd4At9aPnY3+8nFKQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/smIRCL.Core.IrcHandlerList.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/smIRCL.Core.IrcHandlerList.html",
+          "hash": "LWnWBxlQElV+owqkYMR0eQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/smIRCL.Core.SupportedChannelModes.yml",
       "output": {
         ".html": {
@@ -93,7 +189,7 @@
       "output": {
         ".html": {
           "relative_path": "api/smIRCL.Core.html",
-          "hash": "K4q+/iLnLoQjuue6PSHQ8Q=="
+          "hash": "ZrrRGi06ZhjswQTp9hNZEw=="
         }
       },
       "is_incremental": false,
@@ -173,102 +269,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/smIRCL.IrcConnector.CommunicationFailedHandler.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/smIRCL.IrcConnector.CommunicationFailedHandler.html",
-          "hash": "8p3cYeub8WLYfGff4+Ajgg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/smIRCL.IrcConnector.ConnectionStateEventHandler.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/smIRCL.IrcConnector.ConnectionStateEventHandler.html",
-          "hash": "BlrdVjYgwIeho39xcVAMfw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/smIRCL.IrcConnector.MessageHandler.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/smIRCL.IrcConnector.MessageHandler.html",
-          "hash": "kggj+x5MIfa5f+xPpj4eXA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/smIRCL.IrcConnector.MessageTransmitHandler.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/smIRCL.IrcConnector.MessageTransmitHandler.html",
-          "hash": "DkDb9c5GdKA11bsz6N+zqg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/smIRCL.IrcConnector.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/smIRCL.IrcConnector.html",
-          "hash": "qzeCKy/FrZyUHfJqeuVoeg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/smIRCL.IrcController.IrcMessageHandler.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/smIRCL.IrcController.IrcMessageHandler.html",
-          "hash": "MMlmhJh5YIiXhqYDVoo8lA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/smIRCL.IrcController.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/smIRCL.IrcController.html",
-          "hash": "/pJoe8Fmvc7BhcrHfL7vZw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/smIRCL.IrcHandlerList.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/smIRCL.IrcHandlerList.html",
-          "hash": "rz/lkj4IgZ+CL8KxPQ2cpg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/smIRCL.ServerEntities.IrcChannel.yml",
       "output": {
         ".html": {
@@ -316,24 +316,12 @@
       "version": ""
     },
     {
-      "type": "ManagedReference",
-      "source_relative_path": "api/smIRCL.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/smIRCL.html",
-          "hash": "NNU3AxoW4DhPsrsja/cDGA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
       "type": "Toc",
       "source_relative_path": "api/toc.yml",
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "TnyHc26OyspNbnJDPEPZgQ=="
+          "hash": "EKqOtFnWTpN/rLQ4mEnodQ=="
         }
       },
       "is_incremental": false,
@@ -381,7 +369,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "u2+woKPdzEr8q3CKY/bDJw=="
+          "hash": "tMNlExTHQ47lnq0JF25Z/w=="
         }
       },
       "is_incremental": false,
@@ -406,8 +394,8 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 26,
-          "skipped_file_count": 9
+          "total_file_count": 25,
+          "skipped_file_count": 16
         },
         "TocDocumentProcessor": {
           "can_incremental": false,
