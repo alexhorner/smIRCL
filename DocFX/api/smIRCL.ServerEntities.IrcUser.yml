@@ -35,6 +35,7 @@ items:
     content: 'public class IrcUser : object'
     content.vb: >-
       Public Class IrcUser
+
           Inherits Object
   inheritance:
   - System.Object

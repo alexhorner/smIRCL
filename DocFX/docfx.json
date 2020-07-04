@@ -59,14 +59,7 @@
         "markdownEngineName": "markdig",
         "globalMetadata": {
             "_appFooter": "© 2020 Alexander Horner",
-            "_enableSearch": "true",
-            "newFileRepository": {
-                "branch": "master"
-            },
-            "_gitContribute": {
-                "repo": "https://github.com/alexhorner/smIRCL",
-                "branch": "master"
-            }
+            "_enableSearch": "true"
         },
         "noLangKeyword": false,
         "keepFileLink": false,

@@ -28,6 +28,7 @@ items:
     content: 'public static class StringExtensions : object'
     content.vb: >-
       Public Module StringExtensions
+
           Inherits Object
   inheritance:
   - System.Object

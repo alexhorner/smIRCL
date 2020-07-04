@@ -28,6 +28,7 @@ items:
     content: 'public class IrcHandlerList : List<KeyValuePair<string, IrcController.IrcMessageHandler>>'
     content.vb: >-
       Public Class IrcHandlerList
+
           Inherits List(Of KeyValuePair(Of String, IrcController.IrcMessageHandler))
   inheritance:
   - System.Object

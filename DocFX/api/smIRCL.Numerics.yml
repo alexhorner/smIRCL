@@ -188,6 +188,7 @@ items:
     content: 'public static class Numerics : object'
     content.vb: >-
       Public Module Numerics
+
           Inherits Object
   inheritance:
   - System.Object

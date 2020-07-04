@@ -49,6 +49,7 @@ items:
     content: 'public class IrcController : object'
     content.vb: >-
       Public Class IrcController
+
           Inherits Object
   inheritance:
   - System.Object

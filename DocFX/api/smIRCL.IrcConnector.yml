@@ -40,6 +40,7 @@ items:
     content: 'public class IrcConnector : IDisposable'
     content.vb: >-
       Public Class IrcConnector
+
           Inherits IDisposable
   inheritance:
   - System.Object
