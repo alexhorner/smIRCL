@@ -1,0 +1,96 @@
+### YamlMime:ManagedReference
+items:
+- uid: smIRCL.IrcHandlerList
+  commentId: T:smIRCL.IrcHandlerList
+  id: IrcHandlerList
+  parent: smIRCL
+  children:
+  - smIRCL.IrcHandlerList.Add(System.String,smIRCL.IrcController.IrcMessageHandler)
+  langs:
+  - csharp
+  - vb
+  name: IrcHandlerList
+  nameWithType: IrcHandlerList
+  fullName: smIRCL.IrcHandlerList
+  type: Class
+  source:
+    remote:
+      path: smIRCL/IrcHandlerList.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: IrcHandlerList
+    path: ../smIRCL/IrcHandlerList.cs
+    startLine: 4
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: 'public class IrcHandlerList : List<KeyValuePair<string, IrcController.IrcMessageHandler>>'
+    content.vb: >-
+      Public Class IrcHandlerList
+          Inherits List(Of KeyValuePair(Of String, IrcController.IrcMessageHandler))
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: smIRCL.IrcHandlerList.Add(System.String,smIRCL.IrcController.IrcMessageHandler)
+  commentId: M:smIRCL.IrcHandlerList.Add(System.String,smIRCL.IrcController.IrcMessageHandler)
+  id: Add(System.String,smIRCL.IrcController.IrcMessageHandler)
+  parent: smIRCL.IrcHandlerList
+  langs:
+  - csharp
+  - vb
+  name: Add(String, IrcController.IrcMessageHandler)
+  nameWithType: IrcHandlerList.Add(String, IrcController.IrcMessageHandler)
+  fullName: smIRCL.IrcHandlerList.Add(System.String, smIRCL.IrcController.IrcMessageHandler)
+  type: Method
+  source:
+    remote:
+      path: smIRCL/IrcHandlerList.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: Add
+    path: ../smIRCL/IrcHandlerList.cs
+    startLine: 6
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public void Add(string eventName, IrcController.IrcMessageHandler handler)
+    parameters:
+    - id: eventName
+      type: System.String
+    - id: handler
+      type: smIRCL.IrcController.IrcMessageHandler
+    content.vb: Public Sub Add(eventName As String, handler As IrcController.IrcMessageHandler)
+  overload: smIRCL.IrcHandlerList.Add*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: smIRCL
+  commentId: N:smIRCL
+  name: smIRCL
+  nameWithType: smIRCL
+  fullName: smIRCL
+- uid: smIRCL.IrcHandlerList.Add*
+  commentId: Overload:smIRCL.IrcHandlerList.Add
+  name: Add
+  nameWithType: IrcHandlerList.Add
+  fullName: smIRCL.IrcHandlerList.Add
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: smIRCL.IrcController.IrcMessageHandler
+  commentId: T:smIRCL.IrcController.IrcMessageHandler
+  parent: smIRCL
+  name: IrcController.IrcMessageHandler
+  nameWithType: IrcController.IrcMessageHandler
+  fullName: smIRCL.IrcController.IrcMessageHandler

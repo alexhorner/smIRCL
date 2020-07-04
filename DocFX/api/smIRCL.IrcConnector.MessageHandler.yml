@@ -1,0 +1,56 @@
+### YamlMime:ManagedReference
+items:
+- uid: smIRCL.IrcConnector.MessageHandler
+  commentId: T:smIRCL.IrcConnector.MessageHandler
+  id: IrcConnector.MessageHandler
+  parent: smIRCL
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: IrcConnector.MessageHandler
+  nameWithType: IrcConnector.MessageHandler
+  fullName: smIRCL.IrcConnector.MessageHandler
+  type: Delegate
+  source:
+    remote:
+      path: smIRCL/IrcConnector.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: MessageHandler
+    path: ../smIRCL/IrcConnector.cs
+    startLine: 34
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public delegate void MessageHandler(string rawMessage, IrcMessage message);
+    parameters:
+    - id: rawMessage
+      type: System.String
+    - id: message
+      type: smIRCL.IrcMessage
+    content.vb: Public Delegate Sub MessageHandler(rawMessage As String, message As IrcMessage)
+  modifiers.csharp:
+  - public
+  - delegate
+  modifiers.vb:
+  - Public
+  - Delegate
+references:
+- uid: smIRCL
+  commentId: N:smIRCL
+  name: smIRCL
+  nameWithType: smIRCL
+  fullName: smIRCL
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: smIRCL.IrcMessage
+  commentId: T:smIRCL.IrcMessage
+  parent: smIRCL
+  name: IrcMessage
+  nameWithType: IrcMessage
+  fullName: smIRCL.IrcMessage

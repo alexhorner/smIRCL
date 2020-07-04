@@ -1,0 +1,540 @@
+### YamlMime:ManagedReference
+items:
+- uid: smIRCL.ServerEntities.IrcUser
+  commentId: T:smIRCL.ServerEntities.IrcUser
+  id: IrcUser
+  parent: smIRCL.ServerEntities
+  children:
+  - smIRCL.ServerEntities.IrcUser.Away
+  - smIRCL.ServerEntities.IrcUser.Host
+  - smIRCL.ServerEntities.IrcUser.HostMask
+  - smIRCL.ServerEntities.IrcUser.LastDirectMessage
+  - smIRCL.ServerEntities.IrcUser.MutualChannels
+  - smIRCL.ServerEntities.IrcUser.Nick
+  - smIRCL.ServerEntities.IrcUser.RealName
+  - smIRCL.ServerEntities.IrcUser.UserName
+  langs:
+  - csharp
+  - vb
+  name: IrcUser
+  nameWithType: IrcUser
+  fullName: smIRCL.ServerEntities.IrcUser
+  type: Class
+  source:
+    remote:
+      path: smIRCL/ServerEntities/IrcUser.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: IrcUser
+    path: ../smIRCL/ServerEntities/IrcUser.cs
+    startLine: 5
+  assemblies:
+  - smIRCL
+  namespace: smIRCL.ServerEntities
+  syntax:
+    content: 'public class IrcUser : object'
+    content.vb: >-
+      Public Class IrcUser
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: smIRCL.ServerEntities.IrcUser.Nick
+  commentId: P:smIRCL.ServerEntities.IrcUser.Nick
+  id: Nick
+  parent: smIRCL.ServerEntities.IrcUser
+  langs:
+  - csharp
+  - vb
+  name: Nick
+  nameWithType: IrcUser.Nick
+  fullName: smIRCL.ServerEntities.IrcUser.Nick
+  type: Property
+  source:
+    remote:
+      path: smIRCL/ServerEntities/IrcUser.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: Nick
+    path: ../smIRCL/ServerEntities/IrcUser.cs
+    startLine: 8
+  assemblies:
+  - smIRCL
+  namespace: smIRCL.ServerEntities
+  syntax:
+    content: public string Nick { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Nick As String
+  overload: smIRCL.ServerEntities.IrcUser.Nick*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: smIRCL.ServerEntities.IrcUser.UserName
+  commentId: P:smIRCL.ServerEntities.IrcUser.UserName
+  id: UserName
+  parent: smIRCL.ServerEntities.IrcUser
+  langs:
+  - csharp
+  - vb
+  name: UserName
+  nameWithType: IrcUser.UserName
+  fullName: smIRCL.ServerEntities.IrcUser.UserName
+  type: Property
+  source:
+    remote:
+      path: smIRCL/ServerEntities/IrcUser.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: UserName
+    path: ../smIRCL/ServerEntities/IrcUser.cs
+    startLine: 9
+  assemblies:
+  - smIRCL
+  namespace: smIRCL.ServerEntities
+  syntax:
+    content: public string UserName { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property UserName As String
+  overload: smIRCL.ServerEntities.IrcUser.UserName*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: smIRCL.ServerEntities.IrcUser.RealName
+  commentId: P:smIRCL.ServerEntities.IrcUser.RealName
+  id: RealName
+  parent: smIRCL.ServerEntities.IrcUser
+  langs:
+  - csharp
+  - vb
+  name: RealName
+  nameWithType: IrcUser.RealName
+  fullName: smIRCL.ServerEntities.IrcUser.RealName
+  type: Property
+  source:
+    remote:
+      path: smIRCL/ServerEntities/IrcUser.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RealName
+    path: ../smIRCL/ServerEntities/IrcUser.cs
+    startLine: 10
+  assemblies:
+  - smIRCL
+  namespace: smIRCL.ServerEntities
+  syntax:
+    content: public string RealName { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property RealName As String
+  overload: smIRCL.ServerEntities.IrcUser.RealName*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: smIRCL.ServerEntities.IrcUser.HostMask
+  commentId: P:smIRCL.ServerEntities.IrcUser.HostMask
+  id: HostMask
+  parent: smIRCL.ServerEntities.IrcUser
+  langs:
+  - csharp
+  - vb
+  name: HostMask
+  nameWithType: IrcUser.HostMask
+  fullName: smIRCL.ServerEntities.IrcUser.HostMask
+  type: Property
+  source:
+    remote:
+      path: smIRCL/ServerEntities/IrcUser.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: HostMask
+    path: ../smIRCL/ServerEntities/IrcUser.cs
+    startLine: 11
+  assemblies:
+  - smIRCL
+  namespace: smIRCL.ServerEntities
+  syntax:
+    content: public string HostMask { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property HostMask As String
+  overload: smIRCL.ServerEntities.IrcUser.HostMask*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: smIRCL.ServerEntities.IrcUser.Host
+  commentId: P:smIRCL.ServerEntities.IrcUser.Host
+  id: Host
+  parent: smIRCL.ServerEntities.IrcUser
+  langs:
+  - csharp
+  - vb
+  name: Host
+  nameWithType: IrcUser.Host
+  fullName: smIRCL.ServerEntities.IrcUser.Host
+  type: Property
+  source:
+    remote:
+      path: smIRCL/ServerEntities/IrcUser.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: Host
+    path: ../smIRCL/ServerEntities/IrcUser.cs
+    startLine: 12
+  assemblies:
+  - smIRCL
+  namespace: smIRCL.ServerEntities
+  syntax:
+    content: public string Host { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Host As String
+  overload: smIRCL.ServerEntities.IrcUser.Host*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: smIRCL.ServerEntities.IrcUser.Away
+  commentId: P:smIRCL.ServerEntities.IrcUser.Away
+  id: Away
+  parent: smIRCL.ServerEntities.IrcUser
+  langs:
+  - csharp
+  - vb
+  name: Away
+  nameWithType: IrcUser.Away
+  fullName: smIRCL.ServerEntities.IrcUser.Away
+  type: Property
+  source:
+    remote:
+      path: smIRCL/ServerEntities/IrcUser.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: Away
+    path: ../smIRCL/ServerEntities/IrcUser.cs
+    startLine: 13
+  assemblies:
+  - smIRCL
+  namespace: smIRCL.ServerEntities
+  syntax:
+    content: public string Away { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Away As String
+  overload: smIRCL.ServerEntities.IrcUser.Away*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: smIRCL.ServerEntities.IrcUser.MutualChannels
+  commentId: P:smIRCL.ServerEntities.IrcUser.MutualChannels
+  id: MutualChannels
+  parent: smIRCL.ServerEntities.IrcUser
+  langs:
+  - csharp
+  - vb
+  name: MutualChannels
+  nameWithType: IrcUser.MutualChannels
+  fullName: smIRCL.ServerEntities.IrcUser.MutualChannels
+  type: Property
+  source:
+    remote:
+      path: smIRCL/ServerEntities/IrcUser.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: MutualChannels
+    path: ../smIRCL/ServerEntities/IrcUser.cs
+    startLine: 14
+  assemblies:
+  - smIRCL
+  namespace: smIRCL.ServerEntities
+  syntax:
+    content: public List<string> MutualChannels { get; set; }
+    parameters: []
+    return:
+      type: List{System.String}
+    content.vb: Public Property MutualChannels As List(Of String)
+  overload: smIRCL.ServerEntities.IrcUser.MutualChannels*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: smIRCL.ServerEntities.IrcUser.LastDirectMessage
+  commentId: P:smIRCL.ServerEntities.IrcUser.LastDirectMessage
+  id: LastDirectMessage
+  parent: smIRCL.ServerEntities.IrcUser
+  langs:
+  - csharp
+  - vb
+  name: LastDirectMessage
+  nameWithType: IrcUser.LastDirectMessage
+  fullName: smIRCL.ServerEntities.IrcUser.LastDirectMessage
+  type: Property
+  source:
+    remote:
+      path: smIRCL/ServerEntities/IrcUser.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: LastDirectMessage
+    path: ../smIRCL/ServerEntities/IrcUser.cs
+    startLine: 15
+  assemblies:
+  - smIRCL
+  namespace: smIRCL.ServerEntities
+  syntax:
+    content: public DateTime? LastDirectMessage { get; }
+    parameters: []
+    return:
+      type: System.Nullable{DateTime}
+    content.vb: Public ReadOnly Property LastDirectMessage As DateTime?
+  overload: smIRCL.ServerEntities.IrcUser.LastDirectMessage*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: smIRCL.ServerEntities
+  commentId: N:smIRCL.ServerEntities
+  name: smIRCL.ServerEntities
+  nameWithType: smIRCL.ServerEntities
+  fullName: smIRCL.ServerEntities
+- uid: smIRCL.ServerEntities.IrcUser.Nick*
+  commentId: Overload:smIRCL.ServerEntities.IrcUser.Nick
+  name: Nick
+  nameWithType: IrcUser.Nick
+  fullName: smIRCL.ServerEntities.IrcUser.Nick
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: smIRCL.ServerEntities.IrcUser.UserName*
+  commentId: Overload:smIRCL.ServerEntities.IrcUser.UserName
+  name: UserName
+  nameWithType: IrcUser.UserName
+  fullName: smIRCL.ServerEntities.IrcUser.UserName
+- uid: smIRCL.ServerEntities.IrcUser.RealName*
+  commentId: Overload:smIRCL.ServerEntities.IrcUser.RealName
+  name: RealName
+  nameWithType: IrcUser.RealName
+  fullName: smIRCL.ServerEntities.IrcUser.RealName
+- uid: smIRCL.ServerEntities.IrcUser.HostMask*
+  commentId: Overload:smIRCL.ServerEntities.IrcUser.HostMask
+  name: HostMask
+  nameWithType: IrcUser.HostMask
+  fullName: smIRCL.ServerEntities.IrcUser.HostMask
+- uid: smIRCL.ServerEntities.IrcUser.Host*
+  commentId: Overload:smIRCL.ServerEntities.IrcUser.Host
+  name: Host
+  nameWithType: IrcUser.Host
+  fullName: smIRCL.ServerEntities.IrcUser.Host
+- uid: smIRCL.ServerEntities.IrcUser.Away*
+  commentId: Overload:smIRCL.ServerEntities.IrcUser.Away
+  name: Away
+  nameWithType: IrcUser.Away
+  fullName: smIRCL.ServerEntities.IrcUser.Away
+- uid: smIRCL.ServerEntities.IrcUser.MutualChannels*
+  commentId: Overload:smIRCL.ServerEntities.IrcUser.MutualChannels
+  name: MutualChannels
+  nameWithType: IrcUser.MutualChannels
+  fullName: smIRCL.ServerEntities.IrcUser.MutualChannels
+- uid: List{System.String}
+  commentId: '!:List{System.String}'
+  definition: List`1
+  name: List<String>
+  nameWithType: List<String>
+  fullName: List<System.String>
+  nameWithType.vb: List(Of String)
+  fullName.vb: List(Of System.String)
+  name.vb: List(Of String)
+  spec.csharp:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: List`1
+  isExternal: true
+  name: List<>
+  nameWithType: List<>
+  fullName: List<>
+  nameWithType.vb: List(Of )
+  fullName.vb: List(Of )
+  name.vb: List(Of )
+  spec.csharp:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: smIRCL.ServerEntities.IrcUser.LastDirectMessage*
+  commentId: Overload:smIRCL.ServerEntities.IrcUser.LastDirectMessage
+  name: LastDirectMessage
+  nameWithType: IrcUser.LastDirectMessage
+  fullName: smIRCL.ServerEntities.IrcUser.LastDirectMessage
+- uid: System.Nullable{DateTime}
+  commentId: '!:System.Nullable{DateTime}'
+  definition: System.Nullable`1
+  name: Nullable<DateTime>
+  nameWithType: Nullable<DateTime>
+  fullName: System.Nullable<DateTime>
+  nameWithType.vb: Nullable(Of DateTime)
+  fullName.vb: System.Nullable(Of DateTime)
+  name.vb: Nullable(Of DateTime)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: DateTime
+    name: DateTime
+    nameWithType: DateTime
+    fullName: DateTime
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: DateTime
+    name: DateTime
+    nameWithType: DateTime
+    fullName: DateTime
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  commentId: '!:System.Nullable`1'
+  isExternal: true
+  name: Nullable<>
+  nameWithType: Nullable<>
+  fullName: System.Nullable<>
+  nameWithType.vb: Nullable(Of )
+  fullName.vb: System.Nullable(Of )
+  name.vb: Nullable(Of )
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )

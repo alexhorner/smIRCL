@@ -1,0 +1,112 @@
+### YamlMime:ManagedReference
+items:
+- uid: smIRCL.Enums.AuthMode
+  commentId: T:smIRCL.Enums.AuthMode
+  id: AuthMode
+  parent: smIRCL.Enums
+  children:
+  - smIRCL.Enums.AuthMode.None
+  - smIRCL.Enums.AuthMode.SASL
+  langs:
+  - csharp
+  - vb
+  name: AuthMode
+  nameWithType: AuthMode
+  fullName: smIRCL.Enums.AuthMode
+  type: Enum
+  source:
+    remote:
+      path: smIRCL/Enums/AuthMode.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: AuthMode
+    path: ../smIRCL/Enums/AuthMode.cs
+    startLine: 2
+  assemblies:
+  - smIRCL
+  namespace: smIRCL.Enums
+  syntax:
+    content: 'public enum AuthMode : int'
+    content.vb: Public Enum AuthMode As Integer
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: smIRCL.Enums.AuthMode.None
+  commentId: F:smIRCL.Enums.AuthMode.None
+  id: None
+  parent: smIRCL.Enums.AuthMode
+  langs:
+  - csharp
+  - vb
+  name: None
+  nameWithType: AuthMode.None
+  fullName: smIRCL.Enums.AuthMode.None
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Enums/AuthMode.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: None
+    path: ../smIRCL/Enums/AuthMode.cs
+    startLine: 4
+  assemblies:
+  - smIRCL
+  namespace: smIRCL.Enums
+  syntax:
+    content: None = 0
+    return:
+      type: smIRCL.Enums.AuthMode
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Enums.AuthMode.SASL
+  commentId: F:smIRCL.Enums.AuthMode.SASL
+  id: SASL
+  parent: smIRCL.Enums.AuthMode
+  langs:
+  - csharp
+  - vb
+  name: SASL
+  nameWithType: AuthMode.SASL
+  fullName: smIRCL.Enums.AuthMode.SASL
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Enums/AuthMode.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: SASL
+    path: ../smIRCL/Enums/AuthMode.cs
+    startLine: 5
+  assemblies:
+  - smIRCL
+  namespace: smIRCL.Enums
+  syntax:
+    content: SASL = 1
+    return:
+      type: smIRCL.Enums.AuthMode
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: smIRCL.Enums
+  commentId: N:smIRCL.Enums
+  name: smIRCL.Enums
+  nameWithType: smIRCL.Enums
+  fullName: smIRCL.Enums
+- uid: smIRCL.Enums.AuthMode
+  commentId: T:smIRCL.Enums.AuthMode
+  parent: smIRCL.Enums
+  name: AuthMode
+  nameWithType: AuthMode
+  fullName: smIRCL.Enums.AuthMode

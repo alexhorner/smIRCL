@@ -1,0 +1,191 @@
+### YamlMime:ManagedReference
+items:
+- uid: smIRCL.Constants
+  commentId: T:smIRCL.Constants
+  id: Constants
+  parent: smIRCL
+  children:
+  - smIRCL.Constants.TagEscapeDictionary
+  langs:
+  - csharp
+  - vb
+  name: Constants
+  nameWithType: Constants
+  fullName: smIRCL.Constants
+  type: Class
+  source:
+    remote:
+      path: smIRCL/Constants.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: Constants
+    path: ../smIRCL/Constants.cs
+    startLine: 4
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: 'public static class Constants : object'
+    content.vb: >-
+      Public Module Constants
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: smIRCL.Constants.TagEscapeDictionary
+  commentId: F:smIRCL.Constants.TagEscapeDictionary
+  id: TagEscapeDictionary
+  parent: smIRCL.Constants
+  langs:
+  - csharp
+  - vb
+  name: TagEscapeDictionary
+  nameWithType: Constants.TagEscapeDictionary
+  fullName: smIRCL.Constants.TagEscapeDictionary
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Constants.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: TagEscapeDictionary
+    path: ../smIRCL/Constants.cs
+    startLine: 6
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public static readonly Dictionary<string, string> TagEscapeDictionary
+    return:
+      type: Dictionary{System.String,System.String}
+    content.vb: Public Shared ReadOnly TagEscapeDictionary As Dictionary(Of String, String)
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: smIRCL
+  commentId: N:smIRCL
+  name: smIRCL
+  nameWithType: smIRCL
+  fullName: smIRCL
+- uid: Dictionary{System.String,System.String}
+  commentId: '!:Dictionary{System.String,System.String}'
+  definition: Dictionary`2
+  name: Dictionary<String, String>
+  nameWithType: Dictionary<String, String>
+  fullName: Dictionary<System.String, System.String>
+  nameWithType.vb: Dictionary(Of String, String)
+  fullName.vb: Dictionary(Of System.String, System.String)
+  name.vb: Dictionary(Of String, String)
+  spec.csharp:
+  - uid: Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Dictionary`2
+  commentId: '!:Dictionary`2'
+  isExternal: true
+  name: Dictionary<, >
+  nameWithType: Dictionary<, >
+  fullName: Dictionary<, >
+  nameWithType.vb: Dictionary(Of , )
+  fullName.vb: Dictionary(Of , )
+  name.vb: Dictionary(Of , )
+  spec.csharp:
+  - uid: Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )

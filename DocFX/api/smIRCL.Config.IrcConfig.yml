@@ -1,0 +1,920 @@
+### YamlMime:ManagedReference
+items:
+- uid: smIRCL.Config.IrcConfig
+  commentId: T:smIRCL.Config.IrcConfig
+  id: IrcConfig
+  parent: smIRCL.Config
+  children:
+  - smIRCL.Config.IrcConfig.AlternativeNicks
+  - smIRCL.Config.IrcConfig.AuthMode
+  - smIRCL.Config.IrcConfig.AuthPassword
+  - smIRCL.Config.IrcConfig.AutoJoinChannels
+  - smIRCL.Config.IrcConfig.ConnectOnInstantiation
+  - smIRCL.Config.IrcConfig.DesiredCapabilities
+  - smIRCL.Config.IrcConfig.DirectMessageHoldingPeriod
+  - smIRCL.Config.IrcConfig.IsValid(System.Boolean)
+  - smIRCL.Config.IrcConfig.Nick
+  - smIRCL.Config.IrcConfig.RealName
+  - smIRCL.Config.IrcConfig.ReconnectAttempts
+  - smIRCL.Config.IrcConfig.ServerHostname
+  - smIRCL.Config.IrcConfig.ServerPassword
+  - smIRCL.Config.IrcConfig.ServerPort
+  - smIRCL.Config.IrcConfig.UserName
+  - smIRCL.Config.IrcConfig.UseSsl
+  langs:
+  - csharp
+  - vb
+  name: IrcConfig
+  nameWithType: IrcConfig
+  fullName: smIRCL.Config.IrcConfig
+  type: Class
+  source:
+    remote:
+      path: smIRCL/Config/IrcConfig.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: IrcConfig
+    path: ../smIRCL/Config/IrcConfig.cs
+    startLine: 8
+  assemblies:
+  - smIRCL
+  namespace: smIRCL.Config
+  syntax:
+    content: 'public class IrcConfig : object'
+    content.vb: >-
+      Public Class IrcConfig
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: smIRCL.Config.IrcConfig.ServerHostname
+  commentId: P:smIRCL.Config.IrcConfig.ServerHostname
+  id: ServerHostname
+  parent: smIRCL.Config.IrcConfig
+  langs:
+  - csharp
+  - vb
+  name: ServerHostname
+  nameWithType: IrcConfig.ServerHostname
+  fullName: smIRCL.Config.IrcConfig.ServerHostname
+  type: Property
+  source:
+    remote:
+      path: smIRCL/Config/IrcConfig.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: ServerHostname
+    path: ../smIRCL/Config/IrcConfig.cs
+    startLine: 13
+  assemblies:
+  - smIRCL
+  namespace: smIRCL.Config
+  summary: "\nThe hostname or IP address of the server\n"
+  example: []
+  syntax:
+    content: public string ServerHostname { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ServerHostname As String
+  overload: smIRCL.Config.IrcConfig.ServerHostname*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: smIRCL.Config.IrcConfig.ServerPort
+  commentId: P:smIRCL.Config.IrcConfig.ServerPort
+  id: ServerPort
+  parent: smIRCL.Config.IrcConfig
+  langs:
+  - csharp
+  - vb
+  name: ServerPort
+  nameWithType: IrcConfig.ServerPort
+  fullName: smIRCL.Config.IrcConfig.ServerPort
+  type: Property
+  source:
+    remote:
+      path: smIRCL/Config/IrcConfig.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: ServerPort
+    path: ../smIRCL/Config/IrcConfig.cs
+    startLine: 18
+  assemblies:
+  - smIRCL
+  namespace: smIRCL.Config
+  summary: "\nThe port of the server\n"
+  example: []
+  syntax:
+    content: public int ServerPort { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property ServerPort As Integer
+  overload: smIRCL.Config.IrcConfig.ServerPort*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: smIRCL.Config.IrcConfig.ServerPassword
+  commentId: P:smIRCL.Config.IrcConfig.ServerPassword
+  id: ServerPassword
+  parent: smIRCL.Config.IrcConfig
+  langs:
+  - csharp
+  - vb
+  name: ServerPassword
+  nameWithType: IrcConfig.ServerPassword
+  fullName: smIRCL.Config.IrcConfig.ServerPassword
+  type: Property
+  source:
+    remote:
+      path: smIRCL/Config/IrcConfig.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: ServerPassword
+    path: ../smIRCL/Config/IrcConfig.cs
+    startLine: 23
+  assemblies:
+  - smIRCL
+  namespace: smIRCL.Config
+  summary: "\nThe connection password of the server\n"
+  example: []
+  syntax:
+    content: public string ServerPassword { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ServerPassword As String
+  overload: smIRCL.Config.IrcConfig.ServerPassword*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: smIRCL.Config.IrcConfig.Nick
+  commentId: P:smIRCL.Config.IrcConfig.Nick
+  id: Nick
+  parent: smIRCL.Config.IrcConfig
+  langs:
+  - csharp
+  - vb
+  name: Nick
+  nameWithType: IrcConfig.Nick
+  fullName: smIRCL.Config.IrcConfig.Nick
+  type: Property
+  source:
+    remote:
+      path: smIRCL/Config/IrcConfig.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: Nick
+    path: ../smIRCL/Config/IrcConfig.cs
+    startLine: 28
+  assemblies:
+  - smIRCL
+  namespace: smIRCL.Config
+  summary: "\nThe Nick for the client\n"
+  example: []
+  syntax:
+    content: public string Nick { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Nick As String
+  overload: smIRCL.Config.IrcConfig.Nick*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: smIRCL.Config.IrcConfig.AlternativeNicks
+  commentId: P:smIRCL.Config.IrcConfig.AlternativeNicks
+  id: AlternativeNicks
+  parent: smIRCL.Config.IrcConfig
+  langs:
+  - csharp
+  - vb
+  name: AlternativeNicks
+  nameWithType: IrcConfig.AlternativeNicks
+  fullName: smIRCL.Config.IrcConfig.AlternativeNicks
+  type: Property
+  source:
+    remote:
+      path: smIRCL/Config/IrcConfig.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: AlternativeNicks
+    path: ../smIRCL/Config/IrcConfig.cs
+    startLine: 33
+  assemblies:
+  - smIRCL
+  namespace: smIRCL.Config
+  summary: "\nA list of alternative Nicks if the preferred one is unavailable\n"
+  example: []
+  syntax:
+    content: public Queue<string> AlternativeNicks { get; set; }
+    parameters: []
+    return:
+      type: Queue{System.String}
+    content.vb: Public Property AlternativeNicks As Queue(Of String)
+  overload: smIRCL.Config.IrcConfig.AlternativeNicks*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: smIRCL.Config.IrcConfig.AutoJoinChannels
+  commentId: P:smIRCL.Config.IrcConfig.AutoJoinChannels
+  id: AutoJoinChannels
+  parent: smIRCL.Config.IrcConfig
+  langs:
+  - csharp
+  - vb
+  name: AutoJoinChannels
+  nameWithType: IrcConfig.AutoJoinChannels
+  fullName: smIRCL.Config.IrcConfig.AutoJoinChannels
+  type: Property
+  source:
+    remote:
+      path: smIRCL/Config/IrcConfig.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: AutoJoinChannels
+    path: ../smIRCL/Config/IrcConfig.cs
+    startLine: 38
+  assemblies:
+  - smIRCL
+  namespace: smIRCL.Config
+  summary: "\nA list of channels to automatically join upon connection completion\n"
+  example: []
+  syntax:
+    content: public List<string> AutoJoinChannels { get; set; }
+    parameters: []
+    return:
+      type: List{System.String}
+    content.vb: Public Property AutoJoinChannels As List(Of String)
+  overload: smIRCL.Config.IrcConfig.AutoJoinChannels*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: smIRCL.Config.IrcConfig.UserName
+  commentId: P:smIRCL.Config.IrcConfig.UserName
+  id: UserName
+  parent: smIRCL.Config.IrcConfig
+  langs:
+  - csharp
+  - vb
+  name: UserName
+  nameWithType: IrcConfig.UserName
+  fullName: smIRCL.Config.IrcConfig.UserName
+  type: Property
+  source:
+    remote:
+      path: smIRCL/Config/IrcConfig.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: UserName
+    path: ../smIRCL/Config/IrcConfig.cs
+    startLine: 43
+  assemblies:
+  - smIRCL
+  namespace: smIRCL.Config
+  summary: "\nThe User name for the client. If unspecified, Nick will be used\n"
+  example: []
+  syntax:
+    content: public string UserName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property UserName As String
+  overload: smIRCL.Config.IrcConfig.UserName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: smIRCL.Config.IrcConfig.RealName
+  commentId: P:smIRCL.Config.IrcConfig.RealName
+  id: RealName
+  parent: smIRCL.Config.IrcConfig
+  langs:
+  - csharp
+  - vb
+  name: RealName
+  nameWithType: IrcConfig.RealName
+  fullName: smIRCL.Config.IrcConfig.RealName
+  type: Property
+  source:
+    remote:
+      path: smIRCL/Config/IrcConfig.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RealName
+    path: ../smIRCL/Config/IrcConfig.cs
+    startLine: 48
+  assemblies:
+  - smIRCL
+  namespace: smIRCL.Config
+  summary: "\nThe real name for the client\n"
+  example: []
+  syntax:
+    content: public string RealName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property RealName As String
+  overload: smIRCL.Config.IrcConfig.RealName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: smIRCL.Config.IrcConfig.AuthPassword
+  commentId: P:smIRCL.Config.IrcConfig.AuthPassword
+  id: AuthPassword
+  parent: smIRCL.Config.IrcConfig
+  langs:
+  - csharp
+  - vb
+  name: AuthPassword
+  nameWithType: IrcConfig.AuthPassword
+  fullName: smIRCL.Config.IrcConfig.AuthPassword
+  type: Property
+  source:
+    remote:
+      path: smIRCL/Config/IrcConfig.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: AuthPassword
+    path: ../smIRCL/Config/IrcConfig.cs
+    startLine: 53
+  assemblies:
+  - smIRCL
+  namespace: smIRCL.Config
+  summary: "\nThe client&apos;s personal authentication password\n"
+  example: []
+  syntax:
+    content: public string AuthPassword { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property AuthPassword As String
+  overload: smIRCL.Config.IrcConfig.AuthPassword*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: smIRCL.Config.IrcConfig.AuthMode
+  commentId: P:smIRCL.Config.IrcConfig.AuthMode
+  id: AuthMode
+  parent: smIRCL.Config.IrcConfig
+  langs:
+  - csharp
+  - vb
+  name: AuthMode
+  nameWithType: IrcConfig.AuthMode
+  fullName: smIRCL.Config.IrcConfig.AuthMode
+  type: Property
+  source:
+    remote:
+      path: smIRCL/Config/IrcConfig.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: AuthMode
+    path: ../smIRCL/Config/IrcConfig.cs
+    startLine: 58
+  assemblies:
+  - smIRCL
+  namespace: smIRCL.Config
+  summary: "\nThe client&apos;s personal authentication method\n"
+  example: []
+  syntax:
+    content: public AuthMode AuthMode { get; set; }
+    parameters: []
+    return:
+      type: smIRCL.Enums.AuthMode
+    content.vb: Public Property AuthMode As AuthMode
+  overload: smIRCL.Config.IrcConfig.AuthMode*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: smIRCL.Config.IrcConfig.UseSsl
+  commentId: P:smIRCL.Config.IrcConfig.UseSsl
+  id: UseSsl
+  parent: smIRCL.Config.IrcConfig
+  langs:
+  - csharp
+  - vb
+  name: UseSsl
+  nameWithType: IrcConfig.UseSsl
+  fullName: smIRCL.Config.IrcConfig.UseSsl
+  type: Property
+  source:
+    remote:
+      path: smIRCL/Config/IrcConfig.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: UseSsl
+    path: ../smIRCL/Config/IrcConfig.cs
+    startLine: 63
+  assemblies:
+  - smIRCL
+  namespace: smIRCL.Config
+  summary: "\nWhether to use SSL for the connection\n"
+  example: []
+  syntax:
+    content: public bool UseSsl { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property UseSsl As Boolean
+  overload: smIRCL.Config.IrcConfig.UseSsl*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: smIRCL.Config.IrcConfig.ReconnectAttempts
+  commentId: P:smIRCL.Config.IrcConfig.ReconnectAttempts
+  id: ReconnectAttempts
+  parent: smIRCL.Config.IrcConfig
+  langs:
+  - csharp
+  - vb
+  name: ReconnectAttempts
+  nameWithType: IrcConfig.ReconnectAttempts
+  fullName: smIRCL.Config.IrcConfig.ReconnectAttempts
+  type: Property
+  source:
+    remote:
+      path: smIRCL/Config/IrcConfig.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: ReconnectAttempts
+    path: ../smIRCL/Config/IrcConfig.cs
+    startLine: 68
+  assemblies:
+  - smIRCL
+  namespace: smIRCL.Config
+  summary: "\nHow many times to attempt a reconnect on failure\n"
+  example: []
+  syntax:
+    content: public int ReconnectAttempts { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property ReconnectAttempts As Integer
+  overload: smIRCL.Config.IrcConfig.ReconnectAttempts*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: smIRCL.Config.IrcConfig.ConnectOnInstantiation
+  commentId: P:smIRCL.Config.IrcConfig.ConnectOnInstantiation
+  id: ConnectOnInstantiation
+  parent: smIRCL.Config.IrcConfig
+  langs:
+  - csharp
+  - vb
+  name: ConnectOnInstantiation
+  nameWithType: IrcConfig.ConnectOnInstantiation
+  fullName: smIRCL.Config.IrcConfig.ConnectOnInstantiation
+  type: Property
+  source:
+    remote:
+      path: smIRCL/Config/IrcConfig.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: ConnectOnInstantiation
+    path: ../smIRCL/Config/IrcConfig.cs
+    startLine: 73
+  assemblies:
+  - smIRCL
+  namespace: smIRCL.Config
+  summary: "\nWhether to connect immediately during IrcClient instantiation\n"
+  example: []
+  syntax:
+    content: public bool ConnectOnInstantiation { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property ConnectOnInstantiation As Boolean
+  overload: smIRCL.Config.IrcConfig.ConnectOnInstantiation*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: smIRCL.Config.IrcConfig.DirectMessageHoldingPeriod
+  commentId: P:smIRCL.Config.IrcConfig.DirectMessageHoldingPeriod
+  id: DirectMessageHoldingPeriod
+  parent: smIRCL.Config.IrcConfig
+  langs:
+  - csharp
+  - vb
+  name: DirectMessageHoldingPeriod
+  nameWithType: IrcConfig.DirectMessageHoldingPeriod
+  fullName: smIRCL.Config.IrcConfig.DirectMessageHoldingPeriod
+  type: Property
+  source:
+    remote:
+      path: smIRCL/Config/IrcConfig.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: DirectMessageHoldingPeriod
+    path: ../smIRCL/Config/IrcConfig.cs
+    startLine: 78
+  assemblies:
+  - smIRCL
+  namespace: smIRCL.Config
+  summary: "\nThe time an IrcUser will be safe from garbage collection after a Direct Message, with no mutual channels\n"
+  example: []
+  syntax:
+    content: public TimeSpan DirectMessageHoldingPeriod { get; set; }
+    parameters: []
+    return:
+      type: TimeSpan
+    content.vb: Public Property DirectMessageHoldingPeriod As TimeSpan
+  overload: smIRCL.Config.IrcConfig.DirectMessageHoldingPeriod*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: smIRCL.Config.IrcConfig.DesiredCapabilities
+  commentId: F:smIRCL.Config.IrcConfig.DesiredCapabilities
+  id: DesiredCapabilities
+  parent: smIRCL.Config.IrcConfig
+  langs:
+  - csharp
+  - vb
+  name: DesiredCapabilities
+  nameWithType: IrcConfig.DesiredCapabilities
+  fullName: smIRCL.Config.IrcConfig.DesiredCapabilities
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Config/IrcConfig.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: DesiredCapabilities
+    path: ../smIRCL/Config/IrcConfig.cs
+    startLine: 83
+  assemblies:
+  - smIRCL
+  namespace: smIRCL.Config
+  summary: "\nThe IRCv3 capabilities to negotiate. Default capabilities are included and should be added to, not replaced. SASL must not be included as it is determined by AuthMode\n"
+  example: []
+  syntax:
+    content: public List<string> DesiredCapabilities
+    return:
+      type: List{System.String}
+    content.vb: Public DesiredCapabilities As List(Of String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: smIRCL.Config.IrcConfig.IsValid(System.Boolean)
+  commentId: M:smIRCL.Config.IrcConfig.IsValid(System.Boolean)
+  id: IsValid(System.Boolean)
+  parent: smIRCL.Config.IrcConfig
+  langs:
+  - csharp
+  - vb
+  name: IsValid(Boolean)
+  nameWithType: IrcConfig.IsValid(Boolean)
+  fullName: smIRCL.Config.IrcConfig.IsValid(System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: smIRCL/Config/IrcConfig.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: IsValid
+    path: ../smIRCL/Config/IrcConfig.cs
+    startLine: 93
+  assemblies:
+  - smIRCL
+  namespace: smIRCL.Config
+  summary: "\nChecks this configuration is valid\n"
+  example: []
+  syntax:
+    content: public bool IsValid(bool throwOnValidationError = false)
+    parameters:
+    - id: throwOnValidationError
+      type: System.Boolean
+      description: Whether to throw an exception on a validation error rather than return false
+    return:
+      type: System.Boolean
+      description: <code>bool</code> Is the configuration valid
+    content.vb: Public Function IsValid(throwOnValidationError As Boolean = False) As Boolean
+  overload: smIRCL.Config.IrcConfig.IsValid*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: smIRCL.Config
+  commentId: N:smIRCL.Config
+  name: smIRCL.Config
+  nameWithType: smIRCL.Config
+  fullName: smIRCL.Config
+- uid: smIRCL.Config.IrcConfig.ServerHostname*
+  commentId: Overload:smIRCL.Config.IrcConfig.ServerHostname
+  name: ServerHostname
+  nameWithType: IrcConfig.ServerHostname
+  fullName: smIRCL.Config.IrcConfig.ServerHostname
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: smIRCL.Config.IrcConfig.ServerPort*
+  commentId: Overload:smIRCL.Config.IrcConfig.ServerPort
+  name: ServerPort
+  nameWithType: IrcConfig.ServerPort
+  fullName: smIRCL.Config.IrcConfig.ServerPort
+- uid: System.Int32
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: smIRCL.Config.IrcConfig.ServerPassword*
+  commentId: Overload:smIRCL.Config.IrcConfig.ServerPassword
+  name: ServerPassword
+  nameWithType: IrcConfig.ServerPassword
+  fullName: smIRCL.Config.IrcConfig.ServerPassword
+- uid: smIRCL.Config.IrcConfig.Nick*
+  commentId: Overload:smIRCL.Config.IrcConfig.Nick
+  name: Nick
+  nameWithType: IrcConfig.Nick
+  fullName: smIRCL.Config.IrcConfig.Nick
+- uid: smIRCL.Config.IrcConfig.AlternativeNicks*
+  commentId: Overload:smIRCL.Config.IrcConfig.AlternativeNicks
+  name: AlternativeNicks
+  nameWithType: IrcConfig.AlternativeNicks
+  fullName: smIRCL.Config.IrcConfig.AlternativeNicks
+- uid: Queue{System.String}
+  commentId: '!:Queue{System.String}'
+  definition: Queue`1
+  name: Queue<String>
+  nameWithType: Queue<String>
+  fullName: Queue<System.String>
+  nameWithType.vb: Queue(Of String)
+  fullName.vb: Queue(Of System.String)
+  name.vb: Queue(Of String)
+  spec.csharp:
+  - uid: Queue`1
+    name: Queue
+    nameWithType: Queue
+    fullName: Queue
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Queue`1
+    name: Queue
+    nameWithType: Queue
+    fullName: Queue
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Queue`1
+  commentId: '!:Queue`1'
+  isExternal: true
+  name: Queue<>
+  nameWithType: Queue<>
+  fullName: Queue<>
+  nameWithType.vb: Queue(Of )
+  fullName.vb: Queue(Of )
+  name.vb: Queue(Of )
+  spec.csharp:
+  - uid: Queue`1
+    name: Queue
+    nameWithType: Queue
+    fullName: Queue
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Queue`1
+    name: Queue
+    nameWithType: Queue
+    fullName: Queue
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: smIRCL.Config.IrcConfig.AutoJoinChannels*
+  commentId: Overload:smIRCL.Config.IrcConfig.AutoJoinChannels
+  name: AutoJoinChannels
+  nameWithType: IrcConfig.AutoJoinChannels
+  fullName: smIRCL.Config.IrcConfig.AutoJoinChannels
+- uid: List{System.String}
+  commentId: '!:List{System.String}'
+  definition: List`1
+  name: List<String>
+  nameWithType: List<String>
+  fullName: List<System.String>
+  nameWithType.vb: List(Of String)
+  fullName.vb: List(Of System.String)
+  name.vb: List(Of String)
+  spec.csharp:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: List`1
+  isExternal: true
+  name: List<>
+  nameWithType: List<>
+  fullName: List<>
+  nameWithType.vb: List(Of )
+  fullName.vb: List(Of )
+  name.vb: List(Of )
+  spec.csharp:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: smIRCL.Config.IrcConfig.UserName*
+  commentId: Overload:smIRCL.Config.IrcConfig.UserName
+  name: UserName
+  nameWithType: IrcConfig.UserName
+  fullName: smIRCL.Config.IrcConfig.UserName
+- uid: smIRCL.Config.IrcConfig.RealName*
+  commentId: Overload:smIRCL.Config.IrcConfig.RealName
+  name: RealName
+  nameWithType: IrcConfig.RealName
+  fullName: smIRCL.Config.IrcConfig.RealName
+- uid: smIRCL.Config.IrcConfig.AuthPassword*
+  commentId: Overload:smIRCL.Config.IrcConfig.AuthPassword
+  name: AuthPassword
+  nameWithType: IrcConfig.AuthPassword
+  fullName: smIRCL.Config.IrcConfig.AuthPassword
+- uid: smIRCL.Config.IrcConfig.AuthMode*
+  commentId: Overload:smIRCL.Config.IrcConfig.AuthMode
+  name: AuthMode
+  nameWithType: IrcConfig.AuthMode
+  fullName: smIRCL.Config.IrcConfig.AuthMode
+- uid: smIRCL.Enums.AuthMode
+  commentId: T:smIRCL.Enums.AuthMode
+  parent: smIRCL.Enums
+  name: AuthMode
+  nameWithType: AuthMode
+  fullName: smIRCL.Enums.AuthMode
+- uid: smIRCL.Enums
+  commentId: N:smIRCL.Enums
+  name: smIRCL.Enums
+  nameWithType: smIRCL.Enums
+  fullName: smIRCL.Enums
+- uid: smIRCL.Config.IrcConfig.UseSsl*
+  commentId: Overload:smIRCL.Config.IrcConfig.UseSsl
+  name: UseSsl
+  nameWithType: IrcConfig.UseSsl
+  fullName: smIRCL.Config.IrcConfig.UseSsl
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: smIRCL.Config.IrcConfig.ReconnectAttempts*
+  commentId: Overload:smIRCL.Config.IrcConfig.ReconnectAttempts
+  name: ReconnectAttempts
+  nameWithType: IrcConfig.ReconnectAttempts
+  fullName: smIRCL.Config.IrcConfig.ReconnectAttempts
+- uid: smIRCL.Config.IrcConfig.ConnectOnInstantiation*
+  commentId: Overload:smIRCL.Config.IrcConfig.ConnectOnInstantiation
+  name: ConnectOnInstantiation
+  nameWithType: IrcConfig.ConnectOnInstantiation
+  fullName: smIRCL.Config.IrcConfig.ConnectOnInstantiation
+- uid: smIRCL.Config.IrcConfig.DirectMessageHoldingPeriod*
+  commentId: Overload:smIRCL.Config.IrcConfig.DirectMessageHoldingPeriod
+  name: DirectMessageHoldingPeriod
+  nameWithType: IrcConfig.DirectMessageHoldingPeriod
+  fullName: smIRCL.Config.IrcConfig.DirectMessageHoldingPeriod
+- uid: TimeSpan
+  commentId: '!:TimeSpan'
+  isExternal: true
+  name: TimeSpan
+  nameWithType: TimeSpan
+  fullName: TimeSpan
+- uid: smIRCL.Config.IrcConfig.IsValid*
+  commentId: Overload:smIRCL.Config.IrcConfig.IsValid
+  name: IsValid
+  nameWithType: IrcConfig.IsValid
+  fullName: smIRCL.Config.IrcConfig.IsValid

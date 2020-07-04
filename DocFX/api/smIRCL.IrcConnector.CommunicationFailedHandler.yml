@@ -1,0 +1,48 @@
+### YamlMime:ManagedReference
+items:
+- uid: smIRCL.IrcConnector.CommunicationFailedHandler
+  commentId: T:smIRCL.IrcConnector.CommunicationFailedHandler
+  id: IrcConnector.CommunicationFailedHandler
+  parent: smIRCL
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: IrcConnector.CommunicationFailedHandler
+  nameWithType: IrcConnector.CommunicationFailedHandler
+  fullName: smIRCL.IrcConnector.CommunicationFailedHandler
+  type: Delegate
+  source:
+    remote:
+      path: smIRCL/IrcConnector.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: CommunicationFailedHandler
+    path: ../smIRCL/IrcConnector.cs
+    startLine: 39
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public delegate void CommunicationFailedHandler(Exception exception);
+    parameters:
+    - id: exception
+      type: Exception
+    content.vb: Public Delegate Sub CommunicationFailedHandler(exception As Exception)
+  modifiers.csharp:
+  - public
+  - delegate
+  modifiers.vb:
+  - Public
+  - Delegate
+references:
+- uid: smIRCL
+  commentId: N:smIRCL
+  name: smIRCL
+  nameWithType: smIRCL
+  fullName: smIRCL
+- uid: Exception
+  isExternal: true
+  name: Exception
+  nameWithType: Exception
+  fullName: Exception

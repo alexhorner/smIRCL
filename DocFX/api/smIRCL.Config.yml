@@ -1,0 +1,28 @@
+### YamlMime:ManagedReference
+items:
+- uid: smIRCL.Config
+  commentId: N:smIRCL.Config
+  id: smIRCL.Config
+  children:
+  - smIRCL.Config.IrcConfig
+  langs:
+  - csharp
+  - vb
+  name: smIRCL.Config
+  nameWithType: smIRCL.Config
+  fullName: smIRCL.Config
+  type: Namespace
+  assemblies:
+  - smIRCL
+references:
+- uid: smIRCL.Config.IrcConfig
+  commentId: T:smIRCL.Config.IrcConfig
+  parent: smIRCL.Config
+  name: IrcConfig
+  nameWithType: IrcConfig
+  fullName: smIRCL.Config.IrcConfig
+- uid: smIRCL.Config
+  commentId: N:smIRCL.Config
+  name: smIRCL.Config
+  nameWithType: smIRCL.Config
+  fullName: smIRCL.Config

@@ -1,0 +1,22 @@
+### YamlMime:ManagedReference
+items:
+- uid: smIRCL.Extensions
+  commentId: N:smIRCL.Extensions
+  id: smIRCL.Extensions
+  children:
+  - smIRCL.Extensions.StringExtensions
+  langs:
+  - csharp
+  - vb
+  name: smIRCL.Extensions
+  nameWithType: smIRCL.Extensions
+  fullName: smIRCL.Extensions
+  type: Namespace
+  assemblies:
+  - smIRCL
+references:
+- uid: smIRCL.Extensions.StringExtensions
+  commentId: T:smIRCL.Extensions.StringExtensions
+  name: StringExtensions
+  nameWithType: StringExtensions
+  fullName: smIRCL.Extensions.StringExtensions

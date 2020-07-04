@@ -1,0 +1,28 @@
+### YamlMime:ManagedReference
+items:
+- uid: smIRCL.Enums
+  commentId: N:smIRCL.Enums
+  id: smIRCL.Enums
+  children:
+  - smIRCL.Enums.AuthMode
+  langs:
+  - csharp
+  - vb
+  name: smIRCL.Enums
+  nameWithType: smIRCL.Enums
+  fullName: smIRCL.Enums
+  type: Namespace
+  assemblies:
+  - smIRCL
+references:
+- uid: smIRCL.Enums.AuthMode
+  commentId: T:smIRCL.Enums.AuthMode
+  parent: smIRCL.Enums
+  name: AuthMode
+  nameWithType: AuthMode
+  fullName: smIRCL.Enums.AuthMode
+- uid: smIRCL.Enums
+  commentId: N:smIRCL.Enums
+  name: smIRCL.Enums
+  nameWithType: smIRCL.Enums
+  fullName: smIRCL.Enums

@@ -1,0 +1,1197 @@
+### YamlMime:ManagedReference
+items:
+- uid: smIRCL.IrcController
+  commentId: T:smIRCL.IrcController
+  id: IrcController
+  parent: smIRCL
+  children:
+  - smIRCL.IrcController.#ctor(smIRCL.IrcConnector,System.Boolean)
+  - smIRCL.IrcController.AvailableCapabilities
+  - smIRCL.IrcController.Channels
+  - smIRCL.IrcController.Connector
+  - smIRCL.IrcController.Handlers
+  - smIRCL.IrcController.Host
+  - smIRCL.IrcController.Join(System.String)
+  - smIRCL.IrcController.NegotiatedCapabilities
+  - smIRCL.IrcController.Nick
+  - smIRCL.IrcController.Notice
+  - smIRCL.IrcController.Part(System.String)
+  - smIRCL.IrcController.Ping
+  - smIRCL.IrcController.PrivMsg
+  - smIRCL.IrcController.Quit(System.String)
+  - smIRCL.IrcController.RealName
+  - smIRCL.IrcController.SetNick(System.String)
+  - smIRCL.IrcController.SupportedChannelModes
+  - smIRCL.IrcController.SupportedChannelTypes
+  - smIRCL.IrcController.UserName
+  - smIRCL.IrcController.Users
+  - smIRCL.IrcController.Who(System.String)
+  - smIRCL.IrcController.WhoIs(System.String)
+  langs:
+  - csharp
+  - vb
+  name: IrcController
+  nameWithType: IrcController
+  fullName: smIRCL.IrcController
+  type: Class
+  source:
+    remote:
+      path: smIRCL/IrcController.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: IrcController
+    path: ../smIRCL/IrcController.cs
+    startLine: 9
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: 'public class IrcController : object'
+    content.vb: >-
+      Public Class IrcController
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: smIRCL.IrcController.Connector
+  commentId: P:smIRCL.IrcController.Connector
+  id: Connector
+  parent: smIRCL.IrcController
+  langs:
+  - csharp
+  - vb
+  name: Connector
+  nameWithType: IrcController.Connector
+  fullName: smIRCL.IrcController.Connector
+  type: Property
+  source:
+    remote:
+      path: smIRCL/IrcController.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: Connector
+    path: ../smIRCL/IrcController.cs
+    startLine: 13
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public IrcConnector Connector { get; }
+    parameters: []
+    return:
+      type: smIRCL.IrcConnector
+    content.vb: Public ReadOnly Property Connector As IrcConnector
+  overload: smIRCL.IrcController.Connector*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: smIRCL.IrcController.Users
+  commentId: F:smIRCL.IrcController.Users
+  id: Users
+  parent: smIRCL.IrcController
+  langs:
+  - csharp
+  - vb
+  name: Users
+  nameWithType: IrcController.Users
+  fullName: smIRCL.IrcController.Users
+  type: Field
+  source:
+    remote:
+      path: smIRCL/IrcController.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: Users
+    path: ../smIRCL/IrcController.cs
+    startLine: 14
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public readonly List<IrcUser> Users
+    return:
+      type: List{smIRCL.ServerEntities.IrcUser}
+    content.vb: Public ReadOnly Users As List(Of IrcUser)
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: smIRCL.IrcController.Channels
+  commentId: F:smIRCL.IrcController.Channels
+  id: Channels
+  parent: smIRCL.IrcController
+  langs:
+  - csharp
+  - vb
+  name: Channels
+  nameWithType: IrcController.Channels
+  fullName: smIRCL.IrcController.Channels
+  type: Field
+  source:
+    remote:
+      path: smIRCL/IrcController.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: Channels
+    path: ../smIRCL/IrcController.cs
+    startLine: 15
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public readonly List<IrcChannel> Channels
+    return:
+      type: List{smIRCL.ServerEntities.IrcChannel}
+    content.vb: Public ReadOnly Channels As List(Of IrcChannel)
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: smIRCL.IrcController.Nick
+  commentId: P:smIRCL.IrcController.Nick
+  id: Nick
+  parent: smIRCL.IrcController
+  langs:
+  - csharp
+  - vb
+  name: Nick
+  nameWithType: IrcController.Nick
+  fullName: smIRCL.IrcController.Nick
+  type: Property
+  source:
+    remote:
+      path: smIRCL/IrcController.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: Nick
+    path: ../smIRCL/IrcController.cs
+    startLine: 17
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public string Nick { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Nick As String
+  overload: smIRCL.IrcController.Nick*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: smIRCL.IrcController.UserName
+  commentId: P:smIRCL.IrcController.UserName
+  id: UserName
+  parent: smIRCL.IrcController
+  langs:
+  - csharp
+  - vb
+  name: UserName
+  nameWithType: IrcController.UserName
+  fullName: smIRCL.IrcController.UserName
+  type: Property
+  source:
+    remote:
+      path: smIRCL/IrcController.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: UserName
+    path: ../smIRCL/IrcController.cs
+    startLine: 18
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public string UserName { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property UserName As String
+  overload: smIRCL.IrcController.UserName*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: smIRCL.IrcController.RealName
+  commentId: P:smIRCL.IrcController.RealName
+  id: RealName
+  parent: smIRCL.IrcController
+  langs:
+  - csharp
+  - vb
+  name: RealName
+  nameWithType: IrcController.RealName
+  fullName: smIRCL.IrcController.RealName
+  type: Property
+  source:
+    remote:
+      path: smIRCL/IrcController.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RealName
+    path: ../smIRCL/IrcController.cs
+    startLine: 19
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public string RealName { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property RealName As String
+  overload: smIRCL.IrcController.RealName*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: smIRCL.IrcController.Host
+  commentId: P:smIRCL.IrcController.Host
+  id: Host
+  parent: smIRCL.IrcController
+  langs:
+  - csharp
+  - vb
+  name: Host
+  nameWithType: IrcController.Host
+  fullName: smIRCL.IrcController.Host
+  type: Property
+  source:
+    remote:
+      path: smIRCL/IrcController.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: Host
+    path: ../smIRCL/IrcController.cs
+    startLine: 20
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public string Host { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Host As String
+  overload: smIRCL.IrcController.Host*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: smIRCL.IrcController.SupportedChannelTypes
+  commentId: F:smIRCL.IrcController.SupportedChannelTypes
+  id: SupportedChannelTypes
+  parent: smIRCL.IrcController
+  langs:
+  - csharp
+  - vb
+  name: SupportedChannelTypes
+  nameWithType: IrcController.SupportedChannelTypes
+  fullName: smIRCL.IrcController.SupportedChannelTypes
+  type: Field
+  source:
+    remote:
+      path: smIRCL/IrcController.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: SupportedChannelTypes
+    path: ../smIRCL/IrcController.cs
+    startLine: 22
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public List<char> SupportedChannelTypes
+    return:
+      type: List{System.Char}
+    content.vb: Public SupportedChannelTypes As List(Of Char)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: smIRCL.IrcController.SupportedChannelModes
+  commentId: F:smIRCL.IrcController.SupportedChannelModes
+  id: SupportedChannelModes
+  parent: smIRCL.IrcController
+  langs:
+  - csharp
+  - vb
+  name: SupportedChannelModes
+  nameWithType: IrcController.SupportedChannelModes
+  fullName: smIRCL.IrcController.SupportedChannelModes
+  type: Field
+  source:
+    remote:
+      path: smIRCL/IrcController.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: SupportedChannelModes
+    path: ../smIRCL/IrcController.cs
+    startLine: 23
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public SupportedChannelModes SupportedChannelModes
+    return:
+      type: smIRCL.SupportedChannelModes
+    content.vb: Public SupportedChannelModes As SupportedChannelModes
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: smIRCL.IrcController.AvailableCapabilities
+  commentId: F:smIRCL.IrcController.AvailableCapabilities
+  id: AvailableCapabilities
+  parent: smIRCL.IrcController
+  langs:
+  - csharp
+  - vb
+  name: AvailableCapabilities
+  nameWithType: IrcController.AvailableCapabilities
+  fullName: smIRCL.IrcController.AvailableCapabilities
+  type: Field
+  source:
+    remote:
+      path: smIRCL/IrcController.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: AvailableCapabilities
+    path: ../smIRCL/IrcController.cs
+    startLine: 25
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public List<KeyValuePair<string, List<string>>> AvailableCapabilities
+    return:
+      type: List{KeyValuePair{System.String,List{System.String}}}
+    content.vb: Public AvailableCapabilities As List(Of KeyValuePair(Of String, List(Of String)))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: smIRCL.IrcController.NegotiatedCapabilities
+  commentId: F:smIRCL.IrcController.NegotiatedCapabilities
+  id: NegotiatedCapabilities
+  parent: smIRCL.IrcController
+  langs:
+  - csharp
+  - vb
+  name: NegotiatedCapabilities
+  nameWithType: IrcController.NegotiatedCapabilities
+  fullName: smIRCL.IrcController.NegotiatedCapabilities
+  type: Field
+  source:
+    remote:
+      path: smIRCL/IrcController.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: NegotiatedCapabilities
+    path: ../smIRCL/IrcController.cs
+    startLine: 26
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public List<string> NegotiatedCapabilities
+    return:
+      type: List{System.String}
+    content.vb: Public NegotiatedCapabilities As List(Of String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: smIRCL.IrcController.Handlers
+  commentId: F:smIRCL.IrcController.Handlers
+  id: Handlers
+  parent: smIRCL.IrcController
+  langs:
+  - csharp
+  - vb
+  name: Handlers
+  nameWithType: IrcController.Handlers
+  fullName: smIRCL.IrcController.Handlers
+  type: Field
+  source:
+    remote:
+      path: smIRCL/IrcController.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: Handlers
+    path: ../smIRCL/IrcController.cs
+    startLine: 34
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public IrcHandlerList Handlers
+    return:
+      type: smIRCL.IrcHandlerList
+    content.vb: Public Handlers As IrcHandlerList
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: smIRCL.IrcController.PrivMsg
+  commentId: E:smIRCL.IrcController.PrivMsg
+  id: PrivMsg
+  parent: smIRCL.IrcController
+  langs:
+  - csharp
+  - vb
+  name: PrivMsg
+  nameWithType: IrcController.PrivMsg
+  fullName: smIRCL.IrcController.PrivMsg
+  type: Event
+  source:
+    remote:
+      path: smIRCL/IrcController.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: PrivMsg
+    path: ../smIRCL/IrcController.cs
+    startLine: 43
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  summary: "\nFired when a PRIVMSG is received\n"
+  example: []
+  syntax:
+    content: public event IrcController.IrcMessageHandler PrivMsg
+    return:
+      type: smIRCL.IrcController.IrcMessageHandler
+    content.vb: Public Event PrivMsg As IrcController.IrcMessageHandler
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: smIRCL.IrcController.Notice
+  commentId: E:smIRCL.IrcController.Notice
+  id: Notice
+  parent: smIRCL.IrcController
+  langs:
+  - csharp
+  - vb
+  name: Notice
+  nameWithType: IrcController.Notice
+  fullName: smIRCL.IrcController.Notice
+  type: Event
+  source:
+    remote:
+      path: smIRCL/IrcController.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: Notice
+    path: ../smIRCL/IrcController.cs
+    startLine: 48
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  summary: "\nFired when a NOTICE is received\n"
+  example: []
+  syntax:
+    content: public event IrcController.IrcMessageHandler Notice
+    return:
+      type: smIRCL.IrcController.IrcMessageHandler
+    content.vb: Public Event Notice As IrcController.IrcMessageHandler
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: smIRCL.IrcController.Ping
+  commentId: E:smIRCL.IrcController.Ping
+  id: Ping
+  parent: smIRCL.IrcController
+  langs:
+  - csharp
+  - vb
+  name: Ping
+  nameWithType: IrcController.Ping
+  fullName: smIRCL.IrcController.Ping
+  type: Event
+  source:
+    remote:
+      path: smIRCL/IrcController.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: Ping
+    path: ../smIRCL/IrcController.cs
+    startLine: 53
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  summary: "\nFired when a PING is received\n"
+  example: []
+  syntax:
+    content: public event IrcController.IrcMessageHandler Ping
+    return:
+      type: smIRCL.IrcController.IrcMessageHandler
+    content.vb: Public Event Ping As IrcController.IrcMessageHandler
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: smIRCL.IrcController.#ctor(smIRCL.IrcConnector,System.Boolean)
+  commentId: M:smIRCL.IrcController.#ctor(smIRCL.IrcConnector,System.Boolean)
+  id: '#ctor(smIRCL.IrcConnector,System.Boolean)'
+  parent: smIRCL.IrcController
+  langs:
+  - csharp
+  - vb
+  name: IrcController(IrcConnector, Boolean)
+  nameWithType: IrcController.IrcController(IrcConnector, Boolean)
+  fullName: smIRCL.IrcController.IrcController(smIRCL.IrcConnector, System.Boolean)
+  type: Constructor
+  source:
+    remote:
+      path: smIRCL/IrcController.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: .ctor
+    path: ../smIRCL/IrcController.cs
+    startLine: 65
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public IrcController(IrcConnector connector, bool registerInternalHandlers = true)
+    parameters:
+    - id: connector
+      type: smIRCL.IrcConnector
+    - id: registerInternalHandlers
+      type: System.Boolean
+    content.vb: Public Sub New(connector As IrcConnector, registerInternalHandlers As Boolean = True)
+  overload: smIRCL.IrcController.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: smIRCL.IrcController.Quit(System.String)
+  commentId: M:smIRCL.IrcController.Quit(System.String)
+  id: Quit(System.String)
+  parent: smIRCL.IrcController
+  langs:
+  - csharp
+  - vb
+  name: Quit(String)
+  nameWithType: IrcController.Quit(String)
+  fullName: smIRCL.IrcController.Quit(System.String)
+  type: Method
+  source:
+    remote:
+      path: smIRCL/IrcController.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: Quit
+    path: ../smIRCL/IrcController.cs
+    startLine: 148
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public void Quit(string quitMessage = "Client quit")
+    parameters:
+    - id: quitMessage
+      type: System.String
+    content.vb: Public Sub Quit(quitMessage As String = "Client quit")
+  overload: smIRCL.IrcController.Quit*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: smIRCL.IrcController.SetNick(System.String)
+  commentId: M:smIRCL.IrcController.SetNick(System.String)
+  id: SetNick(System.String)
+  parent: smIRCL.IrcController
+  langs:
+  - csharp
+  - vb
+  name: SetNick(String)
+  nameWithType: IrcController.SetNick(String)
+  fullName: smIRCL.IrcController.SetNick(System.String)
+  type: Method
+  source:
+    remote:
+      path: smIRCL/IrcController.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: SetNick
+    path: ../smIRCL/IrcController.cs
+    startLine: 155
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public void SetNick(string newNick)
+    parameters:
+    - id: newNick
+      type: System.String
+    content.vb: Public Sub SetNick(newNick As String)
+  overload: smIRCL.IrcController.SetNick*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: smIRCL.IrcController.Who(System.String)
+  commentId: M:smIRCL.IrcController.Who(System.String)
+  id: Who(System.String)
+  parent: smIRCL.IrcController
+  langs:
+  - csharp
+  - vb
+  name: Who(String)
+  nameWithType: IrcController.Who(String)
+  fullName: smIRCL.IrcController.Who(System.String)
+  type: Method
+  source:
+    remote:
+      path: smIRCL/IrcController.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: Who
+    path: ../smIRCL/IrcController.cs
+    startLine: 160
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public void Who(string channelOrNick)
+    parameters:
+    - id: channelOrNick
+      type: System.String
+    content.vb: Public Sub Who(channelOrNick As String)
+  overload: smIRCL.IrcController.Who*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: smIRCL.IrcController.WhoIs(System.String)
+  commentId: M:smIRCL.IrcController.WhoIs(System.String)
+  id: WhoIs(System.String)
+  parent: smIRCL.IrcController
+  langs:
+  - csharp
+  - vb
+  name: WhoIs(String)
+  nameWithType: IrcController.WhoIs(String)
+  fullName: smIRCL.IrcController.WhoIs(System.String)
+  type: Method
+  source:
+    remote:
+      path: smIRCL/IrcController.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: WhoIs
+    path: ../smIRCL/IrcController.cs
+    startLine: 165
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public void WhoIs(string nick)
+    parameters:
+    - id: nick
+      type: System.String
+    content.vb: Public Sub WhoIs(nick As String)
+  overload: smIRCL.IrcController.WhoIs*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: smIRCL.IrcController.Join(System.String)
+  commentId: M:smIRCL.IrcController.Join(System.String)
+  id: Join(System.String)
+  parent: smIRCL.IrcController
+  langs:
+  - csharp
+  - vb
+  name: Join(String)
+  nameWithType: IrcController.Join(String)
+  fullName: smIRCL.IrcController.Join(System.String)
+  type: Method
+  source:
+    remote:
+      path: smIRCL/IrcController.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: Join
+    path: ../smIRCL/IrcController.cs
+    startLine: 170
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public void Join(string channelName)
+    parameters:
+    - id: channelName
+      type: System.String
+    content.vb: Public Sub Join(channelName As String)
+  overload: smIRCL.IrcController.Join*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: smIRCL.IrcController.Part(System.String)
+  commentId: M:smIRCL.IrcController.Part(System.String)
+  id: Part(System.String)
+  parent: smIRCL.IrcController
+  langs:
+  - csharp
+  - vb
+  name: Part(String)
+  nameWithType: IrcController.Part(String)
+  fullName: smIRCL.IrcController.Part(System.String)
+  type: Method
+  source:
+    remote:
+      path: smIRCL/IrcController.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: Part
+    path: ../smIRCL/IrcController.cs
+    startLine: 183
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public void Part(string channelName)
+    parameters:
+    - id: channelName
+      type: System.String
+    content.vb: Public Sub Part(channelName As String)
+  overload: smIRCL.IrcController.Part*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: smIRCL
+  commentId: N:smIRCL
+  name: smIRCL
+  nameWithType: smIRCL
+  fullName: smIRCL
+- uid: smIRCL.IrcController.Connector*
+  commentId: Overload:smIRCL.IrcController.Connector
+  name: Connector
+  nameWithType: IrcController.Connector
+  fullName: smIRCL.IrcController.Connector
+- uid: smIRCL.IrcConnector
+  commentId: T:smIRCL.IrcConnector
+  parent: smIRCL
+  name: IrcConnector
+  nameWithType: IrcConnector
+  fullName: smIRCL.IrcConnector
+- uid: List{smIRCL.ServerEntities.IrcUser}
+  commentId: '!:List{smIRCL.ServerEntities.IrcUser}'
+  definition: List`1
+  name: List<IrcUser>
+  nameWithType: List<IrcUser>
+  fullName: List<smIRCL.ServerEntities.IrcUser>
+  nameWithType.vb: List(Of IrcUser)
+  fullName.vb: List(Of smIRCL.ServerEntities.IrcUser)
+  name.vb: List(Of IrcUser)
+  spec.csharp:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: smIRCL.ServerEntities.IrcUser
+    name: IrcUser
+    nameWithType: IrcUser
+    fullName: smIRCL.ServerEntities.IrcUser
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: smIRCL.ServerEntities.IrcUser
+    name: IrcUser
+    nameWithType: IrcUser
+    fullName: smIRCL.ServerEntities.IrcUser
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: List`1
+  isExternal: true
+  name: List<>
+  nameWithType: List<>
+  fullName: List<>
+  nameWithType.vb: List(Of )
+  fullName.vb: List(Of )
+  name.vb: List(Of )
+  spec.csharp:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: List{smIRCL.ServerEntities.IrcChannel}
+  commentId: '!:List{smIRCL.ServerEntities.IrcChannel}'
+  definition: List`1
+  name: List<IrcChannel>
+  nameWithType: List<IrcChannel>
+  fullName: List<smIRCL.ServerEntities.IrcChannel>
+  nameWithType.vb: List(Of IrcChannel)
+  fullName.vb: List(Of smIRCL.ServerEntities.IrcChannel)
+  name.vb: List(Of IrcChannel)
+  spec.csharp:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: smIRCL.ServerEntities.IrcChannel
+    name: IrcChannel
+    nameWithType: IrcChannel
+    fullName: smIRCL.ServerEntities.IrcChannel
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: smIRCL.ServerEntities.IrcChannel
+    name: IrcChannel
+    nameWithType: IrcChannel
+    fullName: smIRCL.ServerEntities.IrcChannel
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: smIRCL.IrcController.Nick*
+  commentId: Overload:smIRCL.IrcController.Nick
+  name: Nick
+  nameWithType: IrcController.Nick
+  fullName: smIRCL.IrcController.Nick
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: smIRCL.IrcController.UserName*
+  commentId: Overload:smIRCL.IrcController.UserName
+  name: UserName
+  nameWithType: IrcController.UserName
+  fullName: smIRCL.IrcController.UserName
+- uid: smIRCL.IrcController.RealName*
+  commentId: Overload:smIRCL.IrcController.RealName
+  name: RealName
+  nameWithType: IrcController.RealName
+  fullName: smIRCL.IrcController.RealName
+- uid: smIRCL.IrcController.Host*
+  commentId: Overload:smIRCL.IrcController.Host
+  name: Host
+  nameWithType: IrcController.Host
+  fullName: smIRCL.IrcController.Host
+- uid: List{System.Char}
+  commentId: '!:List{System.Char}'
+  definition: List`1
+  name: List<Char>
+  nameWithType: List<Char>
+  fullName: List<System.Char>
+  nameWithType.vb: List(Of Char)
+  fullName.vb: List(Of System.Char)
+  name.vb: List(Of Char)
+  spec.csharp:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Char
+    name: Char
+    nameWithType: Char
+    fullName: System.Char
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Char
+    name: Char
+    nameWithType: Char
+    fullName: System.Char
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: smIRCL.SupportedChannelModes
+  commentId: T:smIRCL.SupportedChannelModes
+  parent: smIRCL
+  name: SupportedChannelModes
+  nameWithType: SupportedChannelModes
+  fullName: smIRCL.SupportedChannelModes
+- uid: List{KeyValuePair{System.String,List{System.String}}}
+  commentId: '!:List{KeyValuePair{System.String,List{System.String}}}'
+  definition: List`1
+  name: List<KeyValuePair<String, List<String>>>
+  nameWithType: List<KeyValuePair<String, List<String>>>
+  fullName: List<KeyValuePair<System.String, List<System.String>>>
+  nameWithType.vb: List(Of KeyValuePair(Of String, List(Of String)))
+  fullName.vb: List(Of KeyValuePair(Of System.String, List(Of System.String)))
+  name.vb: List(Of KeyValuePair(Of String, List(Of String)))
+  spec.csharp:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: KeyValuePair`2
+    name: KeyValuePair
+    nameWithType: KeyValuePair
+    fullName: KeyValuePair
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: KeyValuePair`2
+    name: KeyValuePair
+    nameWithType: KeyValuePair
+    fullName: KeyValuePair
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: List{System.String}
+  commentId: '!:List{System.String}'
+  definition: List`1
+  name: List<String>
+  nameWithType: List<String>
+  fullName: List<System.String>
+  nameWithType.vb: List(Of String)
+  fullName.vb: List(Of System.String)
+  name.vb: List(Of String)
+  spec.csharp:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: smIRCL.IrcHandlerList
+  commentId: T:smIRCL.IrcHandlerList
+  parent: smIRCL
+  name: IrcHandlerList
+  nameWithType: IrcHandlerList
+  fullName: smIRCL.IrcHandlerList
+- uid: smIRCL.IrcController.IrcMessageHandler
+  commentId: T:smIRCL.IrcController.IrcMessageHandler
+  parent: smIRCL
+  name: IrcController.IrcMessageHandler
+  nameWithType: IrcController.IrcMessageHandler
+  fullName: smIRCL.IrcController.IrcMessageHandler
+- uid: smIRCL.IrcController.#ctor*
+  commentId: Overload:smIRCL.IrcController.#ctor
+  name: IrcController
+  nameWithType: IrcController.IrcController
+  fullName: smIRCL.IrcController.IrcController
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: smIRCL.IrcController.Quit*
+  commentId: Overload:smIRCL.IrcController.Quit
+  name: Quit
+  nameWithType: IrcController.Quit
+  fullName: smIRCL.IrcController.Quit
+- uid: smIRCL.IrcController.SetNick*
+  commentId: Overload:smIRCL.IrcController.SetNick
+  name: SetNick
+  nameWithType: IrcController.SetNick
+  fullName: smIRCL.IrcController.SetNick
+- uid: smIRCL.IrcController.Who*
+  commentId: Overload:smIRCL.IrcController.Who
+  name: Who
+  nameWithType: IrcController.Who
+  fullName: smIRCL.IrcController.Who
+- uid: smIRCL.IrcController.WhoIs*
+  commentId: Overload:smIRCL.IrcController.WhoIs
+  name: WhoIs
+  nameWithType: IrcController.WhoIs
+  fullName: smIRCL.IrcController.WhoIs
+- uid: smIRCL.IrcController.Join*
+  commentId: Overload:smIRCL.IrcController.Join
+  name: Join
+  nameWithType: IrcController.Join
+  fullName: smIRCL.IrcController.Join
+- uid: smIRCL.IrcController.Part*
+  commentId: Overload:smIRCL.IrcController.Part
+  name: Part
+  nameWithType: IrcController.Part
+  fullName: smIRCL.IrcController.Part

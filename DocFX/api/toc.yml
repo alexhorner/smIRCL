@@ -1,0 +1,55 @@
+### YamlMime:TableOfContent
+- uid: smIRCL
+  name: smIRCL
+  items:
+  - uid: smIRCL.Constants
+    name: Constants
+  - uid: smIRCL.IrcConnector
+    name: IrcConnector
+  - uid: smIRCL.IrcConnector.CommunicationFailedHandler
+    name: IrcConnector.CommunicationFailedHandler
+  - uid: smIRCL.IrcConnector.ConnectionStateEventHandler
+    name: IrcConnector.ConnectionStateEventHandler
+  - uid: smIRCL.IrcConnector.MessageHandler
+    name: IrcConnector.MessageHandler
+  - uid: smIRCL.IrcConnector.MessageTransmitHandler
+    name: IrcConnector.MessageTransmitHandler
+  - uid: smIRCL.IrcController
+    name: IrcController
+  - uid: smIRCL.IrcController.IrcMessageHandler
+    name: IrcController.IrcMessageHandler
+  - uid: smIRCL.IrcHandlerList
+    name: IrcHandlerList
+  - uid: smIRCL.IrcMessage
+    name: IrcMessage
+  - uid: smIRCL.Numerics
+    name: Numerics
+  - uid: smIRCL.SupportedChannelModes
+    name: SupportedChannelModes
+- uid: smIRCL.Config
+  name: smIRCL.Config
+  items:
+  - uid: smIRCL.Config.IrcConfig
+    name: IrcConfig
+- uid: smIRCL.Enums
+  name: smIRCL.Enums
+  items:
+  - uid: smIRCL.Enums.AuthMode
+    name: AuthMode
+- uid: smIRCL.Exceptions
+  name: smIRCL.Exceptions
+  items:
+  - uid: smIRCL.Exceptions.ConnectionFailureException
+    name: ConnectionFailureException
+- uid: smIRCL.Extensions
+  name: smIRCL.Extensions
+  items:
+  - uid: smIRCL.Extensions.StringExtensions
+    name: StringExtensions
+- uid: smIRCL.ServerEntities
+  name: smIRCL.ServerEntities
+  items:
+  - uid: smIRCL.ServerEntities.IrcChannel
+    name: IrcChannel
+  - uid: smIRCL.ServerEntities.IrcUser
+    name: IrcUser

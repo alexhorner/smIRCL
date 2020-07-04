@@ -1,0 +1,547 @@
+### YamlMime:ManagedReference
+items:
+- uid: smIRCL.IrcMessage
+  commentId: T:smIRCL.IrcMessage
+  id: IrcMessage
+  parent: smIRCL
+  children:
+  - smIRCL.IrcMessage.Command
+  - smIRCL.IrcMessage.Parameters
+  - smIRCL.IrcMessage.Parse(System.String)
+  - smIRCL.IrcMessage.SourceHost
+  - smIRCL.IrcMessage.SourceHostMask
+  - smIRCL.IrcMessage.SourceNick
+  - smIRCL.IrcMessage.SourceUserName
+  - smIRCL.IrcMessage.Tags
+  langs:
+  - csharp
+  - vb
+  name: IrcMessage
+  nameWithType: IrcMessage
+  fullName: smIRCL.IrcMessage
+  type: Class
+  source:
+    remote:
+      path: smIRCL/IrcMessage.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: IrcMessage
+    path: ../smIRCL/IrcMessage.cs
+    startLine: 6
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: 'public class IrcMessage : object'
+    content.vb: >-
+      Public Class IrcMessage
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: smIRCL.IrcMessage.Tags
+  commentId: P:smIRCL.IrcMessage.Tags
+  id: Tags
+  parent: smIRCL.IrcMessage
+  langs:
+  - csharp
+  - vb
+  name: Tags
+  nameWithType: IrcMessage.Tags
+  fullName: smIRCL.IrcMessage.Tags
+  type: Property
+  source:
+    remote:
+      path: smIRCL/IrcMessage.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: Tags
+    path: ../smIRCL/IrcMessage.cs
+    startLine: 8
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public List<KeyValuePair<string, string>> Tags { get; set; }
+    parameters: []
+    return:
+      type: List{KeyValuePair{System.String,System.String}}
+    content.vb: Public Property Tags As List(Of KeyValuePair(Of String, String))
+  overload: smIRCL.IrcMessage.Tags*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: smIRCL.IrcMessage.SourceHostMask
+  commentId: P:smIRCL.IrcMessage.SourceHostMask
+  id: SourceHostMask
+  parent: smIRCL.IrcMessage
+  langs:
+  - csharp
+  - vb
+  name: SourceHostMask
+  nameWithType: IrcMessage.SourceHostMask
+  fullName: smIRCL.IrcMessage.SourceHostMask
+  type: Property
+  source:
+    remote:
+      path: smIRCL/IrcMessage.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: SourceHostMask
+    path: ../smIRCL/IrcMessage.cs
+    startLine: 11
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public string SourceHostMask { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property SourceHostMask As String
+  overload: smIRCL.IrcMessage.SourceHostMask*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: smIRCL.IrcMessage.SourceNick
+  commentId: P:smIRCL.IrcMessage.SourceNick
+  id: SourceNick
+  parent: smIRCL.IrcMessage
+  langs:
+  - csharp
+  - vb
+  name: SourceNick
+  nameWithType: IrcMessage.SourceNick
+  fullName: smIRCL.IrcMessage.SourceNick
+  type: Property
+  source:
+    remote:
+      path: smIRCL/IrcMessage.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: SourceNick
+    path: ../smIRCL/IrcMessage.cs
+    startLine: 12
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public string SourceNick { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property SourceNick As String
+  overload: smIRCL.IrcMessage.SourceNick*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: smIRCL.IrcMessage.SourceUserName
+  commentId: P:smIRCL.IrcMessage.SourceUserName
+  id: SourceUserName
+  parent: smIRCL.IrcMessage
+  langs:
+  - csharp
+  - vb
+  name: SourceUserName
+  nameWithType: IrcMessage.SourceUserName
+  fullName: smIRCL.IrcMessage.SourceUserName
+  type: Property
+  source:
+    remote:
+      path: smIRCL/IrcMessage.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: SourceUserName
+    path: ../smIRCL/IrcMessage.cs
+    startLine: 13
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public string SourceUserName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property SourceUserName As String
+  overload: smIRCL.IrcMessage.SourceUserName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: smIRCL.IrcMessage.SourceHost
+  commentId: P:smIRCL.IrcMessage.SourceHost
+  id: SourceHost
+  parent: smIRCL.IrcMessage
+  langs:
+  - csharp
+  - vb
+  name: SourceHost
+  nameWithType: IrcMessage.SourceHost
+  fullName: smIRCL.IrcMessage.SourceHost
+  type: Property
+  source:
+    remote:
+      path: smIRCL/IrcMessage.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: SourceHost
+    path: ../smIRCL/IrcMessage.cs
+    startLine: 14
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public string SourceHost { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property SourceHost As String
+  overload: smIRCL.IrcMessage.SourceHost*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: smIRCL.IrcMessage.Command
+  commentId: P:smIRCL.IrcMessage.Command
+  id: Command
+  parent: smIRCL.IrcMessage
+  langs:
+  - csharp
+  - vb
+  name: Command
+  nameWithType: IrcMessage.Command
+  fullName: smIRCL.IrcMessage.Command
+  type: Property
+  source:
+    remote:
+      path: smIRCL/IrcMessage.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: Command
+    path: ../smIRCL/IrcMessage.cs
+    startLine: 17
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public string Command { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Command As String
+  overload: smIRCL.IrcMessage.Command*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: smIRCL.IrcMessage.Parameters
+  commentId: P:smIRCL.IrcMessage.Parameters
+  id: Parameters
+  parent: smIRCL.IrcMessage
+  langs:
+  - csharp
+  - vb
+  name: Parameters
+  nameWithType: IrcMessage.Parameters
+  fullName: smIRCL.IrcMessage.Parameters
+  type: Property
+  source:
+    remote:
+      path: smIRCL/IrcMessage.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: Parameters
+    path: ../smIRCL/IrcMessage.cs
+    startLine: 19
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public List<string> Parameters { get; set; }
+    parameters: []
+    return:
+      type: List{System.String}
+    content.vb: Public Property Parameters As List(Of String)
+  overload: smIRCL.IrcMessage.Parameters*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: smIRCL.IrcMessage.Parse(System.String)
+  commentId: M:smIRCL.IrcMessage.Parse(System.String)
+  id: Parse(System.String)
+  parent: smIRCL.IrcMessage
+  langs:
+  - csharp
+  - vb
+  name: Parse(String)
+  nameWithType: IrcMessage.Parse(String)
+  fullName: smIRCL.IrcMessage.Parse(System.String)
+  type: Method
+  source:
+    remote:
+      path: smIRCL/IrcMessage.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: Parse
+    path: ../smIRCL/IrcMessage.cs
+    startLine: 22
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public static IrcMessage Parse(string message)
+    parameters:
+    - id: message
+      type: System.String
+    return:
+      type: smIRCL.IrcMessage
+    content.vb: Public Shared Function Parse(message As String) As IrcMessage
+  overload: smIRCL.IrcMessage.Parse*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: smIRCL
+  commentId: N:smIRCL
+  name: smIRCL
+  nameWithType: smIRCL
+  fullName: smIRCL
+- uid: smIRCL.IrcMessage.Tags*
+  commentId: Overload:smIRCL.IrcMessage.Tags
+  name: Tags
+  nameWithType: IrcMessage.Tags
+  fullName: smIRCL.IrcMessage.Tags
+- uid: List{KeyValuePair{System.String,System.String}}
+  commentId: '!:List{KeyValuePair{System.String,System.String}}'
+  definition: List`1
+  name: List<KeyValuePair<String, String>>
+  nameWithType: List<KeyValuePair<String, String>>
+  fullName: List<KeyValuePair<System.String, System.String>>
+  nameWithType.vb: List(Of KeyValuePair(Of String, String))
+  fullName.vb: List(Of KeyValuePair(Of System.String, System.String))
+  name.vb: List(Of KeyValuePair(Of String, String))
+  spec.csharp:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: KeyValuePair`2
+    name: KeyValuePair
+    nameWithType: KeyValuePair
+    fullName: KeyValuePair
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: KeyValuePair`2
+    name: KeyValuePair
+    nameWithType: KeyValuePair
+    fullName: KeyValuePair
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: List`1
+  isExternal: true
+  name: List<>
+  nameWithType: List<>
+  fullName: List<>
+  nameWithType.vb: List(Of )
+  fullName.vb: List(Of )
+  name.vb: List(Of )
+  spec.csharp:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: smIRCL.IrcMessage.SourceHostMask*
+  commentId: Overload:smIRCL.IrcMessage.SourceHostMask
+  name: SourceHostMask
+  nameWithType: IrcMessage.SourceHostMask
+  fullName: smIRCL.IrcMessage.SourceHostMask
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: smIRCL.IrcMessage.SourceNick*
+  commentId: Overload:smIRCL.IrcMessage.SourceNick
+  name: SourceNick
+  nameWithType: IrcMessage.SourceNick
+  fullName: smIRCL.IrcMessage.SourceNick
+- uid: smIRCL.IrcMessage.SourceUserName*
+  commentId: Overload:smIRCL.IrcMessage.SourceUserName
+  name: SourceUserName
+  nameWithType: IrcMessage.SourceUserName
+  fullName: smIRCL.IrcMessage.SourceUserName
+- uid: smIRCL.IrcMessage.SourceHost*
+  commentId: Overload:smIRCL.IrcMessage.SourceHost
+  name: SourceHost
+  nameWithType: IrcMessage.SourceHost
+  fullName: smIRCL.IrcMessage.SourceHost
+- uid: smIRCL.IrcMessage.Command*
+  commentId: Overload:smIRCL.IrcMessage.Command
+  name: Command
+  nameWithType: IrcMessage.Command
+  fullName: smIRCL.IrcMessage.Command
+- uid: smIRCL.IrcMessage.Parameters*
+  commentId: Overload:smIRCL.IrcMessage.Parameters
+  name: Parameters
+  nameWithType: IrcMessage.Parameters
+  fullName: smIRCL.IrcMessage.Parameters
+- uid: List{System.String}
+  commentId: '!:List{System.String}'
+  definition: List`1
+  name: List<String>
+  nameWithType: List<String>
+  fullName: List<System.String>
+  nameWithType.vb: List(Of String)
+  fullName.vb: List(Of System.String)
+  name.vb: List(Of String)
+  spec.csharp:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: smIRCL.IrcMessage.Parse*
+  commentId: Overload:smIRCL.IrcMessage.Parse
+  name: Parse
+  nameWithType: IrcMessage.Parse
+  fullName: smIRCL.IrcMessage.Parse
+- uid: smIRCL.IrcMessage
+  commentId: T:smIRCL.IrcMessage
+  parent: smIRCL
+  name: IrcMessage
+  nameWithType: IrcMessage
+  fullName: smIRCL.IrcMessage

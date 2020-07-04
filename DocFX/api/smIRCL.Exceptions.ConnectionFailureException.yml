@@ -1,0 +1,95 @@
+### YamlMime:ManagedReference
+items:
+- uid: smIRCL.Exceptions.ConnectionFailureException
+  commentId: T:smIRCL.Exceptions.ConnectionFailureException
+  id: ConnectionFailureException
+  parent: smIRCL.Exceptions
+  children:
+  - smIRCL.Exceptions.ConnectionFailureException.#ctor(System.String,Exception)
+  langs:
+  - csharp
+  - vb
+  name: ConnectionFailureException
+  nameWithType: ConnectionFailureException
+  fullName: smIRCL.Exceptions.ConnectionFailureException
+  type: Class
+  source:
+    remote:
+      path: smIRCL/Exceptions/ConnectionFailureException.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: ConnectionFailureException
+    path: ../smIRCL/Exceptions/ConnectionFailureException.cs
+    startLine: 4
+  assemblies:
+  - smIRCL
+  namespace: smIRCL.Exceptions
+  syntax:
+    content: 'public class ConnectionFailureException : Exception'
+    content.vb: >-
+      Public Class ConnectionFailureException
+          Inherits Exception
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: smIRCL.Exceptions.ConnectionFailureException.#ctor(System.String,Exception)
+  commentId: M:smIRCL.Exceptions.ConnectionFailureException.#ctor(System.String,Exception)
+  id: '#ctor(System.String,Exception)'
+  parent: smIRCL.Exceptions.ConnectionFailureException
+  langs:
+  - csharp
+  - vb
+  name: ConnectionFailureException(String, Exception)
+  nameWithType: ConnectionFailureException.ConnectionFailureException(String, Exception)
+  fullName: smIRCL.Exceptions.ConnectionFailureException.ConnectionFailureException(System.String, Exception)
+  type: Constructor
+  source:
+    remote:
+      path: smIRCL/Exceptions/ConnectionFailureException.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: .ctor
+    path: ../smIRCL/Exceptions/ConnectionFailureException.cs
+    startLine: 6
+  assemblies:
+  - smIRCL
+  namespace: smIRCL.Exceptions
+  syntax:
+    content: public ConnectionFailureException(string message, Exception innerException = null)
+    parameters:
+    - id: message
+      type: System.String
+    - id: innerException
+      type: Exception
+    content.vb: Public Sub New(message As String, innerException As Exception = Nothing)
+  overload: smIRCL.Exceptions.ConnectionFailureException.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: smIRCL.Exceptions
+  commentId: N:smIRCL.Exceptions
+  name: smIRCL.Exceptions
+  nameWithType: smIRCL.Exceptions
+  fullName: smIRCL.Exceptions
+- uid: smIRCL.Exceptions.ConnectionFailureException.#ctor*
+  commentId: Overload:smIRCL.Exceptions.ConnectionFailureException.#ctor
+  name: ConnectionFailureException
+  nameWithType: ConnectionFailureException.ConnectionFailureException
+  fullName: smIRCL.Exceptions.ConnectionFailureException.ConnectionFailureException
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: Exception
+  isExternal: true
+  name: Exception
+  nameWithType: Exception
+  fullName: Exception

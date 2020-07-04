@@ -1,0 +1,289 @@
+### YamlMime:ManagedReference
+items:
+- uid: smIRCL.SupportedChannelModes
+  commentId: T:smIRCL.SupportedChannelModes
+  id: SupportedChannelModes
+  parent: smIRCL
+  children:
+  - smIRCL.SupportedChannelModes.A
+  - smIRCL.SupportedChannelModes.B
+  - smIRCL.SupportedChannelModes.C
+  - smIRCL.SupportedChannelModes.D
+  langs:
+  - csharp
+  - vb
+  name: SupportedChannelModes
+  nameWithType: SupportedChannelModes
+  fullName: smIRCL.SupportedChannelModes
+  type: Class
+  source:
+    remote:
+      path: smIRCL/SupportedChannelModes.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: SupportedChannelModes
+    path: ../smIRCL/SupportedChannelModes.cs
+    startLine: 4
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: 'public class SupportedChannelModes : object'
+    content.vb: >-
+      Public Class SupportedChannelModes
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: smIRCL.SupportedChannelModes.A
+  commentId: P:smIRCL.SupportedChannelModes.A
+  id: A
+  parent: smIRCL.SupportedChannelModes
+  langs:
+  - csharp
+  - vb
+  name: A
+  nameWithType: SupportedChannelModes.A
+  fullName: smIRCL.SupportedChannelModes.A
+  type: Property
+  source:
+    remote:
+      path: smIRCL/SupportedChannelModes.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: A
+    path: ../smIRCL/SupportedChannelModes.cs
+    startLine: 6
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public List<char> A { get; set; }
+    parameters: []
+    return:
+      type: List{System.Char}
+    content.vb: Public Property A As List(Of Char)
+  overload: smIRCL.SupportedChannelModes.A*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: smIRCL.SupportedChannelModes.B
+  commentId: P:smIRCL.SupportedChannelModes.B
+  id: B
+  parent: smIRCL.SupportedChannelModes
+  langs:
+  - csharp
+  - vb
+  name: B
+  nameWithType: SupportedChannelModes.B
+  fullName: smIRCL.SupportedChannelModes.B
+  type: Property
+  source:
+    remote:
+      path: smIRCL/SupportedChannelModes.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: B
+    path: ../smIRCL/SupportedChannelModes.cs
+    startLine: 7
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public List<char> B { get; set; }
+    parameters: []
+    return:
+      type: List{System.Char}
+    content.vb: Public Property B As List(Of Char)
+  overload: smIRCL.SupportedChannelModes.B*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: smIRCL.SupportedChannelModes.C
+  commentId: P:smIRCL.SupportedChannelModes.C
+  id: C
+  parent: smIRCL.SupportedChannelModes
+  langs:
+  - csharp
+  - vb
+  name: C
+  nameWithType: SupportedChannelModes.C
+  fullName: smIRCL.SupportedChannelModes.C
+  type: Property
+  source:
+    remote:
+      path: smIRCL/SupportedChannelModes.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: C
+    path: ../smIRCL/SupportedChannelModes.cs
+    startLine: 8
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public List<char> C { get; set; }
+    parameters: []
+    return:
+      type: List{System.Char}
+    content.vb: Public Property C As List(Of Char)
+  overload: smIRCL.SupportedChannelModes.C*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: smIRCL.SupportedChannelModes.D
+  commentId: P:smIRCL.SupportedChannelModes.D
+  id: D
+  parent: smIRCL.SupportedChannelModes
+  langs:
+  - csharp
+  - vb
+  name: D
+  nameWithType: SupportedChannelModes.D
+  fullName: smIRCL.SupportedChannelModes.D
+  type: Property
+  source:
+    remote:
+      path: smIRCL/SupportedChannelModes.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: D
+    path: ../smIRCL/SupportedChannelModes.cs
+    startLine: 9
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public List<char> D { get; set; }
+    parameters: []
+    return:
+      type: List{System.Char}
+    content.vb: Public Property D As List(Of Char)
+  overload: smIRCL.SupportedChannelModes.D*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: smIRCL
+  commentId: N:smIRCL
+  name: smIRCL
+  nameWithType: smIRCL
+  fullName: smIRCL
+- uid: smIRCL.SupportedChannelModes.A*
+  commentId: Overload:smIRCL.SupportedChannelModes.A
+  name: A
+  nameWithType: SupportedChannelModes.A
+  fullName: smIRCL.SupportedChannelModes.A
+- uid: List{System.Char}
+  commentId: '!:List{System.Char}'
+  definition: List`1
+  name: List<Char>
+  nameWithType: List<Char>
+  fullName: List<System.Char>
+  nameWithType.vb: List(Of Char)
+  fullName.vb: List(Of System.Char)
+  name.vb: List(Of Char)
+  spec.csharp:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Char
+    name: Char
+    nameWithType: Char
+    fullName: System.Char
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Char
+    name: Char
+    nameWithType: Char
+    fullName: System.Char
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: List`1
+  isExternal: true
+  name: List<>
+  nameWithType: List<>
+  fullName: List<>
+  nameWithType.vb: List(Of )
+  fullName.vb: List(Of )
+  name.vb: List(Of )
+  spec.csharp:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: smIRCL.SupportedChannelModes.B*
+  commentId: Overload:smIRCL.SupportedChannelModes.B
+  name: B
+  nameWithType: SupportedChannelModes.B
+  fullName: smIRCL.SupportedChannelModes.B
+- uid: smIRCL.SupportedChannelModes.C*
+  commentId: Overload:smIRCL.SupportedChannelModes.C
+  name: C
+  nameWithType: SupportedChannelModes.C
+  fullName: smIRCL.SupportedChannelModes.C
+- uid: smIRCL.SupportedChannelModes.D*
+  commentId: Overload:smIRCL.SupportedChannelModes.D
+  name: D
+  nameWithType: SupportedChannelModes.D
+  fullName: smIRCL.SupportedChannelModes.D

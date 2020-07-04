@@ -1,0 +1,40 @@
+### YamlMime:ManagedReference
+items:
+- uid: smIRCL.IrcConnector.ConnectionStateEventHandler
+  commentId: T:smIRCL.IrcConnector.ConnectionStateEventHandler
+  id: IrcConnector.ConnectionStateEventHandler
+  parent: smIRCL
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: IrcConnector.ConnectionStateEventHandler
+  nameWithType: IrcConnector.ConnectionStateEventHandler
+  fullName: smIRCL.IrcConnector.ConnectionStateEventHandler
+  type: Delegate
+  source:
+    remote:
+      path: smIRCL/IrcConnector.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: ConnectionStateEventHandler
+    path: ../smIRCL/IrcConnector.cs
+    startLine: 26
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public delegate void ConnectionStateEventHandler();
+    content.vb: Public Delegate Sub ConnectionStateEventHandler
+  modifiers.csharp:
+  - public
+  - delegate
+  modifiers.vb:
+  - Public
+  - Delegate
+references:
+- uid: smIRCL
+  commentId: N:smIRCL
+  name: smIRCL
+  nameWithType: smIRCL
+  fullName: smIRCL

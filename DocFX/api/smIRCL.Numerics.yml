@@ -1,0 +1,5524 @@
+### YamlMime:ManagedReference
+items:
+- uid: smIRCL.Numerics
+  commentId: T:smIRCL.Numerics
+  id: Numerics
+  parent: smIRCL
+  children:
+  - smIRCL.Numerics.ERR_ALREADYREGISTERED
+  - smIRCL.Numerics.ERR_BADCHANMASK
+  - smIRCL.Numerics.ERR_BADCHANNELKEY
+  - smIRCL.Numerics.ERR_BADMASK
+  - smIRCL.Numerics.ERR_BANLISTFULL
+  - smIRCL.Numerics.ERR_BANNEDFROMCHAN
+  - smIRCL.Numerics.ERR_CANNOTSENDTOCHAN
+  - smIRCL.Numerics.ERR_CANTKILLSERVER
+  - smIRCL.Numerics.ERR_CHANNELISFULL
+  - smIRCL.Numerics.ERR_CHANOPRIVSNEEDED
+  - smIRCL.Numerics.ERR_ERRONEUSNICKNAME
+  - smIRCL.Numerics.ERR_FILEERROR
+  - smIRCL.Numerics.ERR_INVITEONLYCHAN
+  - smIRCL.Numerics.ERR_KEYSET
+  - smIRCL.Numerics.ERR_NEEDMOREPARAMS
+  - smIRCL.Numerics.ERR_NICKCOLLISION
+  - smIRCL.Numerics.ERR_NICKNAMEINUSE
+  - smIRCL.Numerics.ERR_NOADMININFO
+  - smIRCL.Numerics.ERR_NOCHANMODES
+  - smIRCL.Numerics.ERR_NOLOGIN
+  - smIRCL.Numerics.ERR_NOMOTD
+  - smIRCL.Numerics.ERR_NONICKNAMEGIVEN
+  - smIRCL.Numerics.ERR_NOOPERHOST
+  - smIRCL.Numerics.ERR_NOORIGIN
+  - smIRCL.Numerics.ERR_NOPERMFORHOST
+  - smIRCL.Numerics.ERR_NOPRIVILEGES
+  - smIRCL.Numerics.ERR_NORECIPIENT
+  - smIRCL.Numerics.ERR_NOSERVICEHOST
+  - smIRCL.Numerics.ERR_NOSUCHCHANNEL
+  - smIRCL.Numerics.ERR_NOSUCHNICK
+  - smIRCL.Numerics.ERR_NOSUCHSERVER
+  - smIRCL.Numerics.ERR_NOSUCHSERVICE
+  - smIRCL.Numerics.ERR_NOTEXTTOSEND
+  - smIRCL.Numerics.ERR_NOTINCHANNEL
+  - smIRCL.Numerics.ERR_NOTOPLEVEL
+  - smIRCL.Numerics.ERR_NOTREGISTERED
+  - smIRCL.Numerics.ERR_PASSWDMISMATCH
+  - smIRCL.Numerics.ERR_RESTRICTED
+  - smIRCL.Numerics.ERR_SUMMONDISABLED
+  - smIRCL.Numerics.ERR_TOOMANYCHANNELS
+  - smIRCL.Numerics.ERR_TOOMANYTARGETS
+  - smIRCL.Numerics.ERR_UMODEUNKNOWNFLAG
+  - smIRCL.Numerics.ERR_UNAVAILRESOURCE
+  - smIRCL.Numerics.ERR_UNIQOPPRIVSNEEDED
+  - smIRCL.Numerics.ERR_UNKNOWNCOMMAND
+  - smIRCL.Numerics.ERR_UNKNOWNMODE
+  - smIRCL.Numerics.ERR_USERDISABLED
+  - smIRCL.Numerics.ERR_USERNOTINCHANNEL
+  - smIRCL.Numerics.ERR_USERONCHANNEL
+  - smIRCL.Numerics.ERR_USERSDONTMATCH
+  - smIRCL.Numerics.ERR_WASNOSUCHNICK
+  - smIRCL.Numerics.ERR_WILDTOPLEVEL
+  - smIRCL.Numerics.ERR_YOUREBANNEDCREEP
+  - smIRCL.Numerics.ERR_YOUWILLBEBANNED
+  - smIRCL.Numerics.RPL_ADMINEMAIL
+  - smIRCL.Numerics.RPL_ADMINLOC1
+  - smIRCL.Numerics.RPL_ADMINLOC2
+  - smIRCL.Numerics.RPL_ADMINME
+  - smIRCL.Numerics.RPL_AWAY
+  - smIRCL.Numerics.RPL_BANLIST
+  - smIRCL.Numerics.RPL_BOUNCE
+  - smIRCL.Numerics.RPL_CHANNELMODEIS
+  - smIRCL.Numerics.RPL_CLODEEND
+  - smIRCL.Numerics.RPL_CLOSING
+  - smIRCL.Numerics.RPL_CREATED
+  - smIRCL.Numerics.RPL_ENDOFBANLIST
+  - smIRCL.Numerics.RPL_ENDOFEXCEPTLIST
+  - smIRCL.Numerics.RPL_ENDOFINFO
+  - smIRCL.Numerics.RPL_ENDOFINVITELIST
+  - smIRCL.Numerics.RPL_ENDOFLINKS
+  - smIRCL.Numerics.RPL_ENDOFMOTD
+  - smIRCL.Numerics.RPL_ENDOFNAMES
+  - smIRCL.Numerics.RPL_ENDOFSERVICES
+  - smIRCL.Numerics.RPL_ENDOFSTATS
+  - smIRCL.Numerics.RPL_ENDOFUSERS
+  - smIRCL.Numerics.RPL_ENDOFWHO
+  - smIRCL.Numerics.RPL_ENDOFWHOIS
+  - smIRCL.Numerics.RPL_ENDOFWHOWAS
+  - smIRCL.Numerics.RPL_EXCEPTLIST
+  - smIRCL.Numerics.RPL_HOSTHIDDEN
+  - smIRCL.Numerics.RPL_INFO
+  - smIRCL.Numerics.RPL_INFOSTART
+  - smIRCL.Numerics.RPL_INVITELIST
+  - smIRCL.Numerics.RPL_INVITING
+  - smIRCL.Numerics.RPL_ISON
+  - smIRCL.Numerics.RPL_ISUPPORT
+  - smIRCL.Numerics.RPL_KILLDONE
+  - smIRCL.Numerics.RPL_LINKS
+  - smIRCL.Numerics.RPL_LIST
+  - smIRCL.Numerics.RPL_LISTEND
+  - smIRCL.Numerics.RPL_LUSERCHANNELS
+  - smIRCL.Numerics.RPL_LUSERCLIENT
+  - smIRCL.Numerics.RPL_LUSERME
+  - smIRCL.Numerics.RPL_LUSEROP
+  - smIRCL.Numerics.RPL_LUSERUNKNOWN
+  - smIRCL.Numerics.RPL_MOTD
+  - smIRCL.Numerics.RPL_MOTDSTART
+  - smIRCL.Numerics.RPL_MYINFO
+  - smIRCL.Numerics.RPL_MYPORTIS
+  - smIRCL.Numerics.RPL_NAMREPLY
+  - smIRCL.Numerics.RPL_NONE
+  - smIRCL.Numerics.RPL_NOTOPIC
+  - smIRCL.Numerics.RPL_NOUSERS
+  - smIRCL.Numerics.RPL_NOWAWAY
+  - smIRCL.Numerics.RPL_REHASHING
+  - smIRCL.Numerics.RPL_RPL_LISTSTART
+  - smIRCL.Numerics.RPL_SERVICE
+  - smIRCL.Numerics.RPL_SERVICEINFO
+  - smIRCL.Numerics.RPL_SERVLIST
+  - smIRCL.Numerics.RPL_SERVLISTEND
+  - smIRCL.Numerics.RPL_STATSBLINE
+  - smIRCL.Numerics.RPL_STATSCLINE
+  - smIRCL.Numerics.RPL_STATSCOMMANDS
+  - smIRCL.Numerics.RPL_STATSDLINE
+  - smIRCL.Numerics.RPL_STATSHLINE
+  - smIRCL.Numerics.RPL_STATSILINE
+  - smIRCL.Numerics.RPL_STATSKLINE
+  - smIRCL.Numerics.RPL_STATSLINKINFO
+  - smIRCL.Numerics.RPL_STATSLLINE
+  - smIRCL.Numerics.RPL_STATSNLINE
+  - smIRCL.Numerics.RPL_STATSOLINE
+  - smIRCL.Numerics.RPL_STATSPING
+  - smIRCL.Numerics.RPL_STATSQLINE
+  - smIRCL.Numerics.RPL_STATSSLINE
+  - smIRCL.Numerics.RPL_STATSUPTIME
+  - smIRCL.Numerics.RPL_STATSVLINE
+  - smIRCL.Numerics.RPL_STATSYLINE
+  - smIRCL.Numerics.RPL_SUMMONING
+  - smIRCL.Numerics.RPL_TIME
+  - smIRCL.Numerics.RPL_TOPIC
+  - smIRCL.Numerics.RPL_TRACECLASS
+  - smIRCL.Numerics.RPL_TRACECONNECTING
+  - smIRCL.Numerics.RPL_TRACEEND
+  - smIRCL.Numerics.RPL_TRACEHANDSHAKE
+  - smIRCL.Numerics.RPL_TRACELINK
+  - smIRCL.Numerics.RPL_TRACELOG
+  - smIRCL.Numerics.RPL_TRACENEWTYPE
+  - smIRCL.Numerics.RPL_TRACEOPERATOR
+  - smIRCL.Numerics.RPL_TRACERECONNECT
+  - smIRCL.Numerics.RPL_TRACESERVER
+  - smIRCL.Numerics.RPL_TRACEUNKNOWN
+  - smIRCL.Numerics.RPL_TRACEUSER
+  - smIRCL.Numerics.RPL_TRYAGAIN
+  - smIRCL.Numerics.RPL_UMODEIS
+  - smIRCL.Numerics.RPL_UNAWAY
+  - smIRCL.Numerics.RPL_UNIQOPIS
+  - smIRCL.Numerics.RPL_USERHOST
+  - smIRCL.Numerics.RPL_USERS
+  - smIRCL.Numerics.RPL_USERSSTART
+  - smIRCL.Numerics.RPL_VERSION
+  - smIRCL.Numerics.RPL_WELCOME
+  - smIRCL.Numerics.RPL_WHOISCHANNELS
+  - smIRCL.Numerics.RPL_WHOISIDLE
+  - smIRCL.Numerics.RPL_WHOISOPERATOR
+  - smIRCL.Numerics.RPL_WHOISSERVER
+  - smIRCL.Numerics.RPL_WHOISUSER
+  - smIRCL.Numerics.RPL_WHOREPLY
+  - smIRCL.Numerics.RPL_WHOWASUSER
+  - smIRCL.Numerics.RPL_YOUREOPER
+  - smIRCL.Numerics.RPL_YOURESERVICE
+  - smIRCL.Numerics.RPL_YOURHOST
+  langs:
+  - csharp
+  - vb
+  name: Numerics
+  nameWithType: Numerics
+  fullName: smIRCL.Numerics
+  type: Class
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: Numerics
+    path: ../smIRCL/Numerics.cs
+    startLine: 7
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: 'public static class Numerics : object'
+    content.vb: >-
+      Public Module Numerics
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: smIRCL.Numerics.RPL_WELCOME
+  commentId: F:smIRCL.Numerics.RPL_WELCOME
+  id: RPL_WELCOME
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_WELCOME
+  nameWithType: Numerics.RPL_WELCOME
+  fullName: smIRCL.Numerics.RPL_WELCOME
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_WELCOME
+    path: ../smIRCL/Numerics.cs
+    startLine: 12
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_WELCOME = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_WELCOME As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_YOURHOST
+  commentId: F:smIRCL.Numerics.RPL_YOURHOST
+  id: RPL_YOURHOST
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_YOURHOST
+  nameWithType: Numerics.RPL_YOURHOST
+  fullName: smIRCL.Numerics.RPL_YOURHOST
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_YOURHOST
+    path: ../smIRCL/Numerics.cs
+    startLine: 13
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_YOURHOST = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_YOURHOST As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_CREATED
+  commentId: F:smIRCL.Numerics.RPL_CREATED
+  id: RPL_CREATED
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_CREATED
+  nameWithType: Numerics.RPL_CREATED
+  fullName: smIRCL.Numerics.RPL_CREATED
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_CREATED
+    path: ../smIRCL/Numerics.cs
+    startLine: 14
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_CREATED = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_CREATED As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_MYINFO
+  commentId: F:smIRCL.Numerics.RPL_MYINFO
+  id: RPL_MYINFO
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_MYINFO
+  nameWithType: Numerics.RPL_MYINFO
+  fullName: smIRCL.Numerics.RPL_MYINFO
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_MYINFO
+    path: ../smIRCL/Numerics.cs
+    startLine: 15
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_MYINFO = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_MYINFO As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_BOUNCE
+  commentId: F:smIRCL.Numerics.RPL_BOUNCE
+  id: RPL_BOUNCE
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_BOUNCE
+  nameWithType: Numerics.RPL_BOUNCE
+  fullName: smIRCL.Numerics.RPL_BOUNCE
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_BOUNCE
+    path: ../smIRCL/Numerics.cs
+    startLine: 16
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_BOUNCE = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_BOUNCE As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_ISUPPORT
+  commentId: F:smIRCL.Numerics.RPL_ISUPPORT
+  id: RPL_ISUPPORT
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_ISUPPORT
+  nameWithType: Numerics.RPL_ISUPPORT
+  fullName: smIRCL.Numerics.RPL_ISUPPORT
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_ISUPPORT
+    path: ../smIRCL/Numerics.cs
+    startLine: 17
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_ISUPPORT = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_ISUPPORT As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_AWAY
+  commentId: F:smIRCL.Numerics.RPL_AWAY
+  id: RPL_AWAY
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_AWAY
+  nameWithType: Numerics.RPL_AWAY
+  fullName: smIRCL.Numerics.RPL_AWAY
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_AWAY
+    path: ../smIRCL/Numerics.cs
+    startLine: 18
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_AWAY = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_AWAY As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_USERHOST
+  commentId: F:smIRCL.Numerics.RPL_USERHOST
+  id: RPL_USERHOST
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_USERHOST
+  nameWithType: Numerics.RPL_USERHOST
+  fullName: smIRCL.Numerics.RPL_USERHOST
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_USERHOST
+    path: ../smIRCL/Numerics.cs
+    startLine: 19
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_USERHOST = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_USERHOST As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_ISON
+  commentId: F:smIRCL.Numerics.RPL_ISON
+  id: RPL_ISON
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_ISON
+  nameWithType: Numerics.RPL_ISON
+  fullName: smIRCL.Numerics.RPL_ISON
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_ISON
+    path: ../smIRCL/Numerics.cs
+    startLine: 20
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_ISON = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_ISON As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_UNAWAY
+  commentId: F:smIRCL.Numerics.RPL_UNAWAY
+  id: RPL_UNAWAY
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_UNAWAY
+  nameWithType: Numerics.RPL_UNAWAY
+  fullName: smIRCL.Numerics.RPL_UNAWAY
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_UNAWAY
+    path: ../smIRCL/Numerics.cs
+    startLine: 21
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_UNAWAY = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_UNAWAY As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_NOWAWAY
+  commentId: F:smIRCL.Numerics.RPL_NOWAWAY
+  id: RPL_NOWAWAY
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_NOWAWAY
+  nameWithType: Numerics.RPL_NOWAWAY
+  fullName: smIRCL.Numerics.RPL_NOWAWAY
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_NOWAWAY
+    path: ../smIRCL/Numerics.cs
+    startLine: 22
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_NOWAWAY = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_NOWAWAY As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_WHOISUSER
+  commentId: F:smIRCL.Numerics.RPL_WHOISUSER
+  id: RPL_WHOISUSER
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_WHOISUSER
+  nameWithType: Numerics.RPL_WHOISUSER
+  fullName: smIRCL.Numerics.RPL_WHOISUSER
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_WHOISUSER
+    path: ../smIRCL/Numerics.cs
+    startLine: 23
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_WHOISUSER = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_WHOISUSER As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_WHOISSERVER
+  commentId: F:smIRCL.Numerics.RPL_WHOISSERVER
+  id: RPL_WHOISSERVER
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_WHOISSERVER
+  nameWithType: Numerics.RPL_WHOISSERVER
+  fullName: smIRCL.Numerics.RPL_WHOISSERVER
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_WHOISSERVER
+    path: ../smIRCL/Numerics.cs
+    startLine: 24
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_WHOISSERVER = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_WHOISSERVER As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_WHOISOPERATOR
+  commentId: F:smIRCL.Numerics.RPL_WHOISOPERATOR
+  id: RPL_WHOISOPERATOR
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_WHOISOPERATOR
+  nameWithType: Numerics.RPL_WHOISOPERATOR
+  fullName: smIRCL.Numerics.RPL_WHOISOPERATOR
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_WHOISOPERATOR
+    path: ../smIRCL/Numerics.cs
+    startLine: 25
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_WHOISOPERATOR = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_WHOISOPERATOR As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_WHOWASUSER
+  commentId: F:smIRCL.Numerics.RPL_WHOWASUSER
+  id: RPL_WHOWASUSER
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_WHOWASUSER
+  nameWithType: Numerics.RPL_WHOWASUSER
+  fullName: smIRCL.Numerics.RPL_WHOWASUSER
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_WHOWASUSER
+    path: ../smIRCL/Numerics.cs
+    startLine: 26
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_WHOWASUSER = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_WHOWASUSER As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_ENDOFWHO
+  commentId: F:smIRCL.Numerics.RPL_ENDOFWHO
+  id: RPL_ENDOFWHO
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_ENDOFWHO
+  nameWithType: Numerics.RPL_ENDOFWHO
+  fullName: smIRCL.Numerics.RPL_ENDOFWHO
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_ENDOFWHO
+    path: ../smIRCL/Numerics.cs
+    startLine: 27
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_ENDOFWHO = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_ENDOFWHO As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_WHOISIDLE
+  commentId: F:smIRCL.Numerics.RPL_WHOISIDLE
+  id: RPL_WHOISIDLE
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_WHOISIDLE
+  nameWithType: Numerics.RPL_WHOISIDLE
+  fullName: smIRCL.Numerics.RPL_WHOISIDLE
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_WHOISIDLE
+    path: ../smIRCL/Numerics.cs
+    startLine: 28
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_WHOISIDLE = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_WHOISIDLE As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_ENDOFWHOIS
+  commentId: F:smIRCL.Numerics.RPL_ENDOFWHOIS
+  id: RPL_ENDOFWHOIS
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_ENDOFWHOIS
+  nameWithType: Numerics.RPL_ENDOFWHOIS
+  fullName: smIRCL.Numerics.RPL_ENDOFWHOIS
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_ENDOFWHOIS
+    path: ../smIRCL/Numerics.cs
+    startLine: 29
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_ENDOFWHOIS = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_ENDOFWHOIS As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_WHOISCHANNELS
+  commentId: F:smIRCL.Numerics.RPL_WHOISCHANNELS
+  id: RPL_WHOISCHANNELS
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_WHOISCHANNELS
+  nameWithType: Numerics.RPL_WHOISCHANNELS
+  fullName: smIRCL.Numerics.RPL_WHOISCHANNELS
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_WHOISCHANNELS
+    path: ../smIRCL/Numerics.cs
+    startLine: 30
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_WHOISCHANNELS = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_WHOISCHANNELS As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_RPL_LISTSTART
+  commentId: F:smIRCL.Numerics.RPL_RPL_LISTSTART
+  id: RPL_RPL_LISTSTART
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_RPL_LISTSTART
+  nameWithType: Numerics.RPL_RPL_LISTSTART
+  fullName: smIRCL.Numerics.RPL_RPL_LISTSTART
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_RPL_LISTSTART
+    path: ../smIRCL/Numerics.cs
+    startLine: 31
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_RPL_LISTSTART = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_RPL_LISTSTART As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_LIST
+  commentId: F:smIRCL.Numerics.RPL_LIST
+  id: RPL_LIST
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_LIST
+  nameWithType: Numerics.RPL_LIST
+  fullName: smIRCL.Numerics.RPL_LIST
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_LIST
+    path: ../smIRCL/Numerics.cs
+    startLine: 32
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_LIST = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_LIST As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_LISTEND
+  commentId: F:smIRCL.Numerics.RPL_LISTEND
+  id: RPL_LISTEND
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_LISTEND
+  nameWithType: Numerics.RPL_LISTEND
+  fullName: smIRCL.Numerics.RPL_LISTEND
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_LISTEND
+    path: ../smIRCL/Numerics.cs
+    startLine: 33
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_LISTEND = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_LISTEND As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_CHANNELMODEIS
+  commentId: F:smIRCL.Numerics.RPL_CHANNELMODEIS
+  id: RPL_CHANNELMODEIS
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_CHANNELMODEIS
+  nameWithType: Numerics.RPL_CHANNELMODEIS
+  fullName: smIRCL.Numerics.RPL_CHANNELMODEIS
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_CHANNELMODEIS
+    path: ../smIRCL/Numerics.cs
+    startLine: 34
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_CHANNELMODEIS = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_CHANNELMODEIS As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_UNIQOPIS
+  commentId: F:smIRCL.Numerics.RPL_UNIQOPIS
+  id: RPL_UNIQOPIS
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_UNIQOPIS
+  nameWithType: Numerics.RPL_UNIQOPIS
+  fullName: smIRCL.Numerics.RPL_UNIQOPIS
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_UNIQOPIS
+    path: ../smIRCL/Numerics.cs
+    startLine: 35
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_UNIQOPIS = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_UNIQOPIS As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_NOTOPIC
+  commentId: F:smIRCL.Numerics.RPL_NOTOPIC
+  id: RPL_NOTOPIC
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_NOTOPIC
+  nameWithType: Numerics.RPL_NOTOPIC
+  fullName: smIRCL.Numerics.RPL_NOTOPIC
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_NOTOPIC
+    path: ../smIRCL/Numerics.cs
+    startLine: 36
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_NOTOPIC = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_NOTOPIC As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_TOPIC
+  commentId: F:smIRCL.Numerics.RPL_TOPIC
+  id: RPL_TOPIC
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_TOPIC
+  nameWithType: Numerics.RPL_TOPIC
+  fullName: smIRCL.Numerics.RPL_TOPIC
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_TOPIC
+    path: ../smIRCL/Numerics.cs
+    startLine: 37
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_TOPIC = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_TOPIC As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_INVITING
+  commentId: F:smIRCL.Numerics.RPL_INVITING
+  id: RPL_INVITING
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_INVITING
+  nameWithType: Numerics.RPL_INVITING
+  fullName: smIRCL.Numerics.RPL_INVITING
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_INVITING
+    path: ../smIRCL/Numerics.cs
+    startLine: 38
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_INVITING = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_INVITING As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_SUMMONING
+  commentId: F:smIRCL.Numerics.RPL_SUMMONING
+  id: RPL_SUMMONING
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_SUMMONING
+  nameWithType: Numerics.RPL_SUMMONING
+  fullName: smIRCL.Numerics.RPL_SUMMONING
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_SUMMONING
+    path: ../smIRCL/Numerics.cs
+    startLine: 39
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_SUMMONING = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_SUMMONING As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_INVITELIST
+  commentId: F:smIRCL.Numerics.RPL_INVITELIST
+  id: RPL_INVITELIST
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_INVITELIST
+  nameWithType: Numerics.RPL_INVITELIST
+  fullName: smIRCL.Numerics.RPL_INVITELIST
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_INVITELIST
+    path: ../smIRCL/Numerics.cs
+    startLine: 40
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_INVITELIST = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_INVITELIST As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_ENDOFINVITELIST
+  commentId: F:smIRCL.Numerics.RPL_ENDOFINVITELIST
+  id: RPL_ENDOFINVITELIST
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_ENDOFINVITELIST
+  nameWithType: Numerics.RPL_ENDOFINVITELIST
+  fullName: smIRCL.Numerics.RPL_ENDOFINVITELIST
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_ENDOFINVITELIST
+    path: ../smIRCL/Numerics.cs
+    startLine: 41
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_ENDOFINVITELIST = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_ENDOFINVITELIST As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_EXCEPTLIST
+  commentId: F:smIRCL.Numerics.RPL_EXCEPTLIST
+  id: RPL_EXCEPTLIST
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_EXCEPTLIST
+  nameWithType: Numerics.RPL_EXCEPTLIST
+  fullName: smIRCL.Numerics.RPL_EXCEPTLIST
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_EXCEPTLIST
+    path: ../smIRCL/Numerics.cs
+    startLine: 42
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_EXCEPTLIST = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_EXCEPTLIST As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_ENDOFEXCEPTLIST
+  commentId: F:smIRCL.Numerics.RPL_ENDOFEXCEPTLIST
+  id: RPL_ENDOFEXCEPTLIST
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_ENDOFEXCEPTLIST
+  nameWithType: Numerics.RPL_ENDOFEXCEPTLIST
+  fullName: smIRCL.Numerics.RPL_ENDOFEXCEPTLIST
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_ENDOFEXCEPTLIST
+    path: ../smIRCL/Numerics.cs
+    startLine: 43
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_ENDOFEXCEPTLIST = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_ENDOFEXCEPTLIST As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_VERSION
+  commentId: F:smIRCL.Numerics.RPL_VERSION
+  id: RPL_VERSION
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_VERSION
+  nameWithType: Numerics.RPL_VERSION
+  fullName: smIRCL.Numerics.RPL_VERSION
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_VERSION
+    path: ../smIRCL/Numerics.cs
+    startLine: 44
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_VERSION = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_VERSION As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_WHOREPLY
+  commentId: F:smIRCL.Numerics.RPL_WHOREPLY
+  id: RPL_WHOREPLY
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_WHOREPLY
+  nameWithType: Numerics.RPL_WHOREPLY
+  fullName: smIRCL.Numerics.RPL_WHOREPLY
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_WHOREPLY
+    path: ../smIRCL/Numerics.cs
+    startLine: 45
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_WHOREPLY = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_WHOREPLY As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_NAMREPLY
+  commentId: F:smIRCL.Numerics.RPL_NAMREPLY
+  id: RPL_NAMREPLY
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_NAMREPLY
+  nameWithType: Numerics.RPL_NAMREPLY
+  fullName: smIRCL.Numerics.RPL_NAMREPLY
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_NAMREPLY
+    path: ../smIRCL/Numerics.cs
+    startLine: 46
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_NAMREPLY = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_NAMREPLY As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_LINKS
+  commentId: F:smIRCL.Numerics.RPL_LINKS
+  id: RPL_LINKS
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_LINKS
+  nameWithType: Numerics.RPL_LINKS
+  fullName: smIRCL.Numerics.RPL_LINKS
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_LINKS
+    path: ../smIRCL/Numerics.cs
+    startLine: 47
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_LINKS = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_LINKS As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_ENDOFLINKS
+  commentId: F:smIRCL.Numerics.RPL_ENDOFLINKS
+  id: RPL_ENDOFLINKS
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_ENDOFLINKS
+  nameWithType: Numerics.RPL_ENDOFLINKS
+  fullName: smIRCL.Numerics.RPL_ENDOFLINKS
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_ENDOFLINKS
+    path: ../smIRCL/Numerics.cs
+    startLine: 48
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_ENDOFLINKS = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_ENDOFLINKS As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_ENDOFNAMES
+  commentId: F:smIRCL.Numerics.RPL_ENDOFNAMES
+  id: RPL_ENDOFNAMES
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_ENDOFNAMES
+  nameWithType: Numerics.RPL_ENDOFNAMES
+  fullName: smIRCL.Numerics.RPL_ENDOFNAMES
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_ENDOFNAMES
+    path: ../smIRCL/Numerics.cs
+    startLine: 49
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_ENDOFNAMES = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_ENDOFNAMES As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_BANLIST
+  commentId: F:smIRCL.Numerics.RPL_BANLIST
+  id: RPL_BANLIST
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_BANLIST
+  nameWithType: Numerics.RPL_BANLIST
+  fullName: smIRCL.Numerics.RPL_BANLIST
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_BANLIST
+    path: ../smIRCL/Numerics.cs
+    startLine: 50
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_BANLIST = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_BANLIST As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_ENDOFBANLIST
+  commentId: F:smIRCL.Numerics.RPL_ENDOFBANLIST
+  id: RPL_ENDOFBANLIST
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_ENDOFBANLIST
+  nameWithType: Numerics.RPL_ENDOFBANLIST
+  fullName: smIRCL.Numerics.RPL_ENDOFBANLIST
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_ENDOFBANLIST
+    path: ../smIRCL/Numerics.cs
+    startLine: 51
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_ENDOFBANLIST = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_ENDOFBANLIST As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_ENDOFWHOWAS
+  commentId: F:smIRCL.Numerics.RPL_ENDOFWHOWAS
+  id: RPL_ENDOFWHOWAS
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_ENDOFWHOWAS
+  nameWithType: Numerics.RPL_ENDOFWHOWAS
+  fullName: smIRCL.Numerics.RPL_ENDOFWHOWAS
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_ENDOFWHOWAS
+    path: ../smIRCL/Numerics.cs
+    startLine: 52
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_ENDOFWHOWAS = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_ENDOFWHOWAS As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_INFO
+  commentId: F:smIRCL.Numerics.RPL_INFO
+  id: RPL_INFO
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_INFO
+  nameWithType: Numerics.RPL_INFO
+  fullName: smIRCL.Numerics.RPL_INFO
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_INFO
+    path: ../smIRCL/Numerics.cs
+    startLine: 53
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_INFO = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_INFO As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_MOTD
+  commentId: F:smIRCL.Numerics.RPL_MOTD
+  id: RPL_MOTD
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_MOTD
+  nameWithType: Numerics.RPL_MOTD
+  fullName: smIRCL.Numerics.RPL_MOTD
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_MOTD
+    path: ../smIRCL/Numerics.cs
+    startLine: 54
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_MOTD = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_MOTD As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_ENDOFINFO
+  commentId: F:smIRCL.Numerics.RPL_ENDOFINFO
+  id: RPL_ENDOFINFO
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_ENDOFINFO
+  nameWithType: Numerics.RPL_ENDOFINFO
+  fullName: smIRCL.Numerics.RPL_ENDOFINFO
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_ENDOFINFO
+    path: ../smIRCL/Numerics.cs
+    startLine: 55
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_ENDOFINFO = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_ENDOFINFO As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_MOTDSTART
+  commentId: F:smIRCL.Numerics.RPL_MOTDSTART
+  id: RPL_MOTDSTART
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_MOTDSTART
+  nameWithType: Numerics.RPL_MOTDSTART
+  fullName: smIRCL.Numerics.RPL_MOTDSTART
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_MOTDSTART
+    path: ../smIRCL/Numerics.cs
+    startLine: 56
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_MOTDSTART = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_MOTDSTART As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_ENDOFMOTD
+  commentId: F:smIRCL.Numerics.RPL_ENDOFMOTD
+  id: RPL_ENDOFMOTD
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_ENDOFMOTD
+  nameWithType: Numerics.RPL_ENDOFMOTD
+  fullName: smIRCL.Numerics.RPL_ENDOFMOTD
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_ENDOFMOTD
+    path: ../smIRCL/Numerics.cs
+    startLine: 57
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_ENDOFMOTD = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_ENDOFMOTD As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_YOUREOPER
+  commentId: F:smIRCL.Numerics.RPL_YOUREOPER
+  id: RPL_YOUREOPER
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_YOUREOPER
+  nameWithType: Numerics.RPL_YOUREOPER
+  fullName: smIRCL.Numerics.RPL_YOUREOPER
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_YOUREOPER
+    path: ../smIRCL/Numerics.cs
+    startLine: 58
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_YOUREOPER = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_YOUREOPER As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_REHASHING
+  commentId: F:smIRCL.Numerics.RPL_REHASHING
+  id: RPL_REHASHING
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_REHASHING
+  nameWithType: Numerics.RPL_REHASHING
+  fullName: smIRCL.Numerics.RPL_REHASHING
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_REHASHING
+    path: ../smIRCL/Numerics.cs
+    startLine: 59
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_REHASHING = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_REHASHING As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_YOURESERVICE
+  commentId: F:smIRCL.Numerics.RPL_YOURESERVICE
+  id: RPL_YOURESERVICE
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_YOURESERVICE
+  nameWithType: Numerics.RPL_YOURESERVICE
+  fullName: smIRCL.Numerics.RPL_YOURESERVICE
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_YOURESERVICE
+    path: ../smIRCL/Numerics.cs
+    startLine: 60
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_YOURESERVICE = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_YOURESERVICE As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_TIME
+  commentId: F:smIRCL.Numerics.RPL_TIME
+  id: RPL_TIME
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_TIME
+  nameWithType: Numerics.RPL_TIME
+  fullName: smIRCL.Numerics.RPL_TIME
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_TIME
+    path: ../smIRCL/Numerics.cs
+    startLine: 61
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_TIME = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_TIME As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_USERSSTART
+  commentId: F:smIRCL.Numerics.RPL_USERSSTART
+  id: RPL_USERSSTART
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_USERSSTART
+  nameWithType: Numerics.RPL_USERSSTART
+  fullName: smIRCL.Numerics.RPL_USERSSTART
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_USERSSTART
+    path: ../smIRCL/Numerics.cs
+    startLine: 62
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_USERSSTART = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_USERSSTART As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_USERS
+  commentId: F:smIRCL.Numerics.RPL_USERS
+  id: RPL_USERS
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_USERS
+  nameWithType: Numerics.RPL_USERS
+  fullName: smIRCL.Numerics.RPL_USERS
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_USERS
+    path: ../smIRCL/Numerics.cs
+    startLine: 63
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_USERS = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_USERS As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_ENDOFUSERS
+  commentId: F:smIRCL.Numerics.RPL_ENDOFUSERS
+  id: RPL_ENDOFUSERS
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_ENDOFUSERS
+  nameWithType: Numerics.RPL_ENDOFUSERS
+  fullName: smIRCL.Numerics.RPL_ENDOFUSERS
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_ENDOFUSERS
+    path: ../smIRCL/Numerics.cs
+    startLine: 64
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_ENDOFUSERS = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_ENDOFUSERS As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_NOUSERS
+  commentId: F:smIRCL.Numerics.RPL_NOUSERS
+  id: RPL_NOUSERS
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_NOUSERS
+  nameWithType: Numerics.RPL_NOUSERS
+  fullName: smIRCL.Numerics.RPL_NOUSERS
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_NOUSERS
+    path: ../smIRCL/Numerics.cs
+    startLine: 65
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_NOUSERS = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_NOUSERS As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_TRACELINK
+  commentId: F:smIRCL.Numerics.RPL_TRACELINK
+  id: RPL_TRACELINK
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_TRACELINK
+  nameWithType: Numerics.RPL_TRACELINK
+  fullName: smIRCL.Numerics.RPL_TRACELINK
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_TRACELINK
+    path: ../smIRCL/Numerics.cs
+    startLine: 66
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_TRACELINK = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_TRACELINK As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_TRACECONNECTING
+  commentId: F:smIRCL.Numerics.RPL_TRACECONNECTING
+  id: RPL_TRACECONNECTING
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_TRACECONNECTING
+  nameWithType: Numerics.RPL_TRACECONNECTING
+  fullName: smIRCL.Numerics.RPL_TRACECONNECTING
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_TRACECONNECTING
+    path: ../smIRCL/Numerics.cs
+    startLine: 67
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_TRACECONNECTING = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_TRACECONNECTING As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_TRACEHANDSHAKE
+  commentId: F:smIRCL.Numerics.RPL_TRACEHANDSHAKE
+  id: RPL_TRACEHANDSHAKE
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_TRACEHANDSHAKE
+  nameWithType: Numerics.RPL_TRACEHANDSHAKE
+  fullName: smIRCL.Numerics.RPL_TRACEHANDSHAKE
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_TRACEHANDSHAKE
+    path: ../smIRCL/Numerics.cs
+    startLine: 68
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_TRACEHANDSHAKE = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_TRACEHANDSHAKE As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_TRACEUNKNOWN
+  commentId: F:smIRCL.Numerics.RPL_TRACEUNKNOWN
+  id: RPL_TRACEUNKNOWN
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_TRACEUNKNOWN
+  nameWithType: Numerics.RPL_TRACEUNKNOWN
+  fullName: smIRCL.Numerics.RPL_TRACEUNKNOWN
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_TRACEUNKNOWN
+    path: ../smIRCL/Numerics.cs
+    startLine: 69
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_TRACEUNKNOWN = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_TRACEUNKNOWN As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_TRACEOPERATOR
+  commentId: F:smIRCL.Numerics.RPL_TRACEOPERATOR
+  id: RPL_TRACEOPERATOR
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_TRACEOPERATOR
+  nameWithType: Numerics.RPL_TRACEOPERATOR
+  fullName: smIRCL.Numerics.RPL_TRACEOPERATOR
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_TRACEOPERATOR
+    path: ../smIRCL/Numerics.cs
+    startLine: 70
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_TRACEOPERATOR = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_TRACEOPERATOR As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_TRACEUSER
+  commentId: F:smIRCL.Numerics.RPL_TRACEUSER
+  id: RPL_TRACEUSER
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_TRACEUSER
+  nameWithType: Numerics.RPL_TRACEUSER
+  fullName: smIRCL.Numerics.RPL_TRACEUSER
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_TRACEUSER
+    path: ../smIRCL/Numerics.cs
+    startLine: 71
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_TRACEUSER = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_TRACEUSER As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_TRACESERVER
+  commentId: F:smIRCL.Numerics.RPL_TRACESERVER
+  id: RPL_TRACESERVER
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_TRACESERVER
+  nameWithType: Numerics.RPL_TRACESERVER
+  fullName: smIRCL.Numerics.RPL_TRACESERVER
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_TRACESERVER
+    path: ../smIRCL/Numerics.cs
+    startLine: 72
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_TRACESERVER = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_TRACESERVER As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_TRACENEWTYPE
+  commentId: F:smIRCL.Numerics.RPL_TRACENEWTYPE
+  id: RPL_TRACENEWTYPE
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_TRACENEWTYPE
+  nameWithType: Numerics.RPL_TRACENEWTYPE
+  fullName: smIRCL.Numerics.RPL_TRACENEWTYPE
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_TRACENEWTYPE
+    path: ../smIRCL/Numerics.cs
+    startLine: 73
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_TRACENEWTYPE = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_TRACENEWTYPE As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_TRACECLASS
+  commentId: F:smIRCL.Numerics.RPL_TRACECLASS
+  id: RPL_TRACECLASS
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_TRACECLASS
+  nameWithType: Numerics.RPL_TRACECLASS
+  fullName: smIRCL.Numerics.RPL_TRACECLASS
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_TRACECLASS
+    path: ../smIRCL/Numerics.cs
+    startLine: 74
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_TRACECLASS = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_TRACECLASS As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_TRACERECONNECT
+  commentId: F:smIRCL.Numerics.RPL_TRACERECONNECT
+  id: RPL_TRACERECONNECT
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_TRACERECONNECT
+  nameWithType: Numerics.RPL_TRACERECONNECT
+  fullName: smIRCL.Numerics.RPL_TRACERECONNECT
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_TRACERECONNECT
+    path: ../smIRCL/Numerics.cs
+    startLine: 75
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_TRACERECONNECT = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_TRACERECONNECT As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_STATSLINKINFO
+  commentId: F:smIRCL.Numerics.RPL_STATSLINKINFO
+  id: RPL_STATSLINKINFO
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_STATSLINKINFO
+  nameWithType: Numerics.RPL_STATSLINKINFO
+  fullName: smIRCL.Numerics.RPL_STATSLINKINFO
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_STATSLINKINFO
+    path: ../smIRCL/Numerics.cs
+    startLine: 76
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_STATSLINKINFO = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_STATSLINKINFO As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_STATSCOMMANDS
+  commentId: F:smIRCL.Numerics.RPL_STATSCOMMANDS
+  id: RPL_STATSCOMMANDS
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_STATSCOMMANDS
+  nameWithType: Numerics.RPL_STATSCOMMANDS
+  fullName: smIRCL.Numerics.RPL_STATSCOMMANDS
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_STATSCOMMANDS
+    path: ../smIRCL/Numerics.cs
+    startLine: 77
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_STATSCOMMANDS = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_STATSCOMMANDS As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_ENDOFSTATS
+  commentId: F:smIRCL.Numerics.RPL_ENDOFSTATS
+  id: RPL_ENDOFSTATS
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_ENDOFSTATS
+  nameWithType: Numerics.RPL_ENDOFSTATS
+  fullName: smIRCL.Numerics.RPL_ENDOFSTATS
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_ENDOFSTATS
+    path: ../smIRCL/Numerics.cs
+    startLine: 78
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_ENDOFSTATS = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_ENDOFSTATS As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_UMODEIS
+  commentId: F:smIRCL.Numerics.RPL_UMODEIS
+  id: RPL_UMODEIS
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_UMODEIS
+  nameWithType: Numerics.RPL_UMODEIS
+  fullName: smIRCL.Numerics.RPL_UMODEIS
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_UMODEIS
+    path: ../smIRCL/Numerics.cs
+    startLine: 79
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_UMODEIS = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_UMODEIS As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_SERVLIST
+  commentId: F:smIRCL.Numerics.RPL_SERVLIST
+  id: RPL_SERVLIST
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_SERVLIST
+  nameWithType: Numerics.RPL_SERVLIST
+  fullName: smIRCL.Numerics.RPL_SERVLIST
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_SERVLIST
+    path: ../smIRCL/Numerics.cs
+    startLine: 80
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_SERVLIST = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_SERVLIST As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_SERVLISTEND
+  commentId: F:smIRCL.Numerics.RPL_SERVLISTEND
+  id: RPL_SERVLISTEND
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_SERVLISTEND
+  nameWithType: Numerics.RPL_SERVLISTEND
+  fullName: smIRCL.Numerics.RPL_SERVLISTEND
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_SERVLISTEND
+    path: ../smIRCL/Numerics.cs
+    startLine: 81
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_SERVLISTEND = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_SERVLISTEND As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_STATSUPTIME
+  commentId: F:smIRCL.Numerics.RPL_STATSUPTIME
+  id: RPL_STATSUPTIME
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_STATSUPTIME
+  nameWithType: Numerics.RPL_STATSUPTIME
+  fullName: smIRCL.Numerics.RPL_STATSUPTIME
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_STATSUPTIME
+    path: ../smIRCL/Numerics.cs
+    startLine: 82
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_STATSUPTIME = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_STATSUPTIME As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_STATSOLINE
+  commentId: F:smIRCL.Numerics.RPL_STATSOLINE
+  id: RPL_STATSOLINE
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_STATSOLINE
+  nameWithType: Numerics.RPL_STATSOLINE
+  fullName: smIRCL.Numerics.RPL_STATSOLINE
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_STATSOLINE
+    path: ../smIRCL/Numerics.cs
+    startLine: 83
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_STATSOLINE = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_STATSOLINE As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_LUSERCLIENT
+  commentId: F:smIRCL.Numerics.RPL_LUSERCLIENT
+  id: RPL_LUSERCLIENT
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_LUSERCLIENT
+  nameWithType: Numerics.RPL_LUSERCLIENT
+  fullName: smIRCL.Numerics.RPL_LUSERCLIENT
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_LUSERCLIENT
+    path: ../smIRCL/Numerics.cs
+    startLine: 84
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_LUSERCLIENT = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_LUSERCLIENT As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_LUSEROP
+  commentId: F:smIRCL.Numerics.RPL_LUSEROP
+  id: RPL_LUSEROP
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_LUSEROP
+  nameWithType: Numerics.RPL_LUSEROP
+  fullName: smIRCL.Numerics.RPL_LUSEROP
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_LUSEROP
+    path: ../smIRCL/Numerics.cs
+    startLine: 85
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_LUSEROP = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_LUSEROP As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_LUSERUNKNOWN
+  commentId: F:smIRCL.Numerics.RPL_LUSERUNKNOWN
+  id: RPL_LUSERUNKNOWN
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_LUSERUNKNOWN
+  nameWithType: Numerics.RPL_LUSERUNKNOWN
+  fullName: smIRCL.Numerics.RPL_LUSERUNKNOWN
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_LUSERUNKNOWN
+    path: ../smIRCL/Numerics.cs
+    startLine: 86
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_LUSERUNKNOWN = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_LUSERUNKNOWN As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_LUSERCHANNELS
+  commentId: F:smIRCL.Numerics.RPL_LUSERCHANNELS
+  id: RPL_LUSERCHANNELS
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_LUSERCHANNELS
+  nameWithType: Numerics.RPL_LUSERCHANNELS
+  fullName: smIRCL.Numerics.RPL_LUSERCHANNELS
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_LUSERCHANNELS
+    path: ../smIRCL/Numerics.cs
+    startLine: 87
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_LUSERCHANNELS = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_LUSERCHANNELS As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_LUSERME
+  commentId: F:smIRCL.Numerics.RPL_LUSERME
+  id: RPL_LUSERME
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_LUSERME
+  nameWithType: Numerics.RPL_LUSERME
+  fullName: smIRCL.Numerics.RPL_LUSERME
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_LUSERME
+    path: ../smIRCL/Numerics.cs
+    startLine: 88
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_LUSERME = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_LUSERME As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_ADMINME
+  commentId: F:smIRCL.Numerics.RPL_ADMINME
+  id: RPL_ADMINME
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_ADMINME
+  nameWithType: Numerics.RPL_ADMINME
+  fullName: smIRCL.Numerics.RPL_ADMINME
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_ADMINME
+    path: ../smIRCL/Numerics.cs
+    startLine: 89
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_ADMINME = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_ADMINME As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_ADMINLOC1
+  commentId: F:smIRCL.Numerics.RPL_ADMINLOC1
+  id: RPL_ADMINLOC1
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_ADMINLOC1
+  nameWithType: Numerics.RPL_ADMINLOC1
+  fullName: smIRCL.Numerics.RPL_ADMINLOC1
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_ADMINLOC1
+    path: ../smIRCL/Numerics.cs
+    startLine: 90
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_ADMINLOC1 = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_ADMINLOC1 As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_ADMINLOC2
+  commentId: F:smIRCL.Numerics.RPL_ADMINLOC2
+  id: RPL_ADMINLOC2
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_ADMINLOC2
+  nameWithType: Numerics.RPL_ADMINLOC2
+  fullName: smIRCL.Numerics.RPL_ADMINLOC2
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_ADMINLOC2
+    path: ../smIRCL/Numerics.cs
+    startLine: 91
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_ADMINLOC2 = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_ADMINLOC2 As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_ADMINEMAIL
+  commentId: F:smIRCL.Numerics.RPL_ADMINEMAIL
+  id: RPL_ADMINEMAIL
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_ADMINEMAIL
+  nameWithType: Numerics.RPL_ADMINEMAIL
+  fullName: smIRCL.Numerics.RPL_ADMINEMAIL
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_ADMINEMAIL
+    path: ../smIRCL/Numerics.cs
+    startLine: 92
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_ADMINEMAIL = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_ADMINEMAIL As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_TRACELOG
+  commentId: F:smIRCL.Numerics.RPL_TRACELOG
+  id: RPL_TRACELOG
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_TRACELOG
+  nameWithType: Numerics.RPL_TRACELOG
+  fullName: smIRCL.Numerics.RPL_TRACELOG
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_TRACELOG
+    path: ../smIRCL/Numerics.cs
+    startLine: 93
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_TRACELOG = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_TRACELOG As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_TRACEEND
+  commentId: F:smIRCL.Numerics.RPL_TRACEEND
+  id: RPL_TRACEEND
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_TRACEEND
+  nameWithType: Numerics.RPL_TRACEEND
+  fullName: smIRCL.Numerics.RPL_TRACEEND
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_TRACEEND
+    path: ../smIRCL/Numerics.cs
+    startLine: 94
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_TRACEEND = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_TRACEEND As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_TRYAGAIN
+  commentId: F:smIRCL.Numerics.RPL_TRYAGAIN
+  id: RPL_TRYAGAIN
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_TRYAGAIN
+  nameWithType: Numerics.RPL_TRYAGAIN
+  fullName: smIRCL.Numerics.RPL_TRYAGAIN
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_TRYAGAIN
+    path: ../smIRCL/Numerics.cs
+    startLine: 95
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_TRYAGAIN = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_TRYAGAIN As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_HOSTHIDDEN
+  commentId: F:smIRCL.Numerics.RPL_HOSTHIDDEN
+  id: RPL_HOSTHIDDEN
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_HOSTHIDDEN
+  nameWithType: Numerics.RPL_HOSTHIDDEN
+  fullName: smIRCL.Numerics.RPL_HOSTHIDDEN
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_HOSTHIDDEN
+    path: ../smIRCL/Numerics.cs
+    startLine: 96
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_HOSTHIDDEN = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_HOSTHIDDEN As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.ERR_NOSUCHNICK
+  commentId: F:smIRCL.Numerics.ERR_NOSUCHNICK
+  id: ERR_NOSUCHNICK
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: ERR_NOSUCHNICK
+  nameWithType: Numerics.ERR_NOSUCHNICK
+  fullName: smIRCL.Numerics.ERR_NOSUCHNICK
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: ERR_NOSUCHNICK
+    path: ../smIRCL/Numerics.cs
+    startLine: 99
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string ERR_NOSUCHNICK = null
+    return:
+      type: System.String
+    content.vb: Public Const ERR_NOSUCHNICK As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.ERR_NOSUCHSERVER
+  commentId: F:smIRCL.Numerics.ERR_NOSUCHSERVER
+  id: ERR_NOSUCHSERVER
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: ERR_NOSUCHSERVER
+  nameWithType: Numerics.ERR_NOSUCHSERVER
+  fullName: smIRCL.Numerics.ERR_NOSUCHSERVER
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: ERR_NOSUCHSERVER
+    path: ../smIRCL/Numerics.cs
+    startLine: 100
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string ERR_NOSUCHSERVER = null
+    return:
+      type: System.String
+    content.vb: Public Const ERR_NOSUCHSERVER As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.ERR_NOSUCHCHANNEL
+  commentId: F:smIRCL.Numerics.ERR_NOSUCHCHANNEL
+  id: ERR_NOSUCHCHANNEL
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: ERR_NOSUCHCHANNEL
+  nameWithType: Numerics.ERR_NOSUCHCHANNEL
+  fullName: smIRCL.Numerics.ERR_NOSUCHCHANNEL
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: ERR_NOSUCHCHANNEL
+    path: ../smIRCL/Numerics.cs
+    startLine: 101
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string ERR_NOSUCHCHANNEL = null
+    return:
+      type: System.String
+    content.vb: Public Const ERR_NOSUCHCHANNEL As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.ERR_CANNOTSENDTOCHAN
+  commentId: F:smIRCL.Numerics.ERR_CANNOTSENDTOCHAN
+  id: ERR_CANNOTSENDTOCHAN
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: ERR_CANNOTSENDTOCHAN
+  nameWithType: Numerics.ERR_CANNOTSENDTOCHAN
+  fullName: smIRCL.Numerics.ERR_CANNOTSENDTOCHAN
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: ERR_CANNOTSENDTOCHAN
+    path: ../smIRCL/Numerics.cs
+    startLine: 102
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string ERR_CANNOTSENDTOCHAN = null
+    return:
+      type: System.String
+    content.vb: Public Const ERR_CANNOTSENDTOCHAN As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.ERR_TOOMANYCHANNELS
+  commentId: F:smIRCL.Numerics.ERR_TOOMANYCHANNELS
+  id: ERR_TOOMANYCHANNELS
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: ERR_TOOMANYCHANNELS
+  nameWithType: Numerics.ERR_TOOMANYCHANNELS
+  fullName: smIRCL.Numerics.ERR_TOOMANYCHANNELS
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: ERR_TOOMANYCHANNELS
+    path: ../smIRCL/Numerics.cs
+    startLine: 103
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string ERR_TOOMANYCHANNELS = null
+    return:
+      type: System.String
+    content.vb: Public Const ERR_TOOMANYCHANNELS As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.ERR_WASNOSUCHNICK
+  commentId: F:smIRCL.Numerics.ERR_WASNOSUCHNICK
+  id: ERR_WASNOSUCHNICK
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: ERR_WASNOSUCHNICK
+  nameWithType: Numerics.ERR_WASNOSUCHNICK
+  fullName: smIRCL.Numerics.ERR_WASNOSUCHNICK
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: ERR_WASNOSUCHNICK
+    path: ../smIRCL/Numerics.cs
+    startLine: 104
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string ERR_WASNOSUCHNICK = null
+    return:
+      type: System.String
+    content.vb: Public Const ERR_WASNOSUCHNICK As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.ERR_TOOMANYTARGETS
+  commentId: F:smIRCL.Numerics.ERR_TOOMANYTARGETS
+  id: ERR_TOOMANYTARGETS
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: ERR_TOOMANYTARGETS
+  nameWithType: Numerics.ERR_TOOMANYTARGETS
+  fullName: smIRCL.Numerics.ERR_TOOMANYTARGETS
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: ERR_TOOMANYTARGETS
+    path: ../smIRCL/Numerics.cs
+    startLine: 105
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string ERR_TOOMANYTARGETS = null
+    return:
+      type: System.String
+    content.vb: Public Const ERR_TOOMANYTARGETS As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.ERR_NOSUCHSERVICE
+  commentId: F:smIRCL.Numerics.ERR_NOSUCHSERVICE
+  id: ERR_NOSUCHSERVICE
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: ERR_NOSUCHSERVICE
+  nameWithType: Numerics.ERR_NOSUCHSERVICE
+  fullName: smIRCL.Numerics.ERR_NOSUCHSERVICE
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: ERR_NOSUCHSERVICE
+    path: ../smIRCL/Numerics.cs
+    startLine: 106
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string ERR_NOSUCHSERVICE = null
+    return:
+      type: System.String
+    content.vb: Public Const ERR_NOSUCHSERVICE As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.ERR_NOORIGIN
+  commentId: F:smIRCL.Numerics.ERR_NOORIGIN
+  id: ERR_NOORIGIN
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: ERR_NOORIGIN
+  nameWithType: Numerics.ERR_NOORIGIN
+  fullName: smIRCL.Numerics.ERR_NOORIGIN
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: ERR_NOORIGIN
+    path: ../smIRCL/Numerics.cs
+    startLine: 107
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string ERR_NOORIGIN = null
+    return:
+      type: System.String
+    content.vb: Public Const ERR_NOORIGIN As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.ERR_NORECIPIENT
+  commentId: F:smIRCL.Numerics.ERR_NORECIPIENT
+  id: ERR_NORECIPIENT
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: ERR_NORECIPIENT
+  nameWithType: Numerics.ERR_NORECIPIENT
+  fullName: smIRCL.Numerics.ERR_NORECIPIENT
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: ERR_NORECIPIENT
+    path: ../smIRCL/Numerics.cs
+    startLine: 108
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string ERR_NORECIPIENT = null
+    return:
+      type: System.String
+    content.vb: Public Const ERR_NORECIPIENT As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.ERR_NOTEXTTOSEND
+  commentId: F:smIRCL.Numerics.ERR_NOTEXTTOSEND
+  id: ERR_NOTEXTTOSEND
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: ERR_NOTEXTTOSEND
+  nameWithType: Numerics.ERR_NOTEXTTOSEND
+  fullName: smIRCL.Numerics.ERR_NOTEXTTOSEND
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: ERR_NOTEXTTOSEND
+    path: ../smIRCL/Numerics.cs
+    startLine: 109
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string ERR_NOTEXTTOSEND = null
+    return:
+      type: System.String
+    content.vb: Public Const ERR_NOTEXTTOSEND As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.ERR_NOTOPLEVEL
+  commentId: F:smIRCL.Numerics.ERR_NOTOPLEVEL
+  id: ERR_NOTOPLEVEL
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: ERR_NOTOPLEVEL
+  nameWithType: Numerics.ERR_NOTOPLEVEL
+  fullName: smIRCL.Numerics.ERR_NOTOPLEVEL
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: ERR_NOTOPLEVEL
+    path: ../smIRCL/Numerics.cs
+    startLine: 110
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string ERR_NOTOPLEVEL = null
+    return:
+      type: System.String
+    content.vb: Public Const ERR_NOTOPLEVEL As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.ERR_WILDTOPLEVEL
+  commentId: F:smIRCL.Numerics.ERR_WILDTOPLEVEL
+  id: ERR_WILDTOPLEVEL
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: ERR_WILDTOPLEVEL
+  nameWithType: Numerics.ERR_WILDTOPLEVEL
+  fullName: smIRCL.Numerics.ERR_WILDTOPLEVEL
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: ERR_WILDTOPLEVEL
+    path: ../smIRCL/Numerics.cs
+    startLine: 111
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string ERR_WILDTOPLEVEL = null
+    return:
+      type: System.String
+    content.vb: Public Const ERR_WILDTOPLEVEL As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.ERR_BADMASK
+  commentId: F:smIRCL.Numerics.ERR_BADMASK
+  id: ERR_BADMASK
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: ERR_BADMASK
+  nameWithType: Numerics.ERR_BADMASK
+  fullName: smIRCL.Numerics.ERR_BADMASK
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: ERR_BADMASK
+    path: ../smIRCL/Numerics.cs
+    startLine: 112
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string ERR_BADMASK = null
+    return:
+      type: System.String
+    content.vb: Public Const ERR_BADMASK As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.ERR_UNKNOWNCOMMAND
+  commentId: F:smIRCL.Numerics.ERR_UNKNOWNCOMMAND
+  id: ERR_UNKNOWNCOMMAND
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: ERR_UNKNOWNCOMMAND
+  nameWithType: Numerics.ERR_UNKNOWNCOMMAND
+  fullName: smIRCL.Numerics.ERR_UNKNOWNCOMMAND
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: ERR_UNKNOWNCOMMAND
+    path: ../smIRCL/Numerics.cs
+    startLine: 113
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string ERR_UNKNOWNCOMMAND = null
+    return:
+      type: System.String
+    content.vb: Public Const ERR_UNKNOWNCOMMAND As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.ERR_NOMOTD
+  commentId: F:smIRCL.Numerics.ERR_NOMOTD
+  id: ERR_NOMOTD
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: ERR_NOMOTD
+  nameWithType: Numerics.ERR_NOMOTD
+  fullName: smIRCL.Numerics.ERR_NOMOTD
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: ERR_NOMOTD
+    path: ../smIRCL/Numerics.cs
+    startLine: 114
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string ERR_NOMOTD = null
+    return:
+      type: System.String
+    content.vb: Public Const ERR_NOMOTD As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.ERR_NOADMININFO
+  commentId: F:smIRCL.Numerics.ERR_NOADMININFO
+  id: ERR_NOADMININFO
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: ERR_NOADMININFO
+  nameWithType: Numerics.ERR_NOADMININFO
+  fullName: smIRCL.Numerics.ERR_NOADMININFO
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: ERR_NOADMININFO
+    path: ../smIRCL/Numerics.cs
+    startLine: 115
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string ERR_NOADMININFO = null
+    return:
+      type: System.String
+    content.vb: Public Const ERR_NOADMININFO As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.ERR_FILEERROR
+  commentId: F:smIRCL.Numerics.ERR_FILEERROR
+  id: ERR_FILEERROR
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: ERR_FILEERROR
+  nameWithType: Numerics.ERR_FILEERROR
+  fullName: smIRCL.Numerics.ERR_FILEERROR
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: ERR_FILEERROR
+    path: ../smIRCL/Numerics.cs
+    startLine: 116
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string ERR_FILEERROR = null
+    return:
+      type: System.String
+    content.vb: Public Const ERR_FILEERROR As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.ERR_NONICKNAMEGIVEN
+  commentId: F:smIRCL.Numerics.ERR_NONICKNAMEGIVEN
+  id: ERR_NONICKNAMEGIVEN
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: ERR_NONICKNAMEGIVEN
+  nameWithType: Numerics.ERR_NONICKNAMEGIVEN
+  fullName: smIRCL.Numerics.ERR_NONICKNAMEGIVEN
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: ERR_NONICKNAMEGIVEN
+    path: ../smIRCL/Numerics.cs
+    startLine: 117
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string ERR_NONICKNAMEGIVEN = null
+    return:
+      type: System.String
+    content.vb: Public Const ERR_NONICKNAMEGIVEN As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.ERR_ERRONEUSNICKNAME
+  commentId: F:smIRCL.Numerics.ERR_ERRONEUSNICKNAME
+  id: ERR_ERRONEUSNICKNAME
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: ERR_ERRONEUSNICKNAME
+  nameWithType: Numerics.ERR_ERRONEUSNICKNAME
+  fullName: smIRCL.Numerics.ERR_ERRONEUSNICKNAME
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: ERR_ERRONEUSNICKNAME
+    path: ../smIRCL/Numerics.cs
+    startLine: 118
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string ERR_ERRONEUSNICKNAME = null
+    return:
+      type: System.String
+    content.vb: Public Const ERR_ERRONEUSNICKNAME As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.ERR_NICKNAMEINUSE
+  commentId: F:smIRCL.Numerics.ERR_NICKNAMEINUSE
+  id: ERR_NICKNAMEINUSE
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: ERR_NICKNAMEINUSE
+  nameWithType: Numerics.ERR_NICKNAMEINUSE
+  fullName: smIRCL.Numerics.ERR_NICKNAMEINUSE
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: ERR_NICKNAMEINUSE
+    path: ../smIRCL/Numerics.cs
+    startLine: 119
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string ERR_NICKNAMEINUSE = null
+    return:
+      type: System.String
+    content.vb: Public Const ERR_NICKNAMEINUSE As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.ERR_NICKCOLLISION
+  commentId: F:smIRCL.Numerics.ERR_NICKCOLLISION
+  id: ERR_NICKCOLLISION
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: ERR_NICKCOLLISION
+  nameWithType: Numerics.ERR_NICKCOLLISION
+  fullName: smIRCL.Numerics.ERR_NICKCOLLISION
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: ERR_NICKCOLLISION
+    path: ../smIRCL/Numerics.cs
+    startLine: 120
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string ERR_NICKCOLLISION = null
+    return:
+      type: System.String
+    content.vb: Public Const ERR_NICKCOLLISION As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.ERR_UNAVAILRESOURCE
+  commentId: F:smIRCL.Numerics.ERR_UNAVAILRESOURCE
+  id: ERR_UNAVAILRESOURCE
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: ERR_UNAVAILRESOURCE
+  nameWithType: Numerics.ERR_UNAVAILRESOURCE
+  fullName: smIRCL.Numerics.ERR_UNAVAILRESOURCE
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: ERR_UNAVAILRESOURCE
+    path: ../smIRCL/Numerics.cs
+    startLine: 121
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string ERR_UNAVAILRESOURCE = null
+    return:
+      type: System.String
+    content.vb: Public Const ERR_UNAVAILRESOURCE As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.ERR_USERNOTINCHANNEL
+  commentId: F:smIRCL.Numerics.ERR_USERNOTINCHANNEL
+  id: ERR_USERNOTINCHANNEL
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: ERR_USERNOTINCHANNEL
+  nameWithType: Numerics.ERR_USERNOTINCHANNEL
+  fullName: smIRCL.Numerics.ERR_USERNOTINCHANNEL
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: ERR_USERNOTINCHANNEL
+    path: ../smIRCL/Numerics.cs
+    startLine: 122
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string ERR_USERNOTINCHANNEL = null
+    return:
+      type: System.String
+    content.vb: Public Const ERR_USERNOTINCHANNEL As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.ERR_NOTINCHANNEL
+  commentId: F:smIRCL.Numerics.ERR_NOTINCHANNEL
+  id: ERR_NOTINCHANNEL
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: ERR_NOTINCHANNEL
+  nameWithType: Numerics.ERR_NOTINCHANNEL
+  fullName: smIRCL.Numerics.ERR_NOTINCHANNEL
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: ERR_NOTINCHANNEL
+    path: ../smIRCL/Numerics.cs
+    startLine: 123
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string ERR_NOTINCHANNEL = null
+    return:
+      type: System.String
+    content.vb: Public Const ERR_NOTINCHANNEL As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.ERR_USERONCHANNEL
+  commentId: F:smIRCL.Numerics.ERR_USERONCHANNEL
+  id: ERR_USERONCHANNEL
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: ERR_USERONCHANNEL
+  nameWithType: Numerics.ERR_USERONCHANNEL
+  fullName: smIRCL.Numerics.ERR_USERONCHANNEL
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: ERR_USERONCHANNEL
+    path: ../smIRCL/Numerics.cs
+    startLine: 124
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string ERR_USERONCHANNEL = null
+    return:
+      type: System.String
+    content.vb: Public Const ERR_USERONCHANNEL As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.ERR_NOLOGIN
+  commentId: F:smIRCL.Numerics.ERR_NOLOGIN
+  id: ERR_NOLOGIN
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: ERR_NOLOGIN
+  nameWithType: Numerics.ERR_NOLOGIN
+  fullName: smIRCL.Numerics.ERR_NOLOGIN
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: ERR_NOLOGIN
+    path: ../smIRCL/Numerics.cs
+    startLine: 125
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string ERR_NOLOGIN = null
+    return:
+      type: System.String
+    content.vb: Public Const ERR_NOLOGIN As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.ERR_SUMMONDISABLED
+  commentId: F:smIRCL.Numerics.ERR_SUMMONDISABLED
+  id: ERR_SUMMONDISABLED
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: ERR_SUMMONDISABLED
+  nameWithType: Numerics.ERR_SUMMONDISABLED
+  fullName: smIRCL.Numerics.ERR_SUMMONDISABLED
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: ERR_SUMMONDISABLED
+    path: ../smIRCL/Numerics.cs
+    startLine: 126
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string ERR_SUMMONDISABLED = null
+    return:
+      type: System.String
+    content.vb: Public Const ERR_SUMMONDISABLED As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.ERR_USERDISABLED
+  commentId: F:smIRCL.Numerics.ERR_USERDISABLED
+  id: ERR_USERDISABLED
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: ERR_USERDISABLED
+  nameWithType: Numerics.ERR_USERDISABLED
+  fullName: smIRCL.Numerics.ERR_USERDISABLED
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: ERR_USERDISABLED
+    path: ../smIRCL/Numerics.cs
+    startLine: 127
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string ERR_USERDISABLED = null
+    return:
+      type: System.String
+    content.vb: Public Const ERR_USERDISABLED As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.ERR_NOTREGISTERED
+  commentId: F:smIRCL.Numerics.ERR_NOTREGISTERED
+  id: ERR_NOTREGISTERED
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: ERR_NOTREGISTERED
+  nameWithType: Numerics.ERR_NOTREGISTERED
+  fullName: smIRCL.Numerics.ERR_NOTREGISTERED
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: ERR_NOTREGISTERED
+    path: ../smIRCL/Numerics.cs
+    startLine: 128
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string ERR_NOTREGISTERED = null
+    return:
+      type: System.String
+    content.vb: Public Const ERR_NOTREGISTERED As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.ERR_NEEDMOREPARAMS
+  commentId: F:smIRCL.Numerics.ERR_NEEDMOREPARAMS
+  id: ERR_NEEDMOREPARAMS
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: ERR_NEEDMOREPARAMS
+  nameWithType: Numerics.ERR_NEEDMOREPARAMS
+  fullName: smIRCL.Numerics.ERR_NEEDMOREPARAMS
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: ERR_NEEDMOREPARAMS
+    path: ../smIRCL/Numerics.cs
+    startLine: 129
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string ERR_NEEDMOREPARAMS = null
+    return:
+      type: System.String
+    content.vb: Public Const ERR_NEEDMOREPARAMS As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.ERR_ALREADYREGISTERED
+  commentId: F:smIRCL.Numerics.ERR_ALREADYREGISTERED
+  id: ERR_ALREADYREGISTERED
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: ERR_ALREADYREGISTERED
+  nameWithType: Numerics.ERR_ALREADYREGISTERED
+  fullName: smIRCL.Numerics.ERR_ALREADYREGISTERED
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: ERR_ALREADYREGISTERED
+    path: ../smIRCL/Numerics.cs
+    startLine: 130
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string ERR_ALREADYREGISTERED = null
+    return:
+      type: System.String
+    content.vb: Public Const ERR_ALREADYREGISTERED As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.ERR_NOPERMFORHOST
+  commentId: F:smIRCL.Numerics.ERR_NOPERMFORHOST
+  id: ERR_NOPERMFORHOST
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: ERR_NOPERMFORHOST
+  nameWithType: Numerics.ERR_NOPERMFORHOST
+  fullName: smIRCL.Numerics.ERR_NOPERMFORHOST
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: ERR_NOPERMFORHOST
+    path: ../smIRCL/Numerics.cs
+    startLine: 131
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string ERR_NOPERMFORHOST = null
+    return:
+      type: System.String
+    content.vb: Public Const ERR_NOPERMFORHOST As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.ERR_PASSWDMISMATCH
+  commentId: F:smIRCL.Numerics.ERR_PASSWDMISMATCH
+  id: ERR_PASSWDMISMATCH
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: ERR_PASSWDMISMATCH
+  nameWithType: Numerics.ERR_PASSWDMISMATCH
+  fullName: smIRCL.Numerics.ERR_PASSWDMISMATCH
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: ERR_PASSWDMISMATCH
+    path: ../smIRCL/Numerics.cs
+    startLine: 132
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string ERR_PASSWDMISMATCH = null
+    return:
+      type: System.String
+    content.vb: Public Const ERR_PASSWDMISMATCH As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.ERR_YOUREBANNEDCREEP
+  commentId: F:smIRCL.Numerics.ERR_YOUREBANNEDCREEP
+  id: ERR_YOUREBANNEDCREEP
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: ERR_YOUREBANNEDCREEP
+  nameWithType: Numerics.ERR_YOUREBANNEDCREEP
+  fullName: smIRCL.Numerics.ERR_YOUREBANNEDCREEP
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: ERR_YOUREBANNEDCREEP
+    path: ../smIRCL/Numerics.cs
+    startLine: 133
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string ERR_YOUREBANNEDCREEP = null
+    return:
+      type: System.String
+    content.vb: Public Const ERR_YOUREBANNEDCREEP As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.ERR_YOUWILLBEBANNED
+  commentId: F:smIRCL.Numerics.ERR_YOUWILLBEBANNED
+  id: ERR_YOUWILLBEBANNED
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: ERR_YOUWILLBEBANNED
+  nameWithType: Numerics.ERR_YOUWILLBEBANNED
+  fullName: smIRCL.Numerics.ERR_YOUWILLBEBANNED
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: ERR_YOUWILLBEBANNED
+    path: ../smIRCL/Numerics.cs
+    startLine: 134
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string ERR_YOUWILLBEBANNED = null
+    return:
+      type: System.String
+    content.vb: Public Const ERR_YOUWILLBEBANNED As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.ERR_KEYSET
+  commentId: F:smIRCL.Numerics.ERR_KEYSET
+  id: ERR_KEYSET
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: ERR_KEYSET
+  nameWithType: Numerics.ERR_KEYSET
+  fullName: smIRCL.Numerics.ERR_KEYSET
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: ERR_KEYSET
+    path: ../smIRCL/Numerics.cs
+    startLine: 135
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string ERR_KEYSET = null
+    return:
+      type: System.String
+    content.vb: Public Const ERR_KEYSET As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.ERR_CHANNELISFULL
+  commentId: F:smIRCL.Numerics.ERR_CHANNELISFULL
+  id: ERR_CHANNELISFULL
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: ERR_CHANNELISFULL
+  nameWithType: Numerics.ERR_CHANNELISFULL
+  fullName: smIRCL.Numerics.ERR_CHANNELISFULL
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: ERR_CHANNELISFULL
+    path: ../smIRCL/Numerics.cs
+    startLine: 136
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string ERR_CHANNELISFULL = null
+    return:
+      type: System.String
+    content.vb: Public Const ERR_CHANNELISFULL As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.ERR_UNKNOWNMODE
+  commentId: F:smIRCL.Numerics.ERR_UNKNOWNMODE
+  id: ERR_UNKNOWNMODE
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: ERR_UNKNOWNMODE
+  nameWithType: Numerics.ERR_UNKNOWNMODE
+  fullName: smIRCL.Numerics.ERR_UNKNOWNMODE
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: ERR_UNKNOWNMODE
+    path: ../smIRCL/Numerics.cs
+    startLine: 137
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string ERR_UNKNOWNMODE = null
+    return:
+      type: System.String
+    content.vb: Public Const ERR_UNKNOWNMODE As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.ERR_INVITEONLYCHAN
+  commentId: F:smIRCL.Numerics.ERR_INVITEONLYCHAN
+  id: ERR_INVITEONLYCHAN
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: ERR_INVITEONLYCHAN
+  nameWithType: Numerics.ERR_INVITEONLYCHAN
+  fullName: smIRCL.Numerics.ERR_INVITEONLYCHAN
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: ERR_INVITEONLYCHAN
+    path: ../smIRCL/Numerics.cs
+    startLine: 138
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string ERR_INVITEONLYCHAN = null
+    return:
+      type: System.String
+    content.vb: Public Const ERR_INVITEONLYCHAN As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.ERR_BANNEDFROMCHAN
+  commentId: F:smIRCL.Numerics.ERR_BANNEDFROMCHAN
+  id: ERR_BANNEDFROMCHAN
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: ERR_BANNEDFROMCHAN
+  nameWithType: Numerics.ERR_BANNEDFROMCHAN
+  fullName: smIRCL.Numerics.ERR_BANNEDFROMCHAN
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: ERR_BANNEDFROMCHAN
+    path: ../smIRCL/Numerics.cs
+    startLine: 139
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string ERR_BANNEDFROMCHAN = null
+    return:
+      type: System.String
+    content.vb: Public Const ERR_BANNEDFROMCHAN As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.ERR_BADCHANNELKEY
+  commentId: F:smIRCL.Numerics.ERR_BADCHANNELKEY
+  id: ERR_BADCHANNELKEY
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: ERR_BADCHANNELKEY
+  nameWithType: Numerics.ERR_BADCHANNELKEY
+  fullName: smIRCL.Numerics.ERR_BADCHANNELKEY
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: ERR_BADCHANNELKEY
+    path: ../smIRCL/Numerics.cs
+    startLine: 140
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string ERR_BADCHANNELKEY = null
+    return:
+      type: System.String
+    content.vb: Public Const ERR_BADCHANNELKEY As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.ERR_BADCHANMASK
+  commentId: F:smIRCL.Numerics.ERR_BADCHANMASK
+  id: ERR_BADCHANMASK
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: ERR_BADCHANMASK
+  nameWithType: Numerics.ERR_BADCHANMASK
+  fullName: smIRCL.Numerics.ERR_BADCHANMASK
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: ERR_BADCHANMASK
+    path: ../smIRCL/Numerics.cs
+    startLine: 141
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string ERR_BADCHANMASK = null
+    return:
+      type: System.String
+    content.vb: Public Const ERR_BADCHANMASK As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.ERR_NOCHANMODES
+  commentId: F:smIRCL.Numerics.ERR_NOCHANMODES
+  id: ERR_NOCHANMODES
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: ERR_NOCHANMODES
+  nameWithType: Numerics.ERR_NOCHANMODES
+  fullName: smIRCL.Numerics.ERR_NOCHANMODES
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: ERR_NOCHANMODES
+    path: ../smIRCL/Numerics.cs
+    startLine: 142
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string ERR_NOCHANMODES = null
+    return:
+      type: System.String
+    content.vb: Public Const ERR_NOCHANMODES As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.ERR_BANLISTFULL
+  commentId: F:smIRCL.Numerics.ERR_BANLISTFULL
+  id: ERR_BANLISTFULL
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: ERR_BANLISTFULL
+  nameWithType: Numerics.ERR_BANLISTFULL
+  fullName: smIRCL.Numerics.ERR_BANLISTFULL
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: ERR_BANLISTFULL
+    path: ../smIRCL/Numerics.cs
+    startLine: 143
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string ERR_BANLISTFULL = null
+    return:
+      type: System.String
+    content.vb: Public Const ERR_BANLISTFULL As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.ERR_NOPRIVILEGES
+  commentId: F:smIRCL.Numerics.ERR_NOPRIVILEGES
+  id: ERR_NOPRIVILEGES
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: ERR_NOPRIVILEGES
+  nameWithType: Numerics.ERR_NOPRIVILEGES
+  fullName: smIRCL.Numerics.ERR_NOPRIVILEGES
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: ERR_NOPRIVILEGES
+    path: ../smIRCL/Numerics.cs
+    startLine: 144
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string ERR_NOPRIVILEGES = null
+    return:
+      type: System.String
+    content.vb: Public Const ERR_NOPRIVILEGES As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.ERR_CHANOPRIVSNEEDED
+  commentId: F:smIRCL.Numerics.ERR_CHANOPRIVSNEEDED
+  id: ERR_CHANOPRIVSNEEDED
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: ERR_CHANOPRIVSNEEDED
+  nameWithType: Numerics.ERR_CHANOPRIVSNEEDED
+  fullName: smIRCL.Numerics.ERR_CHANOPRIVSNEEDED
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: ERR_CHANOPRIVSNEEDED
+    path: ../smIRCL/Numerics.cs
+    startLine: 145
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string ERR_CHANOPRIVSNEEDED = null
+    return:
+      type: System.String
+    content.vb: Public Const ERR_CHANOPRIVSNEEDED As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.ERR_CANTKILLSERVER
+  commentId: F:smIRCL.Numerics.ERR_CANTKILLSERVER
+  id: ERR_CANTKILLSERVER
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: ERR_CANTKILLSERVER
+  nameWithType: Numerics.ERR_CANTKILLSERVER
+  fullName: smIRCL.Numerics.ERR_CANTKILLSERVER
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: ERR_CANTKILLSERVER
+    path: ../smIRCL/Numerics.cs
+    startLine: 146
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string ERR_CANTKILLSERVER = null
+    return:
+      type: System.String
+    content.vb: Public Const ERR_CANTKILLSERVER As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.ERR_RESTRICTED
+  commentId: F:smIRCL.Numerics.ERR_RESTRICTED
+  id: ERR_RESTRICTED
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: ERR_RESTRICTED
+  nameWithType: Numerics.ERR_RESTRICTED
+  fullName: smIRCL.Numerics.ERR_RESTRICTED
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: ERR_RESTRICTED
+    path: ../smIRCL/Numerics.cs
+    startLine: 147
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string ERR_RESTRICTED = null
+    return:
+      type: System.String
+    content.vb: Public Const ERR_RESTRICTED As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.ERR_UNIQOPPRIVSNEEDED
+  commentId: F:smIRCL.Numerics.ERR_UNIQOPPRIVSNEEDED
+  id: ERR_UNIQOPPRIVSNEEDED
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: ERR_UNIQOPPRIVSNEEDED
+  nameWithType: Numerics.ERR_UNIQOPPRIVSNEEDED
+  fullName: smIRCL.Numerics.ERR_UNIQOPPRIVSNEEDED
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: ERR_UNIQOPPRIVSNEEDED
+    path: ../smIRCL/Numerics.cs
+    startLine: 148
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string ERR_UNIQOPPRIVSNEEDED = null
+    return:
+      type: System.String
+    content.vb: Public Const ERR_UNIQOPPRIVSNEEDED As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.ERR_NOOPERHOST
+  commentId: F:smIRCL.Numerics.ERR_NOOPERHOST
+  id: ERR_NOOPERHOST
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: ERR_NOOPERHOST
+  nameWithType: Numerics.ERR_NOOPERHOST
+  fullName: smIRCL.Numerics.ERR_NOOPERHOST
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: ERR_NOOPERHOST
+    path: ../smIRCL/Numerics.cs
+    startLine: 149
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string ERR_NOOPERHOST = null
+    return:
+      type: System.String
+    content.vb: Public Const ERR_NOOPERHOST As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.ERR_UMODEUNKNOWNFLAG
+  commentId: F:smIRCL.Numerics.ERR_UMODEUNKNOWNFLAG
+  id: ERR_UMODEUNKNOWNFLAG
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: ERR_UMODEUNKNOWNFLAG
+  nameWithType: Numerics.ERR_UMODEUNKNOWNFLAG
+  fullName: smIRCL.Numerics.ERR_UMODEUNKNOWNFLAG
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: ERR_UMODEUNKNOWNFLAG
+    path: ../smIRCL/Numerics.cs
+    startLine: 150
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string ERR_UMODEUNKNOWNFLAG = null
+    return:
+      type: System.String
+    content.vb: Public Const ERR_UMODEUNKNOWNFLAG As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.ERR_USERSDONTMATCH
+  commentId: F:smIRCL.Numerics.ERR_USERSDONTMATCH
+  id: ERR_USERSDONTMATCH
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: ERR_USERSDONTMATCH
+  nameWithType: Numerics.ERR_USERSDONTMATCH
+  fullName: smIRCL.Numerics.ERR_USERSDONTMATCH
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: ERR_USERSDONTMATCH
+    path: ../smIRCL/Numerics.cs
+    startLine: 151
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string ERR_USERSDONTMATCH = null
+    return:
+      type: System.String
+    content.vb: Public Const ERR_USERSDONTMATCH As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_STATSCLINE
+  commentId: F:smIRCL.Numerics.RPL_STATSCLINE
+  id: RPL_STATSCLINE
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_STATSCLINE
+  nameWithType: Numerics.RPL_STATSCLINE
+  fullName: smIRCL.Numerics.RPL_STATSCLINE
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_STATSCLINE
+    path: ../smIRCL/Numerics.cs
+    startLine: 157
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_STATSCLINE = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_STATSCLINE As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_STATSNLINE
+  commentId: F:smIRCL.Numerics.RPL_STATSNLINE
+  id: RPL_STATSNLINE
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_STATSNLINE
+  nameWithType: Numerics.RPL_STATSNLINE
+  fullName: smIRCL.Numerics.RPL_STATSNLINE
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_STATSNLINE
+    path: ../smIRCL/Numerics.cs
+    startLine: 158
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_STATSNLINE = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_STATSNLINE As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_STATSILINE
+  commentId: F:smIRCL.Numerics.RPL_STATSILINE
+  id: RPL_STATSILINE
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_STATSILINE
+  nameWithType: Numerics.RPL_STATSILINE
+  fullName: smIRCL.Numerics.RPL_STATSILINE
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_STATSILINE
+    path: ../smIRCL/Numerics.cs
+    startLine: 159
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_STATSILINE = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_STATSILINE As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_STATSKLINE
+  commentId: F:smIRCL.Numerics.RPL_STATSKLINE
+  id: RPL_STATSKLINE
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_STATSKLINE
+  nameWithType: Numerics.RPL_STATSKLINE
+  fullName: smIRCL.Numerics.RPL_STATSKLINE
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_STATSKLINE
+    path: ../smIRCL/Numerics.cs
+    startLine: 160
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_STATSKLINE = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_STATSKLINE As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_STATSQLINE
+  commentId: F:smIRCL.Numerics.RPL_STATSQLINE
+  id: RPL_STATSQLINE
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_STATSQLINE
+  nameWithType: Numerics.RPL_STATSQLINE
+  fullName: smIRCL.Numerics.RPL_STATSQLINE
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_STATSQLINE
+    path: ../smIRCL/Numerics.cs
+    startLine: 161
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_STATSQLINE = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_STATSQLINE As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_STATSYLINE
+  commentId: F:smIRCL.Numerics.RPL_STATSYLINE
+  id: RPL_STATSYLINE
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_STATSYLINE
+  nameWithType: Numerics.RPL_STATSYLINE
+  fullName: smIRCL.Numerics.RPL_STATSYLINE
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_STATSYLINE
+    path: ../smIRCL/Numerics.cs
+    startLine: 162
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_STATSYLINE = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_STATSYLINE As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_SERVICEINFO
+  commentId: F:smIRCL.Numerics.RPL_SERVICEINFO
+  id: RPL_SERVICEINFO
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_SERVICEINFO
+  nameWithType: Numerics.RPL_SERVICEINFO
+  fullName: smIRCL.Numerics.RPL_SERVICEINFO
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_SERVICEINFO
+    path: ../smIRCL/Numerics.cs
+    startLine: 163
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_SERVICEINFO = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_SERVICEINFO As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_ENDOFSERVICES
+  commentId: F:smIRCL.Numerics.RPL_ENDOFSERVICES
+  id: RPL_ENDOFSERVICES
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_ENDOFSERVICES
+  nameWithType: Numerics.RPL_ENDOFSERVICES
+  fullName: smIRCL.Numerics.RPL_ENDOFSERVICES
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_ENDOFSERVICES
+    path: ../smIRCL/Numerics.cs
+    startLine: 164
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_ENDOFSERVICES = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_ENDOFSERVICES As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_SERVICE
+  commentId: F:smIRCL.Numerics.RPL_SERVICE
+  id: RPL_SERVICE
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_SERVICE
+  nameWithType: Numerics.RPL_SERVICE
+  fullName: smIRCL.Numerics.RPL_SERVICE
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_SERVICE
+    path: ../smIRCL/Numerics.cs
+    startLine: 165
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_SERVICE = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_SERVICE As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_STATSVLINE
+  commentId: F:smIRCL.Numerics.RPL_STATSVLINE
+  id: RPL_STATSVLINE
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_STATSVLINE
+  nameWithType: Numerics.RPL_STATSVLINE
+  fullName: smIRCL.Numerics.RPL_STATSVLINE
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_STATSVLINE
+    path: ../smIRCL/Numerics.cs
+    startLine: 166
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_STATSVLINE = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_STATSVLINE As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_STATSLLINE
+  commentId: F:smIRCL.Numerics.RPL_STATSLLINE
+  id: RPL_STATSLLINE
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_STATSLLINE
+  nameWithType: Numerics.RPL_STATSLLINE
+  fullName: smIRCL.Numerics.RPL_STATSLLINE
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_STATSLLINE
+    path: ../smIRCL/Numerics.cs
+    startLine: 167
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_STATSLLINE = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_STATSLLINE As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_STATSHLINE
+  commentId: F:smIRCL.Numerics.RPL_STATSHLINE
+  id: RPL_STATSHLINE
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_STATSHLINE
+  nameWithType: Numerics.RPL_STATSHLINE
+  fullName: smIRCL.Numerics.RPL_STATSHLINE
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_STATSHLINE
+    path: ../smIRCL/Numerics.cs
+    startLine: 168
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_STATSHLINE = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_STATSHLINE As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_STATSSLINE
+  commentId: F:smIRCL.Numerics.RPL_STATSSLINE
+  id: RPL_STATSSLINE
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_STATSSLINE
+  nameWithType: Numerics.RPL_STATSSLINE
+  fullName: smIRCL.Numerics.RPL_STATSSLINE
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_STATSSLINE
+    path: ../smIRCL/Numerics.cs
+    startLine: 169
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_STATSSLINE = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_STATSSLINE As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_STATSPING
+  commentId: F:smIRCL.Numerics.RPL_STATSPING
+  id: RPL_STATSPING
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_STATSPING
+  nameWithType: Numerics.RPL_STATSPING
+  fullName: smIRCL.Numerics.RPL_STATSPING
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_STATSPING
+    path: ../smIRCL/Numerics.cs
+    startLine: 170
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_STATSPING = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_STATSPING As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_STATSBLINE
+  commentId: F:smIRCL.Numerics.RPL_STATSBLINE
+  id: RPL_STATSBLINE
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_STATSBLINE
+  nameWithType: Numerics.RPL_STATSBLINE
+  fullName: smIRCL.Numerics.RPL_STATSBLINE
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_STATSBLINE
+    path: ../smIRCL/Numerics.cs
+    startLine: 171
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_STATSBLINE = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_STATSBLINE As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_STATSDLINE
+  commentId: F:smIRCL.Numerics.RPL_STATSDLINE
+  id: RPL_STATSDLINE
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_STATSDLINE
+  nameWithType: Numerics.RPL_STATSDLINE
+  fullName: smIRCL.Numerics.RPL_STATSDLINE
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_STATSDLINE
+    path: ../smIRCL/Numerics.cs
+    startLine: 172
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_STATSDLINE = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_STATSDLINE As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_NONE
+  commentId: F:smIRCL.Numerics.RPL_NONE
+  id: RPL_NONE
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_NONE
+  nameWithType: Numerics.RPL_NONE
+  fullName: smIRCL.Numerics.RPL_NONE
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_NONE
+    path: ../smIRCL/Numerics.cs
+    startLine: 173
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_NONE = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_NONE As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_KILLDONE
+  commentId: F:smIRCL.Numerics.RPL_KILLDONE
+  id: RPL_KILLDONE
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_KILLDONE
+  nameWithType: Numerics.RPL_KILLDONE
+  fullName: smIRCL.Numerics.RPL_KILLDONE
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_KILLDONE
+    path: ../smIRCL/Numerics.cs
+    startLine: 174
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_KILLDONE = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_KILLDONE As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_CLOSING
+  commentId: F:smIRCL.Numerics.RPL_CLOSING
+  id: RPL_CLOSING
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_CLOSING
+  nameWithType: Numerics.RPL_CLOSING
+  fullName: smIRCL.Numerics.RPL_CLOSING
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_CLOSING
+    path: ../smIRCL/Numerics.cs
+    startLine: 175
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_CLOSING = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_CLOSING As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_CLODEEND
+  commentId: F:smIRCL.Numerics.RPL_CLODEEND
+  id: RPL_CLODEEND
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_CLODEEND
+  nameWithType: Numerics.RPL_CLODEEND
+  fullName: smIRCL.Numerics.RPL_CLODEEND
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_CLODEEND
+    path: ../smIRCL/Numerics.cs
+    startLine: 176
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_CLODEEND = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_CLODEEND As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_INFOSTART
+  commentId: F:smIRCL.Numerics.RPL_INFOSTART
+  id: RPL_INFOSTART
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_INFOSTART
+  nameWithType: Numerics.RPL_INFOSTART
+  fullName: smIRCL.Numerics.RPL_INFOSTART
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_INFOSTART
+    path: ../smIRCL/Numerics.cs
+    startLine: 177
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_INFOSTART = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_INFOSTART As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.RPL_MYPORTIS
+  commentId: F:smIRCL.Numerics.RPL_MYPORTIS
+  id: RPL_MYPORTIS
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_MYPORTIS
+  nameWithType: Numerics.RPL_MYPORTIS
+  fullName: smIRCL.Numerics.RPL_MYPORTIS
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_MYPORTIS
+    path: ../smIRCL/Numerics.cs
+    startLine: 178
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string RPL_MYPORTIS = null
+    return:
+      type: System.String
+    content.vb: Public Const RPL_MYPORTIS As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Numerics.ERR_NOSERVICEHOST
+  commentId: F:smIRCL.Numerics.ERR_NOSERVICEHOST
+  id: ERR_NOSERVICEHOST
+  parent: smIRCL.Numerics
+  langs:
+  - csharp
+  - vb
+  name: ERR_NOSERVICEHOST
+  nameWithType: Numerics.ERR_NOSERVICEHOST
+  fullName: smIRCL.Numerics.ERR_NOSERVICEHOST
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: ERR_NOSERVICEHOST
+    path: ../smIRCL/Numerics.cs
+    startLine: 179
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public const string ERR_NOSERVICEHOST = null
+    return:
+      type: System.String
+    content.vb: Public Const ERR_NOSERVICEHOST As String = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: smIRCL
+  commentId: N:smIRCL
+  name: smIRCL
+  nameWithType: smIRCL
+  fullName: smIRCL
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String

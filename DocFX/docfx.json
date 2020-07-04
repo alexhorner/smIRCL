@@ -62,6 +62,10 @@
             "_enableSearch": "true",
             "newFileRepository": {
                 "branch": "master"
+            },
+            "_gitContribute": {
+                "repo": "https://github.com/alexhorner/smIRCL",
+                "branch": "master"
             }
         },
         "noLangKeyword": false,

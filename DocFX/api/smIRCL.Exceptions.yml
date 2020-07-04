@@ -1,0 +1,22 @@
+### YamlMime:ManagedReference
+items:
+- uid: smIRCL.Exceptions
+  commentId: N:smIRCL.Exceptions
+  id: smIRCL.Exceptions
+  children:
+  - smIRCL.Exceptions.ConnectionFailureException
+  langs:
+  - csharp
+  - vb
+  name: smIRCL.Exceptions
+  nameWithType: smIRCL.Exceptions
+  fullName: smIRCL.Exceptions
+  type: Namespace
+  assemblies:
+  - smIRCL
+references:
+- uid: smIRCL.Exceptions.ConnectionFailureException
+  commentId: T:smIRCL.Exceptions.ConnectionFailureException
+  name: ConnectionFailureException
+  nameWithType: ConnectionFailureException
+  fullName: smIRCL.Exceptions.ConnectionFailureException

@@ -1,0 +1,554 @@
+### YamlMime:ManagedReference
+items:
+- uid: smIRCL.IrcConnector
+  commentId: T:smIRCL.IrcConnector
+  id: IrcConnector
+  parent: smIRCL
+  children:
+  - smIRCL.IrcConnector.#ctor(smIRCL.Config.IrcConfig)
+  - smIRCL.IrcConnector.Config
+  - smIRCL.IrcConnector.Connect
+  - smIRCL.IrcConnector.Connected
+  - smIRCL.IrcConnector.Disconnected
+  - smIRCL.IrcConnector.Dispose
+  - smIRCL.IrcConnector.IsConnected
+  - smIRCL.IrcConnector.IsDisposed
+  - smIRCL.IrcConnector.MessageReceived
+  - smIRCL.IrcConnector.MessageTransmitted
+  - smIRCL.IrcConnector.ReceiveFailed
+  - smIRCL.IrcConnector.Transmit(System.String)
+  - smIRCL.IrcConnector.TransmitFailed
+  langs:
+  - csharp
+  - vb
+  name: IrcConnector
+  nameWithType: IrcConnector
+  fullName: smIRCL.IrcConnector
+  type: Class
+  source:
+    remote:
+      path: smIRCL/IrcConnector.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: IrcConnector
+    path: ../smIRCL/IrcConnector.cs
+    startLine: 10
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: 'public class IrcConnector : IDisposable'
+    content.vb: >-
+      Public Class IrcConnector
+          Inherits IDisposable
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: smIRCL.IrcConnector.Config
+  commentId: P:smIRCL.IrcConnector.Config
+  id: Config
+  parent: smIRCL.IrcConnector
+  langs:
+  - csharp
+  - vb
+  name: Config
+  nameWithType: IrcConnector.Config
+  fullName: smIRCL.IrcConnector.Config
+  type: Property
+  source:
+    remote:
+      path: smIRCL/IrcConnector.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: Config
+    path: ../smIRCL/IrcConnector.cs
+    startLine: 14
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public IrcConfig Config { get; }
+    parameters: []
+    return:
+      type: smIRCL.Config.IrcConfig
+    content.vb: Public ReadOnly Property Config As IrcConfig
+  overload: smIRCL.IrcConnector.Config*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: smIRCL.IrcConnector.IsConnected
+  commentId: P:smIRCL.IrcConnector.IsConnected
+  id: IsConnected
+  parent: smIRCL.IrcConnector
+  langs:
+  - csharp
+  - vb
+  name: IsConnected
+  nameWithType: IrcConnector.IsConnected
+  fullName: smIRCL.IrcConnector.IsConnected
+  type: Property
+  source:
+    remote:
+      path: smIRCL/IrcConnector.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: IsConnected
+    path: ../smIRCL/IrcConnector.cs
+    startLine: 16
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public bool IsConnected { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsConnected As Boolean
+  overload: smIRCL.IrcConnector.IsConnected*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: smIRCL.IrcConnector.IsDisposed
+  commentId: P:smIRCL.IrcConnector.IsDisposed
+  id: IsDisposed
+  parent: smIRCL.IrcConnector
+  langs:
+  - csharp
+  - vb
+  name: IsDisposed
+  nameWithType: IrcConnector.IsDisposed
+  fullName: smIRCL.IrcConnector.IsDisposed
+  type: Property
+  source:
+    remote:
+      path: smIRCL/IrcConnector.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: IsDisposed
+    path: ../smIRCL/IrcConnector.cs
+    startLine: 18
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public bool IsDisposed { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsDisposed As Boolean
+  overload: smIRCL.IrcConnector.IsDisposed*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: smIRCL.IrcConnector.Connected
+  commentId: E:smIRCL.IrcConnector.Connected
+  id: Connected
+  parent: smIRCL.IrcConnector
+  langs:
+  - csharp
+  - vb
+  name: Connected
+  nameWithType: IrcConnector.Connected
+  fullName: smIRCL.IrcConnector.Connected
+  type: Event
+  source:
+    remote:
+      path: smIRCL/IrcConnector.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: Connected
+    path: ../smIRCL/IrcConnector.cs
+    startLine: 24
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public event IrcConnector.ConnectionStateEventHandler Connected
+    return:
+      type: smIRCL.IrcConnector.ConnectionStateEventHandler
+    content.vb: Public Event Connected As IrcConnector.ConnectionStateEventHandler
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: smIRCL.IrcConnector.Disconnected
+  commentId: E:smIRCL.IrcConnector.Disconnected
+  id: Disconnected
+  parent: smIRCL.IrcConnector
+  langs:
+  - csharp
+  - vb
+  name: Disconnected
+  nameWithType: IrcConnector.Disconnected
+  fullName: smIRCL.IrcConnector.Disconnected
+  type: Event
+  source:
+    remote:
+      path: smIRCL/IrcConnector.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: Disconnected
+    path: ../smIRCL/IrcConnector.cs
+    startLine: 25
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public event IrcConnector.ConnectionStateEventHandler Disconnected
+    return:
+      type: smIRCL.IrcConnector.ConnectionStateEventHandler
+    content.vb: Public Event Disconnected As IrcConnector.ConnectionStateEventHandler
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: smIRCL.IrcConnector.MessageTransmitted
+  commentId: E:smIRCL.IrcConnector.MessageTransmitted
+  id: MessageTransmitted
+  parent: smIRCL.IrcConnector
+  langs:
+  - csharp
+  - vb
+  name: MessageTransmitted
+  nameWithType: IrcConnector.MessageTransmitted
+  fullName: smIRCL.IrcConnector.MessageTransmitted
+  type: Event
+  source:
+    remote:
+      path: smIRCL/IrcConnector.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: MessageTransmitted
+    path: ../smIRCL/IrcConnector.cs
+    startLine: 29
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public event IrcConnector.MessageTransmitHandler MessageTransmitted
+    return:
+      type: smIRCL.IrcConnector.MessageTransmitHandler
+    content.vb: Public Event MessageTransmitted As IrcConnector.MessageTransmitHandler
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: smIRCL.IrcConnector.MessageReceived
+  commentId: E:smIRCL.IrcConnector.MessageReceived
+  id: MessageReceived
+  parent: smIRCL.IrcConnector
+  langs:
+  - csharp
+  - vb
+  name: MessageReceived
+  nameWithType: IrcConnector.MessageReceived
+  fullName: smIRCL.IrcConnector.MessageReceived
+  type: Event
+  source:
+    remote:
+      path: smIRCL/IrcConnector.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: MessageReceived
+    path: ../smIRCL/IrcConnector.cs
+    startLine: 33
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public event IrcConnector.MessageHandler MessageReceived
+    return:
+      type: smIRCL.IrcConnector.MessageHandler
+    content.vb: Public Event MessageReceived As IrcConnector.MessageHandler
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: smIRCL.IrcConnector.TransmitFailed
+  commentId: E:smIRCL.IrcConnector.TransmitFailed
+  id: TransmitFailed
+  parent: smIRCL.IrcConnector
+  langs:
+  - csharp
+  - vb
+  name: TransmitFailed
+  nameWithType: IrcConnector.TransmitFailed
+  fullName: smIRCL.IrcConnector.TransmitFailed
+  type: Event
+  source:
+    remote:
+      path: smIRCL/IrcConnector.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: TransmitFailed
+    path: ../smIRCL/IrcConnector.cs
+    startLine: 37
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public event IrcConnector.CommunicationFailedHandler TransmitFailed
+    return:
+      type: smIRCL.IrcConnector.CommunicationFailedHandler
+    content.vb: Public Event TransmitFailed As IrcConnector.CommunicationFailedHandler
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: smIRCL.IrcConnector.ReceiveFailed
+  commentId: E:smIRCL.IrcConnector.ReceiveFailed
+  id: ReceiveFailed
+  parent: smIRCL.IrcConnector
+  langs:
+  - csharp
+  - vb
+  name: ReceiveFailed
+  nameWithType: IrcConnector.ReceiveFailed
+  fullName: smIRCL.IrcConnector.ReceiveFailed
+  type: Event
+  source:
+    remote:
+      path: smIRCL/IrcConnector.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: ReceiveFailed
+    path: ../smIRCL/IrcConnector.cs
+    startLine: 38
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public event IrcConnector.CommunicationFailedHandler ReceiveFailed
+    return:
+      type: smIRCL.IrcConnector.CommunicationFailedHandler
+    content.vb: Public Event ReceiveFailed As IrcConnector.CommunicationFailedHandler
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: smIRCL.IrcConnector.#ctor(smIRCL.Config.IrcConfig)
+  commentId: M:smIRCL.IrcConnector.#ctor(smIRCL.Config.IrcConfig)
+  id: '#ctor(smIRCL.Config.IrcConfig)'
+  parent: smIRCL.IrcConnector
+  langs:
+  - csharp
+  - vb
+  name: IrcConnector(IrcConfig)
+  nameWithType: IrcConnector.IrcConnector(IrcConfig)
+  fullName: smIRCL.IrcConnector.IrcConnector(smIRCL.Config.IrcConfig)
+  type: Constructor
+  source:
+    remote:
+      path: smIRCL/IrcConnector.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: .ctor
+    path: ../smIRCL/IrcConnector.cs
+    startLine: 58
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public IrcConnector(IrcConfig config)
+    parameters:
+    - id: config
+      type: smIRCL.Config.IrcConfig
+    content.vb: Public Sub New(config As IrcConfig)
+  overload: smIRCL.IrcConnector.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: smIRCL.IrcConnector.Connect
+  commentId: M:smIRCL.IrcConnector.Connect
+  id: Connect
+  parent: smIRCL.IrcConnector
+  langs:
+  - csharp
+  - vb
+  name: Connect()
+  nameWithType: IrcConnector.Connect()
+  fullName: smIRCL.IrcConnector.Connect()
+  type: Method
+  source:
+    remote:
+      path: smIRCL/IrcConnector.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: Connect
+    path: ../smIRCL/IrcConnector.cs
+    startLine: 71
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public void Connect()
+    content.vb: Public Sub Connect
+  overload: smIRCL.IrcConnector.Connect*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: smIRCL.IrcConnector.Dispose
+  commentId: M:smIRCL.IrcConnector.Dispose
+  id: Dispose
+  parent: smIRCL.IrcConnector
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: IrcConnector.Dispose()
+  fullName: smIRCL.IrcConnector.Dispose()
+  type: Method
+  source:
+    remote:
+      path: smIRCL/IrcConnector.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: Dispose
+    path: ../smIRCL/IrcConnector.cs
+    startLine: 165
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public void Dispose()
+    content.vb: Public Sub Dispose
+  overload: smIRCL.IrcConnector.Dispose*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: smIRCL.IrcConnector.Transmit(System.String)
+  commentId: M:smIRCL.IrcConnector.Transmit(System.String)
+  id: Transmit(System.String)
+  parent: smIRCL.IrcConnector
+  langs:
+  - csharp
+  - vb
+  name: Transmit(String)
+  nameWithType: IrcConnector.Transmit(String)
+  fullName: smIRCL.IrcConnector.Transmit(System.String)
+  type: Method
+  source:
+    remote:
+      path: smIRCL/IrcConnector.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: Transmit
+    path: ../smIRCL/IrcConnector.cs
+    startLine: 177
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public void Transmit(string data)
+    parameters:
+    - id: data
+      type: System.String
+    content.vb: Public Sub Transmit(data As String)
+  overload: smIRCL.IrcConnector.Transmit*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: smIRCL
+  commentId: N:smIRCL
+  name: smIRCL
+  nameWithType: smIRCL
+  fullName: smIRCL
+- uid: smIRCL.IrcConnector.Config*
+  commentId: Overload:smIRCL.IrcConnector.Config
+  name: Config
+  nameWithType: IrcConnector.Config
+  fullName: smIRCL.IrcConnector.Config
+- uid: smIRCL.Config.IrcConfig
+  commentId: T:smIRCL.Config.IrcConfig
+  parent: smIRCL.Config
+  name: IrcConfig
+  nameWithType: IrcConfig
+  fullName: smIRCL.Config.IrcConfig
+- uid: smIRCL.Config
+  commentId: N:smIRCL.Config
+  name: smIRCL.Config
+  nameWithType: smIRCL.Config
+  fullName: smIRCL.Config
+- uid: smIRCL.IrcConnector.IsConnected*
+  commentId: Overload:smIRCL.IrcConnector.IsConnected
+  name: IsConnected
+  nameWithType: IrcConnector.IsConnected
+  fullName: smIRCL.IrcConnector.IsConnected
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: smIRCL.IrcConnector.IsDisposed*
+  commentId: Overload:smIRCL.IrcConnector.IsDisposed
+  name: IsDisposed
+  nameWithType: IrcConnector.IsDisposed
+  fullName: smIRCL.IrcConnector.IsDisposed
+- uid: smIRCL.IrcConnector.ConnectionStateEventHandler
+  commentId: T:smIRCL.IrcConnector.ConnectionStateEventHandler
+  parent: smIRCL
+  name: IrcConnector.ConnectionStateEventHandler
+  nameWithType: IrcConnector.ConnectionStateEventHandler
+  fullName: smIRCL.IrcConnector.ConnectionStateEventHandler
+- uid: smIRCL.IrcConnector.MessageTransmitHandler
+  commentId: T:smIRCL.IrcConnector.MessageTransmitHandler
+  parent: smIRCL
+  name: IrcConnector.MessageTransmitHandler
+  nameWithType: IrcConnector.MessageTransmitHandler
+  fullName: smIRCL.IrcConnector.MessageTransmitHandler
+- uid: smIRCL.IrcConnector.MessageHandler
+  commentId: T:smIRCL.IrcConnector.MessageHandler
+  parent: smIRCL
+  name: IrcConnector.MessageHandler
+  nameWithType: IrcConnector.MessageHandler
+  fullName: smIRCL.IrcConnector.MessageHandler
+- uid: smIRCL.IrcConnector.CommunicationFailedHandler
+  commentId: T:smIRCL.IrcConnector.CommunicationFailedHandler
+  parent: smIRCL
+  name: IrcConnector.CommunicationFailedHandler
+  nameWithType: IrcConnector.CommunicationFailedHandler
+  fullName: smIRCL.IrcConnector.CommunicationFailedHandler
+- uid: smIRCL.IrcConnector.#ctor*
+  commentId: Overload:smIRCL.IrcConnector.#ctor
+  name: IrcConnector
+  nameWithType: IrcConnector.IrcConnector
+  fullName: smIRCL.IrcConnector.IrcConnector
+- uid: smIRCL.IrcConnector.Connect*
+  commentId: Overload:smIRCL.IrcConnector.Connect
+  name: Connect
+  nameWithType: IrcConnector.Connect
+  fullName: smIRCL.IrcConnector.Connect
+- uid: smIRCL.IrcConnector.Dispose*
+  commentId: Overload:smIRCL.IrcConnector.Dispose
+  name: Dispose
+  nameWithType: IrcConnector.Dispose
+  fullName: smIRCL.IrcConnector.Dispose
+- uid: smIRCL.IrcConnector.Transmit*
+  commentId: Overload:smIRCL.IrcConnector.Transmit
+  name: Transmit
+  nameWithType: IrcConnector.Transmit
+  fullName: smIRCL.IrcConnector.Transmit
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String

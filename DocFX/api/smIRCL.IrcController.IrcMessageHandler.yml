@@ -1,0 +1,65 @@
+### YamlMime:ManagedReference
+items:
+- uid: smIRCL.IrcController.IrcMessageHandler
+  commentId: T:smIRCL.IrcController.IrcMessageHandler
+  id: IrcController.IrcMessageHandler
+  parent: smIRCL
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: IrcController.IrcMessageHandler
+  nameWithType: IrcController.IrcMessageHandler
+  fullName: smIRCL.IrcController.IrcMessageHandler
+  type: Delegate
+  source:
+    remote:
+      path: smIRCL/IrcController.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: IrcMessageHandler
+    path: ../smIRCL/IrcController.cs
+    startLine: 33
+  assemblies:
+  - smIRCL
+  namespace: smIRCL
+  syntax:
+    content: public delegate void IrcMessageHandler(IrcConnector client, IrcController controller, IrcMessage message);
+    parameters:
+    - id: client
+      type: smIRCL.IrcConnector
+    - id: controller
+      type: smIRCL.IrcController
+    - id: message
+      type: smIRCL.IrcMessage
+    content.vb: Public Delegate Sub IrcMessageHandler(client As IrcConnector, controller As IrcController, message As IrcMessage)
+  modifiers.csharp:
+  - public
+  - delegate
+  modifiers.vb:
+  - Public
+  - Delegate
+references:
+- uid: smIRCL
+  commentId: N:smIRCL
+  name: smIRCL
+  nameWithType: smIRCL
+  fullName: smIRCL
+- uid: smIRCL.IrcConnector
+  commentId: T:smIRCL.IrcConnector
+  parent: smIRCL
+  name: IrcConnector
+  nameWithType: IrcConnector
+  fullName: smIRCL.IrcConnector
+- uid: smIRCL.IrcController
+  commentId: T:smIRCL.IrcController
+  parent: smIRCL
+  name: IrcController
+  nameWithType: IrcController
+  fullName: smIRCL.IrcController
+- uid: smIRCL.IrcMessage
+  commentId: T:smIRCL.IrcMessage
+  parent: smIRCL
+  name: IrcMessage
+  nameWithType: IrcMessage
+  fullName: smIRCL.IrcMessage

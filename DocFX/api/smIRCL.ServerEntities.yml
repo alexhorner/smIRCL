@@ -1,0 +1,28 @@
+### YamlMime:ManagedReference
+items:
+- uid: smIRCL.ServerEntities
+  commentId: N:smIRCL.ServerEntities
+  id: smIRCL.ServerEntities
+  children:
+  - smIRCL.ServerEntities.IrcChannel
+  - smIRCL.ServerEntities.IrcUser
+  langs:
+  - csharp
+  - vb
+  name: smIRCL.ServerEntities
+  nameWithType: smIRCL.ServerEntities
+  fullName: smIRCL.ServerEntities
+  type: Namespace
+  assemblies:
+  - smIRCL
+references:
+- uid: smIRCL.ServerEntities.IrcChannel
+  commentId: T:smIRCL.ServerEntities.IrcChannel
+  name: IrcChannel
+  nameWithType: IrcChannel
+  fullName: smIRCL.ServerEntities.IrcChannel
+- uid: smIRCL.ServerEntities.IrcUser
+  commentId: T:smIRCL.ServerEntities.IrcUser
+  name: IrcUser
+  nameWithType: IrcUser
+  fullName: smIRCL.ServerEntities.IrcUser
