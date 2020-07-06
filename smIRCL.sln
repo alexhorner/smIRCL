@@ -5,8 +5,6 @@ VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "smIRCL", "smIRCL\smIRCL.csproj", "{5F61B267-98F6-4480-9461-FE101D7CCD03}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "smIRCLTest", "smIRCLTest\smIRCLTest.csproj", "{8502AEDC-C278-4130-9A54-0C918493710C}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,10 +15,6 @@ Global
 		{5F61B267-98F6-4480-9461-FE101D7CCD03}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5F61B267-98F6-4480-9461-FE101D7CCD03}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5F61B267-98F6-4480-9461-FE101D7CCD03}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8502AEDC-C278-4130-9A54-0C918493710C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8502AEDC-C278-4130-9A54-0C918493710C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8502AEDC-C278-4130-9A54-0C918493710C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8502AEDC-C278-4130-9A54-0C918493710C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
