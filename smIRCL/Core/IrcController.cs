@@ -568,6 +568,9 @@ namespace smIRCL.Core
                 Host = message.Parameters[3];
                 RealName = message.Parameters[7].Split(new[] { ' ' }, 2)[1];
 
+                IrcChannel channel = Channels.FirstOrDefault(ch => ch.Name.ToIrcLower() == message.Parameters[1].ToIrcLower());
+                channel?.ClientModes.Clear();
+
                 foreach (char status in statuses)
                 {
                     switch (status)
@@ -578,6 +581,13 @@ namespace smIRCL.Core
 
                         case 'H':
                             Away = null;
+                            break;
+
+                        default:
+                            if (SupportedUserPrefixes.Any(sup => sup.Value == status))
+                            {
+                                channel?.ClientModes.Add(SupportedUserPrefixes.FirstOrDefault(sup => sup.Value == status).Key);
+                            }
                             break;
                     }
                 }
@@ -591,6 +601,9 @@ namespace smIRCL.Core
                     user.Host = message.Parameters[3];
                     user.RealName = message.Parameters[7].Split(new[] { ' ' }, 2)[1];
 
+                    KeyValuePair<string, List<char>> userMutualChannelModes = user.MutualChannelModes.FirstOrDefault(mcm => mcm.Key.ToIrcLower() == message.Parameters[1].ToIrcLower());
+                    if (userMutualChannelModes.Key != null) userMutualChannelModes.Value.Clear();
+
                     foreach (char status in statuses)
                     {
                         switch (status)
@@ -601,6 +614,13 @@ namespace smIRCL.Core
 
                             case 'H':
                                 user.Away = null;
+                                break;
+
+                            default:
+                                if (SupportedUserPrefixes.Any(sup => sup.Value == status) && userMutualChannelModes.Key != null)
+                                {
+                                    userMutualChannelModes.Value.Add(SupportedUserPrefixes.FirstOrDefault(sup => sup.Value == status).Key);
+                                }
                                 break;
                         }
                     }

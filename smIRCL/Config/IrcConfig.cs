@@ -93,7 +93,8 @@ namespace smIRCL.Config
         {
             "message-tags",
             "away-notify",
-            "extended-join"
+            "extended-join",
+            "multi-prefix"
         };
 
         /// <summary>
