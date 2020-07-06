@@ -638,7 +638,7 @@ items:
   assemblies:
   - smIRCL
   namespace: smIRCL.Config
-  summary: "\nThe IRCv3 capabilities to negotiate. Default capabilities are included and should be added to, not replaced. SASL must not be included as it is determined by AuthMode\n"
+  summary: "\nThe IRCv3 capabilities to negotiate. Default capabilities are included and should be added to, not replaced otherwise some features may be broken. SASL must not be included as it is determined by AuthMode\n"
   example: []
   syntax:
     content: public List<string> DesiredCapabilities
@@ -667,7 +667,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: IsValid
     path: ../smIRCL/Config/IrcConfig.cs
-    startLine: 102
+    startLine: 103
   assemblies:
   - smIRCL
   namespace: smIRCL.Config

@@ -8,6 +8,7 @@ items:
   - smIRCL.ServerEntities.IrcUser.Away
   - smIRCL.ServerEntities.IrcUser.Host
   - smIRCL.ServerEntities.IrcUser.HostMask
+  - smIRCL.ServerEntities.IrcUser.IdentifiedAccount
   - smIRCL.ServerEntities.IrcUser.LastDirectMessage
   - smIRCL.ServerEntities.IrcUser.MutualChannelModes
   - smIRCL.ServerEntities.IrcUser.MutualChannels
@@ -263,18 +264,55 @@ items:
   summary: "\nThe Away status and message of the IRC user\n"
   example: []
   syntax:
-    content: public string Away { get; set; }
+    content: public string Away { get; }
     parameters: []
     return:
       type: System.String
-    content.vb: Public Property Away As String
+    content.vb: Public ReadOnly Property Away As String
   overload: smIRCL.ServerEntities.IrcUser.Away*
   modifiers.csharp:
   - public
   - get
-  - set
   modifiers.vb:
   - Public
+  - ReadOnly
+- uid: smIRCL.ServerEntities.IrcUser.IdentifiedAccount
+  commentId: P:smIRCL.ServerEntities.IrcUser.IdentifiedAccount
+  id: IdentifiedAccount
+  parent: smIRCL.ServerEntities.IrcUser
+  langs:
+  - csharp
+  - vb
+  name: IdentifiedAccount
+  nameWithType: IrcUser.IdentifiedAccount
+  fullName: smIRCL.ServerEntities.IrcUser.IdentifiedAccount
+  type: Property
+  source:
+    remote:
+      path: smIRCL/ServerEntities/IrcUser.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: IdentifiedAccount
+    path: ../smIRCL/ServerEntities/IrcUser.cs
+    startLine: 37
+  assemblies:
+  - smIRCL
+  namespace: smIRCL.ServerEntities
+  summary: "\nThe account the IRC user has identified with (if known) using a service such as SASL or NickServ\n"
+  example: []
+  syntax:
+    content: public string IdentifiedAccount { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property IdentifiedAccount As String
+  overload: smIRCL.ServerEntities.IrcUser.IdentifiedAccount*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
 - uid: smIRCL.ServerEntities.IrcUser.MutualChannels
   commentId: P:smIRCL.ServerEntities.IrcUser.MutualChannels
   id: MutualChannels
@@ -293,7 +331,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: MutualChannels
     path: ../smIRCL/ServerEntities/IrcUser.cs
-    startLine: 37
+    startLine: 41
   assemblies:
   - smIRCL
   namespace: smIRCL.ServerEntities
@@ -330,7 +368,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: MutualChannelModes
     path: ../smIRCL/ServerEntities/IrcUser.cs
-    startLine: 41
+    startLine: 45
   assemblies:
   - smIRCL
   namespace: smIRCL.ServerEntities
@@ -367,7 +405,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: LastDirectMessage
     path: ../smIRCL/ServerEntities/IrcUser.cs
-    startLine: 45
+    startLine: 49
   assemblies:
   - smIRCL
   namespace: smIRCL.ServerEntities
@@ -721,6 +759,11 @@ references:
   name: Away
   nameWithType: IrcUser.Away
   fullName: smIRCL.ServerEntities.IrcUser.Away
+- uid: smIRCL.ServerEntities.IrcUser.IdentifiedAccount*
+  commentId: Overload:smIRCL.ServerEntities.IrcUser.IdentifiedAccount
+  name: IdentifiedAccount
+  nameWithType: IrcUser.IdentifiedAccount
+  fullName: smIRCL.ServerEntities.IrcUser.IdentifiedAccount
 - uid: smIRCL.ServerEntities.IrcUser.MutualChannels*
   commentId: Overload:smIRCL.ServerEntities.IrcUser.MutualChannels
   name: MutualChannels

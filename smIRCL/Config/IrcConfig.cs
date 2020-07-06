@@ -87,12 +87,13 @@ namespace smIRCL.Config
         public TimeSpan DirectMessageHoldingPeriod { get; set; } = TimeSpan.FromMinutes(5);
 
         /// <summary>
-        /// The IRCv3 capabilities to negotiate. Default capabilities are included and should be added to, not replaced. SASL must not be included as it is determined by AuthMode
+        /// The IRCv3 capabilities to negotiate. Default capabilities are included and should be added to, not replaced otherwise some features may be broken. SASL must not be included as it is determined by AuthMode
         /// </summary>
         public List<string> DesiredCapabilities = new List<string>
         {
             "message-tags",
-            "away-notify"
+            "away-notify",
+            "extended-join"
         };
 
         /// <summary>

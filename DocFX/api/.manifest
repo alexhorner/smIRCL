@@ -284,6 +284,7 @@
   "smIRCL.ServerEntities.IrcUser.Away": "smIRCL.ServerEntities.IrcUser.yml",
   "smIRCL.ServerEntities.IrcUser.Host": "smIRCL.ServerEntities.IrcUser.yml",
   "smIRCL.ServerEntities.IrcUser.HostMask": "smIRCL.ServerEntities.IrcUser.yml",
+  "smIRCL.ServerEntities.IrcUser.IdentifiedAccount": "smIRCL.ServerEntities.IrcUser.yml",
   "smIRCL.ServerEntities.IrcUser.LastDirectMessage": "smIRCL.ServerEntities.IrcUser.yml",
   "smIRCL.ServerEntities.IrcUser.MutualChannelModes": "smIRCL.ServerEntities.IrcUser.yml",
   "smIRCL.ServerEntities.IrcUser.MutualChannels": "smIRCL.ServerEntities.IrcUser.yml",

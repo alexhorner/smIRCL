@@ -665,18 +665,39 @@ namespace smIRCL.Core
             {
                 if (Users.All(u => u.Nick.ToIrcLower() != message.SourceNick.ToIrcLower()))
                 {
+                    string realName = null;
+                    string identifiedAccount = null;
+
+                    if (NegotiatedCapabilities.Any(cap => cap.ToIrcLower() == "extended-join"))
+                    {
+                        if (message.Parameters[1] != "*") identifiedAccount = message.Parameters[1];
+                        realName = message.Parameters[2];
+                    }
+
                     Users.Add(new IrcUser
                     {
                         HostMask = message.SourceHostMask,
                         Nick = message.SourceNick,
                         Host = message.SourceHost,
-                        UserName = message.SourceUserName
+                        UserName = message.SourceUserName,
+                        RealName = realName,
+                        IdentifiedAccount = identifiedAccount,
+                        MutualChannels = new List<string>
+                        {
+                            message.Parameters[0]
+                        },
+                        MutualChannelModes = new List<KeyValuePair<string, List<char>>>
+                        {
+                            new KeyValuePair<string, List<char>>(message.Parameters[0], new List<char>())
+                        }
                     });
                     WhoIs(message.SourceNick);
                 }
                 else
                 {
-                    Users.FirstOrDefault(u => u.Nick.ToIrcLower() == message.SourceNick.ToIrcLower())?.MutualChannels.Add(message.Parameters[0]);
+                    IrcUser user = Users.FirstOrDefault(u => u.Nick.ToIrcLower() == message.SourceNick.ToIrcLower());
+                    user?.MutualChannels.Add(message.Parameters[0]);
+                    user?.MutualChannelModes.Add(new KeyValuePair<string, List<char>>(message.Parameters[0], new List<char>()));
                 }
 
                 Channels.FirstOrDefault(ch => ch.Name.ToIrcLower() == message.Parameters[0].ToIrcLower())?.Users.Add(message.SourceNick);

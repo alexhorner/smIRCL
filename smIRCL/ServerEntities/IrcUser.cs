@@ -31,7 +31,11 @@ namespace smIRCL.ServerEntities
         /// <summary>
         /// The Away status and message of the IRC user
         /// </summary>
-        public string Away { get; set; } = null;
+        public string Away { get; internal set; } = null;
+        /// <summary>
+        /// The account the IRC user has identified with (if known) using a service such as SASL or NickServ
+        /// </summary>
+        public string IdentifiedAccount { get; internal set; } = null;
         /// <summary>
         /// The channels shared between the IRC user and the client
         /// </summary>

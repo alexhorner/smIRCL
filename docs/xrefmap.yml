@@ -2221,6 +2221,19 @@ references:
   isSpec: "True"
   fullName: smIRCL.ServerEntities.IrcUser.HostMask
   nameWithType: IrcUser.HostMask
+- uid: smIRCL.ServerEntities.IrcUser.IdentifiedAccount
+  name: IdentifiedAccount
+  href: api/smIRCL.ServerEntities.IrcUser.html#smIRCL_ServerEntities_IrcUser_IdentifiedAccount
+  commentId: P:smIRCL.ServerEntities.IrcUser.IdentifiedAccount
+  fullName: smIRCL.ServerEntities.IrcUser.IdentifiedAccount
+  nameWithType: IrcUser.IdentifiedAccount
+- uid: smIRCL.ServerEntities.IrcUser.IdentifiedAccount*
+  name: IdentifiedAccount
+  href: api/smIRCL.ServerEntities.IrcUser.html#smIRCL_ServerEntities_IrcUser_IdentifiedAccount_
+  commentId: Overload:smIRCL.ServerEntities.IrcUser.IdentifiedAccount
+  isSpec: "True"
+  fullName: smIRCL.ServerEntities.IrcUser.IdentifiedAccount
+  nameWithType: IrcUser.IdentifiedAccount
 - uid: smIRCL.ServerEntities.IrcUser.LastDirectMessage
   name: LastDirectMessage
   href: api/smIRCL.ServerEntities.IrcUser.html#smIRCL_ServerEntities_IrcUser_LastDirectMessage
