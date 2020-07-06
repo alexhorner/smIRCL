@@ -8,6 +8,7 @@ items:
   - smIRCL.Config.IrcConfig.AlternativeNicks
   - smIRCL.Config.IrcConfig.AuthMode
   - smIRCL.Config.IrcConfig.AuthPassword
+  - smIRCL.Config.IrcConfig.AuthUsername
   - smIRCL.Config.IrcConfig.AutoJoinChannels
   - smIRCL.Config.IrcConfig.ConnectOnInstantiation
   - smIRCL.Config.IrcConfig.DesiredCapabilities
@@ -356,6 +357,43 @@ items:
   - set
   modifiers.vb:
   - Public
+- uid: smIRCL.Config.IrcConfig.AuthUsername
+  commentId: P:smIRCL.Config.IrcConfig.AuthUsername
+  id: AuthUsername
+  parent: smIRCL.Config.IrcConfig
+  langs:
+  - csharp
+  - vb
+  name: AuthUsername
+  nameWithType: IrcConfig.AuthUsername
+  fullName: smIRCL.Config.IrcConfig.AuthUsername
+  type: Property
+  source:
+    remote:
+      path: smIRCL/Config/IrcConfig.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: AuthUsername
+    path: ../smIRCL/Config/IrcConfig.cs
+    startLine: 56
+  assemblies:
+  - smIRCL
+  namespace: smIRCL.Config
+  summary: "\nThe client&apos;s personal authentication username\n"
+  example: []
+  syntax:
+    content: public string AuthUsername { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property AuthUsername As String
+  overload: smIRCL.Config.IrcConfig.AuthUsername*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: smIRCL.Config.IrcConfig.AuthPassword
   commentId: P:smIRCL.Config.IrcConfig.AuthPassword
   id: AuthPassword
@@ -374,7 +412,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: AuthPassword
     path: ../smIRCL/Config/IrcConfig.cs
-    startLine: 56
+    startLine: 61
   assemblies:
   - smIRCL
   namespace: smIRCL.Config
@@ -411,7 +449,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: AuthMode
     path: ../smIRCL/Config/IrcConfig.cs
-    startLine: 61
+    startLine: 66
   assemblies:
   - smIRCL
   namespace: smIRCL.Config
@@ -448,7 +486,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: UseSsl
     path: ../smIRCL/Config/IrcConfig.cs
-    startLine: 66
+    startLine: 71
   assemblies:
   - smIRCL
   namespace: smIRCL.Config
@@ -485,7 +523,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: ReconnectAttempts
     path: ../smIRCL/Config/IrcConfig.cs
-    startLine: 71
+    startLine: 76
   assemblies:
   - smIRCL
   namespace: smIRCL.Config
@@ -522,7 +560,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: ConnectOnInstantiation
     path: ../smIRCL/Config/IrcConfig.cs
-    startLine: 76
+    startLine: 81
   assemblies:
   - smIRCL
   namespace: smIRCL.Config
@@ -559,7 +597,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: DirectMessageHoldingPeriod
     path: ../smIRCL/Config/IrcConfig.cs
-    startLine: 81
+    startLine: 86
   assemblies:
   - smIRCL
   namespace: smIRCL.Config
@@ -596,7 +634,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: DesiredCapabilities
     path: ../smIRCL/Config/IrcConfig.cs
-    startLine: 86
+    startLine: 91
   assemblies:
   - smIRCL
   namespace: smIRCL.Config
@@ -629,7 +667,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: IsValid
     path: ../smIRCL/Config/IrcConfig.cs
-    startLine: 96
+    startLine: 102
   assemblies:
   - smIRCL
   namespace: smIRCL.Config
@@ -1174,6 +1212,11 @@ references:
   name: RealName
   nameWithType: IrcConfig.RealName
   fullName: smIRCL.Config.IrcConfig.RealName
+- uid: smIRCL.Config.IrcConfig.AuthUsername*
+  commentId: Overload:smIRCL.Config.IrcConfig.AuthUsername
+  name: AuthUsername
+  nameWithType: IrcConfig.AuthUsername
+  fullName: smIRCL.Config.IrcConfig.AuthUsername
 - uid: smIRCL.Config.IrcConfig.AuthPassword*
   commentId: Overload:smIRCL.Config.IrcConfig.AuthPassword
   name: AuthPassword

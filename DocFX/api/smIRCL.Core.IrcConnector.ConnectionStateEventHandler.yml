@@ -19,7 +19,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: ConnectionStateEventHandler
     path: ../smIRCL/Core/IrcConnector.cs
-    startLine: 45
+    startLine: 48
   assemblies:
   - smIRCL
   namespace: smIRCL.Core

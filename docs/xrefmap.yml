@@ -52,6 +52,19 @@ references:
   isSpec: "True"
   fullName: smIRCL.Config.IrcConfig.AuthPassword
   nameWithType: IrcConfig.AuthPassword
+- uid: smIRCL.Config.IrcConfig.AuthUsername
+  name: AuthUsername
+  href: api/smIRCL.Config.IrcConfig.html#smIRCL_Config_IrcConfig_AuthUsername
+  commentId: P:smIRCL.Config.IrcConfig.AuthUsername
+  fullName: smIRCL.Config.IrcConfig.AuthUsername
+  nameWithType: IrcConfig.AuthUsername
+- uid: smIRCL.Config.IrcConfig.AuthUsername*
+  name: AuthUsername
+  href: api/smIRCL.Config.IrcConfig.html#smIRCL_Config_IrcConfig_AuthUsername_
+  commentId: Overload:smIRCL.Config.IrcConfig.AuthUsername
+  isSpec: "True"
+  fullName: smIRCL.Config.IrcConfig.AuthUsername
+  nameWithType: IrcConfig.AuthUsername
 - uid: smIRCL.Config.IrcConfig.AutoJoinChannels
   name: AutoJoinChannels
   href: api/smIRCL.Config.IrcConfig.html#smIRCL_Config_IrcConfig_AutoJoinChannels
@@ -232,6 +245,12 @@ references:
   commentId: F:smIRCL.Constants.GeneralConstants.IrcLowers
   fullName: smIRCL.Constants.GeneralConstants.IrcLowers
   nameWithType: GeneralConstants.IrcLowers
+- uid: smIRCL.Constants.GeneralConstants.Rcf1459ValidChannelChars
+  name: Rcf1459ValidChannelChars
+  href: api/smIRCL.Constants.GeneralConstants.html#smIRCL_Constants_GeneralConstants_Rcf1459ValidChannelChars
+  commentId: F:smIRCL.Constants.GeneralConstants.Rcf1459ValidChannelChars
+  fullName: smIRCL.Constants.GeneralConstants.Rcf1459ValidChannelChars
+  nameWithType: GeneralConstants.Rcf1459ValidChannelChars
 - uid: smIRCL.Constants.GeneralConstants.TagEscapeDictionary
   name: TagEscapeDictionary
   href: api/smIRCL.Constants.GeneralConstants.html#smIRCL_Constants_GeneralConstants_TagEscapeDictionary
@@ -340,6 +359,12 @@ references:
   commentId: F:smIRCL.Constants.Numerics.ERR_NICKCOLLISION
   fullName: smIRCL.Constants.Numerics.ERR_NICKCOLLISION
   nameWithType: Numerics.ERR_NICKCOLLISION
+- uid: smIRCL.Constants.Numerics.ERR_NICKLOCKED
+  name: ERR_NICKLOCKED
+  href: api/smIRCL.Constants.Numerics.html#smIRCL_Constants_Numerics_ERR_NICKLOCKED
+  commentId: F:smIRCL.Constants.Numerics.ERR_NICKLOCKED
+  fullName: smIRCL.Constants.Numerics.ERR_NICKLOCKED
+  nameWithType: Numerics.ERR_NICKLOCKED
 - uid: smIRCL.Constants.Numerics.ERR_NICKNAMEINUSE
   name: ERR_NICKNAMEINUSE
   href: api/smIRCL.Constants.Numerics.html#smIRCL_Constants_Numerics_ERR_NICKNAMEINUSE
@@ -472,6 +497,30 @@ references:
   commentId: F:smIRCL.Constants.Numerics.ERR_RESTRICTED
   fullName: smIRCL.Constants.Numerics.ERR_RESTRICTED
   nameWithType: Numerics.ERR_RESTRICTED
+- uid: smIRCL.Constants.Numerics.ERR_SASLABORTED
+  name: ERR_SASLABORTED
+  href: api/smIRCL.Constants.Numerics.html#smIRCL_Constants_Numerics_ERR_SASLABORTED
+  commentId: F:smIRCL.Constants.Numerics.ERR_SASLABORTED
+  fullName: smIRCL.Constants.Numerics.ERR_SASLABORTED
+  nameWithType: Numerics.ERR_SASLABORTED
+- uid: smIRCL.Constants.Numerics.ERR_SASLALREADY
+  name: ERR_SASLALREADY
+  href: api/smIRCL.Constants.Numerics.html#smIRCL_Constants_Numerics_ERR_SASLALREADY
+  commentId: F:smIRCL.Constants.Numerics.ERR_SASLALREADY
+  fullName: smIRCL.Constants.Numerics.ERR_SASLALREADY
+  nameWithType: Numerics.ERR_SASLALREADY
+- uid: smIRCL.Constants.Numerics.ERR_SASLFAIL
+  name: ERR_SASLFAIL
+  href: api/smIRCL.Constants.Numerics.html#smIRCL_Constants_Numerics_ERR_SASLFAIL
+  commentId: F:smIRCL.Constants.Numerics.ERR_SASLFAIL
+  fullName: smIRCL.Constants.Numerics.ERR_SASLFAIL
+  nameWithType: Numerics.ERR_SASLFAIL
+- uid: smIRCL.Constants.Numerics.ERR_SASLTOOLONG
+  name: ERR_SASLTOOLONG
+  href: api/smIRCL.Constants.Numerics.html#smIRCL_Constants_Numerics_ERR_SASLTOOLONG
+  commentId: F:smIRCL.Constants.Numerics.ERR_SASLTOOLONG
+  fullName: smIRCL.Constants.Numerics.ERR_SASLTOOLONG
+  nameWithType: Numerics.ERR_SASLTOOLONG
 - uid: smIRCL.Constants.Numerics.ERR_SUMMONDISABLED
   name: ERR_SUMMONDISABLED
   href: api/smIRCL.Constants.Numerics.html#smIRCL_Constants_Numerics_ERR_SUMMONDISABLED
@@ -784,6 +833,18 @@ references:
   commentId: F:smIRCL.Constants.Numerics.RPL_LISTEND
   fullName: smIRCL.Constants.Numerics.RPL_LISTEND
   nameWithType: Numerics.RPL_LISTEND
+- uid: smIRCL.Constants.Numerics.RPL_LOGGEDIN
+  name: RPL_LOGGEDIN
+  href: api/smIRCL.Constants.Numerics.html#smIRCL_Constants_Numerics_RPL_LOGGEDIN
+  commentId: F:smIRCL.Constants.Numerics.RPL_LOGGEDIN
+  fullName: smIRCL.Constants.Numerics.RPL_LOGGEDIN
+  nameWithType: Numerics.RPL_LOGGEDIN
+- uid: smIRCL.Constants.Numerics.RPL_LOGGEDOUT
+  name: RPL_LOGGEDOUT
+  href: api/smIRCL.Constants.Numerics.html#smIRCL_Constants_Numerics_RPL_LOGGEDOUT
+  commentId: F:smIRCL.Constants.Numerics.RPL_LOGGEDOUT
+  fullName: smIRCL.Constants.Numerics.RPL_LOGGEDOUT
+  nameWithType: Numerics.RPL_LOGGEDOUT
 - uid: smIRCL.Constants.Numerics.RPL_LUSERCHANNELS
   name: RPL_LUSERCHANNELS
   href: api/smIRCL.Constants.Numerics.html#smIRCL_Constants_Numerics_RPL_LUSERCHANNELS
@@ -880,6 +941,18 @@ references:
   commentId: F:smIRCL.Constants.Numerics.RPL_RPL_LISTSTART
   fullName: smIRCL.Constants.Numerics.RPL_RPL_LISTSTART
   nameWithType: Numerics.RPL_RPL_LISTSTART
+- uid: smIRCL.Constants.Numerics.RPL_SASLMECHS
+  name: RPL_SASLMECHS
+  href: api/smIRCL.Constants.Numerics.html#smIRCL_Constants_Numerics_RPL_SASLMECHS
+  commentId: F:smIRCL.Constants.Numerics.RPL_SASLMECHS
+  fullName: smIRCL.Constants.Numerics.RPL_SASLMECHS
+  nameWithType: Numerics.RPL_SASLMECHS
+- uid: smIRCL.Constants.Numerics.RPL_SASLSUCCESS
+  name: RPL_SASLSUCCESS
+  href: api/smIRCL.Constants.Numerics.html#smIRCL_Constants_Numerics_RPL_SASLSUCCESS
+  commentId: F:smIRCL.Constants.Numerics.RPL_SASLSUCCESS
+  fullName: smIRCL.Constants.Numerics.RPL_SASLSUCCESS
+  nameWithType: Numerics.RPL_SASLSUCCESS
 - uid: smIRCL.Constants.Numerics.RPL_SERVICE
   name: RPL_SERVICE
   href: api/smIRCL.Constants.Numerics.html#smIRCL_Constants_Numerics_RPL_SERVICE
@@ -1395,9 +1468,29 @@ references:
 - uid: smIRCL.Core.IrcController.AvailableCapabilities
   name: AvailableCapabilities
   href: api/smIRCL.Core.IrcController.html#smIRCL_Core_IrcController_AvailableCapabilities
-  commentId: F:smIRCL.Core.IrcController.AvailableCapabilities
+  commentId: P:smIRCL.Core.IrcController.AvailableCapabilities
   fullName: smIRCL.Core.IrcController.AvailableCapabilities
   nameWithType: IrcController.AvailableCapabilities
+- uid: smIRCL.Core.IrcController.AvailableCapabilities*
+  name: AvailableCapabilities
+  href: api/smIRCL.Core.IrcController.html#smIRCL_Core_IrcController_AvailableCapabilities_
+  commentId: Overload:smIRCL.Core.IrcController.AvailableCapabilities
+  isSpec: "True"
+  fullName: smIRCL.Core.IrcController.AvailableCapabilities
+  nameWithType: IrcController.AvailableCapabilities
+- uid: smIRCL.Core.IrcController.Away
+  name: Away
+  href: api/smIRCL.Core.IrcController.html#smIRCL_Core_IrcController_Away
+  commentId: P:smIRCL.Core.IrcController.Away
+  fullName: smIRCL.Core.IrcController.Away
+  nameWithType: IrcController.Away
+- uid: smIRCL.Core.IrcController.Away*
+  name: Away
+  href: api/smIRCL.Core.IrcController.html#smIRCL_Core_IrcController_Away_
+  commentId: Overload:smIRCL.Core.IrcController.Away
+  isSpec: "True"
+  fullName: smIRCL.Core.IrcController.Away
+  nameWithType: IrcController.Away
 - uid: smIRCL.Core.IrcController.Channels
   name: Channels
   href: api/smIRCL.Core.IrcController.html#smIRCL_Core_IrcController_Channels
@@ -1442,6 +1535,19 @@ references:
   commentId: T:smIRCL.Core.IrcController.IrcMessageHandler
   fullName: smIRCL.Core.IrcController.IrcMessageHandler
   nameWithType: IrcController.IrcMessageHandler
+- uid: smIRCL.Core.IrcController.IsValidChannelName(System.String)
+  name: IsValidChannelName(String)
+  href: api/smIRCL.Core.IrcController.html#smIRCL_Core_IrcController_IsValidChannelName_System_String_
+  commentId: M:smIRCL.Core.IrcController.IsValidChannelName(System.String)
+  fullName: smIRCL.Core.IrcController.IsValidChannelName(System.String)
+  nameWithType: IrcController.IsValidChannelName(String)
+- uid: smIRCL.Core.IrcController.IsValidChannelName*
+  name: IsValidChannelName
+  href: api/smIRCL.Core.IrcController.html#smIRCL_Core_IrcController_IsValidChannelName_
+  commentId: Overload:smIRCL.Core.IrcController.IsValidChannelName
+  isSpec: "True"
+  fullName: smIRCL.Core.IrcController.IsValidChannelName
+  nameWithType: IrcController.IsValidChannelName
 - uid: smIRCL.Core.IrcController.Join(System.String)
   name: Join(String)
   href: api/smIRCL.Core.IrcController.html#smIRCL_Core_IrcController_Join_System_String_
@@ -1458,7 +1564,14 @@ references:
 - uid: smIRCL.Core.IrcController.NegotiatedCapabilities
   name: NegotiatedCapabilities
   href: api/smIRCL.Core.IrcController.html#smIRCL_Core_IrcController_NegotiatedCapabilities
-  commentId: F:smIRCL.Core.IrcController.NegotiatedCapabilities
+  commentId: P:smIRCL.Core.IrcController.NegotiatedCapabilities
+  fullName: smIRCL.Core.IrcController.NegotiatedCapabilities
+  nameWithType: IrcController.NegotiatedCapabilities
+- uid: smIRCL.Core.IrcController.NegotiatedCapabilities*
+  name: NegotiatedCapabilities
+  href: api/smIRCL.Core.IrcController.html#smIRCL_Core_IrcController_NegotiatedCapabilities_
+  commentId: Overload:smIRCL.Core.IrcController.NegotiatedCapabilities
+  isSpec: "True"
   fullName: smIRCL.Core.IrcController.NegotiatedCapabilities
   nameWithType: IrcController.NegotiatedCapabilities
 - uid: smIRCL.Core.IrcController.Nick
@@ -1531,6 +1644,45 @@ references:
   isSpec: "True"
   fullName: smIRCL.Core.IrcController.RealName
   nameWithType: IrcController.RealName
+- uid: smIRCL.Core.IrcController.SendPrivMsg(System.String,System.String)
+  name: SendPrivMsg(String, String)
+  href: api/smIRCL.Core.IrcController.html#smIRCL_Core_IrcController_SendPrivMsg_System_String_System_String_
+  commentId: M:smIRCL.Core.IrcController.SendPrivMsg(System.String,System.String)
+  fullName: smIRCL.Core.IrcController.SendPrivMsg(System.String, System.String)
+  nameWithType: IrcController.SendPrivMsg(String, String)
+- uid: smIRCL.Core.IrcController.SendPrivMsg*
+  name: SendPrivMsg
+  href: api/smIRCL.Core.IrcController.html#smIRCL_Core_IrcController_SendPrivMsg_
+  commentId: Overload:smIRCL.Core.IrcController.SendPrivMsg
+  isSpec: "True"
+  fullName: smIRCL.Core.IrcController.SendPrivMsg
+  nameWithType: IrcController.SendPrivMsg
+- uid: smIRCL.Core.IrcController.ServerMotd
+  name: ServerMotd
+  href: api/smIRCL.Core.IrcController.html#smIRCL_Core_IrcController_ServerMotd
+  commentId: P:smIRCL.Core.IrcController.ServerMotd
+  fullName: smIRCL.Core.IrcController.ServerMotd
+  nameWithType: IrcController.ServerMotd
+- uid: smIRCL.Core.IrcController.ServerMotd*
+  name: ServerMotd
+  href: api/smIRCL.Core.IrcController.html#smIRCL_Core_IrcController_ServerMotd_
+  commentId: Overload:smIRCL.Core.IrcController.ServerMotd
+  isSpec: "True"
+  fullName: smIRCL.Core.IrcController.ServerMotd
+  nameWithType: IrcController.ServerMotd
+- uid: smIRCL.Core.IrcController.SetAway(System.String)
+  name: SetAway(String)
+  href: api/smIRCL.Core.IrcController.html#smIRCL_Core_IrcController_SetAway_System_String_
+  commentId: M:smIRCL.Core.IrcController.SetAway(System.String)
+  fullName: smIRCL.Core.IrcController.SetAway(System.String)
+  nameWithType: IrcController.SetAway(String)
+- uid: smIRCL.Core.IrcController.SetAway*
+  name: SetAway
+  href: api/smIRCL.Core.IrcController.html#smIRCL_Core_IrcController_SetAway_
+  commentId: Overload:smIRCL.Core.IrcController.SetAway
+  isSpec: "True"
+  fullName: smIRCL.Core.IrcController.SetAway
+  nameWithType: IrcController.SetAway
 - uid: smIRCL.Core.IrcController.SetNick(System.String)
   name: SetNick(String)
   href: api/smIRCL.Core.IrcController.html#smIRCL_Core_IrcController_SetNick_System_String_
@@ -1544,18 +1696,58 @@ references:
   isSpec: "True"
   fullName: smIRCL.Core.IrcController.SetNick
   nameWithType: IrcController.SetNick
+- uid: smIRCL.Core.IrcController.SetUnAway
+  name: SetUnAway()
+  href: api/smIRCL.Core.IrcController.html#smIRCL_Core_IrcController_SetUnAway
+  commentId: M:smIRCL.Core.IrcController.SetUnAway
+  fullName: smIRCL.Core.IrcController.SetUnAway()
+  nameWithType: IrcController.SetUnAway()
+- uid: smIRCL.Core.IrcController.SetUnAway*
+  name: SetUnAway
+  href: api/smIRCL.Core.IrcController.html#smIRCL_Core_IrcController_SetUnAway_
+  commentId: Overload:smIRCL.Core.IrcController.SetUnAway
+  isSpec: "True"
+  fullName: smIRCL.Core.IrcController.SetUnAway
+  nameWithType: IrcController.SetUnAway
 - uid: smIRCL.Core.IrcController.SupportedChannelModes
   name: SupportedChannelModes
   href: api/smIRCL.Core.IrcController.html#smIRCL_Core_IrcController_SupportedChannelModes
-  commentId: F:smIRCL.Core.IrcController.SupportedChannelModes
+  commentId: P:smIRCL.Core.IrcController.SupportedChannelModes
+  fullName: smIRCL.Core.IrcController.SupportedChannelModes
+  nameWithType: IrcController.SupportedChannelModes
+- uid: smIRCL.Core.IrcController.SupportedChannelModes*
+  name: SupportedChannelModes
+  href: api/smIRCL.Core.IrcController.html#smIRCL_Core_IrcController_SupportedChannelModes_
+  commentId: Overload:smIRCL.Core.IrcController.SupportedChannelModes
+  isSpec: "True"
   fullName: smIRCL.Core.IrcController.SupportedChannelModes
   nameWithType: IrcController.SupportedChannelModes
 - uid: smIRCL.Core.IrcController.SupportedChannelTypes
   name: SupportedChannelTypes
   href: api/smIRCL.Core.IrcController.html#smIRCL_Core_IrcController_SupportedChannelTypes
-  commentId: F:smIRCL.Core.IrcController.SupportedChannelTypes
+  commentId: P:smIRCL.Core.IrcController.SupportedChannelTypes
   fullName: smIRCL.Core.IrcController.SupportedChannelTypes
   nameWithType: IrcController.SupportedChannelTypes
+- uid: smIRCL.Core.IrcController.SupportedChannelTypes*
+  name: SupportedChannelTypes
+  href: api/smIRCL.Core.IrcController.html#smIRCL_Core_IrcController_SupportedChannelTypes_
+  commentId: Overload:smIRCL.Core.IrcController.SupportedChannelTypes
+  isSpec: "True"
+  fullName: smIRCL.Core.IrcController.SupportedChannelTypes
+  nameWithType: IrcController.SupportedChannelTypes
+- uid: smIRCL.Core.IrcController.SupportedUserPrefixes
+  name: SupportedUserPrefixes
+  href: api/smIRCL.Core.IrcController.html#smIRCL_Core_IrcController_SupportedUserPrefixes
+  commentId: P:smIRCL.Core.IrcController.SupportedUserPrefixes
+  fullName: smIRCL.Core.IrcController.SupportedUserPrefixes
+  nameWithType: IrcController.SupportedUserPrefixes
+- uid: smIRCL.Core.IrcController.SupportedUserPrefixes*
+  name: SupportedUserPrefixes
+  href: api/smIRCL.Core.IrcController.html#smIRCL_Core_IrcController_SupportedUserPrefixes_
+  commentId: Overload:smIRCL.Core.IrcController.SupportedUserPrefixes
+  isSpec: "True"
+  fullName: smIRCL.Core.IrcController.SupportedUserPrefixes
+  nameWithType: IrcController.SupportedUserPrefixes
 - uid: smIRCL.Core.IrcController.UserName
   name: UserName
   href: api/smIRCL.Core.IrcController.html#smIRCL_Core_IrcController_UserName
@@ -1764,12 +1956,15 @@ references:
   commentId: T:smIRCL.ServerEntities.IrcChannel
   fullName: smIRCL.ServerEntities.IrcChannel
   nameWithType: IrcChannel
-- uid: smIRCL.ServerEntities.IrcChannel.#ctor(System.String)
-  name: IrcChannel(String)
-  href: api/smIRCL.ServerEntities.IrcChannel.html#smIRCL_ServerEntities_IrcChannel__ctor_System_String_
-  commentId: M:smIRCL.ServerEntities.IrcChannel.#ctor(System.String)
-  fullName: smIRCL.ServerEntities.IrcChannel.IrcChannel(System.String)
-  nameWithType: IrcChannel.IrcChannel(String)
+- uid: smIRCL.ServerEntities.IrcChannel.#ctor(System.String,System.Collections.Generic.List{System.Char})
+  name: IrcChannel(String, List<Char>)
+  href: api/smIRCL.ServerEntities.IrcChannel.html#smIRCL_ServerEntities_IrcChannel__ctor_System_String_System_Collections_Generic_List_System_Char__
+  commentId: M:smIRCL.ServerEntities.IrcChannel.#ctor(System.String,System.Collections.Generic.List{System.Char})
+  name.vb: IrcChannel(String, List(Of Char))
+  fullName: smIRCL.ServerEntities.IrcChannel.IrcChannel(System.String, System.Collections.Generic.List<System.Char>)
+  fullName.vb: smIRCL.ServerEntities.IrcChannel.IrcChannel(System.String, System.Collections.Generic.List(Of System.Char))
+  nameWithType: IrcChannel.IrcChannel(String, List<Char>)
+  nameWithType.vb: IrcChannel.IrcChannel(String, List(Of Char))
 - uid: smIRCL.ServerEntities.IrcChannel.#ctor*
   name: IrcChannel
   href: api/smIRCL.ServerEntities.IrcChannel.html#smIRCL_ServerEntities_IrcChannel__ctor_
@@ -1777,12 +1972,28 @@ references:
   isSpec: "True"
   fullName: smIRCL.ServerEntities.IrcChannel.IrcChannel
   nameWithType: IrcChannel.IrcChannel
-- uid: smIRCL.ServerEntities.IrcChannel.IsValidName(System.String)
-  name: IsValidName(String)
-  href: api/smIRCL.ServerEntities.IrcChannel.html#smIRCL_ServerEntities_IrcChannel_IsValidName_System_String_
-  commentId: M:smIRCL.ServerEntities.IrcChannel.IsValidName(System.String)
-  fullName: smIRCL.ServerEntities.IrcChannel.IsValidName(System.String)
-  nameWithType: IrcChannel.IsValidName(String)
+- uid: smIRCL.ServerEntities.IrcChannel.ClientModes
+  name: ClientModes
+  href: api/smIRCL.ServerEntities.IrcChannel.html#smIRCL_ServerEntities_IrcChannel_ClientModes
+  commentId: P:smIRCL.ServerEntities.IrcChannel.ClientModes
+  fullName: smIRCL.ServerEntities.IrcChannel.ClientModes
+  nameWithType: IrcChannel.ClientModes
+- uid: smIRCL.ServerEntities.IrcChannel.ClientModes*
+  name: ClientModes
+  href: api/smIRCL.ServerEntities.IrcChannel.html#smIRCL_ServerEntities_IrcChannel_ClientModes_
+  commentId: Overload:smIRCL.ServerEntities.IrcChannel.ClientModes
+  isSpec: "True"
+  fullName: smIRCL.ServerEntities.IrcChannel.ClientModes
+  nameWithType: IrcChannel.ClientModes
+- uid: smIRCL.ServerEntities.IrcChannel.IsValidName(System.String,System.Collections.Generic.List{System.Char})
+  name: IsValidName(String, List<Char>)
+  href: api/smIRCL.ServerEntities.IrcChannel.html#smIRCL_ServerEntities_IrcChannel_IsValidName_System_String_System_Collections_Generic_List_System_Char__
+  commentId: M:smIRCL.ServerEntities.IrcChannel.IsValidName(System.String,System.Collections.Generic.List{System.Char})
+  name.vb: IsValidName(String, List(Of Char))
+  fullName: smIRCL.ServerEntities.IrcChannel.IsValidName(System.String, System.Collections.Generic.List<System.Char>)
+  fullName.vb: smIRCL.ServerEntities.IrcChannel.IsValidName(System.String, System.Collections.Generic.List(Of System.Char))
+  nameWithType: IrcChannel.IsValidName(String, List<Char>)
+  nameWithType.vb: IrcChannel.IsValidName(String, List(Of Char))
 - uid: smIRCL.ServerEntities.IrcChannel.IsValidName*
   name: IsValidName
   href: api/smIRCL.ServerEntities.IrcChannel.html#smIRCL_ServerEntities_IrcChannel_IsValidName_
@@ -2023,6 +2234,19 @@ references:
   isSpec: "True"
   fullName: smIRCL.ServerEntities.IrcUser.LastDirectMessage
   nameWithType: IrcUser.LastDirectMessage
+- uid: smIRCL.ServerEntities.IrcUser.MutualChannelModes
+  name: MutualChannelModes
+  href: api/smIRCL.ServerEntities.IrcUser.html#smIRCL_ServerEntities_IrcUser_MutualChannelModes
+  commentId: P:smIRCL.ServerEntities.IrcUser.MutualChannelModes
+  fullName: smIRCL.ServerEntities.IrcUser.MutualChannelModes
+  nameWithType: IrcUser.MutualChannelModes
+- uid: smIRCL.ServerEntities.IrcUser.MutualChannelModes*
+  name: MutualChannelModes
+  href: api/smIRCL.ServerEntities.IrcUser.html#smIRCL_ServerEntities_IrcUser_MutualChannelModes_
+  commentId: Overload:smIRCL.ServerEntities.IrcUser.MutualChannelModes
+  isSpec: "True"
+  fullName: smIRCL.ServerEntities.IrcUser.MutualChannelModes
+  nameWithType: IrcUser.MutualChannelModes
 - uid: smIRCL.ServerEntities.IrcUser.MutualChannels
   name: MutualChannels
   href: api/smIRCL.ServerEntities.IrcUser.html#smIRCL_ServerEntities_IrcUser_MutualChannels

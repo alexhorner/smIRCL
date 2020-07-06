@@ -19,7 +19,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: MessageHandler
     path: ../smIRCL/Core/IrcConnector.cs
-    startLine: 66
+    startLine: 69
   assemblies:
   - smIRCL
   namespace: smIRCL.Core

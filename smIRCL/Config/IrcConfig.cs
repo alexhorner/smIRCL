@@ -52,6 +52,11 @@ namespace smIRCL.Config
         public string RealName { get; set; }
 
         /// <summary>
+        /// The client's personal authentication username
+        /// </summary>
+        public string AuthUsername { get; set; }
+
+        /// <summary>
         /// The client's personal authentication password
         /// </summary>
         public string AuthPassword { get; set; }
@@ -86,6 +91,7 @@ namespace smIRCL.Config
         /// </summary>
         public List<string> DesiredCapabilities = new List<string>
         {
+            "message-tags",
             "away-notify"
         };
 
@@ -143,6 +149,12 @@ namespace smIRCL.Config
             if (string.IsNullOrWhiteSpace(RealName))
             {
                 if (throwOnValidationError) throw new Exception($"The parameter '{nameof(RealName)}' is invalid");
+                isValid = false;
+            }
+
+            if (AuthMode != AuthMode.None && string.IsNullOrWhiteSpace(AuthUsername))
+            {
+                if (throwOnValidationError) throw new Exception($"The parameter '{nameof(AuthUsername)}' is invalid for AuthMode {AuthMode.ToString()}");
                 isValid = false;
             }
 

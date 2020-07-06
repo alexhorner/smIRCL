@@ -9,6 +9,7 @@ items:
   - smIRCL.ServerEntities.IrcUser.Host
   - smIRCL.ServerEntities.IrcUser.HostMask
   - smIRCL.ServerEntities.IrcUser.LastDirectMessage
+  - smIRCL.ServerEntities.IrcUser.MutualChannelModes
   - smIRCL.ServerEntities.IrcUser.MutualChannels
   - smIRCL.ServerEntities.IrcUser.Nick
   - smIRCL.ServerEntities.IrcUser.RealName
@@ -27,10 +28,12 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: IrcUser
     path: ../smIRCL/ServerEntities/IrcUser.cs
-    startLine: 5
+    startLine: 8
   assemblies:
   - smIRCL
   namespace: smIRCL.ServerEntities
+  summary: "\nAn IRC user who exists on the connected IRC server\n"
+  example: []
   syntax:
     content: public class IrcUser
     content.vb: Public Class IrcUser
@@ -68,10 +71,12 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: Nick
     path: ../smIRCL/ServerEntities/IrcUser.cs
-    startLine: 8
+    startLine: 13
   assemblies:
   - smIRCL
   namespace: smIRCL.ServerEntities
+  summary: "\nThe Nick of the IRC user\n"
+  example: []
   syntax:
     content: public string Nick { get; }
     parameters: []
@@ -103,10 +108,12 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: UserName
     path: ../smIRCL/ServerEntities/IrcUser.cs
-    startLine: 9
+    startLine: 17
   assemblies:
   - smIRCL
   namespace: smIRCL.ServerEntities
+  summary: "\nThe User name of the IRC user\n"
+  example: []
   syntax:
     content: public string UserName { get; }
     parameters: []
@@ -138,10 +145,12 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: RealName
     path: ../smIRCL/ServerEntities/IrcUser.cs
-    startLine: 10
+    startLine: 21
   assemblies:
   - smIRCL
   namespace: smIRCL.ServerEntities
+  summary: "\nThe Real name (GECOS) of the IRC user\n"
+  example: []
   syntax:
     content: public string RealName { get; }
     parameters: []
@@ -173,10 +182,12 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: HostMask
     path: ../smIRCL/ServerEntities/IrcUser.cs
-    startLine: 11
+    startLine: 25
   assemblies:
   - smIRCL
   namespace: smIRCL.ServerEntities
+  summary: "\nThe Host mask of the IRC user\n"
+  example: []
   syntax:
     content: public string HostMask { get; }
     parameters: []
@@ -208,10 +219,12 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: Host
     path: ../smIRCL/ServerEntities/IrcUser.cs
-    startLine: 12
+    startLine: 29
   assemblies:
   - smIRCL
   namespace: smIRCL.ServerEntities
+  summary: "\nThe Hostname or Mask of the IRC user\n"
+  example: []
   syntax:
     content: public string Host { get; }
     parameters: []
@@ -243,10 +256,12 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: Away
     path: ../smIRCL/ServerEntities/IrcUser.cs
-    startLine: 13
+    startLine: 33
   assemblies:
   - smIRCL
   namespace: smIRCL.ServerEntities
+  summary: "\nThe Away status and message of the IRC user\n"
+  example: []
   syntax:
     content: public string Away { get; set; }
     parameters: []
@@ -278,10 +293,12 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: MutualChannels
     path: ../smIRCL/ServerEntities/IrcUser.cs
-    startLine: 14
+    startLine: 37
   assemblies:
   - smIRCL
   namespace: smIRCL.ServerEntities
+  summary: "\nThe channels shared between the IRC user and the client\n"
+  example: []
   syntax:
     content: public List<string> MutualChannels { get; set; }
     parameters: []
@@ -289,6 +306,43 @@ items:
       type: System.Collections.Generic.List{System.String}
     content.vb: Public Property MutualChannels As List(Of String)
   overload: smIRCL.ServerEntities.IrcUser.MutualChannels*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: smIRCL.ServerEntities.IrcUser.MutualChannelModes
+  commentId: P:smIRCL.ServerEntities.IrcUser.MutualChannelModes
+  id: MutualChannelModes
+  parent: smIRCL.ServerEntities.IrcUser
+  langs:
+  - csharp
+  - vb
+  name: MutualChannelModes
+  nameWithType: IrcUser.MutualChannelModes
+  fullName: smIRCL.ServerEntities.IrcUser.MutualChannelModes
+  type: Property
+  source:
+    remote:
+      path: smIRCL/ServerEntities/IrcUser.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: MutualChannelModes
+    path: ../smIRCL/ServerEntities/IrcUser.cs
+    startLine: 41
+  assemblies:
+  - smIRCL
+  namespace: smIRCL.ServerEntities
+  summary: "\nThe modes the IRC user has in the associated mutual channel\n"
+  example: []
+  syntax:
+    content: public List<KeyValuePair<string, List<char>>> MutualChannelModes { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{System.Collections.Generic.KeyValuePair{System.String,System.Collections.Generic.List{System.Char}}}
+    content.vb: Public Property MutualChannelModes As List(Of KeyValuePair(Of String, List(Of Char)))
+  overload: smIRCL.ServerEntities.IrcUser.MutualChannelModes*
   modifiers.csharp:
   - public
   - get
@@ -313,10 +367,12 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: LastDirectMessage
     path: ../smIRCL/ServerEntities/IrcUser.cs
-    startLine: 15
+    startLine: 45
   assemblies:
   - smIRCL
   namespace: smIRCL.ServerEntities
+  summary: "\nThe time of the last Direct Message from or to the IRC user\n"
+  example: []
   syntax:
     content: public DateTime? LastDirectMessage { get; }
     parameters: []
@@ -759,6 +815,115 @@ references:
   name: System.Collections.Generic
   nameWithType: System.Collections.Generic
   fullName: System.Collections.Generic
+- uid: smIRCL.ServerEntities.IrcUser.MutualChannelModes*
+  commentId: Overload:smIRCL.ServerEntities.IrcUser.MutualChannelModes
+  name: MutualChannelModes
+  nameWithType: IrcUser.MutualChannelModes
+  fullName: smIRCL.ServerEntities.IrcUser.MutualChannelModes
+- uid: System.Collections.Generic.List{System.Collections.Generic.KeyValuePair{System.String,System.Collections.Generic.List{System.Char}}}
+  commentId: T:System.Collections.Generic.List{System.Collections.Generic.KeyValuePair{System.String,System.Collections.Generic.List{System.Char}}}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<KeyValuePair<String, List<Char>>>
+  nameWithType: List<KeyValuePair<String, List<Char>>>
+  fullName: System.Collections.Generic.List<System.Collections.Generic.KeyValuePair<System.String, System.Collections.Generic.List<System.Char>>>
+  nameWithType.vb: List(Of KeyValuePair(Of String, List(Of Char)))
+  fullName.vb: System.Collections.Generic.List(Of System.Collections.Generic.KeyValuePair(Of System.String, System.Collections.Generic.List(Of System.Char)))
+  name.vb: List(Of KeyValuePair(Of String, List(Of Char)))
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    nameWithType: KeyValuePair
+    fullName: System.Collections.Generic.KeyValuePair
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Char
+    name: Char
+    nameWithType: Char
+    fullName: System.Char
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    nameWithType: KeyValuePair
+    fullName: System.Collections.Generic.KeyValuePair
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Char
+    name: Char
+    nameWithType: Char
+    fullName: System.Char
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: smIRCL.ServerEntities.IrcUser.LastDirectMessage*
   commentId: Overload:smIRCL.ServerEntities.IrcUser.LastDirectMessage
   name: LastDirectMessage

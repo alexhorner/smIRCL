@@ -12,7 +12,7 @@
           "hash": "0ABv2dbkM9MxXXmz36vFdQ=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -21,10 +21,10 @@
       "output": {
         ".html": {
           "relative_path": "api/smIRCL.Config.IrcConfig.html",
-          "hash": "j8RO6D/5xqfJ2SNfBM54Mg=="
+          "hash": "x38Xb4palkrm3mW3tOfBSg=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -36,7 +36,7 @@
           "hash": "Jea5ssxjsfI8cPWBb0iacg=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -45,10 +45,10 @@
       "output": {
         ".html": {
           "relative_path": "api/smIRCL.Constants.GeneralConstants.html",
-          "hash": "hnM98/B3SCMvaFR4n8ui5g=="
+          "hash": "ZG1zo7llsYXnPwAZG3c2Kw=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -57,10 +57,10 @@
       "output": {
         ".html": {
           "relative_path": "api/smIRCL.Constants.Numerics.html",
-          "hash": "weJfNTE5Xh+CVYS8Bdg2AQ=="
+          "hash": "LJNwm2OOriKAlgYjK2LcYw=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -72,7 +72,7 @@
           "hash": "N0yEoYskhvKRWKQY1T8z3w=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -81,10 +81,10 @@
       "output": {
         ".html": {
           "relative_path": "api/smIRCL.Core.IrcConnector.CommunicationFailedHandler.html",
-          "hash": "cmLlQ1SFo3EiPcs2mjj21Q=="
+          "hash": "HerqWYESZkXwDbazMurncA=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -93,10 +93,10 @@
       "output": {
         ".html": {
           "relative_path": "api/smIRCL.Core.IrcConnector.ConnectionStateEventHandler.html",
-          "hash": "3GS4nVFOGi6R1+UWMSMRaQ=="
+          "hash": "W7GoWjUvJxITkcKyVkLoxQ=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -105,10 +105,10 @@
       "output": {
         ".html": {
           "relative_path": "api/smIRCL.Core.IrcConnector.MessageHandler.html",
-          "hash": "7CUT7BRxd8D4yQouzQ8ZoA=="
+          "hash": "yVZ4LoaXgYumVMKK+SjSUA=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -117,10 +117,10 @@
       "output": {
         ".html": {
           "relative_path": "api/smIRCL.Core.IrcConnector.MessageTransmitHandler.html",
-          "hash": "MQShd3hDoVGPBaCFdc9Bmw=="
+          "hash": "CdTtkuMb/ujdgdH7vgLNJw=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -129,10 +129,10 @@
       "output": {
         ".html": {
           "relative_path": "api/smIRCL.Core.IrcConnector.html",
-          "hash": "3JfuJ8V4WB84HKQuPF35Eg=="
+          "hash": "D9sEtPoyqg814Vl+55U2GQ=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -141,10 +141,10 @@
       "output": {
         ".html": {
           "relative_path": "api/smIRCL.Core.IrcController.IrcMessageHandler.html",
-          "hash": "jLqbr08Gs82OD83Ax5JXHA=="
+          "hash": "bJsOg7ag+ZKrgqvYCxDfOA=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -153,10 +153,10 @@
       "output": {
         ".html": {
           "relative_path": "api/smIRCL.Core.IrcController.html",
-          "hash": "FHxKlKd4At9aPnY3+8nFKQ=="
+          "hash": "jbJ2+4zdMzKiqGbkjL3F/w=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -168,7 +168,7 @@
           "hash": "LWnWBxlQElV+owqkYMR0eQ=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -180,7 +180,7 @@
           "hash": "Umn1DF9fpFTlj8ogkEE56w=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -189,10 +189,10 @@
       "output": {
         ".html": {
           "relative_path": "api/smIRCL.Core.html",
-          "hash": "ZrrRGi06ZhjswQTp9hNZEw=="
+          "hash": "0OfkkSB/b/ej3voQhcquiQ=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -204,7 +204,7 @@
           "hash": "C6aKt0H6yubgS+W0K0rsMA=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -216,7 +216,7 @@
           "hash": "/+/KluO4zjkAyPCoUCMI8w=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -228,7 +228,7 @@
           "hash": "AGfndcYD+dV/LJhIkBgUUg=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -240,7 +240,7 @@
           "hash": "Ky+XQJAopDTJ3R00XWMJ6w=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -252,7 +252,7 @@
           "hash": "Xg9bALoMF8cSN/seJEjRsQ=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -264,7 +264,7 @@
           "hash": "dNSPLVJZ96DgSV0AoQKvTA=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -273,10 +273,10 @@
       "output": {
         ".html": {
           "relative_path": "api/smIRCL.ServerEntities.IrcChannel.html",
-          "hash": "VdIJ1xomjrinCoY4rQekWw=="
+          "hash": "faztkMpgBWGkIoPKKgBjDw=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -288,7 +288,7 @@
           "hash": "H06KMLTSRZuZuPUtzF+B5A=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -297,10 +297,10 @@
       "output": {
         ".html": {
           "relative_path": "api/smIRCL.ServerEntities.IrcUser.html",
-          "hash": "KEDSgc10V2IVgw+X6cZPmA=="
+          "hash": "H6OaYL0knMMz4oXAX1TVaA=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -309,10 +309,10 @@
       "output": {
         ".html": {
           "relative_path": "api/smIRCL.ServerEntities.html",
-          "hash": "WpfbSnT6295onE860xD/Kw=="
+          "hash": "eliFzbOIqD6OUyKdncMXgQ=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -329,11 +329,23 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "articles/demos.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/demos.html",
+          "hash": "aKfYDj1zF2ChKfC7kQEINQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "articles/intro.md",
       "output": {
         ".html": {
           "relative_path": "articles/intro.html",
-          "hash": "tK4wMwecdGStq1pgguDjpQ=="
+          "hash": "M9ux96onutr+4iAq59f3kg=="
         }
       },
       "is_incremental": true,
@@ -345,7 +357,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/toc.html",
-          "hash": "KBwxp3MA0VkzCK693g8TkQ=="
+          "hash": "ovg+7J0zoa4eP/+A/k40Hw=="
         }
       },
       "is_incremental": false,
@@ -388,14 +400,14 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 3,
-          "skipped_file_count": 3
+          "total_file_count": 4,
+          "skipped_file_count": 4
         },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 25,
-          "skipped_file_count": 16
+          "skipped_file_count": 25
         },
         "TocDocumentProcessor": {
           "can_incremental": false,

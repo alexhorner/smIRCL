@@ -17,7 +17,7 @@ namespace smIRCL.Constants
         };
 
         /// <summary>
-        /// The IRC lowercase mapping as described in in RFC1459
+        /// The IRC lowercase mapping as described in RFC1459
         /// </summary>
         public static Dictionary<char, char> IrcLowers = new Dictionary<char, char>
         {
@@ -52,6 +52,17 @@ namespace smIRCL.Constants
             { ']', '}' },
             { '\\', '|' },
             { '~', '^' }
+        };
+
+        /// <summary>
+        /// Valid channel starting characters as described in RFC1459
+        /// </summary>
+        public static List<char> Rcf1459ValidChannelChars = new List<char>
+        {
+            '&',
+            '#',
+            '+',
+            '!'
         };
     }
 }

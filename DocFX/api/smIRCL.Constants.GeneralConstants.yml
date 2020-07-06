@@ -6,6 +6,7 @@ items:
   parent: smIRCL.Constants
   children:
   - smIRCL.Constants.GeneralConstants.IrcLowers
+  - smIRCL.Constants.GeneralConstants.Rcf1459ValidChannelChars
   - smIRCL.Constants.GeneralConstants.TagEscapeDictionary
   langs:
   - csharp
@@ -104,13 +105,48 @@ items:
   assemblies:
   - smIRCL
   namespace: smIRCL.Constants
-  summary: "\nThe IRC lowercase mapping as described in in RFC1459\n"
+  summary: "\nThe IRC lowercase mapping as described in RFC1459\n"
   example: []
   syntax:
     content: public static Dictionary<char, char> IrcLowers
     return:
       type: System.Collections.Generic.Dictionary{System.Char,System.Char}
     content.vb: Public Shared IrcLowers As Dictionary(Of Char, Char)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: smIRCL.Constants.GeneralConstants.Rcf1459ValidChannelChars
+  commentId: F:smIRCL.Constants.GeneralConstants.Rcf1459ValidChannelChars
+  id: Rcf1459ValidChannelChars
+  parent: smIRCL.Constants.GeneralConstants
+  langs:
+  - csharp
+  - vb
+  name: Rcf1459ValidChannelChars
+  nameWithType: GeneralConstants.Rcf1459ValidChannelChars
+  fullName: smIRCL.Constants.GeneralConstants.Rcf1459ValidChannelChars
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Constants/GeneralConstants.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: Rcf1459ValidChannelChars
+    path: ../smIRCL/Constants/GeneralConstants.cs
+    startLine: 59
+  assemblies:
+  - smIRCL
+  namespace: smIRCL.Constants
+  summary: "\nValid channel starting characters as described in RFC1459\n"
+  example: []
+  syntax:
+    content: public static List<char> Rcf1459ValidChannelChars
+    return:
+      type: System.Collections.Generic.List{System.Char}
+    content.vb: Public Shared Rcf1459ValidChannelChars As List(Of Char)
   modifiers.csharp:
   - public
   - static
@@ -589,6 +625,89 @@ references:
     nameWithType: Char
     fullName: System.Char
     isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List{System.Char}
+  commentId: T:System.Collections.Generic.List{System.Char}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<Char>
+  nameWithType: List<Char>
+  fullName: System.Collections.Generic.List<System.Char>
+  nameWithType.vb: List(Of Char)
+  fullName.vb: System.Collections.Generic.List(Of System.Char)
+  name.vb: List(Of Char)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Char
+    name: Char
+    nameWithType: Char
+    fullName: System.Char
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Char
+    name: Char
+    nameWithType: Char
+    fullName: System.Char
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
   - name: )
     nameWithType: )
     fullName: )

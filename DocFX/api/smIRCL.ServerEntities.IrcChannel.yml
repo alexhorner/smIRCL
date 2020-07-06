@@ -5,8 +5,9 @@ items:
   id: IrcChannel
   parent: smIRCL.ServerEntities
   children:
-  - smIRCL.ServerEntities.IrcChannel.#ctor(System.String)
-  - smIRCL.ServerEntities.IrcChannel.IsValidName(System.String)
+  - smIRCL.ServerEntities.IrcChannel.#ctor(System.String,System.Collections.Generic.List{System.Char})
+  - smIRCL.ServerEntities.IrcChannel.ClientModes
+  - smIRCL.ServerEntities.IrcChannel.IsValidName(System.String,System.Collections.Generic.List{System.Char})
   - smIRCL.ServerEntities.IrcChannel.Modes
   - smIRCL.ServerEntities.IrcChannel.Name
   - smIRCL.ServerEntities.IrcChannel.Topic
@@ -26,10 +27,12 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: IrcChannel
     path: ../smIRCL/ServerEntities/IrcChannel.cs
-    startLine: 5
+    startLine: 8
   assemblies:
   - smIRCL
   namespace: smIRCL.ServerEntities
+  summary: "\nAn IRC channel which exists on the connected IRC server\n"
+  example: []
   syntax:
     content: public class IrcChannel
     content.vb: Public Class IrcChannel
@@ -49,16 +52,16 @@ items:
   modifiers.vb:
   - Public
   - Class
-- uid: smIRCL.ServerEntities.IrcChannel.#ctor(System.String)
-  commentId: M:smIRCL.ServerEntities.IrcChannel.#ctor(System.String)
-  id: '#ctor(System.String)'
+- uid: smIRCL.ServerEntities.IrcChannel.#ctor(System.String,System.Collections.Generic.List{System.Char})
+  commentId: M:smIRCL.ServerEntities.IrcChannel.#ctor(System.String,System.Collections.Generic.List{System.Char})
+  id: '#ctor(System.String,System.Collections.Generic.List{System.Char})'
   parent: smIRCL.ServerEntities.IrcChannel
   langs:
   - csharp
   - vb
-  name: IrcChannel(String)
-  nameWithType: IrcChannel.IrcChannel(String)
-  fullName: smIRCL.ServerEntities.IrcChannel.IrcChannel(System.String)
+  name: IrcChannel(String, List<Char>)
+  nameWithType: IrcChannel.IrcChannel(String, List<Char>)
+  fullName: smIRCL.ServerEntities.IrcChannel.IrcChannel(System.String, System.Collections.Generic.List<System.Char>)
   type: Constructor
   source:
     remote:
@@ -67,21 +70,30 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: .ctor
     path: ../smIRCL/ServerEntities/IrcChannel.cs
-    startLine: 7
+    startLine: 15
   assemblies:
   - smIRCL
   namespace: smIRCL.ServerEntities
+  summary: "\nInstantiates a new channel\n"
+  example: []
   syntax:
-    content: public IrcChannel(string name)
+    content: public IrcChannel(string name, List<char> checkerChars = null)
     parameters:
     - id: name
       type: System.String
-    content.vb: Public Sub New(name As String)
+      description: The name of the channel
+    - id: checkerChars
+      type: System.Collections.Generic.List{System.Char}
+      description: Optional list of valid chars for server-specific checking from ISupport
+    content.vb: Public Sub New(name As String, checkerChars As List(Of Char) = Nothing)
   overload: smIRCL.ServerEntities.IrcChannel.#ctor*
+  nameWithType.vb: IrcChannel.IrcChannel(String, List(Of Char))
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
+  fullName.vb: smIRCL.ServerEntities.IrcChannel.IrcChannel(System.String, System.Collections.Generic.List(Of System.Char))
+  name.vb: IrcChannel(String, List(Of Char))
 - uid: smIRCL.ServerEntities.IrcChannel.Name
   commentId: P:smIRCL.ServerEntities.IrcChannel.Name
   id: Name
@@ -100,10 +112,12 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: Name
     path: ../smIRCL/ServerEntities/IrcChannel.cs
-    startLine: 13
+    startLine: 24
   assemblies:
   - smIRCL
   namespace: smIRCL.ServerEntities
+  summary: "\nThe name of the channel\n"
+  example: []
   syntax:
     content: public string Name { get; }
     parameters: []
@@ -135,10 +149,12 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: Topic
     path: ../smIRCL/ServerEntities/IrcChannel.cs
-    startLine: 14
+    startLine: 28
   assemblies:
   - smIRCL
   namespace: smIRCL.ServerEntities
+  summary: "\nThe topic of the channel\n"
+  example: []
   syntax:
     content: public string Topic { get; }
     parameters: []
@@ -170,17 +186,56 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: Modes
     path: ../smIRCL/ServerEntities/IrcChannel.cs
-    startLine: 15
+    startLine: 32
   assemblies:
   - smIRCL
   namespace: smIRCL.ServerEntities
+  summary: "\nThe modes and their parameters set on the channel\n"
+  example: []
   syntax:
-    content: public string Modes { get; }
+    content: public List<KeyValuePair<char, string>> Modes { get; }
     parameters: []
     return:
-      type: System.String
-    content.vb: Public ReadOnly Property Modes As String
+      type: System.Collections.Generic.List{System.Collections.Generic.KeyValuePair{System.Char,System.String}}
+    content.vb: Public ReadOnly Property Modes As List(Of KeyValuePair(Of Char, String))
   overload: smIRCL.ServerEntities.IrcChannel.Modes*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: smIRCL.ServerEntities.IrcChannel.ClientModes
+  commentId: P:smIRCL.ServerEntities.IrcChannel.ClientModes
+  id: ClientModes
+  parent: smIRCL.ServerEntities.IrcChannel
+  langs:
+  - csharp
+  - vb
+  name: ClientModes
+  nameWithType: IrcChannel.ClientModes
+  fullName: smIRCL.ServerEntities.IrcChannel.ClientModes
+  type: Property
+  source:
+    remote:
+      path: smIRCL/ServerEntities/IrcChannel.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: ClientModes
+    path: ../smIRCL/ServerEntities/IrcChannel.cs
+    startLine: 36
+  assemblies:
+  - smIRCL
+  namespace: smIRCL.ServerEntities
+  summary: "\nThe modes set on the client in this channel\n"
+  example: []
+  syntax:
+    content: public List<char> ClientModes { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{System.Char}
+    content.vb: Public ReadOnly Property ClientModes As List(Of Char)
+  overload: smIRCL.ServerEntities.IrcChannel.ClientModes*
   modifiers.csharp:
   - public
   - get
@@ -205,10 +260,12 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: Users
     path: ../smIRCL/ServerEntities/IrcChannel.cs
-    startLine: 16
+    startLine: 40
   assemblies:
   - smIRCL
   namespace: smIRCL.ServerEntities
+  summary: "\nThe users in the channel\n"
+  example: []
   syntax:
     content: public List<string> Users { get; }
     parameters: []
@@ -240,10 +297,12 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: UserCollectionComplete
     path: ../smIRCL/ServerEntities/IrcChannel.cs
-    startLine: 17
+    startLine: 44
   assemblies:
   - smIRCL
   namespace: smIRCL.ServerEntities
+  summary: "\nWhether the Users collection has been fully populated yet\n"
+  example: []
   syntax:
     content: public bool UserCollectionComplete { get; }
     parameters: []
@@ -257,16 +316,16 @@ items:
   modifiers.vb:
   - Public
   - ReadOnly
-- uid: smIRCL.ServerEntities.IrcChannel.IsValidName(System.String)
-  commentId: M:smIRCL.ServerEntities.IrcChannel.IsValidName(System.String)
-  id: IsValidName(System.String)
+- uid: smIRCL.ServerEntities.IrcChannel.IsValidName(System.String,System.Collections.Generic.List{System.Char})
+  commentId: M:smIRCL.ServerEntities.IrcChannel.IsValidName(System.String,System.Collections.Generic.List{System.Char})
+  id: IsValidName(System.String,System.Collections.Generic.List{System.Char})
   parent: smIRCL.ServerEntities.IrcChannel
   langs:
   - csharp
   - vb
-  name: IsValidName(String)
-  nameWithType: IrcChannel.IsValidName(String)
-  fullName: smIRCL.ServerEntities.IrcChannel.IsValidName(System.String)
+  name: IsValidName(String, List<Char>)
+  nameWithType: IrcChannel.IsValidName(String, List<Char>)
+  fullName: smIRCL.ServerEntities.IrcChannel.IsValidName(System.String, System.Collections.Generic.List<System.Char>)
   type: Method
   source:
     remote:
@@ -275,25 +334,35 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: IsValidName
     path: ../smIRCL/ServerEntities/IrcChannel.cs
-    startLine: 19
+    startLine: 52
   assemblies:
   - smIRCL
   namespace: smIRCL.ServerEntities
+  summary: "\nChecks if a given string forms a valid channel name\n"
+  example: []
   syntax:
-    content: public static bool IsValidName(string channelName)
+    content: public static bool IsValidName(string channelName, List<char> checkerChars = null)
     parameters:
     - id: channelName
       type: System.String
+      description: String to validate
+    - id: checkerChars
+      type: System.Collections.Generic.List{System.Char}
+      description: Optional list of valid chars for server-specific checking from ISupport
     return:
       type: System.Boolean
-    content.vb: Public Shared Function IsValidName(channelName As String) As Boolean
+      description: Whether the string is a valid channel name
+    content.vb: Public Shared Function IsValidName(channelName As String, checkerChars As List(Of Char) = Nothing) As Boolean
   overload: smIRCL.ServerEntities.IrcChannel.IsValidName*
+  nameWithType.vb: IrcChannel.IsValidName(String, List(Of Char))
   modifiers.csharp:
   - public
   - static
   modifiers.vb:
   - Public
   - Shared
+  fullName.vb: smIRCL.ServerEntities.IrcChannel.IsValidName(System.String, System.Collections.Generic.List(Of System.Char))
+  name.vb: IsValidName(String, List(Of Char))
 references:
 - uid: smIRCL.ServerEntities
   commentId: N:smIRCL.ServerEntities
@@ -604,36 +673,16 @@ references:
   name: String
   nameWithType: String
   fullName: System.String
-- uid: smIRCL.ServerEntities.IrcChannel.Name*
-  commentId: Overload:smIRCL.ServerEntities.IrcChannel.Name
-  name: Name
-  nameWithType: IrcChannel.Name
-  fullName: smIRCL.ServerEntities.IrcChannel.Name
-- uid: smIRCL.ServerEntities.IrcChannel.Topic*
-  commentId: Overload:smIRCL.ServerEntities.IrcChannel.Topic
-  name: Topic
-  nameWithType: IrcChannel.Topic
-  fullName: smIRCL.ServerEntities.IrcChannel.Topic
-- uid: smIRCL.ServerEntities.IrcChannel.Modes*
-  commentId: Overload:smIRCL.ServerEntities.IrcChannel.Modes
-  name: Modes
-  nameWithType: IrcChannel.Modes
-  fullName: smIRCL.ServerEntities.IrcChannel.Modes
-- uid: smIRCL.ServerEntities.IrcChannel.Users*
-  commentId: Overload:smIRCL.ServerEntities.IrcChannel.Users
-  name: Users
-  nameWithType: IrcChannel.Users
-  fullName: smIRCL.ServerEntities.IrcChannel.Users
-- uid: System.Collections.Generic.List{System.String}
-  commentId: T:System.Collections.Generic.List{System.String}
+- uid: System.Collections.Generic.List{System.Char}
+  commentId: T:System.Collections.Generic.List{System.Char}
   parent: System.Collections.Generic
   definition: System.Collections.Generic.List`1
-  name: List<String>
-  nameWithType: List<String>
-  fullName: System.Collections.Generic.List<System.String>
-  nameWithType.vb: List(Of String)
-  fullName.vb: System.Collections.Generic.List(Of System.String)
-  name.vb: List(Of String)
+  name: List<Char>
+  nameWithType: List<Char>
+  fullName: System.Collections.Generic.List<System.Char>
+  nameWithType.vb: List(Of Char)
+  fullName.vb: System.Collections.Generic.List(Of System.Char)
+  name.vb: List(Of Char)
   spec.csharp:
   - uid: System.Collections.Generic.List`1
     name: List
@@ -643,10 +692,10 @@ references:
   - name: <
     nameWithType: <
     fullName: <
-  - uid: System.String
-    name: String
-    nameWithType: String
-    fullName: System.String
+  - uid: System.Char
+    name: Char
+    nameWithType: Char
+    fullName: System.Char
     isExternal: true
   - name: '>'
     nameWithType: '>'
@@ -660,10 +709,10 @@ references:
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: System.String
-    name: String
-    nameWithType: String
-    fullName: System.String
+  - uid: System.Char
+    name: Char
+    nameWithType: Char
+    fullName: System.Char
     isExternal: true
   - name: )
     nameWithType: )
@@ -713,6 +762,157 @@ references:
   name: System.Collections.Generic
   nameWithType: System.Collections.Generic
   fullName: System.Collections.Generic
+- uid: smIRCL.ServerEntities.IrcChannel.Name*
+  commentId: Overload:smIRCL.ServerEntities.IrcChannel.Name
+  name: Name
+  nameWithType: IrcChannel.Name
+  fullName: smIRCL.ServerEntities.IrcChannel.Name
+- uid: smIRCL.ServerEntities.IrcChannel.Topic*
+  commentId: Overload:smIRCL.ServerEntities.IrcChannel.Topic
+  name: Topic
+  nameWithType: IrcChannel.Topic
+  fullName: smIRCL.ServerEntities.IrcChannel.Topic
+- uid: smIRCL.ServerEntities.IrcChannel.Modes*
+  commentId: Overload:smIRCL.ServerEntities.IrcChannel.Modes
+  name: Modes
+  nameWithType: IrcChannel.Modes
+  fullName: smIRCL.ServerEntities.IrcChannel.Modes
+- uid: System.Collections.Generic.List{System.Collections.Generic.KeyValuePair{System.Char,System.String}}
+  commentId: T:System.Collections.Generic.List{System.Collections.Generic.KeyValuePair{System.Char,System.String}}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<KeyValuePair<Char, String>>
+  nameWithType: List<KeyValuePair<Char, String>>
+  fullName: System.Collections.Generic.List<System.Collections.Generic.KeyValuePair<System.Char, System.String>>
+  nameWithType.vb: List(Of KeyValuePair(Of Char, String))
+  fullName.vb: System.Collections.Generic.List(Of System.Collections.Generic.KeyValuePair(Of System.Char, System.String))
+  name.vb: List(Of KeyValuePair(Of Char, String))
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    nameWithType: KeyValuePair
+    fullName: System.Collections.Generic.KeyValuePair
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Char
+    name: Char
+    nameWithType: Char
+    fullName: System.Char
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Collections.Generic.KeyValuePair`2
+    name: KeyValuePair
+    nameWithType: KeyValuePair
+    fullName: System.Collections.Generic.KeyValuePair
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Char
+    name: Char
+    nameWithType: Char
+    fullName: System.Char
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: smIRCL.ServerEntities.IrcChannel.ClientModes*
+  commentId: Overload:smIRCL.ServerEntities.IrcChannel.ClientModes
+  name: ClientModes
+  nameWithType: IrcChannel.ClientModes
+  fullName: smIRCL.ServerEntities.IrcChannel.ClientModes
+- uid: smIRCL.ServerEntities.IrcChannel.Users*
+  commentId: Overload:smIRCL.ServerEntities.IrcChannel.Users
+  name: Users
+  nameWithType: IrcChannel.Users
+  fullName: smIRCL.ServerEntities.IrcChannel.Users
+- uid: System.Collections.Generic.List{System.String}
+  commentId: T:System.Collections.Generic.List{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<String>
+  nameWithType: List<String>
+  fullName: System.Collections.Generic.List<System.String>
+  nameWithType.vb: List(Of String)
+  fullName.vb: System.Collections.Generic.List(Of System.String)
+  name.vb: List(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: smIRCL.ServerEntities.IrcChannel.UserCollectionComplete*
   commentId: Overload:smIRCL.ServerEntities.IrcChannel.UserCollectionComplete
   name: UserCollectionComplete

@@ -19,7 +19,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: CommunicationFailedHandler
     path: ../smIRCL/Core/IrcConnector.cs
-    startLine: 80
+    startLine: 83
   assemblies:
   - smIRCL
   namespace: smIRCL.Core

@@ -96,6 +96,11 @@ namespace smIRCL.Constants
         public const string RPL_TRYAGAIN = "263";
         public const string RPL_HOSTHIDDEN = "396";
 
+        public const string RPL_LOGGEDIN = "900"; //SASL
+        public const string RPL_LOGGEDOUT = "901"; //SASL
+        public const string RPL_SASLSUCCESS = "903"; //SASL
+        public const string RPL_SASLMECHS = "908"; //SASL
+
         //Error Replies
         public const string ERR_NOSUCHNICK = "401";
         public const string ERR_NOSUCHSERVER = "402";
@@ -150,6 +155,12 @@ namespace smIRCL.Constants
         public const string ERR_NOOPERHOST = "491";
         public const string ERR_UMODEUNKNOWNFLAG = "501";
         public const string ERR_USERSDONTMATCH = "502";
+
+        public const string ERR_NICKLOCKED = "902"; //SASL
+        public const string ERR_SASLFAIL = "904"; //SASL
+        public const string ERR_SASLTOOLONG = "905"; //SASL
+        public const string ERR_SASLABORTED = "906"; //SASL
+        public const string ERR_SASLALREADY = "907"; //SASL
 
         //Reserved numerics
         //1. no longer in use

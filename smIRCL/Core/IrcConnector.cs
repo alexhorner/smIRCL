@@ -9,6 +9,9 @@ using smIRCL.ServerEntities;
 
 namespace smIRCL.Core
 {
+    /// <summary>
+    /// Handles raw connections and message parsing to and from an IRC server
+    /// </summary>
     public class IrcConnector : IDisposable
     {
         #region Public Properties

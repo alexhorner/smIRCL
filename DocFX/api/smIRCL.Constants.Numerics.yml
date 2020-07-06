@@ -21,6 +21,7 @@ items:
   - smIRCL.Constants.Numerics.ERR_KEYSET
   - smIRCL.Constants.Numerics.ERR_NEEDMOREPARAMS
   - smIRCL.Constants.Numerics.ERR_NICKCOLLISION
+  - smIRCL.Constants.Numerics.ERR_NICKLOCKED
   - smIRCL.Constants.Numerics.ERR_NICKNAMEINUSE
   - smIRCL.Constants.Numerics.ERR_NOADMININFO
   - smIRCL.Constants.Numerics.ERR_NOCHANMODES
@@ -43,6 +44,10 @@ items:
   - smIRCL.Constants.Numerics.ERR_NOTREGISTERED
   - smIRCL.Constants.Numerics.ERR_PASSWDMISMATCH
   - smIRCL.Constants.Numerics.ERR_RESTRICTED
+  - smIRCL.Constants.Numerics.ERR_SASLABORTED
+  - smIRCL.Constants.Numerics.ERR_SASLALREADY
+  - smIRCL.Constants.Numerics.ERR_SASLFAIL
+  - smIRCL.Constants.Numerics.ERR_SASLTOOLONG
   - smIRCL.Constants.Numerics.ERR_SUMMONDISABLED
   - smIRCL.Constants.Numerics.ERR_TOOMANYCHANNELS
   - smIRCL.Constants.Numerics.ERR_TOOMANYTARGETS
@@ -95,6 +100,8 @@ items:
   - smIRCL.Constants.Numerics.RPL_LINKS
   - smIRCL.Constants.Numerics.RPL_LIST
   - smIRCL.Constants.Numerics.RPL_LISTEND
+  - smIRCL.Constants.Numerics.RPL_LOGGEDIN
+  - smIRCL.Constants.Numerics.RPL_LOGGEDOUT
   - smIRCL.Constants.Numerics.RPL_LUSERCHANNELS
   - smIRCL.Constants.Numerics.RPL_LUSERCLIENT
   - smIRCL.Constants.Numerics.RPL_LUSERME
@@ -111,6 +118,8 @@ items:
   - smIRCL.Constants.Numerics.RPL_NOWAWAY
   - smIRCL.Constants.Numerics.RPL_REHASHING
   - smIRCL.Constants.Numerics.RPL_RPL_LISTSTART
+  - smIRCL.Constants.Numerics.RPL_SASLMECHS
+  - smIRCL.Constants.Numerics.RPL_SASLSUCCESS
   - smIRCL.Constants.Numerics.RPL_SERVICE
   - smIRCL.Constants.Numerics.RPL_SERVICEINFO
   - smIRCL.Constants.Numerics.RPL_SERVLIST
@@ -3009,6 +3018,138 @@ items:
   modifiers.vb:
   - Public
   - Const
+- uid: smIRCL.Constants.Numerics.RPL_LOGGEDIN
+  commentId: F:smIRCL.Constants.Numerics.RPL_LOGGEDIN
+  id: RPL_LOGGEDIN
+  parent: smIRCL.Constants.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_LOGGEDIN
+  nameWithType: Numerics.RPL_LOGGEDIN
+  fullName: smIRCL.Constants.Numerics.RPL_LOGGEDIN
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Constants/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_LOGGEDIN
+    path: ../smIRCL/Constants/Numerics.cs
+    startLine: 98
+  assemblies:
+  - smIRCL
+  namespace: smIRCL.Constants
+  syntax:
+    content: public const string RPL_LOGGEDIN = "900"
+    return:
+      type: System.String
+    content.vb: Public Const RPL_LOGGEDIN As String = "900"
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Constants.Numerics.RPL_LOGGEDOUT
+  commentId: F:smIRCL.Constants.Numerics.RPL_LOGGEDOUT
+  id: RPL_LOGGEDOUT
+  parent: smIRCL.Constants.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_LOGGEDOUT
+  nameWithType: Numerics.RPL_LOGGEDOUT
+  fullName: smIRCL.Constants.Numerics.RPL_LOGGEDOUT
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Constants/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_LOGGEDOUT
+    path: ../smIRCL/Constants/Numerics.cs
+    startLine: 99
+  assemblies:
+  - smIRCL
+  namespace: smIRCL.Constants
+  syntax:
+    content: public const string RPL_LOGGEDOUT = "901"
+    return:
+      type: System.String
+    content.vb: Public Const RPL_LOGGEDOUT As String = "901"
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Constants.Numerics.RPL_SASLSUCCESS
+  commentId: F:smIRCL.Constants.Numerics.RPL_SASLSUCCESS
+  id: RPL_SASLSUCCESS
+  parent: smIRCL.Constants.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_SASLSUCCESS
+  nameWithType: Numerics.RPL_SASLSUCCESS
+  fullName: smIRCL.Constants.Numerics.RPL_SASLSUCCESS
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Constants/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_SASLSUCCESS
+    path: ../smIRCL/Constants/Numerics.cs
+    startLine: 100
+  assemblies:
+  - smIRCL
+  namespace: smIRCL.Constants
+  syntax:
+    content: public const string RPL_SASLSUCCESS = "903"
+    return:
+      type: System.String
+    content.vb: Public Const RPL_SASLSUCCESS As String = "903"
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Constants.Numerics.RPL_SASLMECHS
+  commentId: F:smIRCL.Constants.Numerics.RPL_SASLMECHS
+  id: RPL_SASLMECHS
+  parent: smIRCL.Constants.Numerics
+  langs:
+  - csharp
+  - vb
+  name: RPL_SASLMECHS
+  nameWithType: Numerics.RPL_SASLMECHS
+  fullName: smIRCL.Constants.Numerics.RPL_SASLMECHS
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Constants/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: RPL_SASLMECHS
+    path: ../smIRCL/Constants/Numerics.cs
+    startLine: 101
+  assemblies:
+  - smIRCL
+  namespace: smIRCL.Constants
+  syntax:
+    content: public const string RPL_SASLMECHS = "908"
+    return:
+      type: System.String
+    content.vb: Public Const RPL_SASLMECHS As String = "908"
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
 - uid: smIRCL.Constants.Numerics.ERR_NOSUCHNICK
   commentId: F:smIRCL.Constants.Numerics.ERR_NOSUCHNICK
   id: ERR_NOSUCHNICK
@@ -3027,7 +3168,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_NOSUCHNICK
     path: ../smIRCL/Constants/Numerics.cs
-    startLine: 99
+    startLine: 104
   assemblies:
   - smIRCL
   namespace: smIRCL.Constants
@@ -3060,7 +3201,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_NOSUCHSERVER
     path: ../smIRCL/Constants/Numerics.cs
-    startLine: 100
+    startLine: 105
   assemblies:
   - smIRCL
   namespace: smIRCL.Constants
@@ -3093,7 +3234,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_NOSUCHCHANNEL
     path: ../smIRCL/Constants/Numerics.cs
-    startLine: 101
+    startLine: 106
   assemblies:
   - smIRCL
   namespace: smIRCL.Constants
@@ -3126,7 +3267,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_CANNOTSENDTOCHAN
     path: ../smIRCL/Constants/Numerics.cs
-    startLine: 102
+    startLine: 107
   assemblies:
   - smIRCL
   namespace: smIRCL.Constants
@@ -3159,7 +3300,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_TOOMANYCHANNELS
     path: ../smIRCL/Constants/Numerics.cs
-    startLine: 103
+    startLine: 108
   assemblies:
   - smIRCL
   namespace: smIRCL.Constants
@@ -3192,7 +3333,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_WASNOSUCHNICK
     path: ../smIRCL/Constants/Numerics.cs
-    startLine: 104
+    startLine: 109
   assemblies:
   - smIRCL
   namespace: smIRCL.Constants
@@ -3225,7 +3366,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_TOOMANYTARGETS
     path: ../smIRCL/Constants/Numerics.cs
-    startLine: 105
+    startLine: 110
   assemblies:
   - smIRCL
   namespace: smIRCL.Constants
@@ -3258,7 +3399,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_NOSUCHSERVICE
     path: ../smIRCL/Constants/Numerics.cs
-    startLine: 106
+    startLine: 111
   assemblies:
   - smIRCL
   namespace: smIRCL.Constants
@@ -3291,7 +3432,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_NOORIGIN
     path: ../smIRCL/Constants/Numerics.cs
-    startLine: 107
+    startLine: 112
   assemblies:
   - smIRCL
   namespace: smIRCL.Constants
@@ -3324,7 +3465,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_NORECIPIENT
     path: ../smIRCL/Constants/Numerics.cs
-    startLine: 108
+    startLine: 113
   assemblies:
   - smIRCL
   namespace: smIRCL.Constants
@@ -3357,7 +3498,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_NOTEXTTOSEND
     path: ../smIRCL/Constants/Numerics.cs
-    startLine: 109
+    startLine: 114
   assemblies:
   - smIRCL
   namespace: smIRCL.Constants
@@ -3390,7 +3531,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_NOTOPLEVEL
     path: ../smIRCL/Constants/Numerics.cs
-    startLine: 110
+    startLine: 115
   assemblies:
   - smIRCL
   namespace: smIRCL.Constants
@@ -3423,7 +3564,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_WILDTOPLEVEL
     path: ../smIRCL/Constants/Numerics.cs
-    startLine: 111
+    startLine: 116
   assemblies:
   - smIRCL
   namespace: smIRCL.Constants
@@ -3456,7 +3597,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_BADMASK
     path: ../smIRCL/Constants/Numerics.cs
-    startLine: 112
+    startLine: 117
   assemblies:
   - smIRCL
   namespace: smIRCL.Constants
@@ -3489,7 +3630,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_UNKNOWNCOMMAND
     path: ../smIRCL/Constants/Numerics.cs
-    startLine: 113
+    startLine: 118
   assemblies:
   - smIRCL
   namespace: smIRCL.Constants
@@ -3522,7 +3663,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_NOMOTD
     path: ../smIRCL/Constants/Numerics.cs
-    startLine: 114
+    startLine: 119
   assemblies:
   - smIRCL
   namespace: smIRCL.Constants
@@ -3555,7 +3696,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_NOADMININFO
     path: ../smIRCL/Constants/Numerics.cs
-    startLine: 115
+    startLine: 120
   assemblies:
   - smIRCL
   namespace: smIRCL.Constants
@@ -3588,7 +3729,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_FILEERROR
     path: ../smIRCL/Constants/Numerics.cs
-    startLine: 116
+    startLine: 121
   assemblies:
   - smIRCL
   namespace: smIRCL.Constants
@@ -3621,7 +3762,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_NONICKNAMEGIVEN
     path: ../smIRCL/Constants/Numerics.cs
-    startLine: 117
+    startLine: 122
   assemblies:
   - smIRCL
   namespace: smIRCL.Constants
@@ -3654,7 +3795,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_ERRONEUSNICKNAME
     path: ../smIRCL/Constants/Numerics.cs
-    startLine: 118
+    startLine: 123
   assemblies:
   - smIRCL
   namespace: smIRCL.Constants
@@ -3687,7 +3828,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_NICKNAMEINUSE
     path: ../smIRCL/Constants/Numerics.cs
-    startLine: 119
+    startLine: 124
   assemblies:
   - smIRCL
   namespace: smIRCL.Constants
@@ -3720,7 +3861,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_NICKCOLLISION
     path: ../smIRCL/Constants/Numerics.cs
-    startLine: 120
+    startLine: 125
   assemblies:
   - smIRCL
   namespace: smIRCL.Constants
@@ -3753,7 +3894,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_UNAVAILRESOURCE
     path: ../smIRCL/Constants/Numerics.cs
-    startLine: 121
+    startLine: 126
   assemblies:
   - smIRCL
   namespace: smIRCL.Constants
@@ -3786,7 +3927,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_USERNOTINCHANNEL
     path: ../smIRCL/Constants/Numerics.cs
-    startLine: 122
+    startLine: 127
   assemblies:
   - smIRCL
   namespace: smIRCL.Constants
@@ -3819,7 +3960,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_NOTINCHANNEL
     path: ../smIRCL/Constants/Numerics.cs
-    startLine: 123
+    startLine: 128
   assemblies:
   - smIRCL
   namespace: smIRCL.Constants
@@ -3852,7 +3993,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_USERONCHANNEL
     path: ../smIRCL/Constants/Numerics.cs
-    startLine: 124
+    startLine: 129
   assemblies:
   - smIRCL
   namespace: smIRCL.Constants
@@ -3885,7 +4026,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_NOLOGIN
     path: ../smIRCL/Constants/Numerics.cs
-    startLine: 125
+    startLine: 130
   assemblies:
   - smIRCL
   namespace: smIRCL.Constants
@@ -3918,7 +4059,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_SUMMONDISABLED
     path: ../smIRCL/Constants/Numerics.cs
-    startLine: 126
+    startLine: 131
   assemblies:
   - smIRCL
   namespace: smIRCL.Constants
@@ -3951,7 +4092,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_USERDISABLED
     path: ../smIRCL/Constants/Numerics.cs
-    startLine: 127
+    startLine: 132
   assemblies:
   - smIRCL
   namespace: smIRCL.Constants
@@ -3984,7 +4125,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_NOTREGISTERED
     path: ../smIRCL/Constants/Numerics.cs
-    startLine: 128
+    startLine: 133
   assemblies:
   - smIRCL
   namespace: smIRCL.Constants
@@ -4017,7 +4158,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_NEEDMOREPARAMS
     path: ../smIRCL/Constants/Numerics.cs
-    startLine: 129
+    startLine: 134
   assemblies:
   - smIRCL
   namespace: smIRCL.Constants
@@ -4050,7 +4191,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_ALREADYREGISTERED
     path: ../smIRCL/Constants/Numerics.cs
-    startLine: 130
+    startLine: 135
   assemblies:
   - smIRCL
   namespace: smIRCL.Constants
@@ -4083,7 +4224,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_NOPERMFORHOST
     path: ../smIRCL/Constants/Numerics.cs
-    startLine: 131
+    startLine: 136
   assemblies:
   - smIRCL
   namespace: smIRCL.Constants
@@ -4116,7 +4257,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_PASSWDMISMATCH
     path: ../smIRCL/Constants/Numerics.cs
-    startLine: 132
+    startLine: 137
   assemblies:
   - smIRCL
   namespace: smIRCL.Constants
@@ -4149,7 +4290,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_YOUREBANNEDCREEP
     path: ../smIRCL/Constants/Numerics.cs
-    startLine: 133
+    startLine: 138
   assemblies:
   - smIRCL
   namespace: smIRCL.Constants
@@ -4182,7 +4323,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_YOUWILLBEBANNED
     path: ../smIRCL/Constants/Numerics.cs
-    startLine: 134
+    startLine: 139
   assemblies:
   - smIRCL
   namespace: smIRCL.Constants
@@ -4215,7 +4356,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_KEYSET
     path: ../smIRCL/Constants/Numerics.cs
-    startLine: 135
+    startLine: 140
   assemblies:
   - smIRCL
   namespace: smIRCL.Constants
@@ -4248,7 +4389,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_CHANNELISFULL
     path: ../smIRCL/Constants/Numerics.cs
-    startLine: 136
+    startLine: 141
   assemblies:
   - smIRCL
   namespace: smIRCL.Constants
@@ -4281,7 +4422,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_UNKNOWNMODE
     path: ../smIRCL/Constants/Numerics.cs
-    startLine: 137
+    startLine: 142
   assemblies:
   - smIRCL
   namespace: smIRCL.Constants
@@ -4314,7 +4455,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_INVITEONLYCHAN
     path: ../smIRCL/Constants/Numerics.cs
-    startLine: 138
+    startLine: 143
   assemblies:
   - smIRCL
   namespace: smIRCL.Constants
@@ -4347,7 +4488,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_BANNEDFROMCHAN
     path: ../smIRCL/Constants/Numerics.cs
-    startLine: 139
+    startLine: 144
   assemblies:
   - smIRCL
   namespace: smIRCL.Constants
@@ -4380,7 +4521,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_BADCHANNELKEY
     path: ../smIRCL/Constants/Numerics.cs
-    startLine: 140
+    startLine: 145
   assemblies:
   - smIRCL
   namespace: smIRCL.Constants
@@ -4413,7 +4554,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_BADCHANMASK
     path: ../smIRCL/Constants/Numerics.cs
-    startLine: 141
+    startLine: 146
   assemblies:
   - smIRCL
   namespace: smIRCL.Constants
@@ -4446,7 +4587,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_NOCHANMODES
     path: ../smIRCL/Constants/Numerics.cs
-    startLine: 142
+    startLine: 147
   assemblies:
   - smIRCL
   namespace: smIRCL.Constants
@@ -4479,7 +4620,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_BANLISTFULL
     path: ../smIRCL/Constants/Numerics.cs
-    startLine: 143
+    startLine: 148
   assemblies:
   - smIRCL
   namespace: smIRCL.Constants
@@ -4512,7 +4653,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_NOPRIVILEGES
     path: ../smIRCL/Constants/Numerics.cs
-    startLine: 144
+    startLine: 149
   assemblies:
   - smIRCL
   namespace: smIRCL.Constants
@@ -4545,7 +4686,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_CHANOPRIVSNEEDED
     path: ../smIRCL/Constants/Numerics.cs
-    startLine: 145
+    startLine: 150
   assemblies:
   - smIRCL
   namespace: smIRCL.Constants
@@ -4578,7 +4719,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_CANTKILLSERVER
     path: ../smIRCL/Constants/Numerics.cs
-    startLine: 146
+    startLine: 151
   assemblies:
   - smIRCL
   namespace: smIRCL.Constants
@@ -4611,7 +4752,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_RESTRICTED
     path: ../smIRCL/Constants/Numerics.cs
-    startLine: 147
+    startLine: 152
   assemblies:
   - smIRCL
   namespace: smIRCL.Constants
@@ -4644,7 +4785,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_UNIQOPPRIVSNEEDED
     path: ../smIRCL/Constants/Numerics.cs
-    startLine: 148
+    startLine: 153
   assemblies:
   - smIRCL
   namespace: smIRCL.Constants
@@ -4677,7 +4818,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_NOOPERHOST
     path: ../smIRCL/Constants/Numerics.cs
-    startLine: 149
+    startLine: 154
   assemblies:
   - smIRCL
   namespace: smIRCL.Constants
@@ -4710,7 +4851,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_UMODEUNKNOWNFLAG
     path: ../smIRCL/Constants/Numerics.cs
-    startLine: 150
+    startLine: 155
   assemblies:
   - smIRCL
   namespace: smIRCL.Constants
@@ -4743,7 +4884,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_USERSDONTMATCH
     path: ../smIRCL/Constants/Numerics.cs
-    startLine: 151
+    startLine: 156
   assemblies:
   - smIRCL
   namespace: smIRCL.Constants
@@ -4752,6 +4893,171 @@ items:
     return:
       type: System.String
     content.vb: Public Const ERR_USERSDONTMATCH As String = "502"
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Constants.Numerics.ERR_NICKLOCKED
+  commentId: F:smIRCL.Constants.Numerics.ERR_NICKLOCKED
+  id: ERR_NICKLOCKED
+  parent: smIRCL.Constants.Numerics
+  langs:
+  - csharp
+  - vb
+  name: ERR_NICKLOCKED
+  nameWithType: Numerics.ERR_NICKLOCKED
+  fullName: smIRCL.Constants.Numerics.ERR_NICKLOCKED
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Constants/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: ERR_NICKLOCKED
+    path: ../smIRCL/Constants/Numerics.cs
+    startLine: 158
+  assemblies:
+  - smIRCL
+  namespace: smIRCL.Constants
+  syntax:
+    content: public const string ERR_NICKLOCKED = "902"
+    return:
+      type: System.String
+    content.vb: Public Const ERR_NICKLOCKED As String = "902"
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Constants.Numerics.ERR_SASLFAIL
+  commentId: F:smIRCL.Constants.Numerics.ERR_SASLFAIL
+  id: ERR_SASLFAIL
+  parent: smIRCL.Constants.Numerics
+  langs:
+  - csharp
+  - vb
+  name: ERR_SASLFAIL
+  nameWithType: Numerics.ERR_SASLFAIL
+  fullName: smIRCL.Constants.Numerics.ERR_SASLFAIL
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Constants/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: ERR_SASLFAIL
+    path: ../smIRCL/Constants/Numerics.cs
+    startLine: 159
+  assemblies:
+  - smIRCL
+  namespace: smIRCL.Constants
+  syntax:
+    content: public const string ERR_SASLFAIL = "904"
+    return:
+      type: System.String
+    content.vb: Public Const ERR_SASLFAIL As String = "904"
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Constants.Numerics.ERR_SASLTOOLONG
+  commentId: F:smIRCL.Constants.Numerics.ERR_SASLTOOLONG
+  id: ERR_SASLTOOLONG
+  parent: smIRCL.Constants.Numerics
+  langs:
+  - csharp
+  - vb
+  name: ERR_SASLTOOLONG
+  nameWithType: Numerics.ERR_SASLTOOLONG
+  fullName: smIRCL.Constants.Numerics.ERR_SASLTOOLONG
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Constants/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: ERR_SASLTOOLONG
+    path: ../smIRCL/Constants/Numerics.cs
+    startLine: 160
+  assemblies:
+  - smIRCL
+  namespace: smIRCL.Constants
+  syntax:
+    content: public const string ERR_SASLTOOLONG = "905"
+    return:
+      type: System.String
+    content.vb: Public Const ERR_SASLTOOLONG As String = "905"
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Constants.Numerics.ERR_SASLABORTED
+  commentId: F:smIRCL.Constants.Numerics.ERR_SASLABORTED
+  id: ERR_SASLABORTED
+  parent: smIRCL.Constants.Numerics
+  langs:
+  - csharp
+  - vb
+  name: ERR_SASLABORTED
+  nameWithType: Numerics.ERR_SASLABORTED
+  fullName: smIRCL.Constants.Numerics.ERR_SASLABORTED
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Constants/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: ERR_SASLABORTED
+    path: ../smIRCL/Constants/Numerics.cs
+    startLine: 161
+  assemblies:
+  - smIRCL
+  namespace: smIRCL.Constants
+  syntax:
+    content: public const string ERR_SASLABORTED = "906"
+    return:
+      type: System.String
+    content.vb: Public Const ERR_SASLABORTED As String = "906"
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: smIRCL.Constants.Numerics.ERR_SASLALREADY
+  commentId: F:smIRCL.Constants.Numerics.ERR_SASLALREADY
+  id: ERR_SASLALREADY
+  parent: smIRCL.Constants.Numerics
+  langs:
+  - csharp
+  - vb
+  name: ERR_SASLALREADY
+  nameWithType: Numerics.ERR_SASLALREADY
+  fullName: smIRCL.Constants.Numerics.ERR_SASLALREADY
+  type: Field
+  source:
+    remote:
+      path: smIRCL/Constants/Numerics.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: ERR_SASLALREADY
+    path: ../smIRCL/Constants/Numerics.cs
+    startLine: 162
+  assemblies:
+  - smIRCL
+  namespace: smIRCL.Constants
+  syntax:
+    content: public const string ERR_SASLALREADY = "907"
+    return:
+      type: System.String
+    content.vb: Public Const ERR_SASLALREADY As String = "907"
   modifiers.csharp:
   - public
   - const
@@ -4776,7 +5082,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_STATSCLINE
     path: ../smIRCL/Constants/Numerics.cs
-    startLine: 159
+    startLine: 170
   assemblies:
   - smIRCL
   namespace: smIRCL.Constants
@@ -4809,7 +5115,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_STATSNLINE
     path: ../smIRCL/Constants/Numerics.cs
-    startLine: 160
+    startLine: 171
   assemblies:
   - smIRCL
   namespace: smIRCL.Constants
@@ -4842,7 +5148,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_STATSILINE
     path: ../smIRCL/Constants/Numerics.cs
-    startLine: 161
+    startLine: 172
   assemblies:
   - smIRCL
   namespace: smIRCL.Constants
@@ -4875,7 +5181,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_STATSKLINE
     path: ../smIRCL/Constants/Numerics.cs
-    startLine: 162
+    startLine: 173
   assemblies:
   - smIRCL
   namespace: smIRCL.Constants
@@ -4908,7 +5214,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_STATSQLINE
     path: ../smIRCL/Constants/Numerics.cs
-    startLine: 163
+    startLine: 174
   assemblies:
   - smIRCL
   namespace: smIRCL.Constants
@@ -4941,7 +5247,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_STATSYLINE
     path: ../smIRCL/Constants/Numerics.cs
-    startLine: 164
+    startLine: 175
   assemblies:
   - smIRCL
   namespace: smIRCL.Constants
@@ -4974,7 +5280,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_SERVICEINFO
     path: ../smIRCL/Constants/Numerics.cs
-    startLine: 165
+    startLine: 176
   assemblies:
   - smIRCL
   namespace: smIRCL.Constants
@@ -5007,7 +5313,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_ENDOFSERVICES
     path: ../smIRCL/Constants/Numerics.cs
-    startLine: 166
+    startLine: 177
   assemblies:
   - smIRCL
   namespace: smIRCL.Constants
@@ -5040,7 +5346,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_SERVICE
     path: ../smIRCL/Constants/Numerics.cs
-    startLine: 167
+    startLine: 178
   assemblies:
   - smIRCL
   namespace: smIRCL.Constants
@@ -5073,7 +5379,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_STATSVLINE
     path: ../smIRCL/Constants/Numerics.cs
-    startLine: 168
+    startLine: 179
   assemblies:
   - smIRCL
   namespace: smIRCL.Constants
@@ -5106,7 +5412,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_STATSLLINE
     path: ../smIRCL/Constants/Numerics.cs
-    startLine: 169
+    startLine: 180
   assemblies:
   - smIRCL
   namespace: smIRCL.Constants
@@ -5139,7 +5445,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_STATSHLINE
     path: ../smIRCL/Constants/Numerics.cs
-    startLine: 170
+    startLine: 181
   assemblies:
   - smIRCL
   namespace: smIRCL.Constants
@@ -5172,7 +5478,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_STATSSLINE
     path: ../smIRCL/Constants/Numerics.cs
-    startLine: 171
+    startLine: 182
   assemblies:
   - smIRCL
   namespace: smIRCL.Constants
@@ -5205,7 +5511,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_STATSPING
     path: ../smIRCL/Constants/Numerics.cs
-    startLine: 172
+    startLine: 183
   assemblies:
   - smIRCL
   namespace: smIRCL.Constants
@@ -5238,7 +5544,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_STATSBLINE
     path: ../smIRCL/Constants/Numerics.cs
-    startLine: 173
+    startLine: 184
   assemblies:
   - smIRCL
   namespace: smIRCL.Constants
@@ -5271,7 +5577,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_STATSDLINE
     path: ../smIRCL/Constants/Numerics.cs
-    startLine: 174
+    startLine: 185
   assemblies:
   - smIRCL
   namespace: smIRCL.Constants
@@ -5304,7 +5610,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_NONE
     path: ../smIRCL/Constants/Numerics.cs
-    startLine: 175
+    startLine: 186
   assemblies:
   - smIRCL
   namespace: smIRCL.Constants
@@ -5337,7 +5643,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_KILLDONE
     path: ../smIRCL/Constants/Numerics.cs
-    startLine: 176
+    startLine: 187
   assemblies:
   - smIRCL
   namespace: smIRCL.Constants
@@ -5370,7 +5676,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_CLOSING
     path: ../smIRCL/Constants/Numerics.cs
-    startLine: 177
+    startLine: 188
   assemblies:
   - smIRCL
   namespace: smIRCL.Constants
@@ -5403,7 +5709,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_CLODEEND
     path: ../smIRCL/Constants/Numerics.cs
-    startLine: 178
+    startLine: 189
   assemblies:
   - smIRCL
   namespace: smIRCL.Constants
@@ -5436,7 +5742,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_INFOSTART
     path: ../smIRCL/Constants/Numerics.cs
-    startLine: 179
+    startLine: 190
   assemblies:
   - smIRCL
   namespace: smIRCL.Constants
@@ -5469,7 +5775,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: RPL_MYPORTIS
     path: ../smIRCL/Constants/Numerics.cs
-    startLine: 180
+    startLine: 191
   assemblies:
   - smIRCL
   namespace: smIRCL.Constants
@@ -5502,7 +5808,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: ERR_NOSERVICEHOST
     path: ../smIRCL/Constants/Numerics.cs
-    startLine: 181
+    startLine: 192
   assemblies:
   - smIRCL
   namespace: smIRCL.Constants

@@ -19,25 +19,22 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: IrcMessageHandler
     path: ../smIRCL/Core/IrcController.cs
-    startLine: 76
+    startLine: 100
   assemblies:
   - smIRCL
   namespace: smIRCL.Core
   summary: "\nAn IRC message handler for commands and numerics\n"
   example: []
   syntax:
-    content: public delegate void IrcMessageHandler(IrcConnector connector, IrcController controller, IrcMessage message);
+    content: public delegate void IrcMessageHandler(IrcController controller, IrcMessage message);
     parameters:
-    - id: connector
-      type: smIRCL.Core.IrcConnector
-      description: The connector which fired the message
     - id: controller
       type: smIRCL.Core.IrcController
       description: The controller handling the message
     - id: message
       type: smIRCL.ServerEntities.IrcMessage
       description: THe message received
-    content.vb: Public Delegate Sub IrcMessageHandler(connector As IrcConnector, controller As IrcController, message As IrcMessage)
+    content.vb: Public Delegate Sub IrcMessageHandler(controller As IrcController, message As IrcMessage)
   modifiers.csharp:
   - public
   - delegate
@@ -50,12 +47,6 @@ references:
   name: smIRCL.Core
   nameWithType: smIRCL.Core
   fullName: smIRCL.Core
-- uid: smIRCL.Core.IrcConnector
-  commentId: T:smIRCL.Core.IrcConnector
-  parent: smIRCL.Core
-  name: IrcConnector
-  nameWithType: IrcConnector
-  fullName: smIRCL.Core.IrcConnector
 - uid: smIRCL.Core.IrcController
   commentId: T:smIRCL.Core.IrcController
   parent: smIRCL.Core

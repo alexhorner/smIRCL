@@ -83,7 +83,8 @@
   
   <h1 id="smIRCL_ServerEntities_IrcChannel" data-uid="smIRCL.ServerEntities.IrcChannel" class="text-break">Class IrcChannel
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>An IRC channel which exists on the connected IRC server</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -124,18 +125,19 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/alexhorner/smIRCL/new/master/apiSpec/new?filename=smIRCL_ServerEntities_IrcChannel__ctor_System_String_.md&amp;value=---%0Auid%3A%20smIRCL.ServerEntities.IrcChannel.%23ctor(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/alexhorner/smIRCL/new/master/apiSpec/new?filename=smIRCL_ServerEntities_IrcChannel__ctor_System_String_System_Collections_Generic_List_System_Char__.md&amp;value=---%0Auid%3A%20smIRCL.ServerEntities.IrcChannel.%23ctor(System.String%2CSystem.Collections.Generic.List%7BSystem.Char%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/alexhorner/smIRCL/blob/master/smIRCL/ServerEntities/IrcChannel.cs/#L8">View Source</a>
+    <a href="https://github.com/alexhorner/smIRCL/blob/master/smIRCL/ServerEntities/IrcChannel.cs/#L16">View Source</a>
   </span>
   <a id="smIRCL_ServerEntities_IrcChannel__ctor_" data-uid="smIRCL.ServerEntities.IrcChannel.#ctor*"></a>
-  <h4 id="smIRCL_ServerEntities_IrcChannel__ctor_System_String_" data-uid="smIRCL.ServerEntities.IrcChannel.#ctor(System.String)">IrcChannel(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <h4 id="smIRCL_ServerEntities_IrcChannel__ctor_System_String_System_Collections_Generic_List_System_Char__" data-uid="smIRCL.ServerEntities.IrcChannel.#ctor(System.String,System.Collections.Generic.List{System.Char})">IrcChannel(String, List&lt;Char&gt;)</h4>
+  <div class="markdown level1 summary"><p>Instantiates a new channel</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IrcChannel(string name)</code></pre>
+    <pre><code class="lang-csharp hljs">public IrcChannel(string name, List&lt;char&gt; checkerChars = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -150,7 +152,14 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">name</span></td>
-        <td></td>
+        <td><p>The name of the channel</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">System.Char</span>&gt;</td>
+        <td><span class="parametername">checkerChars</span></td>
+        <td><p>Optional list of valid chars for server-specific checking from ISupport</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -158,18 +167,19 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/alexhorner/smIRCL/new/master/apiSpec/new?filename=smIRCL_ServerEntities_IrcChannel_Modes.md&amp;value=---%0Auid%3A%20smIRCL.ServerEntities.IrcChannel.Modes%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/alexhorner/smIRCL/new/master/apiSpec/new?filename=smIRCL_ServerEntities_IrcChannel_ClientModes.md&amp;value=---%0Auid%3A%20smIRCL.ServerEntities.IrcChannel.ClientModes%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/alexhorner/smIRCL/blob/master/smIRCL/ServerEntities/IrcChannel.cs/#L16">View Source</a>
+    <a href="https://github.com/alexhorner/smIRCL/blob/master/smIRCL/ServerEntities/IrcChannel.cs/#L37">View Source</a>
   </span>
-  <a id="smIRCL_ServerEntities_IrcChannel_Modes_" data-uid="smIRCL.ServerEntities.IrcChannel.Modes*"></a>
-  <h4 id="smIRCL_ServerEntities_IrcChannel_Modes" data-uid="smIRCL.ServerEntities.IrcChannel.Modes">Modes</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="smIRCL_ServerEntities_IrcChannel_ClientModes_" data-uid="smIRCL.ServerEntities.IrcChannel.ClientModes*"></a>
+  <h4 id="smIRCL_ServerEntities_IrcChannel_ClientModes" data-uid="smIRCL.ServerEntities.IrcChannel.ClientModes">ClientModes</h4>
+  <div class="markdown level1 summary"><p>The modes set on the client in this channel</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string Modes { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public List&lt;char&gt; ClientModes { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -181,7 +191,38 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">System.Char</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/alexhorner/smIRCL/new/master/apiSpec/new?filename=smIRCL_ServerEntities_IrcChannel_Modes.md&amp;value=---%0Auid%3A%20smIRCL.ServerEntities.IrcChannel.Modes%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/alexhorner/smIRCL/blob/master/smIRCL/ServerEntities/IrcChannel.cs/#L33">View Source</a>
+  </span>
+  <a id="smIRCL_ServerEntities_IrcChannel_Modes_" data-uid="smIRCL.ServerEntities.IrcChannel.Modes*"></a>
+  <h4 id="smIRCL_ServerEntities_IrcChannel_Modes" data-uid="smIRCL.ServerEntities.IrcChannel.Modes">Modes</h4>
+  <div class="markdown level1 summary"><p>The modes and their parameters set on the channel</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public List&lt;KeyValuePair&lt;char, string&gt;&gt; Modes { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">System.Collections.Generic.KeyValuePair</span>&lt;<span class="xref">System.Char</span>, <span class="xref">System.String</span>&gt;&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -191,11 +232,12 @@
     <a href="https://github.com/alexhorner/smIRCL/new/master/apiSpec/new?filename=smIRCL_ServerEntities_IrcChannel_Name.md&amp;value=---%0Auid%3A%20smIRCL.ServerEntities.IrcChannel.Name%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/alexhorner/smIRCL/blob/master/smIRCL/ServerEntities/IrcChannel.cs/#L14">View Source</a>
+    <a href="https://github.com/alexhorner/smIRCL/blob/master/smIRCL/ServerEntities/IrcChannel.cs/#L25">View Source</a>
   </span>
   <a id="smIRCL_ServerEntities_IrcChannel_Name_" data-uid="smIRCL.ServerEntities.IrcChannel.Name*"></a>
   <h4 id="smIRCL_ServerEntities_IrcChannel_Name" data-uid="smIRCL.ServerEntities.IrcChannel.Name">Name</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The name of the channel</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -221,11 +263,12 @@
     <a href="https://github.com/alexhorner/smIRCL/new/master/apiSpec/new?filename=smIRCL_ServerEntities_IrcChannel_Topic.md&amp;value=---%0Auid%3A%20smIRCL.ServerEntities.IrcChannel.Topic%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/alexhorner/smIRCL/blob/master/smIRCL/ServerEntities/IrcChannel.cs/#L15">View Source</a>
+    <a href="https://github.com/alexhorner/smIRCL/blob/master/smIRCL/ServerEntities/IrcChannel.cs/#L29">View Source</a>
   </span>
   <a id="smIRCL_ServerEntities_IrcChannel_Topic_" data-uid="smIRCL.ServerEntities.IrcChannel.Topic*"></a>
   <h4 id="smIRCL_ServerEntities_IrcChannel_Topic" data-uid="smIRCL.ServerEntities.IrcChannel.Topic">Topic</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The topic of the channel</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -251,11 +294,12 @@
     <a href="https://github.com/alexhorner/smIRCL/new/master/apiSpec/new?filename=smIRCL_ServerEntities_IrcChannel_UserCollectionComplete.md&amp;value=---%0Auid%3A%20smIRCL.ServerEntities.IrcChannel.UserCollectionComplete%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/alexhorner/smIRCL/blob/master/smIRCL/ServerEntities/IrcChannel.cs/#L18">View Source</a>
+    <a href="https://github.com/alexhorner/smIRCL/blob/master/smIRCL/ServerEntities/IrcChannel.cs/#L45">View Source</a>
   </span>
   <a id="smIRCL_ServerEntities_IrcChannel_UserCollectionComplete_" data-uid="smIRCL.ServerEntities.IrcChannel.UserCollectionComplete*"></a>
   <h4 id="smIRCL_ServerEntities_IrcChannel_UserCollectionComplete" data-uid="smIRCL.ServerEntities.IrcChannel.UserCollectionComplete">UserCollectionComplete</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Whether the Users collection has been fully populated yet</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -281,11 +325,12 @@
     <a href="https://github.com/alexhorner/smIRCL/new/master/apiSpec/new?filename=smIRCL_ServerEntities_IrcChannel_Users.md&amp;value=---%0Auid%3A%20smIRCL.ServerEntities.IrcChannel.Users%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/alexhorner/smIRCL/blob/master/smIRCL/ServerEntities/IrcChannel.cs/#L17">View Source</a>
+    <a href="https://github.com/alexhorner/smIRCL/blob/master/smIRCL/ServerEntities/IrcChannel.cs/#L41">View Source</a>
   </span>
   <a id="smIRCL_ServerEntities_IrcChannel_Users_" data-uid="smIRCL.ServerEntities.IrcChannel.Users*"></a>
   <h4 id="smIRCL_ServerEntities_IrcChannel_Users" data-uid="smIRCL.ServerEntities.IrcChannel.Users">Users</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>The users in the channel</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -310,18 +355,19 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/alexhorner/smIRCL/new/master/apiSpec/new?filename=smIRCL_ServerEntities_IrcChannel_IsValidName_System_String_.md&amp;value=---%0Auid%3A%20smIRCL.ServerEntities.IrcChannel.IsValidName(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/alexhorner/smIRCL/new/master/apiSpec/new?filename=smIRCL_ServerEntities_IrcChannel_IsValidName_System_String_System_Collections_Generic_List_System_Char__.md&amp;value=---%0Auid%3A%20smIRCL.ServerEntities.IrcChannel.IsValidName(System.String%2CSystem.Collections.Generic.List%7BSystem.Char%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/alexhorner/smIRCL/blob/master/smIRCL/ServerEntities/IrcChannel.cs/#L20">View Source</a>
+    <a href="https://github.com/alexhorner/smIRCL/blob/master/smIRCL/ServerEntities/IrcChannel.cs/#L53">View Source</a>
   </span>
   <a id="smIRCL_ServerEntities_IrcChannel_IsValidName_" data-uid="smIRCL.ServerEntities.IrcChannel.IsValidName*"></a>
-  <h4 id="smIRCL_ServerEntities_IrcChannel_IsValidName_System_String_" data-uid="smIRCL.ServerEntities.IrcChannel.IsValidName(System.String)">IsValidName(String)</h4>
-  <div class="markdown level1 summary"></div>
+  <h4 id="smIRCL_ServerEntities_IrcChannel_IsValidName_System_String_System_Collections_Generic_List_System_Char__" data-uid="smIRCL.ServerEntities.IrcChannel.IsValidName(System.String,System.Collections.Generic.List{System.Char})">IsValidName(String, List&lt;Char&gt;)</h4>
+  <div class="markdown level1 summary"><p>Checks if a given string forms a valid channel name</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static bool IsValidName(string channelName)</code></pre>
+    <pre><code class="lang-csharp hljs">public static bool IsValidName(string channelName, List&lt;char&gt; checkerChars = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -336,7 +382,14 @@
       <tr>
         <td><span class="xref">System.String</span></td>
         <td><span class="parametername">channelName</span></td>
-        <td></td>
+        <td><p>String to validate</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">System.Char</span>&gt;</td>
+        <td><span class="parametername">checkerChars</span></td>
+        <td><p>Optional list of valid chars for server-specific checking from ISupport</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -351,7 +404,8 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
+        <td><p>Whether the string is a valid channel name</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -366,7 +420,7 @@
                     <a href="https://github.com/alexhorner/smIRCL/new/master/apiSpec/new?filename=smIRCL_ServerEntities_IrcChannel.md&amp;value=---%0Auid%3A%20smIRCL.ServerEntities.IrcChannel%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/alexhorner/smIRCL/blob/master/smIRCL/ServerEntities/IrcChannel.cs/#L6" class="contribution-link">View Source</a>
+                    <a href="https://github.com/alexhorner/smIRCL/blob/master/smIRCL/ServerEntities/IrcChannel.cs/#L9" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
