@@ -94,7 +94,8 @@ namespace smIRCL.Config
             "message-tags",
             "away-notify",
             "extended-join",
-            "multi-prefix"
+            "multi-prefix",
+            "chghost"
         };
 
         /// <summary>

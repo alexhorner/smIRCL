@@ -170,6 +170,7 @@ namespace smIRCL.Core
                 Handlers.Add("CAP", OnCapability);
                 Handlers.Add("AUTHENTICATE", OnSasl);
                 Handlers.Add("AWAY", OnAwayNotify);
+                Handlers.Add("CHGHOST", OnChangeHost);
 
                 Handlers.Add(Numerics.RPL_SASLSUCCESS, OnSaslComplete);
                 Handlers.Add(Numerics.RPL_LOGGEDOUT, OnSaslFailure);
@@ -1157,6 +1158,24 @@ namespace smIRCL.Core
                     {
                         user.Away = message.Parameters[0];
                     }
+                }
+            }
+        }
+
+        private void OnChangeHost(IrcController controller, IrcMessage message)
+        {
+            if (message.SourceNick.ToIrcLower() == Nick.ToIrcLower())
+            {
+                UserName = message.Parameters[0];
+                Host = message.Parameters[1];
+            }
+            else
+            {
+                IrcUser user = Users.FirstOrDefault(u => u.Nick.ToIrcLower() == message.SourceNick.ToIrcLower());
+                if (user != null)
+                {
+                    user.UserName = message.Parameters[0];
+                    user.HostMask = message.Parameters[1];
                 }
             }
         }
