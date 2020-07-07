@@ -925,10 +925,10 @@ namespace smIRCL.Core
                             if (user != null)
                             {
                                 KeyValuePair<string, List<char>> mutualChannelModes = user.MutualChannelModes.FirstOrDefault(mcm => mcm.Key.ToIrcLower() == channel.Name.ToIrcLower());
-                                mutualChannelModes.Value.RemoveAll(m => m == sentMode);
+                                mutualChannelModes.Value?.RemoveAll(m => m == sentMode);
                                 if (!removal)
                                 {
-                                    mutualChannelModes.Value.Add(sentMode);
+                                    mutualChannelModes.Value?.Add(sentMode);
                                 }
                             }
                         }
