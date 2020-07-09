@@ -1510,6 +1510,24 @@ references:
   isSpec: "True"
   fullName: smIRCL.Core.IrcController.Connector
   nameWithType: IrcController.Connector
+- uid: smIRCL.Core.IrcController.ControllerDisconnectedHandler
+  name: IrcController.ControllerDisconnectedHandler
+  href: api/smIRCL.Core.IrcController.ControllerDisconnectedHandler.html
+  commentId: T:smIRCL.Core.IrcController.ControllerDisconnectedHandler
+  fullName: smIRCL.Core.IrcController.ControllerDisconnectedHandler
+  nameWithType: IrcController.ControllerDisconnectedHandler
+- uid: smIRCL.Core.IrcController.Ctcp
+  name: Ctcp
+  href: api/smIRCL.Core.IrcController.html#smIRCL_Core_IrcController_Ctcp
+  commentId: E:smIRCL.Core.IrcController.Ctcp
+  fullName: smIRCL.Core.IrcController.Ctcp
+  nameWithType: IrcController.Ctcp
+- uid: smIRCL.Core.IrcController.Disconnected
+  name: Disconnected
+  href: api/smIRCL.Core.IrcController.html#smIRCL_Core_IrcController_Disconnected
+  commentId: E:smIRCL.Core.IrcController.Disconnected
+  fullName: smIRCL.Core.IrcController.Disconnected
+  nameWithType: IrcController.Disconnected
 - uid: smIRCL.Core.IrcController.Handlers
   name: Handlers
   href: api/smIRCL.Core.IrcController.html#smIRCL_Core_IrcController_Handlers
@@ -1644,6 +1662,19 @@ references:
   isSpec: "True"
   fullName: smIRCL.Core.IrcController.RealName
   nameWithType: IrcController.RealName
+- uid: smIRCL.Core.IrcController.SendNotice(System.String,System.String)
+  name: SendNotice(String, String)
+  href: api/smIRCL.Core.IrcController.html#smIRCL_Core_IrcController_SendNotice_System_String_System_String_
+  commentId: M:smIRCL.Core.IrcController.SendNotice(System.String,System.String)
+  fullName: smIRCL.Core.IrcController.SendNotice(System.String, System.String)
+  nameWithType: IrcController.SendNotice(String, String)
+- uid: smIRCL.Core.IrcController.SendNotice*
+  name: SendNotice
+  href: api/smIRCL.Core.IrcController.html#smIRCL_Core_IrcController_SendNotice_
+  commentId: Overload:smIRCL.Core.IrcController.SendNotice
+  isSpec: "True"
+  fullName: smIRCL.Core.IrcController.SendNotice
+  nameWithType: IrcController.SendNotice
 - uid: smIRCL.Core.IrcController.SendPrivMsg(System.String,System.String)
   name: SendPrivMsg(String, String)
   href: api/smIRCL.Core.IrcController.html#smIRCL_Core_IrcController_SendPrivMsg_System_String_System_String_
@@ -1944,6 +1975,19 @@ references:
   isSpec: "True"
   fullName: smIRCL.Extensions.StringExtensions.ToIrcLower
   nameWithType: StringExtensions.ToIrcLower
+- uid: smIRCL.Extensions.StringExtensions.ToIrcUpper(System.String)
+  name: ToIrcUpper(String)
+  href: api/smIRCL.Extensions.StringExtensions.html#smIRCL_Extensions_StringExtensions_ToIrcUpper_System_String_
+  commentId: M:smIRCL.Extensions.StringExtensions.ToIrcUpper(System.String)
+  fullName: smIRCL.Extensions.StringExtensions.ToIrcUpper(System.String)
+  nameWithType: StringExtensions.ToIrcUpper(String)
+- uid: smIRCL.Extensions.StringExtensions.ToIrcUpper*
+  name: ToIrcUpper
+  href: api/smIRCL.Extensions.StringExtensions.html#smIRCL_Extensions_StringExtensions_ToIrcUpper_
+  commentId: Overload:smIRCL.Extensions.StringExtensions.ToIrcUpper
+  isSpec: "True"
+  fullName: smIRCL.Extensions.StringExtensions.ToIrcUpper
+  nameWithType: StringExtensions.ToIrcUpper
 - uid: smIRCL.ServerEntities
   name: smIRCL.ServerEntities
   href: api/smIRCL.ServerEntities.html

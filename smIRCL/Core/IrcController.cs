@@ -120,9 +120,25 @@ namespace smIRCL.Core
         public event IrcMessageHandler Notice;
 
         /// <summary>
+        /// Fired when a CTCP message is received
+        /// </summary>
+        public event IrcMessageHandler Ctcp;
+
+        /// <summary>
         /// Fired when a PING is received
         /// </summary>
         public event IrcMessageHandler Ping;
+
+
+        /// <summary>
+        /// Fired when the internal connector dies
+        /// </summary>
+        public event ControllerDisconnectedHandler Disconnected;
+        /// <summary>
+        /// The handler for disconnects
+        /// </summary>
+        /// <param name="controller">The controller who's connector died</param>
+        public delegate void ControllerDisconnectedHandler(IrcController controller);
 
         #endregion
 
@@ -148,6 +164,7 @@ namespace smIRCL.Core
             Connector = connector ?? throw new ArgumentNullException(nameof(connector));
             connector.Connected += ConnectorOnConnected;
             connector.MessageReceived += ConnectorOnMessageReceived;
+            connector.Disconnected += ConnectorOnDisconnected;
 
             _userGarbageCollectionTimer = new Timer(Connector.Config.DirectMessageHoldingPeriod.TotalMilliseconds);
             _userGarbageCollectionTimer.Elapsed += DoUserGarbageCollection;
@@ -402,6 +419,41 @@ namespace smIRCL.Core
         }
 
         /// <summary>
+        /// Send a NOTICE to the specified Nick or Channel (if the client is in the requested channel)
+        /// </summary>
+        /// <param name="channelOrNick">The Nick or Channel recipient</param>
+        /// <param name="message">The message to send</param>
+        public void SendNotice(string channelOrNick, string message)
+        {
+            if (IsValidChannelName(channelOrNick))
+            {
+                if (Channels.All(ch => ch.Name.ToIrcLower() != channelOrNick.ToIrcLower()))
+                {
+                    throw new ArgumentException("Not in the requested channel", nameof(channelOrNick));
+                }
+            }
+            else
+            {
+                IrcUser user = Users.FirstOrDefault(u => u.Nick.ToIrcLower() == channelOrNick.ToIrcLower());
+                if (user != null)
+                {
+                    user.LastDirectMessage = DateTime.Now;
+                }
+                else
+                {
+                    Users.Add(new IrcUser
+                    {
+                        Nick = channelOrNick,
+                        LastDirectMessage = DateTime.Now
+                    });
+                    WhoIs(channelOrNick);
+                }
+            }
+
+            Connector.Transmit($"NOTICE {channelOrNick} :{message}");
+        }
+
+        /// <summary>
         /// Set the client's status to AWAY
         /// </summary>
         /// <param name="reason">The reason for the away</param>
@@ -433,6 +485,11 @@ namespace smIRCL.Core
             SetNick(Connector.Config.Nick);
             Connector.Transmit($"USER {Connector.Config.UserName} 0 * :{Connector.Config.RealName}");
             //SASL will be completed by FinaliseCapabilities
+        }
+
+        private void ConnectorOnDisconnected()
+        {
+            Disconnected?.Invoke(this);
         }
 
         private void ConnectorOnMessageReceived(string rawMessage, IrcMessage message)
@@ -484,6 +541,15 @@ namespace smIRCL.Core
                     });
                     WhoIs(message.SourceNick);
                 }
+            }
+
+            if (message.Parameters[1].StartsWith("\x01"))
+            {
+                Ctcp?.Invoke(controller, message);
+            }
+            else
+            {
+                PrivMsg?.Invoke(controller, message);
             }
         }
 

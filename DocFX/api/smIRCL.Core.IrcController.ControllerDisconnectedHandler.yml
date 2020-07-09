@@ -1,0 +1,52 @@
+### YamlMime:ManagedReference
+items:
+- uid: smIRCL.Core.IrcController.ControllerDisconnectedHandler
+  commentId: T:smIRCL.Core.IrcController.ControllerDisconnectedHandler
+  id: IrcController.ControllerDisconnectedHandler
+  parent: smIRCL.Core
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: IrcController.ControllerDisconnectedHandler
+  nameWithType: IrcController.ControllerDisconnectedHandler
+  fullName: smIRCL.Core.IrcController.ControllerDisconnectedHandler
+  type: Delegate
+  source:
+    remote:
+      path: smIRCL/Core/IrcController.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: ControllerDisconnectedHandler
+    path: ../smIRCL/Core/IrcController.cs
+    startLine: 140
+  assemblies:
+  - smIRCL
+  namespace: smIRCL.Core
+  summary: "\nThe handler for disconnects\n"
+  example: []
+  syntax:
+    content: public delegate void ControllerDisconnectedHandler(IrcController controller);
+    parameters:
+    - id: controller
+      type: smIRCL.Core.IrcController
+      description: The controller who&apos;s connector died
+    content.vb: Public Delegate Sub ControllerDisconnectedHandler(controller As IrcController)
+  modifiers.csharp:
+  - public
+  - delegate
+  modifiers.vb:
+  - Public
+  - Delegate
+references:
+- uid: smIRCL.Core
+  commentId: N:smIRCL.Core
+  name: smIRCL.Core
+  nameWithType: smIRCL.Core
+  fullName: smIRCL.Core
+- uid: smIRCL.Core.IrcController
+  commentId: T:smIRCL.Core.IrcController
+  parent: smIRCL.Core
+  name: IrcController
+  nameWithType: IrcController
+  fullName: smIRCL.Core.IrcController

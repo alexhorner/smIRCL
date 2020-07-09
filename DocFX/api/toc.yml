@@ -26,6 +26,8 @@
     name: IrcConnector.MessageTransmitHandler
   - uid: smIRCL.Core.IrcController
     name: IrcController
+  - uid: smIRCL.Core.IrcController.ControllerDisconnectedHandler
+    name: IrcController.ControllerDisconnectedHandler
   - uid: smIRCL.Core.IrcController.IrcMessageHandler
     name: IrcController.IrcMessageHandler
   - uid: smIRCL.Core.IrcHandlerList

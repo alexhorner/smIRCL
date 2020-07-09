@@ -5,9 +5,11 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>smIRCL Demo Programs </title>
+    <title>Delegate IrcController.ControllerDisconnectedHandler
+   </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="smIRCL Demo Programs ">
+    <meta name="title" content="Delegate IrcController.ControllerDisconnectedHandler
+   ">
     <meta name="generator" content="docfx 2.55.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -76,74 +78,38 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="">
-<h1 id="smircl-demo-programs">smIRCL Demo Programs</h1>
-
-<p>These demo programs show example implementations of the library for making IRC Bots</p>
-<hr>
-<h2 id="demo-1---hello-bot">Demo 1 - Hello Bot</h2>
-<p>This demo implements a very basic hello call-response, fired when any PRIVMSG received contains both the client's Nick and the word <code>hello</code>, <code>hi</code> or <code>hey</code>. It extends on the <strong>Getting Started</strong> code, so you will see all input and output, and will also be able to send raw messages to the server:</p>
-<pre><code class="lang-csharp">static void Main(string[] args)
-{
-    IrcConnector connector = new IrcConnector(new IrcConfig
-    {
-        ServerHostname = &quot;irc.myservice.net&quot;,
-        ServerPort = 6697,
-        Nick = &quot;smIRCLDemo1&quot;,
-        UserName = &quot;smIRCL&quot;,
-        RealName = &quot;The .NET IRCv3 Library - Demo 1 - Hello Bot&quot;,
-        UseSsl = true
-    });
-
-    connector.MessageReceived += ConnectorMessageReceived;
-    connector.MessageTransmitted += ConnectorOnMessageTransmitted;
-
-    IrcController controller = new IrcController(connector);
-
-    connector.Connect();
-
-    while (!connector.IsDisposed)
-    {
-        string msg = Console.ReadLine();
-        try
-        {
-            connector.Transmit(msg);
-        }
-        catch (Exception)
-        {
-            //ignore
-        }
-    }
-}
-
-private static void OnPrivMsg(IrcController controller, IrcMessage message)
-{
-    string messageLower = message.Parameters[1].ToIrcLower();
-
-    if (messageLower.Contains(controller.Nick.ToIrcLower()) &amp;&amp; (messageLower.Contains(&quot;hello&quot;) || messageLower.Contains(&quot;hi&quot;) || messageLower.Contains(&quot;hey&quot;)))
-    {
-        if (controller.IsValidChannelName(message.Parameters[0]))
-        {
-            controller.SendPrivMsg(message.Parameters[0], $&quot;Hello there {message.SourceNick}!&quot;);
-        }
-        else
-        {
-            controller.SendPrivMsg(message.SourceNick, &quot;Hello there!&quot;);
-        }
-    }
-}
-
-private static void ConnectorOnMessageTransmitted(string rawMessage)
-{
-    Console.WriteLine(&quot;&lt;&lt;&lt;    &quot; + rawMessage);
-}
-
-private static void ConnectorMessageReceived(string rawMessage, IrcMessage message)
-{
-    Console.WriteLine(&quot;&gt;&gt;&gt;    &quot; + rawMessage);
-}
-</code></pre>
-<p>The demo first determines if the message was received from a channel, or directly from a user, then responds to the correct place in the correct manner based on this.</p>
+            <article class="content wrap" id="_content" data-uid="smIRCL.Core.IrcController.ControllerDisconnectedHandler">
+  
+  
+  <h1 id="smIRCL_Core_IrcController_ControllerDisconnectedHandler" data-uid="smIRCL.Core.IrcController.ControllerDisconnectedHandler" class="text-break">Delegate IrcController.ControllerDisconnectedHandler
+  </h1>
+  <div class="markdown level0 summary"><p>The handler for disconnects</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="smIRCL.Core.html">smIRCL.Core</a></h6>
+  <h6><strong>Assembly</strong>: smIRCL.dll</h6>
+  <h5 id="smIRCL_Core_IrcController_ControllerDisconnectedHandler_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public delegate void ControllerDisconnectedHandler(IrcController controller);</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="smIRCL.Core.IrcController.html">IrcController</a></td>
+        <td><span class="parametername">controller</span></td>
+        <td><p>The controller who's connector died</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
 </article>
           </div>
           
@@ -152,7 +118,10 @@ private static void ConnectorMessageReceived(string rawMessage, IrcMessage messa
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/alexhorner/smIRCL/blob/master/DocFX/articles/demos.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/alexhorner/smIRCL/new/master/apiSpec/new?filename=smIRCL_Core_IrcController_ControllerDisconnectedHandler.md&amp;value=---%0Auid%3A%20smIRCL.Core.IrcController.ControllerDisconnectedHandler%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/alexhorner/smIRCL/blob/master/smIRCL/Core/IrcController.cs/#L141" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

@@ -667,7 +667,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: IsValid
     path: ../smIRCL/Config/IrcConfig.cs
-    startLine: 103
+    startLine: 105
   assemblies:
   - smIRCL
   namespace: smIRCL.Config

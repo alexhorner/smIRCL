@@ -13,7 +13,7 @@ static void Main(string[] args)
     {
         ServerHostname = "irc.myservice.net",
         ServerPort = 6697,
-        Nick = "smIRCLDemo1"
+        Nick = "smIRCLDemo1",
         UserName = "smIRCL",
         RealName = "The .NET IRCv3 Library - Demo 1 - Hello Bot",
         UseSsl = true

@@ -10,6 +10,8 @@ items:
   - smIRCL.Core.IrcController.Away
   - smIRCL.Core.IrcController.Channels
   - smIRCL.Core.IrcController.Connector
+  - smIRCL.Core.IrcController.Ctcp
+  - smIRCL.Core.IrcController.Disconnected
   - smIRCL.Core.IrcController.Handlers
   - smIRCL.Core.IrcController.Host
   - smIRCL.Core.IrcController.IsValidChannelName(System.String)
@@ -22,6 +24,7 @@ items:
   - smIRCL.Core.IrcController.PrivMsg
   - smIRCL.Core.IrcController.Quit(System.String)
   - smIRCL.Core.IrcController.RealName
+  - smIRCL.Core.IrcController.SendNotice(System.String,System.String)
   - smIRCL.Core.IrcController.SendPrivMsg(System.String,System.String)
   - smIRCL.Core.IrcController.ServerMotd
   - smIRCL.Core.IrcController.SetAway(System.String)
@@ -686,6 +689,39 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: smIRCL.Core.IrcController.Ctcp
+  commentId: E:smIRCL.Core.IrcController.Ctcp
+  id: Ctcp
+  parent: smIRCL.Core.IrcController
+  langs:
+  - csharp
+  - vb
+  name: Ctcp
+  nameWithType: IrcController.Ctcp
+  fullName: smIRCL.Core.IrcController.Ctcp
+  type: Event
+  source:
+    remote:
+      path: smIRCL/Core/IrcController.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: Ctcp
+    path: ../smIRCL/Core/IrcController.cs
+    startLine: 124
+  assemblies:
+  - smIRCL
+  namespace: smIRCL.Core
+  summary: "\nFired when a CTCP message is received\n"
+  example: []
+  syntax:
+    content: public event IrcController.IrcMessageHandler Ctcp
+    return:
+      type: smIRCL.Core.IrcController.IrcMessageHandler
+    content.vb: Public Event Ctcp As IrcController.IrcMessageHandler
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: smIRCL.Core.IrcController.Ping
   commentId: E:smIRCL.Core.IrcController.Ping
   id: Ping
@@ -704,7 +740,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: Ping
     path: ../smIRCL/Core/IrcController.cs
-    startLine: 124
+    startLine: 129
   assemblies:
   - smIRCL
   namespace: smIRCL.Core
@@ -715,6 +751,39 @@ items:
     return:
       type: smIRCL.Core.IrcController.IrcMessageHandler
     content.vb: Public Event Ping As IrcController.IrcMessageHandler
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: smIRCL.Core.IrcController.Disconnected
+  commentId: E:smIRCL.Core.IrcController.Disconnected
+  id: Disconnected
+  parent: smIRCL.Core.IrcController
+  langs:
+  - csharp
+  - vb
+  name: Disconnected
+  nameWithType: IrcController.Disconnected
+  fullName: smIRCL.Core.IrcController.Disconnected
+  type: Event
+  source:
+    remote:
+      path: smIRCL/Core/IrcController.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: Disconnected
+    path: ../smIRCL/Core/IrcController.cs
+    startLine: 135
+  assemblies:
+  - smIRCL
+  namespace: smIRCL.Core
+  summary: "\nFired when the internal connector dies\n"
+  example: []
+  syntax:
+    content: public event IrcController.ControllerDisconnectedHandler Disconnected
+    return:
+      type: smIRCL.Core.IrcController.ControllerDisconnectedHandler
+    content.vb: Public Event Disconnected As IrcController.ControllerDisconnectedHandler
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -737,7 +806,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: .ctor
     path: ../smIRCL/Core/IrcController.cs
-    startLine: 145
+    startLine: 161
   assemblies:
   - smIRCL
   namespace: smIRCL.Core
@@ -776,7 +845,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: IsValidChannelName
     path: ../smIRCL/Core/IrcController.cs
-    startLine: 287
+    startLine: 305
   assemblies:
   - smIRCL
   namespace: smIRCL.Core
@@ -815,7 +884,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: Quit
     path: ../smIRCL/Core/IrcController.cs
-    startLine: 298
+    startLine: 316
   assemblies:
   - smIRCL
   namespace: smIRCL.Core
@@ -851,7 +920,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: SetNick
     path: ../smIRCL/Core/IrcController.cs
-    startLine: 309
+    startLine: 327
   assemblies:
   - smIRCL
   namespace: smIRCL.Core
@@ -887,7 +956,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: Who
     path: ../smIRCL/Core/IrcController.cs
-    startLine: 318
+    startLine: 336
   assemblies:
   - smIRCL
   namespace: smIRCL.Core
@@ -923,7 +992,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: WhoIs
     path: ../smIRCL/Core/IrcController.cs
-    startLine: 327
+    startLine: 345
   assemblies:
   - smIRCL
   namespace: smIRCL.Core
@@ -959,7 +1028,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: Join
     path: ../smIRCL/Core/IrcController.cs
-    startLine: 336
+    startLine: 354
   assemblies:
   - smIRCL
   namespace: smIRCL.Core
@@ -995,7 +1064,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: Part
     path: ../smIRCL/Core/IrcController.cs
-    startLine: 354
+    startLine: 372
   assemblies:
   - smIRCL
   namespace: smIRCL.Core
@@ -1031,7 +1100,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: SendPrivMsg
     path: ../smIRCL/Core/IrcController.cs
-    startLine: 372
+    startLine: 390
   assemblies:
   - smIRCL
   namespace: smIRCL.Core
@@ -1048,6 +1117,45 @@ items:
       description: The message to send
     content.vb: Public Sub SendPrivMsg(channelOrNick As String, message As String)
   overload: smIRCL.Core.IrcController.SendPrivMsg*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: smIRCL.Core.IrcController.SendNotice(System.String,System.String)
+  commentId: M:smIRCL.Core.IrcController.SendNotice(System.String,System.String)
+  id: SendNotice(System.String,System.String)
+  parent: smIRCL.Core.IrcController
+  langs:
+  - csharp
+  - vb
+  name: SendNotice(String, String)
+  nameWithType: IrcController.SendNotice(String, String)
+  fullName: smIRCL.Core.IrcController.SendNotice(System.String, System.String)
+  type: Method
+  source:
+    remote:
+      path: smIRCL/Core/IrcController.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: SendNotice
+    path: ../smIRCL/Core/IrcController.cs
+    startLine: 425
+  assemblies:
+  - smIRCL
+  namespace: smIRCL.Core
+  summary: "\nSend a NOTICE to the specified Nick or Channel (if the client is in the requested channel)\n"
+  example: []
+  syntax:
+    content: public void SendNotice(string channelOrNick, string message)
+    parameters:
+    - id: channelOrNick
+      type: System.String
+      description: The Nick or Channel recipient
+    - id: message
+      type: System.String
+      description: The message to send
+    content.vb: Public Sub SendNotice(channelOrNick As String, message As String)
+  overload: smIRCL.Core.IrcController.SendNotice*
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -1070,7 +1178,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: SetAway
     path: ../smIRCL/Core/IrcController.cs
-    startLine: 406
+    startLine: 459
   assemblies:
   - smIRCL
   namespace: smIRCL.Core
@@ -1106,7 +1214,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: SetUnAway
     path: ../smIRCL/Core/IrcController.cs
-    startLine: 414
+    startLine: 467
   assemblies:
   - smIRCL
   namespace: smIRCL.Core
@@ -1912,6 +2020,12 @@ references:
   name: IrcController.IrcMessageHandler
   nameWithType: IrcController.IrcMessageHandler
   fullName: smIRCL.Core.IrcController.IrcMessageHandler
+- uid: smIRCL.Core.IrcController.ControllerDisconnectedHandler
+  commentId: T:smIRCL.Core.IrcController.ControllerDisconnectedHandler
+  parent: smIRCL.Core
+  name: IrcController.ControllerDisconnectedHandler
+  nameWithType: IrcController.ControllerDisconnectedHandler
+  fullName: smIRCL.Core.IrcController.ControllerDisconnectedHandler
 - uid: smIRCL.Core.IrcController.#ctor*
   commentId: Overload:smIRCL.Core.IrcController.#ctor
   name: IrcController
@@ -1964,6 +2078,11 @@ references:
   name: SendPrivMsg
   nameWithType: IrcController.SendPrivMsg
   fullName: smIRCL.Core.IrcController.SendPrivMsg
+- uid: smIRCL.Core.IrcController.SendNotice*
+  commentId: Overload:smIRCL.Core.IrcController.SendNotice
+  name: SendNotice
+  nameWithType: IrcController.SendNotice
+  fullName: smIRCL.Core.IrcController.SendNotice
 - uid: smIRCL.Core.IrcController.SetAway*
   commentId: Overload:smIRCL.Core.IrcController.SetAway
   name: SetAway

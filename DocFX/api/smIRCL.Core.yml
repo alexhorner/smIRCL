@@ -10,6 +10,7 @@ items:
   - smIRCL.Core.IrcConnector.MessageHandler
   - smIRCL.Core.IrcConnector.MessageTransmitHandler
   - smIRCL.Core.IrcController
+  - smIRCL.Core.IrcController.ControllerDisconnectedHandler
   - smIRCL.Core.IrcController.IrcMessageHandler
   - smIRCL.Core.IrcHandlerList
   - smIRCL.Core.SupportedChannelModes
@@ -65,6 +66,12 @@ references:
   name: IrcController.IrcMessageHandler
   nameWithType: IrcController.IrcMessageHandler
   fullName: smIRCL.Core.IrcController.IrcMessageHandler
+- uid: smIRCL.Core.IrcController.ControllerDisconnectedHandler
+  commentId: T:smIRCL.Core.IrcController.ControllerDisconnectedHandler
+  parent: smIRCL.Core
+  name: IrcController.ControllerDisconnectedHandler
+  nameWithType: IrcController.ControllerDisconnectedHandler
+  fullName: smIRCL.Core.IrcController.ControllerDisconnectedHandler
 - uid: smIRCL.Core.IrcHandlerList
   commentId: T:smIRCL.Core.IrcHandlerList
   parent: smIRCL.Core

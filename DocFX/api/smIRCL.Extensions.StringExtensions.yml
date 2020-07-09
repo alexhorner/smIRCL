@@ -6,6 +6,7 @@ items:
   parent: smIRCL.Extensions
   children:
   - smIRCL.Extensions.StringExtensions.ToIrcLower(System.String)
+  - smIRCL.Extensions.StringExtensions.ToIrcUpper(System.String)
   langs:
   - csharp
   - vb
@@ -20,7 +21,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: StringExtensions
     path: ../smIRCL/Extensions/StringExtensions.cs
-    startLine: 4
+    startLine: 5
   assemblies:
   - smIRCL
   namespace: smIRCL.Extensions
@@ -63,7 +64,7 @@ items:
       repo: https://github.com/alexhorner/smIRCL.git
     id: ToIrcLower
     path: ../smIRCL/Extensions/StringExtensions.cs
-    startLine: 11
+    startLine: 12
   assemblies:
   - smIRCL
   namespace: smIRCL.Extensions
@@ -83,6 +84,51 @@ items:
 
       Public Shared Function ToIrcLower(str As String) As String
   overload: smIRCL.Extensions.StringExtensions.ToIrcLower*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: smIRCL.Extensions.StringExtensions.ToIrcUpper(System.String)
+  commentId: M:smIRCL.Extensions.StringExtensions.ToIrcUpper(System.String)
+  id: ToIrcUpper(System.String)
+  isExtensionMethod: true
+  parent: smIRCL.Extensions.StringExtensions
+  langs:
+  - csharp
+  - vb
+  name: ToIrcUpper(String)
+  nameWithType: StringExtensions.ToIrcUpper(String)
+  fullName: smIRCL.Extensions.StringExtensions.ToIrcUpper(System.String)
+  type: Method
+  source:
+    remote:
+      path: smIRCL/Extensions/StringExtensions.cs
+      branch: master
+      repo: https://github.com/alexhorner/smIRCL.git
+    id: ToIrcUpper
+    path: ../smIRCL/Extensions/StringExtensions.cs
+    startLine: 29
+  assemblies:
+  - smIRCL
+  namespace: smIRCL.Extensions
+  summary: "\nConverts strings to IRC uppercase as described in RFC1459\n"
+  example: []
+  syntax:
+    content: public static string ToIrcUpper(this string str)
+    parameters:
+    - id: str
+      type: System.String
+      description: The string to convert to IRC uppercase
+    return:
+      type: System.String
+      description: The IRC uppercased string
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function ToIrcUpper(str As String) As String
+  overload: smIRCL.Extensions.StringExtensions.ToIrcUpper*
   modifiers.csharp:
   - public
   - static
@@ -399,3 +445,8 @@ references:
   name: String
   nameWithType: String
   fullName: System.String
+- uid: smIRCL.Extensions.StringExtensions.ToIrcUpper*
+  commentId: Overload:smIRCL.Extensions.StringExtensions.ToIrcUpper
+  name: ToIrcUpper
+  nameWithType: StringExtensions.ToIrcUpper
+  fullName: smIRCL.Extensions.StringExtensions.ToIrcUpper
