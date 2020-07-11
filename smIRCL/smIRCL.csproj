@@ -1,7 +1,34 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <Version>0.0.1.0-rc</Version>
+    <Authors>Alexander Horner</Authors>
+    <Product>smIRCL</Product>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <Copyright>2020 Alexander Horner</Copyright>
+    <RepositoryUrl>https://github.com/alexhorner/smIRCL.git</RepositoryUrl>
+    <RepositoryType>GIT</RepositoryType>
+    <PackageTags></PackageTags>
+    <PackageReleaseNotes>The initial Prerelease of smIRCL</PackageReleaseNotes>
+    <PackageProjectUrl>https://github.com/alexhorner/smIRCL</PackageProjectUrl>
+    <AssemblyVersion>0.0.1.0</AssemblyVersion>
+    <NeutralLanguage></NeutralLanguage>
+    <SignAssembly>false</SignAssembly>
+    <Description>smIRCL is a (sm)all (IRC) (L)ibrary designed to provide core cuntionality for IRCv3 in a lightweight and self-sustaining manner. smIRCL will handle an IRC connection and session state for you with minimal input and output, and can provide a very simple to integrate base for simple bots, whilst exposing the required properties to implement more complex features with ease.</Description>
   </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile></DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
 
 </Project>
