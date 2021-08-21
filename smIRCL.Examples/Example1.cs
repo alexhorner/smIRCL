@@ -36,7 +36,7 @@ namespace smIRCL.Examples
                 if (args.Content.ToIrcLower() != "hello") return;
                 
                 Console.WriteLine($"{args.Channel.Name} >>> [{DateTime.Now}] {args.Author.Nick}({args.Author.HostMask}) {args.Author.RealName}: {args.Content}");
-                ircController.SendPrivMsg(args.Channel.Name, "Hello, " + args.Author.Nick);
+                args.Channel.SendMessage("Hello, " + args.Author.Nick);
             };
             
             controller.OnPrivateMessage += (ircController, args) =>
@@ -44,7 +44,7 @@ namespace smIRCL.Examples
                 if (args.Content.ToIrcLower() != "hello") return;
                 
                 Console.WriteLine($"Private >>> [{DateTime.Now}] {args.Author.Nick}({args.Author.HostMask}) {args.Author.RealName}: {args.Content}");
-                ircController.SendPrivMsg(args.Author.Nick, "Hello, " + args.Author.Nick);
+                args.Author.SendMessage("Hello, " + args.Author.Nick);
             };
             
             Console.Write("Connecting... ");
