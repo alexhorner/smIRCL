@@ -13,146 +13,19 @@ namespace smIRCL.Core
     /// <summary>
     /// A controller which handles the ongoing state of an IRC server connection and allows control over that connection
     /// </summary>
-    public class IrcController
+    public partial class IrcController
     {
-        #region Public Properties
-
-        /// <summary>
-        /// The connector for handling and accessing the IRC server connection
-        /// </summary>
-        public IrcConnector Connector { get; internal set; }
-
-        /// <summary>
-        /// A list of Users who are within scope of the client
-        /// </summary>
-        public readonly List<IrcUser> Users = new List<IrcUser>();
-
-        /// <summary>
-        /// A list of channels currently joined by the client
-        /// </summary>
-        public readonly List<IrcChannel> Channels = new List<IrcChannel>();
-
-        /// <summary>
-        /// The Nick of the client
-        /// </summary>
-        public string Nick { get; internal set; }
-
-        /// <summary>
-        /// The User name of the client
-        /// </summary>
-        public string UserName { get; internal set; }
-
-        /// <summary>
-        /// The Real name (GECOS) of the client
-        /// </summary>
-        public string RealName { get; internal set; }
-
-        /// <summary>
-        /// The Hostname or Mask of the client
-        /// </summary>
-        public string Host { get; internal set; }
-
-        /// <summary>
-        /// The Away status and message of the client
-        /// </summary>
-        public string Away { get; internal set; }
-
-
-        /// <summary>
-        /// The channel characters which are valid for the connected server
-        /// </summary>
-        public List<char> SupportedChannelTypes { get; internal set; } = new List<char>();
-
-        /// <summary>
-        /// The modes supported for channels for the connected server
-        /// </summary>
-        public SupportedChannelModes SupportedChannelModes { get; internal set; } = new SupportedChannelModes();
-
-        /// <summary>
-        /// The prefixes representing modes assignable to users in channels
-        /// </summary>
-        public List<KeyValuePair<char, char>> SupportedUserPrefixes { get; internal set; } = new List<KeyValuePair<char, char>>();
-
-        /// <summary>
-        /// The IRCv3 capabilities supported by the server
-        /// </summary>
-        public List<KeyValuePair<string, List<string>>> AvailableCapabilities { get; internal set; } = new List<KeyValuePair<string, List<string>>>();
-
-        /// <summary>
-        /// The IRCv3 capabilities negotiated and activated with the server
-        /// </summary>
-        public List<string> NegotiatedCapabilities { get; internal set; } = new List<string>();
-
-        /// <summary>
-        /// The MOTD of the connected server, if one is available
-        /// </summary>
-        public string ServerMotd { get; internal set; } = null;
-
-        #endregion
-
-        #region Public Command Handling
-
-        /// <summary>
-        /// An IRC message handler for commands and numerics
-        /// </summary>
-        /// <param name="connector">The connector which fired the message</param>
-        /// <param name="controller">The controller handling the message</param>
-        /// <param name="message">THe message received</param>
-        public delegate void IrcMessageHandler(IrcController controller, IrcMessage message);
-
-        /// <summary>
-        /// The collection of handlers which handle commands and numerics
-        /// </summary>
-        public IrcHandlerList Handlers = new IrcHandlerList();
-
-        #endregion
-
-        #region Public Events
-
-        /// <summary>
-        /// Fired when a PRIVMSG is received
-        /// </summary>
-        public event IrcMessageHandler PrivMsg;
-
-        /// <summary>
-        /// Fired when a NOTICE is received
-        /// </summary>
-        public event IrcMessageHandler Notice;
-
-        /// <summary>
-        /// Fired when a CTCP message is received
-        /// </summary>
-        public event IrcMessageHandler Ctcp;
-
-        /// <summary>
-        /// Fired when a PING is received
-        /// </summary>
-        public event IrcMessageHandler Ping;
-
-
-        /// <summary>
-        /// Fired when the internal connector dies
-        /// </summary>
-        public event ControllerDisconnectedHandler Disconnected;
-        /// <summary>
-        /// The handler for disconnects
-        /// </summary>
-        /// <param name="controller">The controller who's connector died</param>
-        public delegate void ControllerDisconnectedHandler(IrcController controller);
-
-        #endregion
-
-        #region Private Properties
-
         private Timer _userGarbageCollectionTimer;
 
         private string _unconfirmedNick;
 
         private bool _expectingTermination;
 
+        private bool _sessionReady;
+
         private readonly List<char> _trimmableUserPrefixes = new List<char>();
 
-        #endregion
+        private readonly Queue<CapabilityStep> _capabilitySteps = new Queue<CapabilityStep>();
 
         /// <summary>
         /// Instantiates a new controller
@@ -230,27 +103,56 @@ namespace smIRCL.Core
 
         private void DoUserGarbageCollection()
         {
-            Users.RemoveAll(u =>
-                u.MutualChannels.Count == 0 && (u.LastDirectMessage == null ||
-                                                u.LastDirectMessage + Connector.Config.DirectMessageHoldingPeriod <
-                                                DateTime.Now));
+            Users.RemoveAll(u => u.MutualChannels.Count == 0 && (u.LastDirectMessage == null ||  u.LastDirectMessage + Connector.Config.DirectMessageHoldingPeriod < DateTime.Now));
         }
         private void DoUserGarbageCollection(Object source, ElapsedEventArgs e)
         {
             DoUserGarbageCollection();
         }
 
-        private void CompleteCapabilityRequesting()
+        /// <summary>
+        /// Determines what the next step is for completing capability negotiation and setup, and executes it
+        /// </summary>
+        private void DoNextCapabilityCompletionStep()
+        {
+            if (!_capabilitySteps.Any()) return;
+            
+            CapabilityStep nextStep = _capabilitySteps.Dequeue();
+            
+            switch (nextStep)
+            {
+                case CapabilityStep.Start:
+                    Connector.Transmit("CAP LS :302");
+                    break;
+                
+                case CapabilityStep.RequestCapabilities:
+                    RequestCapabilities();
+                    break;
+                
+                case CapabilityStep.RequestSaslAuthentication:
+                    Connector.Transmit("AUTHENTICATE :PLAIN");
+                    break;
+                
+                case CapabilityStep.End:
+                    Connector.Transmit("CAP :END");
+                    break;
+            }
+        }
+        
+        /// <summary>
+        /// Based on available capabilities, request the desired capabilities
+        /// </summary>
+        private void RequestCapabilities()
         {
             string capabilityRequest = "";
 
-            if (Connector.Config.AuthMode == AuthMode.SASL)
+            if (Connector.Config.AuthMode == AuthMode.SASL) //SASL is a special capability, added to the request separately
             {
-                if (AvailableCapabilities.Any(acap => acap.Key.ToIrcLower() == "sasl"))
+                if (AvailableCapabilities.Any(acap => acap.Key.ToIrcLower() == "sasl")) //If SASL is available, add it
                 {
                     capabilityRequest += "sasl";
                 }
-                else
+                else //If SASL is not available, we mustn't continue
                 {
                     Quit("SASL required but not available");
                     return;
@@ -270,28 +172,30 @@ namespace smIRCL.Core
                     capabilityRequest += capability.ToIrcLower();
                 }
             }
-
+            
+            //Kick the capability negotiation process off
             if (capabilityRequest != "") Connector.Transmit($"CAP REQ :{capabilityRequest}");
         }
-
-        private void FinaliseCapabilities()
-        {
-            if (Connector.Config.AuthMode == AuthMode.SASL)
-            {
-                Connector.Transmit("AUTHENTICATE :PLAIN");
-            }
-            else
-            {
-                Connector.Transmit("CAP :END");
-            }
-        }
-
+        
+        /// <summary>
+        /// Join channels configured to be joined automatically
+        /// </summary>
         private void RunAutoJoins()
         {
             foreach (string channel in Connector.Config.AutoJoinChannels)
             {
                 Join(channel);
             }
+        }
+        
+        /// <summary>
+        /// When the connection is considered properly established (MOTD has been received or we have been notified one isn't available) consider the client ready
+        /// </summary>
+        private void ControllerReady()
+        {
+            RunAutoJoins();
+            _sessionReady = true;
+            Ready?.Invoke(this);
         }
 
         #endregion
@@ -400,6 +304,7 @@ namespace smIRCL.Core
             else
             {
                 IrcUser user = Users.FirstOrDefault(u => u.Nick.ToIrcLower() == channelOrNick.ToIrcLower());
+                
                 if (user != null)
                 {
                     user.LastDirectMessage = DateTime.Now;
@@ -411,6 +316,7 @@ namespace smIRCL.Core
                         Nick = channelOrNick,
                         LastDirectMessage = DateTime.Now
                     });
+                    
                     WhoIs(channelOrNick);
                 }
             }
@@ -468,782 +374,6 @@ namespace smIRCL.Core
         public void SetUnAway()
         {
             Connector.Transmit("AWAY");
-        }
-
-        #endregion
-
-        #region Connector Handlers
-
-        private void ConnectorOnConnected()
-        {
-            //See https://modern.ircdocs.horse/index.html#connection-registration
-            Connector.Transmit("CAP LS :302");
-            //Capability negotiation will occur in a handler if supported by the server
-            if (!string.IsNullOrWhiteSpace(Connector.Config.ServerPassword))
-                Connector.Transmit($"PASS :{Connector.Config.ServerPassword}");
-            _unconfirmedNick = Connector.Config.Nick;
-            SetNick(Connector.Config.Nick);
-            Connector.Transmit($"USER {Connector.Config.UserName} 0 * :{Connector.Config.RealName}");
-            //SASL will be completed by FinaliseCapabilities
-        }
-
-        private void ConnectorOnDisconnected()
-        {
-            Disconnected?.Invoke(this);
-        }
-
-        private void ConnectorOnMessageReceived(string rawMessage, IrcMessage message)
-        {
-            if (message == null) throw new ArgumentNullException(nameof(message));
-
-            if (message.Command == "ERROR" && _expectingTermination)
-            {
-                return;
-            }
-
-            CheckOperationValid();
-
-            foreach (KeyValuePair<string, IrcMessageHandler> ircMessageHandler in Handlers.Where(h =>
-                h.Key == message.Command))
-            {
-                ircMessageHandler.Value.Invoke(this, message);
-            }
-        }
-
-        #endregion
-
-        #region Handlers
-
-        private void OnPing(IrcController controller, IrcMessage message)
-        {
-            Connector.Transmit($"PONG :{message.Parameters[0]}");
-            Ping?.Invoke(controller, message);
-        }
-
-        private void OnPrivMsg(IrcController controller, IrcMessage message)
-        {
-            if (!controller.IsValidChannelName(message.Parameters[0]))
-            {
-                IrcUser user = Users.FirstOrDefault(u => u.Nick.ToIrcLower() == message.SourceNick.ToIrcLower());
-                if (user != null)
-                {
-                    user.LastDirectMessage = DateTime.Now;
-                }
-                else
-                {
-                    Users.Add(new IrcUser
-                    {
-                        HostMask = message.SourceHostMask,
-                        Nick = message.SourceNick,
-                        Host = message.SourceHost,
-                        UserName = message.SourceUserName,
-                        LastDirectMessage = DateTime.Now
-                    });
-                    WhoIs(message.SourceNick);
-                }
-            }
-
-            if (message.Parameters[1].StartsWith("\x01"))
-            {
-                Ctcp?.Invoke(controller, message);
-            }
-            else
-            {
-                PrivMsg?.Invoke(controller, message);
-            }
-        }
-
-        private void OnNotice(IrcController controller, IrcMessage message)
-        {
-            Notice?.Invoke(controller, message);
-        }
-
-        private void OnUnrecoverableError(IrcController controller, IrcMessage message)
-        {
-            Connector.Dispose();
-        }
-
-        private void OnNickError(IrcController controller, IrcMessage message)
-        {
-            if (Nick == null)
-            {
-                if (Connector.Config.AlternativeNicks.Count > 0)
-                {
-                    _unconfirmedNick = Connector.Config.AlternativeNicks.Dequeue();
-                    Connector.Transmit($"NICK {_unconfirmedNick}");
-                }
-                else
-                {
-                    Quit("Unable to find a usable Nick");
-                }
-            }
-        }
-
-        private void OnNickSet(IrcController controller, IrcMessage message)
-        {
-            if (message.SourceNick.ToIrcLower() == Nick.ToIrcLower()) //Minimum requirement of a source is Nick which is always unique
-            {
-                Nick = message.Parameters[0];
-            }
-            else if (Users.Any(u => u.Nick.ToIrcLower() == message.SourceNick.ToIrcLower()))
-            {
-                IrcUser user = Users.FirstOrDefault(u => u.Nick.ToIrcLower() == message.SourceNick.ToIrcLower());
-                if (user != null) user.Nick = message.Parameters[0];
-            }
-
-            WhoIs(message.Parameters[0]);
-        }
-
-        private void OnWelcomeEnd(IrcController controller, IrcMessage message)
-        {
-            Nick = _unconfirmedNick;
-            _unconfirmedNick = null;
-            WhoIs(Nick);
-        }
-
-        private void OnMotdPart(IrcController controller, IrcMessage message)
-        {
-            if (ServerMotd == null)
-            {
-                ServerMotd = message.Parameters[1];
-            }
-            else
-            {
-                ServerMotd += "\n" + message.Parameters[1];
-            }
-        }
-
-        private void OnMotdEnd(IrcController controller, IrcMessage message)
-        {
-            //Now safe to assume ISupport has been received and processed
-            RunAutoJoins();
-        }
-
-        private void OnNoMotd(IrcController controller, IrcMessage message)
-        {
-            //Now safe to assume ISupport has been received and processed
-            RunAutoJoins();
-        }
-
-        private void OnWhoReply(IrcController controller, IrcMessage message)
-        {
-            char[] statuses = message.Parameters[6].ToCharArray();
-
-            if (message.Parameters[5].ToIrcLower() == Nick.ToIrcLower())
-            {
-                UserName = message.Parameters[2];
-                Host = message.Parameters[3];
-                RealName = message.Parameters[7].Split(new[] { ' ' }, 2)[1];
-
-                IrcChannel channel = Channels.FirstOrDefault(ch => ch.Name.ToIrcLower() == message.Parameters[1].ToIrcLower());
-                channel?.ClientModes.Clear();
-
-                foreach (char status in statuses)
-                {
-                    switch (status)
-                    {
-                        case 'G':
-                            Away = "Unknown";
-                            break;
-
-                        case 'H':
-                            Away = null;
-                            break;
-
-                        default:
-                            if (SupportedUserPrefixes.Any(sup => sup.Value == status))
-                            {
-                                channel?.ClientModes.Add(SupportedUserPrefixes.FirstOrDefault(sup => sup.Value == status).Key);
-                            }
-                            break;
-                    }
-                }
-            }
-            else if (Users.Any(u => u.Nick.ToIrcLower() == message.Parameters[5].ToIrcLower()))
-            {
-                IrcUser user = Users.FirstOrDefault(u => u.Nick.ToIrcLower() == message.Parameters[5].ToIrcLower());
-                if (user != null)
-                {
-                    user.UserName = message.Parameters[2];
-                    user.Host = message.Parameters[3];
-                    user.RealName = message.Parameters[7].Split(new[] { ' ' }, 2)[1];
-
-                    KeyValuePair<string, List<char>> userMutualChannelModes = user.MutualChannelModes.FirstOrDefault(mcm => mcm.Key.ToIrcLower() == message.Parameters[1].ToIrcLower());
-                    if (userMutualChannelModes.Key != null) userMutualChannelModes.Value.Clear();
-
-                    foreach (char status in statuses)
-                    {
-                        switch (status)
-                        {
-                            case 'G':
-                                user.Away = "Unknown";
-                                break;
-
-                            case 'H':
-                                user.Away = null;
-                                break;
-
-                            default:
-                                if (SupportedUserPrefixes.Any(sup => sup.Value == status) && userMutualChannelModes.Key != null)
-                                {
-                                    userMutualChannelModes.Value.Add(SupportedUserPrefixes.FirstOrDefault(sup => sup.Value == status).Key);
-                                }
-                                break;
-                        }
-                    }
-                }
-            }
-        }
-
-        private void OnWhoIsUserReply(IrcController controller, IrcMessage message)
-        {
-            if (message.Parameters[1].ToIrcLower() == Nick.ToIrcLower())
-            {
-                UserName = message.Parameters[2];
-                Host = message.Parameters[3];
-                RealName = message.Parameters[5];
-            }
-            else if (Users.Any(u => u.Nick.ToIrcLower() == message.Parameters[1].ToIrcLower()))
-            {
-                IrcUser user = Users.FirstOrDefault(u => u.Nick.ToIrcLower() == message.Parameters[1].ToIrcLower());
-                if (user != null)
-                {
-                    user.UserName = message.Parameters[2];
-                    user.Host = message.Parameters[3];
-                    user.RealName = message.Parameters[5];
-                }
-            }
-        }
-
-        private void OnWhoIsChannelsReply(IrcController controller, IrcMessage message)
-        {
-            if (message.Parameters[1].ToIrcLower() != Nick.ToIrcLower() && Users.Any(u => u.Nick.ToIrcLower() == message.Parameters[1].ToIrcLower()))
-            {
-                string[] channels = message.Parameters[2].Split(' ');
-                List<string> trimmedChannels = new List<string>();
-                foreach (string channel in channels)
-                {
-                    trimmedChannels.Add(channel.TrimStart('@', '+'));
-                }
-
-                foreach (string channel in trimmedChannels)
-                {
-                    if (Channels.Any(ch => ch.Name.ToIrcLower() == channel.ToIrcLower()))
-                    {
-                        IrcUser user = Users.FirstOrDefault(u => u.Nick.ToIrcLower() == message.Parameters[1].ToIrcLower());
-                        if (user != null && user.MutualChannels.All(uch => uch.ToIrcLower() != channel.ToIrcLower())) user.MutualChannels.Add(channel);
-                    }
-                }
-            }
-        }
-
-        private void OnHostMaskCloak(IrcController controller, IrcMessage message)
-        {
-            Host = message.Parameters[1];
-        }
-
-        private void OnJoin(IrcController controller, IrcMessage message)
-        {
-            if(message.SourceNick.ToIrcLower() == Nick.ToIrcLower())
-            {
-                if (Channels.All(ch => ch.Name.ToIrcLower() != message.Parameters[0].ToIrcLower())) Channels.Add(new IrcChannel(message.Parameters[0]));
-            }
-            else
-            {
-                if (Users.All(u => u.Nick.ToIrcLower() != message.SourceNick.ToIrcLower()))
-                {
-                    string realName = null;
-                    string identifiedAccount = null;
-
-                    if (NegotiatedCapabilities.Any(cap => cap.ToIrcLower() == "extended-join"))
-                    {
-                        if (message.Parameters[1] != "*") identifiedAccount = message.Parameters[1];
-                        realName = message.Parameters[2];
-                    }
-
-                    Users.Add(new IrcUser
-                    {
-                        HostMask = message.SourceHostMask,
-                        Nick = message.SourceNick,
-                        Host = message.SourceHost,
-                        UserName = message.SourceUserName,
-                        RealName = realName,
-                        IdentifiedAccount = identifiedAccount,
-                        MutualChannels = new List<string>
-                        {
-                            message.Parameters[0]
-                        },
-                        MutualChannelModes = new List<KeyValuePair<string, List<char>>>
-                        {
-                            new KeyValuePair<string, List<char>>(message.Parameters[0], new List<char>())
-                        }
-                    });
-                    WhoIs(message.SourceNick);
-                }
-                else
-                {
-                    IrcUser user = Users.FirstOrDefault(u => u.Nick.ToIrcLower() == message.SourceNick.ToIrcLower());
-                    user?.MutualChannels.Add(message.Parameters[0]);
-                    user?.MutualChannelModes.Add(new KeyValuePair<string, List<char>>(message.Parameters[0], new List<char>()));
-                }
-
-                Channels.FirstOrDefault(ch => ch.Name.ToIrcLower() == message.Parameters[0].ToIrcLower())?.Users.Add(message.SourceNick);
-            }
-        }
-
-        private void OnNamesReply(IrcController controller, IrcMessage message)
-        {
-            IrcChannel channel = Channels.FirstOrDefault(ch => ch.Name.ToIrcLower() == message.Parameters[2].ToIrcLower());
-            if (channel != null)
-            {
-                if (channel.UserCollectionComplete)
-                {
-                    channel.UserCollectionComplete = false;
-                    channel.Users = new List<string>();
-                }
-
-                string[] users = message.Parameters[3].Split(' ');
-
-                foreach (string user in users)
-                {
-                    string userNick = user.TrimStart(_trimmableUserPrefixes.ToArray());
-
-                    if (userNick.ToIrcLower() != Nick.ToIrcLower())
-                    {
-                        channel.Users.Add(userNick);
-
-                        List<char> userPrefixes = new List<char>();
-                        string userSplice = user;
-
-                        foreach (char trimmableUserPrefix in _trimmableUserPrefixes)
-                        {
-                            if (userSplice.StartsWith(trimmableUserPrefix.ToString()))
-                            {
-                                userPrefixes.Add(trimmableUserPrefix);
-                                userSplice = userSplice.TrimStart(trimmableUserPrefix);
-                            }
-                        }
-
-                        List<char> userModes = new List<char>();
-
-                        foreach (char prefix in userPrefixes)
-                        {
-                            if (SupportedUserPrefixes.Any(p => p.Value == prefix)) userModes.Add(SupportedUserPrefixes.FirstOrDefault(p => p.Value == prefix).Key);
-                        }
-
-                        if (Users.All(u => u.Nick.ToLower() != userNick.ToIrcLower()))
-                        {
-                            Users.Add(new IrcUser
-                            {
-                                MutualChannels = new List<string>
-                                {
-                                    channel.Name
-                                },
-                                MutualChannelModes = new List<KeyValuePair<string, List<char>>>
-                                {
-                                    new KeyValuePair<string, List<char>>(channel.Name, userModes)
-                                },
-                                Nick = userNick
-                            });
-                        }
-                        else
-                        {
-                            IrcUser globalUser = Users.FirstOrDefault(u => u.Nick.ToIrcLower() == userNick.ToIrcLower());
-                            if (globalUser != null)
-                            {
-                                if (globalUser.MutualChannels.All(ch => ch.ToIrcLower() != channel.Name.ToIrcLower())) globalUser.MutualChannels.Add(channel.Name);
-                                if (globalUser.MutualChannelModes.All(ch => ch.Key.ToIrcLower() != channel.Name.ToIrcLower())) globalUser.MutualChannelModes.Add(new KeyValuePair<string, List<char>>(channel.Name, userModes));
-                            }
-                        }
-                    }
-                    else
-                    {
-                        List<char> userPrefixes = new List<char>();
-                        string userSplice = user;
-
-                        foreach (char trimmableUserPrefix in _trimmableUserPrefixes)
-                        {
-                            if (userSplice.StartsWith(trimmableUserPrefix.ToString()))
-                            {
-                                userPrefixes.Add(trimmableUserPrefix);
-                                userSplice = userSplice.TrimStart(trimmableUserPrefix);
-                            }
-                        }
-
-                        List<char> userModes = new List<char>();
-
-                        foreach (char prefix in userPrefixes)
-                        {
-                            if (SupportedUserPrefixes.Any(p => p.Value == prefix)) userModes.Add(SupportedUserPrefixes.FirstOrDefault(p => p.Value == prefix).Key);
-                        }
-
-                        channel.ClientModes = userModes;
-                    }
-                }
-            }
-        }
-
-        private void OnNamesEnd(IrcController controller, IrcMessage message)
-        {
-            IrcChannel channel = Channels.FirstOrDefault(ch => ch.Name.ToIrcLower() == message.Parameters[1].ToIrcLower());
-            if (channel != null) channel.UserCollectionComplete = true;
-
-            Who(message.Parameters[1]);
-        }
-
-        private void OnChannelModes(IrcController controller, IrcMessage message)
-        {
-            IrcChannel channel = Channels.FirstOrDefault(ch => ch.Name.ToIrcLower() == message.Parameters[1].ToIrcLower());
-            if (channel != null)
-            {
-                char[] channelModes = message.Parameters[2].TrimStart('+').ToCharArray();
-                Queue<string> channelModeParameters = new Queue<string>();
-
-                for (int i = 3; i < message.Parameters.Count; i++)
-                {
-                    channelModeParameters.Enqueue(message.Parameters[i]);
-                }
-
-                foreach (char channelMode in channelModes)
-                {
-                    if (SupportedChannelModes.A.Contains(channelMode))
-                    {
-                        channelModeParameters.Dequeue(); //Not listening for A, discard
-                    }
-                    else if (SupportedChannelModes.B.Contains(channelMode) || SupportedChannelModes.C.Contains(channelMode))
-                    {
-                        channel.Modes.RemoveAll(m => m.Key == channelMode);
-                        channel.Modes.Add(new KeyValuePair<char, string>(channelMode, channelModeParameters.Dequeue()));
-                    }
-                    else if (SupportedChannelModes.D.Contains(channelMode))
-                    {
-                        channel.Modes.RemoveAll(m => m.Key == channelMode);
-                        channel.Modes.Add(new KeyValuePair<char, string>(channelMode, null));
-                    }
-                }
-            }
-        }
-
-        private void OnMode(IrcController controller, IrcMessage message)
-        {
-            IrcChannel channel = Channels.FirstOrDefault(ch => ch.Name.ToIrcLower() == message.Parameters[0].ToIrcLower());
-            if (channel != null)
-            {
-                char[] sentModes = message.Parameters[1].ToCharArray();
-                bool removal = false;
-
-                Queue<string> otherParams = new Queue<string>();
-
-                for (int i = 2; i < message.Parameters.Count; i++)
-                {
-                    otherParams.Enqueue(message.Parameters[i]);
-                }
-
-                foreach (char sentMode in sentModes)
-                {
-                    if (sentMode == '+')
-                    {
-                        removal = false;
-                        continue;
-                    }
-                    
-                    if (sentMode == '-')
-                    {
-                        removal = true;
-                        continue;
-                    }
-
-                    if (SupportedChannelModes.A.Contains(sentMode))
-                    {
-                        otherParams.Dequeue(); //Not listening for A, discard
-                    }
-                    else if (SupportedChannelModes.B.Contains(sentMode) || SupportedChannelModes.C.Contains(sentMode))
-                    {
-                        channel.Modes.RemoveAll(m => m.Key == sentMode);
-                        if (!removal)
-                        {
-                            channel.Modes.Add(new KeyValuePair<char, string>(sentMode, otherParams.Dequeue()));
-                        }
-                    }
-                    else if (SupportedChannelModes.D.Contains(sentMode))
-                    {
-                        channel.Modes.RemoveAll(m => m.Key == sentMode);
-                        if (!removal)
-                        {
-                            channel.Modes.Add(new KeyValuePair<char, string>(sentMode, null));
-                        }
-                    }
-                    else if (SupportedUserPrefixes.Any(sup => sup.Key == sentMode))
-                    {
-                        string associatedNick = otherParams.Dequeue();
-
-                        if (Nick.ToIrcLower() == associatedNick.ToIrcLower())
-                        {
-                            channel.ClientModes.RemoveAll(m => m == sentMode);
-                            if (!removal)
-                            {
-                                channel.ClientModes.Add(sentMode);
-                            }
-                        }
-                        else
-                        {
-                            IrcUser user = Users.FirstOrDefault(u => u.Nick.ToIrcLower() == associatedNick.ToIrcLower());
-                            if (user != null)
-                            {
-                                KeyValuePair<string, List<char>> mutualChannelModes = user.MutualChannelModes.FirstOrDefault(mcm => mcm.Key.ToIrcLower() == channel.Name.ToIrcLower());
-                                mutualChannelModes.Value?.RemoveAll(m => m == sentMode);
-                                if (!removal)
-                                {
-                                    mutualChannelModes.Value?.Add(sentMode);
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
-        private void OnPart(IrcController controller, IrcMessage message)
-        {
-            if (message.SourceNick.ToIrcLower() == Nick.ToIrcLower())
-            {
-                IrcChannel channel = Channels.FirstOrDefault(ch => ch.Name.ToIrcLower() == message.Parameters[0].ToIrcLower());
-                if (channel != null) Channels.Remove(channel);
-
-                List<IrcUser> usersWithMutualChannels = Users.Where(u => u.MutualChannels.Any(ch => ch.ToIrcLower() == message.Parameters[0].ToIrcLower())).ToList();
-                foreach (IrcUser user in usersWithMutualChannels)
-                {
-                    user.MutualChannels.RemoveAll(ch => ch.ToIrcLower() == message.Parameters[0].ToIrcLower());
-                }
-            }
-            else
-            {
-                IrcChannel channel = Channels.FirstOrDefault(ch => ch.Name.ToIrcLower() == message.Parameters[0].ToIrcLower());
-                channel?.Users.RemoveAll(u => u.ToIrcLower() == message.SourceNick.ToIrcLower());
-
-                IrcUser user = Users.FirstOrDefault(u => u.Nick.ToIrcLower() == message.SourceNick.ToIrcLower());
-                user?.MutualChannels.RemoveAll(ch => ch.ToIrcLower() == message.Parameters[0].ToIrcLower());
-            }
-
-            DoUserGarbageCollection();
-        }
-
-        private void OnKick(IrcController controller, IrcMessage message)
-        {
-            if (message.Parameters[1].ToIrcLower() == Nick.ToIrcLower())
-            {
-                IrcChannel channel = Channels.FirstOrDefault(ch => ch.Name.ToIrcLower() == message.Parameters[0].ToIrcLower());
-                if (channel != null) Channels.Remove(channel);
-
-                List<IrcUser> usersWithMutualChannels = Users.Where(u => u.MutualChannels.Any(ch => ch.ToIrcLower() == message.Parameters[0].ToIrcLower())).ToList();
-                foreach (IrcUser user in usersWithMutualChannels)
-                {
-                    user.MutualChannels.RemoveAll(ch => ch.ToIrcLower() == message.Parameters[0].ToIrcLower());
-                }
-            }
-            else
-            {
-                IrcChannel channel = Channels.FirstOrDefault(ch => ch.Name.ToIrcLower() == message.Parameters[0].ToIrcLower());
-                channel?.Users.RemoveAll(u => u.ToIrcLower() == message.Parameters[1].ToIrcLower());
-
-                IrcUser user = Users.FirstOrDefault(u => u.Nick.ToIrcLower() == message.Parameters[1].ToIrcLower());
-                user?.MutualChannels.RemoveAll(ch => ch.ToIrcLower() == message.Parameters[0].ToIrcLower());
-            }
-
-            DoUserGarbageCollection();
-        }
-
-        private void OnQuit(IrcController controller, IrcMessage message)
-        {
-            if (message.SourceNick.ToIrcLower() != Nick.ToIrcLower())
-            {
-                List<IrcChannel> mutualChannels = Channels.Where(ch => ch.Users.Any(u => u.ToIrcLower() == message.SourceNick.ToIrcLower())).ToList();
-                foreach (IrcChannel mutualChannel in mutualChannels)
-                {
-                    mutualChannel.Users.RemoveAll(u => u.ToIrcLower() == message.SourceNick.ToIrcLower());
-                }
-
-                IrcUser user = Users.FirstOrDefault(u => u.Nick.ToIrcLower() == message.SourceNick.ToIrcLower());
-                if (user != null) Users.Remove(user);
-            }
-        }
-
-        private void OnTopicInform(IrcController controller, IrcMessage message)
-        {
-            IrcChannel channel = Channels.FirstOrDefault(ch => ch.Name.ToIrcLower() == message.Parameters[1].ToIrcLower());
-            if (channel != null) channel.Topic = message.Parameters[2];
-        }
-
-        private void OnTopicUpdate(IrcController controller, IrcMessage message)
-        {
-            IrcChannel channel = Channels.FirstOrDefault(ch => ch.Name.ToIrcLower() == message.Parameters[0].ToIrcLower());
-            if (channel != null) channel.Topic = message.Parameters[1] != "" ? message.Parameters[1] : null;
-        }
-
-        private void OnISupport(IrcController controller, IrcMessage message)
-        {
-            foreach (string parameter in message.Parameters)
-            {
-                string[] keyPair = parameter.Split(new[] { '=' }, 2);
-
-                if (keyPair.Length < 2) continue;
-
-                switch (keyPair[0].ToIrcLower())
-                {
-                    case "chantypes":
-                        foreach (char c in keyPair[1])
-                        {
-                            if (SupportedChannelTypes.Any(sct => sct == c)) continue;
-                            SupportedChannelTypes.Add(c);
-                        }
-                        break;
-
-                    case "chanmodes":
-                        string[] chanModeGroups = keyPair[1].Split(','); //0 A, 1 B, 2 C, 3 D
-
-                        int currentChanModeGroup = 0;
-
-                        foreach (string chanModeGroup in chanModeGroups)
-                        {
-                            List<char> chanModeList = null;
-
-                            switch (currentChanModeGroup)
-                            {
-                                case 0:
-                                    chanModeList = SupportedChannelModes.A; 
-                                    break;
-                                case 1:
-                                    chanModeList = SupportedChannelModes.B;
-                                    break;
-                                case 2:
-                                    chanModeList = SupportedChannelModes.C;
-                                    break;
-                                case 3:
-                                    chanModeList = SupportedChannelModes.D;
-                                    break;
-                            }
-
-                            foreach (char chanMode in chanModeGroup)
-                            {
-                                chanModeList?.Add(chanMode);
-                            }
-
-                            currentChanModeGroup++;
-                        }
-
-                        break;
-
-                    case "prefix":
-                        string[] modePairs = keyPair[1].TrimStart('(').Split(')');
-
-                        for (int i = 0; i < modePairs[0].Length; i++)
-                        {
-                            if (SupportedUserPrefixes.All(pref => pref.Key != modePairs[0][i])) SupportedUserPrefixes.Add(new KeyValuePair<char, char>(modePairs[0][i], modePairs[1][i]));
-
-                            if (_trimmableUserPrefixes.All(tup => tup != modePairs[1][i])) _trimmableUserPrefixes.Add(modePairs[1][i]);
-                        }
-                        break;
-                }
-            }
-        }
-
-        private void OnCapability(IrcController controller, IrcMessage message)
-        {
-            switch (message.Parameters[1].ToIrcLower())
-            {
-                case "ls":
-                    string[] capabilitiesGiven = message.Parameters[message.Parameters.Count - 1].Split(' ');
-
-                    foreach (string cap in capabilitiesGiven)
-                    {
-                        string[] capabilityAndParameters = cap.Split('=');
-                        List<string> parameters = capabilityAndParameters.Length > 1 ? capabilityAndParameters[1].Split(',').ToList() : new List<string>();
-
-                        if (AvailableCapabilities.All(acap => acap.Key != capabilityAndParameters[0])) AvailableCapabilities.Add(new KeyValuePair<string, List<string>>(capabilityAndParameters[0], parameters));
-                    }
-
-                    if (message.Parameters[2] != "*") CompleteCapabilityRequesting();
-                    break;
-
-                case "ack":
-                    string[] capabilitiesAcknowledged = message.Parameters[message.Parameters.Count - 1].Split(' ');
-
-                    foreach (string cap in capabilitiesAcknowledged)
-                    {
-                        if (NegotiatedCapabilities.All(ncap => ncap != cap.ToIrcLower())) NegotiatedCapabilities.Add(cap.ToIrcLower());
-                    }
-
-                    FinaliseCapabilities();
-                    break;
-            }
-        }
-
-        private void OnSasl(IrcController controller, IrcMessage message)
-        {
-            switch (message.Parameters[0].ToIrcLower())
-            {
-                case "+":
-                    Connector.Transmit($"AUTHENTICATE {Convert.ToBase64String(Encoding.UTF8.GetBytes($"{Connector.Config.AuthUsername}\x00{Connector.Config.AuthUsername}\x00{Connector.Config.AuthPassword}"))}");
-                    break;
-            }
-        }
-
-        private void OnSaslComplete(IrcController controller, IrcMessage message)
-        {
-            Connector.Transmit("CAP :END");
-        }
-
-        private void OnSaslFailure(IrcController controller, IrcMessage message)
-        {
-            Quit("SASL authentication has failed");
-        }
-
-        private void OnAwayNotify(IrcController controller, IrcMessage message)
-        {
-            if (message.SourceNick.ToIrcLower() == Nick.ToIrcLower())
-            {
-                if (message.Parameters.Count == 0)
-                {
-                    Away = null;
-                }
-                else
-                {
-                    Away = message.Parameters[0];
-                }
-            }
-            else
-            {
-                IrcUser user = Users.FirstOrDefault(u => u.Nick.ToIrcLower() == message.SourceNick.ToIrcLower());
-                if (user != null)
-                {
-                    if (message.Parameters.Count == 0)
-                    {
-                        user.Away = null;
-                    }
-                    else
-                    {
-                        user.Away = message.Parameters[0];
-                    }
-                }
-            }
-        }
-
-        private void OnChangeHost(IrcController controller, IrcMessage message)
-        {
-            if (message.SourceNick.ToIrcLower() == Nick.ToIrcLower())
-            {
-                UserName = message.Parameters[0];
-                Host = message.Parameters[1];
-            }
-            else
-            {
-                IrcUser user = Users.FirstOrDefault(u => u.Nick.ToIrcLower() == message.SourceNick.ToIrcLower());
-                if (user != null)
-                {
-                    user.UserName = message.Parameters[0];
-                    user.HostMask = message.Parameters[1];
-                }
-            }
         }
 
         #endregion
