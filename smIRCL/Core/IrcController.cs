@@ -25,7 +25,7 @@ namespace smIRCL.Core
 
         private readonly List<char> _trimmableUserPrefixes = new List<char>();
 
-        private readonly Queue<CapabilityStep> _capabilitySteps = new Queue<CapabilityStep>();
+        private readonly Queue<CapabilityStep> _capabilitySteps = new();
 
         /// <summary>
         /// Instantiates a new controller

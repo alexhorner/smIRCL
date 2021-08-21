@@ -89,13 +89,14 @@ namespace smIRCL.Config
         /// <summary>
         /// The IRCv3 capabilities to negotiate. Default capabilities are included and should be added to, not replaced otherwise some features may be broken. SASL must not be included as it is determined by AuthMode
         /// </summary>
-        public List<string> DesiredCapabilities = new List<string>
+        public List<string> DesiredCapabilities = new()
         {
             "message-tags",
             "away-notify",
             "extended-join",
             "multi-prefix",
-            "chghost"
+            "chghost",
+            "userhost-in-names"
         };
 
         /// <summary>

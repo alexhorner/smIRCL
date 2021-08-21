@@ -410,35 +410,52 @@ namespace smIRCL.Core
 
             foreach (string user in users)
             {
-                string userNick = user.TrimStart(_trimmableUserPrefixes.ToArray());
+                string userHostMaskOrNickOnly = user.TrimStart(_trimmableUserPrefixes.ToArray());
+                string userHost = null;
+                string userUserName = null;
+                
+                string[] detailsAndHost = userHostMaskOrNickOnly.Split('@');
+                if (detailsAndHost.Length > 1) userHost = detailsAndHost[1];
+
+                string[] nickAndUserName = detailsAndHost[0].Split('!');
+                if (nickAndUserName.Length > 1) userUserName = nickAndUserName[1];
+
+                string userNick = nickAndUserName[0];
 
                 if (userNick.ToIrcLower() != Nick.ToIrcLower())
                 {
+                    //Add nick to user list
                     channel.UsersInternal.Add(userNick);
-
+                    
+                    //Get user prefixes
                     List<char> userPrefixes = new List<char>();
                     string userSplice = user;
 
                     foreach (char trimmableUserPrefix in _trimmableUserPrefixes)
                     {
-                        if (userSplice.StartsWith(trimmableUserPrefix.ToString()))
-                        {
-                            userPrefixes.Add(trimmableUserPrefix);
-                            userSplice = userSplice.TrimStart(trimmableUserPrefix);
-                        }
+                        if (!userSplice.StartsWith(trimmableUserPrefix.ToString())) continue;
+                        
+                        userPrefixes.Add(trimmableUserPrefix);
+                        userSplice = userSplice.TrimStart(trimmableUserPrefix);
                     }
 
+                    //Get user modes
                     List<char> userModes = new List<char>();
 
                     foreach (char prefix in userPrefixes)
                     {
                         if (SupportedUserPrefixes.Any(p => p.Value == prefix)) userModes.Add(SupportedUserPrefixes.FirstOrDefault(p => p.Value == prefix).Key);
                     }
-
+                    
+                    //Check user against cache
                     if (_users.All(u => u.Nick.ToLower() != userNick.ToIrcLower()))
                     {
                         _users.Add(new IrcUser(this)
                         {
+                            Nick = userNick,
+                            HostMask = userHost != null ? userHostMaskOrNickOnly : null,
+                            Host = userHost,
+                            UserName = userUserName,
                             MutualChannelsInternal = new List<string>
                             {
                                 channel.Name
@@ -446,19 +463,17 @@ namespace smIRCL.Core
                             MutualChannelModesInternal = new List<KeyValuePair<string, List<char>>>
                             {
                                 new(channel.Name, userModes)
-                            },
-                            Nick = userNick
+                            }
                         });
                     }
                     else
                     {
                         IrcUser globalUser = _users.FirstOrDefault(u => u.Nick.ToIrcLower() == userNick.ToIrcLower());
+
+                        if (globalUser == null) continue;
                         
-                        if (globalUser != null)
-                        {
-                            if (globalUser.MutualChannels.All(ch => ch.ToIrcLower() != channel.Name.ToIrcLower())) globalUser.MutualChannelsInternal.Add(channel.Name);
-                            if (globalUser.MutualChannelModes.All(ch => ch.Key.ToIrcLower() != channel.Name.ToIrcLower())) globalUser.MutualChannelModesInternal.Add(new KeyValuePair<string, List<char>>(channel.Name, userModes));
-                        }
+                        if (globalUser.MutualChannels.All(ch => ch.ToIrcLower() != channel.Name.ToIrcLower())) globalUser.MutualChannelsInternal.Add(channel.Name);
+                        if (globalUser.MutualChannelModes.All(ch => ch.Key.ToIrcLower() != channel.Name.ToIrcLower())) globalUser.MutualChannelModesInternal.Add(new KeyValuePair<string, List<char>>(channel.Name, userModes));
                     }
                 }
                 else
