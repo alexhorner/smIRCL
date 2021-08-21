@@ -103,7 +103,7 @@ namespace smIRCL.Core
 
         private void DoUserGarbageCollection()
         {
-            Users.RemoveAll(u => u.MutualChannels.Count == 0 && (u.LastDirectMessage == null ||  u.LastDirectMessage + Connector.Config.DirectMessageHoldingPeriod < DateTime.Now));
+            _users.RemoveAll(u => u.MutualChannels.Count == 0 && (u.LastDirectMessage == null ||  u.LastDirectMessage + Connector.Config.DirectMessageHoldingPeriod < DateTime.Now));
         }
         private void DoUserGarbageCollection(Object source, ElapsedEventArgs e)
         {
@@ -263,7 +263,7 @@ namespace smIRCL.Core
                 throw new ArgumentException("Not a valid channel name", nameof(channelName));
             }
 
-            if (Channels.All(ch => ch.Name.ToIrcLower() != channelName.ToIrcLower()))
+            if (_channels.All(ch => ch.Name.ToIrcLower() != channelName.ToIrcLower()))
             {
                 Connector.Transmit($"JOIN :{channelName}");
                 Connector.Transmit($"MODE :{channelName}");
@@ -281,7 +281,7 @@ namespace smIRCL.Core
                 throw new ArgumentException("Not a valid channel name", nameof(channelName));
             }
 
-            if (Channels.Any(ch => ch.Name.ToIrcLower() == channelName.ToIrcLower()))
+            if (_channels.Any(ch => ch.Name.ToIrcLower() == channelName.ToIrcLower()))
             {
                 Connector.Transmit($"PART :{channelName}");
             }
@@ -296,14 +296,14 @@ namespace smIRCL.Core
         {
             if (IsValidChannelName(channelOrNick))
             {
-                if (Channels.All(ch => ch.Name.ToIrcLower() != channelOrNick.ToIrcLower()))
+                if (_channels.All(ch => ch.Name.ToIrcLower() != channelOrNick.ToIrcLower()))
                 {
                     throw new ArgumentException("Not in the requested channel", nameof(channelOrNick));
                 }
             }
             else
             {
-                IrcUser user = Users.FirstOrDefault(u => u.Nick.ToIrcLower() == channelOrNick.ToIrcLower());
+                IrcUser user = _users.FirstOrDefault(u => u.Nick.ToIrcLower() == channelOrNick.ToIrcLower());
                 
                 if (user != null)
                 {
@@ -311,7 +311,7 @@ namespace smIRCL.Core
                 }
                 else
                 {
-                    Users.Add(new IrcUser
+                    _users.Add(new IrcUser
                     {
                         Nick = channelOrNick,
                         LastDirectMessage = DateTime.Now
@@ -333,21 +333,21 @@ namespace smIRCL.Core
         {
             if (IsValidChannelName(channelOrNick))
             {
-                if (Channels.All(ch => ch.Name.ToIrcLower() != channelOrNick.ToIrcLower()))
+                if (_channels.All(ch => ch.Name.ToIrcLower() != channelOrNick.ToIrcLower()))
                 {
                     throw new ArgumentException("Not in the requested channel", nameof(channelOrNick));
                 }
             }
             else
             {
-                IrcUser user = Users.FirstOrDefault(u => u.Nick.ToIrcLower() == channelOrNick.ToIrcLower());
+                IrcUser user = _users.FirstOrDefault(u => u.Nick.ToIrcLower() == channelOrNick.ToIrcLower());
                 if (user != null)
                 {
                     user.LastDirectMessage = DateTime.Now;
                 }
                 else
                 {
-                    Users.Add(new IrcUser
+                    _users.Add(new IrcUser
                     {
                         Nick = channelOrNick,
                         LastDirectMessage = DateTime.Now

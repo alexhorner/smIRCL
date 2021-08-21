@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using smIRCL.ServerEntities;
 
 namespace smIRCL.Core
@@ -10,17 +11,24 @@ namespace smIRCL.Core
         /// The connector for handling and accessing the IRC server connection
         /// </summary>
         public IrcConnector Connector { get; internal set; }
-        
 
         /// <summary>
         /// A list of Users who are within scope of the client
         /// </summary>
-        public readonly List<IrcUser> Users = new List<IrcUser>(); //TODO externally readonly collection
+        public ReadOnlyCollection<IrcUser> Users => new ReadOnlyCollection<IrcUser>(_users);
+        /// <summary>
+        /// A list of Users who are within scope of the client (internal)
+        /// </summary>
+        private readonly List<IrcUser> _users = new List<IrcUser>(); //TODO externally readonly collection
 
         /// <summary>
-        /// A list of channels currently joined by the client
+        /// A list of channels currently joined by the client (internal)
         /// </summary>
-        public readonly List<IrcChannel> Channels = new List<IrcChannel>(); //TODO externally readonly collection
+        public ReadOnlyCollection<IrcChannel> Channels => new ReadOnlyCollection<IrcChannel>(_channels);
+        /// <summary>
+        /// A list of channels currently joined by the client (internal)
+        /// </summary>
+        private readonly List<IrcChannel> _channels = new List<IrcChannel>(); //TODO externally readonly collection
         
 
         /// <summary>
