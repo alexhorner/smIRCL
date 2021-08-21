@@ -46,48 +46,48 @@ namespace smIRCL.Core
 
             if (registerInternalHandlers)
             {
-                Handlers.Add("PING", OnPing);
-                Handlers.Add("PRIVMSG", OnPrivMsg);
-                Handlers.Add("NOTICE", OnNotice);
-                Handlers.Add("ERROR", OnUnrecoverableError);
-                Handlers.Add("NICK", OnNickSet);
-                Handlers.Add("JOIN", OnJoin);
-                Handlers.Add("PART", OnPart);
-                Handlers.Add("KICK", OnKick);
-                Handlers.Add("QUIT", OnQuit);
-                Handlers.Add("TOPIC", OnTopicUpdate);
-                Handlers.Add("MODE", OnMode);
-                Handlers.Add("CAP", OnCapability);
-                Handlers.Add("AUTHENTICATE", OnSasl);
-                Handlers.Add("AWAY", OnAwayNotify);
-                Handlers.Add("CHGHOST", OnChangeHost);
+                Handlers.Add("PING", PingHandler);
+                Handlers.Add("PRIVMSG", PrivMsgHandler);
+                Handlers.Add("NOTICE", NoticeHandler);
+                Handlers.Add("ERROR", UnrecoverableErrorHandler);
+                Handlers.Add("NICK", NickSetHandler);
+                Handlers.Add("JOIN", JoinHandler);
+                Handlers.Add("PART", PartHandler);
+                Handlers.Add("KICK", KickHandler);
+                Handlers.Add("QUIT", QuitHandler);
+                Handlers.Add("TOPIC", TopicUpdateHandler);
+                Handlers.Add("MODE", ModeHandler);
+                Handlers.Add("CAP", CapabilityHandler);
+                Handlers.Add("AUTHENTICATE", SaslHandler);
+                Handlers.Add("AWAY", AwayNotifyHandler);
+                Handlers.Add("CHGHOST", ChangeHostHandler);
 
-                Handlers.Add(Numerics.RPL_SASLSUCCESS, OnSaslComplete);
-                Handlers.Add(Numerics.RPL_LOGGEDOUT, OnSaslFailure);
-                Handlers.Add(Numerics.ERR_NICKLOCKED, OnSaslFailure);
-                Handlers.Add(Numerics.ERR_SASLFAIL, OnSaslFailure);
-                Handlers.Add(Numerics.ERR_SASLTOOLONG, OnSaslFailure);
-                Handlers.Add(Numerics.ERR_SASLABORTED, OnSaslFailure);
-                Handlers.Add(Numerics.ERR_SASLALREADY, OnSaslFailure);
+                Handlers.Add(Numerics.RPL_SASLSUCCESS, SaslCompleteHandler);
+                Handlers.Add(Numerics.RPL_LOGGEDOUT, SaslFailureHandler);
+                Handlers.Add(Numerics.ERR_NICKLOCKED, SaslFailureHandler);
+                Handlers.Add(Numerics.ERR_SASLFAIL, SaslFailureHandler);
+                Handlers.Add(Numerics.ERR_SASLTOOLONG, SaslFailureHandler);
+                Handlers.Add(Numerics.ERR_SASLABORTED, SaslFailureHandler);
+                Handlers.Add(Numerics.ERR_SASLALREADY, SaslFailureHandler);
 
-                Handlers.Add(Numerics.RPL_MYINFO, OnWelcomeEnd);
-                Handlers.Add(Numerics.RPL_MOTD, OnMotdPart);
-                Handlers.Add(Numerics.RPL_ENDOFMOTD, OnMotdEnd);
-                Handlers.Add(Numerics.ERR_NOMOTD, OnNoMotd);
-                Handlers.Add(Numerics.RPL_WHOREPLY, OnWhoReply);
-                Handlers.Add(Numerics.RPL_WHOISUSER, OnWhoIsUserReply);
-                Handlers.Add(Numerics.RPL_WHOISCHANNELS, OnWhoIsChannelsReply);
-                Handlers.Add(Numerics.RPL_TOPIC, OnTopicInform);
-                Handlers.Add(Numerics.RPL_HOSTHIDDEN, OnHostMaskCloak);
-                Handlers.Add(Numerics.RPL_NAMREPLY, OnNamesReply);
-                Handlers.Add(Numerics.RPL_ENDOFNAMES, OnNamesEnd);
-                Handlers.Add(Numerics.RPL_CHANNELMODEIS, OnChannelModes);
-                Handlers.Add(Numerics.RPL_ISUPPORT, OnISupport);
+                Handlers.Add(Numerics.RPL_MYINFO, WelcomeEndHandler);
+                Handlers.Add(Numerics.RPL_MOTD, MotdPartHandler);
+                Handlers.Add(Numerics.RPL_ENDOFMOTD, MotdEndHandler);
+                Handlers.Add(Numerics.ERR_NOMOTD, NoMotdHandler);
+                Handlers.Add(Numerics.RPL_WHOREPLY, WhoReplyHandler);
+                Handlers.Add(Numerics.RPL_WHOISUSER, WhoIsUserReplyHandler);
+                Handlers.Add(Numerics.RPL_WHOISCHANNELS, WhoIsChannelsReplyHandler);
+                Handlers.Add(Numerics.RPL_TOPIC, TopicInformHandler);
+                Handlers.Add(Numerics.RPL_HOSTHIDDEN, HostMaskCloakHandler);
+                Handlers.Add(Numerics.RPL_NAMREPLY, NamesReplyHandler);
+                Handlers.Add(Numerics.RPL_ENDOFNAMES, NamesEndHandler);
+                Handlers.Add(Numerics.RPL_CHANNELMODEIS, ChannelModesHandler);
+                Handlers.Add(Numerics.RPL_ISUPPORT, ServerISupportHandler);
 
-                Handlers.Add(Numerics.ERR_NONICKNAMEGIVEN, OnNickError);
-                Handlers.Add(Numerics.ERR_ERRONEUSNICKNAME, OnNickError);
-                Handlers.Add(Numerics.ERR_NICKNAMEINUSE, OnNickError);
-                Handlers.Add(Numerics.ERR_NICKCOLLISION, OnNickError);
+                Handlers.Add(Numerics.ERR_NONICKNAMEGIVEN, NickErrorHandler);
+                Handlers.Add(Numerics.ERR_ERRONEUSNICKNAME, NickErrorHandler);
+                Handlers.Add(Numerics.ERR_NICKNAMEINUSE, NickErrorHandler);
+                Handlers.Add(Numerics.ERR_NICKCOLLISION, NickErrorHandler);
             }
         }
 

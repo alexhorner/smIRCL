@@ -19,7 +19,7 @@ namespace smIRCL.Core
         /// <summary>
         /// A list of Users who are within scope of the client (internal)
         /// </summary>
-        private readonly List<IrcUser> _users = new List<IrcUser>(); //TODO externally readonly collection
+        private readonly List<IrcUser> _users = new List<IrcUser>();
 
         /// <summary>
         /// A list of channels currently joined by the client (internal)
@@ -28,7 +28,7 @@ namespace smIRCL.Core
         /// <summary>
         /// A list of channels currently joined by the client (internal)
         /// </summary>
-        private readonly List<IrcChannel> _channels = new List<IrcChannel>(); //TODO externally readonly collection
+        private readonly List<IrcChannel> _channels = new List<IrcChannel>();
         
 
         /// <summary>
