@@ -103,7 +103,7 @@ namespace smIRCL.Core
 
         private void DoUserGarbageCollection()
         {
-            _users.RemoveAll(u => u.MutualChannels.Count == 0 && (u.LastDirectMessage == null ||  u.LastDirectMessage + Connector.Config.DirectMessageHoldingPeriod < DateTime.Now));
+            _users.RemoveAll(u => u.MutualChannels.Count == 0 && (u.LastPrivateMessage == null ||  u.LastPrivateMessage + Connector.Config.DirectMessageHoldingPeriod < DateTime.Now));
         }
         private void DoUserGarbageCollection(Object source, ElapsedEventArgs e)
         {
@@ -307,14 +307,14 @@ namespace smIRCL.Core
                 
                 if (user != null)
                 {
-                    user.LastDirectMessage = DateTime.Now;
+                    user.LastPrivateMessage = DateTime.Now;
                 }
                 else
                 {
                     _users.Add(new IrcUser
                     {
                         Nick = channelOrNick,
-                        LastDirectMessage = DateTime.Now
+                        LastPrivateMessage = DateTime.Now
                     });
                     
                     WhoIs(channelOrNick);
@@ -343,14 +343,14 @@ namespace smIRCL.Core
                 IrcUser user = _users.FirstOrDefault(u => u.Nick.ToIrcLower() == channelOrNick.ToIrcLower());
                 if (user != null)
                 {
-                    user.LastDirectMessage = DateTime.Now;
+                    user.LastPrivateMessage = DateTime.Now;
                 }
                 else
                 {
                     _users.Add(new IrcUser
                     {
                         Nick = channelOrNick,
-                        LastDirectMessage = DateTime.Now
+                        LastPrivateMessage = DateTime.Now
                     });
                     WhoIs(channelOrNick);
                 }

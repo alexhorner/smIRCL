@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using smIRCL.EventArgs;
 using smIRCL.Extensions;
 using smIRCL.ServerEntities;
 
@@ -23,13 +24,15 @@ namespace smIRCL.Core
         /// </summary>
         private void PrivMsgHandler(IrcController controller, IrcMessage message)
         {
-            if (!controller.IsValidChannelName(message.Parameters[0]))
+            bool isChannel = controller.IsValidChannelName(message.Parameters[0]);
+            
+            if (!isChannel)
             {
                 IrcUser user = _users.FirstOrDefault(u => u.Nick.ToIrcLower() == message.SourceNick.ToIrcLower());
                 
                 if (user != null)
                 {
-                    user.LastDirectMessage = DateTime.Now;
+                    user.LastPrivateMessage = DateTime.Now;
                 }
                 else
                 {
@@ -39,7 +42,7 @@ namespace smIRCL.Core
                         Nick = message.SourceNick,
                         Host = message.SourceHost,
                         UserName = message.SourceUserName,
-                        LastDirectMessage = DateTime.Now
+                        LastPrivateMessage = DateTime.Now
                     });
                     
                     WhoIs(message.SourceNick);
@@ -48,11 +51,25 @@ namespace smIRCL.Core
 
             if (message.Parameters[1].StartsWith("\x01"))
             {
-                Ctcp?.Invoke(controller, message);
+                if (isChannel)
+                {
+                    OnChannelCtcpMessage?.Invoke(controller, new ChannelCtcpMessageEventArgs(controller, message));
+                }
+                else
+                {
+                    OnPrivateCtcpMessage?.Invoke(controller, new PrivateCtcpMessageEventArgs(controller, message));
+                }
             }
             else
             {
-                PrivMsg?.Invoke(controller, message);
+                if (isChannel)
+                {
+                    OnChannelMessage?.Invoke(controller, new ChannelMessageEventArgs(controller, message));
+                }
+                else
+                {
+                    OnPrivateMessage?.Invoke(controller, new PrivateMessageEventArgs(controller, message));
+                }
             }
         }
         
@@ -61,7 +78,39 @@ namespace smIRCL.Core
         /// </summary>
         private void NoticeHandler(IrcController controller, IrcMessage message)
         {
-            Notice?.Invoke(controller, message);
+            bool isChannel = controller.IsValidChannelName(message.Parameters[0]);
+            
+            if (!isChannel)
+            {
+                IrcUser user = _users.FirstOrDefault(u => u.Nick.ToIrcLower() == message.SourceNick.ToIrcLower());
+                
+                if (user != null)
+                {
+                    user.LastPrivateMessage = DateTime.Now;
+                }
+                else
+                {
+                    _users.Add(new IrcUser
+                    {
+                        HostMask = message.SourceHostMask,
+                        Nick = message.SourceNick,
+                        Host = message.SourceHost,
+                        UserName = message.SourceUserName,
+                        LastPrivateMessage = DateTime.Now
+                    });
+                    
+                    WhoIs(message.SourceNick);
+                }
+            }
+
+            if (isChannel)
+            {
+                OnChannelNotice?.Invoke(controller, new ChannelNoticeEventArgs(controller, message));
+            }
+            else
+            {
+                OnPrivateNotice?.Invoke(controller, new PrivateNoticeEventArgs(controller, message));
+            }
         }
         
         /// <summary>

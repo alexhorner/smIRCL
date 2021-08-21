@@ -18,6 +18,7 @@
     <NeutralLanguage></NeutralLanguage>
     <SignAssembly>false</SignAssembly>
     <Description>smIRCL is a (sm)all (IRC) (L)ibrary designed to provide core cuntionality for IRCv3 in a lightweight and self-sustaining manner. smIRCL will handle an IRC connection and session state for you with minimal input and output, and can provide a very simple to integrate base for simple bots, whilst exposing the required properties to implement more complex features with ease.</Description>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">

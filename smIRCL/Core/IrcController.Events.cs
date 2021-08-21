@@ -1,64 +1,85 @@
-﻿using smIRCL.ServerEntities;
+﻿using smIRCL.EventArgs;
+// ReSharper disable EventNeverSubscribedTo.Global
 
 namespace smIRCL.Core
 {
     public partial class IrcController
     {
         /// <summary>
-        /// An IRC message handler for commands and numerics
+        /// A handler for private (direct) messages
         /// </summary>
-        /// <param name="connector">The connector which fired the message</param>
-        /// <param name="controller">The controller handling the message</param>
-        /// <param name="message">The message received</param>
-        public delegate void IrcMessageHandler(IrcController controller, IrcMessage message);
+        /// <param name="controller">The source controller</param>
+        /// <param name="args">The message data</param>
+        public delegate void PrivateMessageHandler(IrcController controller, PrivateMessageEventArgs args);
         
         /// <summary>
-        /// The handler for disconnects
+        /// Fired when a private (direct) message is received
         /// </summary>
-        /// <param name="controller">The controller who's connector died</param>
-        public delegate void ControllerDisconnectedHandler(IrcController controller);
+        public event PrivateMessageHandler OnPrivateMessage;
+
         
         /// <summary>
-        /// The handler for readying
+        /// A handler for channel messages
         /// </summary>
-        /// <param name="controller">The controller that is now ready</param>
-        public delegate void ControllerReadyHandler(IrcController controller);
-
+        /// <param name="controller">The source controller</param>
+        /// <param name="args">The message data</param>
+        public delegate void ChannelMessageHandler(IrcController controller, ChannelMessageEventArgs args);
+        
         /// <summary>
-        /// The collection of handlers which handle commands and numerics
+        /// Fired when a channel message is received
         /// </summary>
-        public IrcHandlerList Handlers = new IrcHandlerList();
+        public event ChannelMessageHandler OnChannelMessage;
         
         
         /// <summary>
-        /// Fired when a PRIVMSG is received
+        /// A handler for private (direct) CTCP messages
         /// </summary>
-        public event IrcMessageHandler PrivMsg;
-
-        /// <summary>
-        /// Fired when a NOTICE is received
-        /// </summary>
-        public event IrcMessageHandler Notice;
-
-        /// <summary>
-        /// Fired when a CTCP message is received
-        /// </summary>
-        public event IrcMessageHandler Ctcp;
-
-        /// <summary>
-        /// Fired when a PING is received
-        /// </summary>
-        public event IrcMessageHandler Ping;
-
-
-        /// <summary>
-        /// Fired when the internal connector dies
-        /// </summary>
-        public event ControllerDisconnectedHandler Disconnected;
+        /// <param name="controller">The source controller</param>
+        /// <param name="args">The message data</param>
+        public delegate void PrivateCtcpMessageHandler(IrcController controller, PrivateCtcpMessageEventArgs args);
         
         /// <summary>
-        /// Fired when the controller is ready
+        /// Fired when a private (direct) CTCP message is received
         /// </summary>
-        public event ControllerReadyHandler Ready;
+        public event PrivateCtcpMessageHandler OnPrivateCtcpMessage;
+
+        
+        /// <summary>
+        /// A handler for channel CTCP messages
+        /// </summary>
+        /// <param name="controller">The source controller</param>
+        /// <param name="args">The message data</param>
+        public delegate void ChannelCtcpMessageHandler(IrcController controller, ChannelCtcpMessageEventArgs args);
+        
+        /// <summary>
+        /// Fired when a channel CTCP message is received
+        /// </summary>
+        public event ChannelCtcpMessageHandler OnChannelCtcpMessage;
+        
+        
+        /// <summary>
+        /// A handler for private (direct) notices
+        /// </summary>
+        /// <param name="controller">The source controller</param>
+        /// <param name="args">The message data</param>
+        public delegate void PrivateNoticeHandler(IrcController controller, PrivateNoticeEventArgs args);
+        
+        /// <summary>
+        /// Fired when a private (direct) notice is received
+        /// </summary>
+        public event PrivateNoticeHandler OnPrivateNotice;
+        
+        
+        /// <summary>
+        /// A handler for channel notices
+        /// </summary>
+        /// <param name="controller">The source controller</param>
+        /// <param name="args">The notice data</param>
+        public delegate void ChannelNoticeHandler(IrcController controller, ChannelNoticeEventArgs args);
+        
+        /// <summary>
+        /// Fired when a channel notice is received
+        /// </summary>
+        public event ChannelNoticeHandler OnChannelNotice;
     }
 }
