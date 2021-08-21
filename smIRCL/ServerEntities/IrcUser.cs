@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using smIRCL.Core;
 
 namespace smIRCL.ServerEntities
 {
@@ -8,6 +10,8 @@ namespace smIRCL.ServerEntities
     /// </summary>
     public class IrcUser
     {
+        protected readonly IrcController SourceController;
+
         /// <summary>
         /// The Nick of the IRC user
         /// </summary>
@@ -46,16 +50,60 @@ namespace smIRCL.ServerEntities
         /// <summary>
         /// The channels shared between the IRC user and the client
         /// </summary>
-        public List<string> MutualChannels { get; set; } = new();
+        public ReadOnlyCollection<string> MutualChannels => new(MutualChannelsInternal);
+        /// <summary>
+        /// The channels shared between the IRC user and the client (internal)
+        /// </summary>
+        protected internal List<string> MutualChannelsInternal = new();
         
         /// <summary>
         /// The modes the IRC user has in the associated mutual channel
         /// </summary>
-        public List<KeyValuePair<string, List<char>>> MutualChannelModes { get; set; } = new();
+        public ReadOnlyCollection<KeyValuePair<string, List<char>>> MutualChannelModes => new(MutualChannelModesInternal);
+        /// <summary>
+        /// The modes the IRC user has in the associated mutual channel (internal)
+        /// </summary>
+        protected internal List<KeyValuePair<string, List<char>>> MutualChannelModesInternal = new();
         
         /// <summary>
         /// The time of the last private message from or to the IRC user
         /// </summary>
         public DateTime? LastPrivateMessage { get; internal set; }
+        
+        /// <summary>
+        /// Instantiates a new IRC user
+        /// </summary>
+        /// <param name="sourceController">The controller the user is associated with</param>
+        public IrcUser(IrcController sourceController)
+        {
+            SourceController = sourceController;
+        }
+        
+        /// <summary>
+        /// Send a private message to the IRC user
+        /// </summary>
+        /// <param name="message">The message to send</param>
+        public void SendMessage(string message)
+        {
+            SourceController.SendPrivMsg(Nick, message);
+        }
+
+        /// <summary>
+        /// Send a private notice to the IRC user
+        /// </summary>
+        /// <param name="message">The message to send</param>
+        public void SendNotice(string message)
+        {
+            SourceController.SendNotice(Nick, message);
+        }
+        
+        /// <summary>
+        /// Send a private CTCP message to the IRC user
+        /// </summary>
+        /// <param name="fullCommand">The full command, including all arguments, to be sent</param>
+        public void SendCtcp(string fullCommand)
+        {
+            SourceController.SendPrivMsg(Nick, '\x01' + fullCommand + '\x01');
+        }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using smIRCL.Constants;
 
@@ -13,36 +14,66 @@ namespace smIRCL.ServerEntities
         /// <summary>
         /// IRCv3 message tags and their values
         /// </summary>
-        public List<KeyValuePair<string, string>> Tags { get; set; }
-
+        public ReadOnlyCollection<KeyValuePair<string, string>> Tags => new(TagsInternal);
+        /// <summary>
+        /// IRCv3 message tags and their values (internal)
+        /// </summary>
+        protected internal readonly List<KeyValuePair<string, string>> TagsInternal;
 
         /// <summary>
         /// The hostmask of the message sender
         /// </summary>
-        public string SourceHostMask { get; set; }
+        public readonly string SourceHostMask;
+
         /// <summary>
         /// The Nick of the message sender
         /// </summary>
-        public string SourceNick { get; set; }
+        public readonly string SourceNick;
+
         /// <summary>
         /// The User name of the message sender
         /// </summary>
-        public string SourceUserName { get; set; }
+        public readonly string SourceUserName;
+
         /// <summary>
         /// The hostname of the message sender
         /// </summary>
-        public string SourceHost { get; set; }
-
+        public readonly string SourceHost;
 
         /// <summary>
         /// The IRC command issued
         /// </summary>
-        public string Command { get; set; }
+        public readonly string Command;
+
         /// <summary>
         /// Parameters to the IRC command issued
         /// </summary>
-        public List<string> Parameters { get; set; }
+        public ReadOnlyCollection<string> Parameters => new(ParametersInternal);
+        /// <summary>
+        /// Parameters to the IRC command issued (internal)
+        /// </summary>
+        protected internal readonly List<string> ParametersInternal;
 
+        /// <summary>
+        /// Instantiates a new IRC command message
+        /// </summary>
+        /// <param name="parameters">The parameters to the command</param>
+        /// <param name="tags">The tags assigned to the command</param>
+        /// <param name="sourceHostMask">The hostmask of the source sender</param>
+        /// <param name="sourceNick">The nick of the source sender</param>
+        /// <param name="sourceUserName">The username of the source sender</param>
+        /// <param name="sourceHost">The hostname of the source sender</param>
+        /// <param name="command">The command of this command message</param>
+        public IrcMessage(List<string> parameters, List<KeyValuePair<string, string>> tags, string sourceHostMask, string sourceNick, string sourceUserName, string sourceHost, string command)
+        {
+            ParametersInternal = parameters;
+            TagsInternal = tags;
+            SourceHostMask = sourceHostMask;
+            SourceNick = sourceNick;
+            SourceUserName = sourceUserName;
+            SourceHost = sourceHost;
+            Command = command;
+        }
 
         /// <summary>
         /// Parses a raw IRC message from a string to its appropriate parts
@@ -122,7 +153,7 @@ namespace smIRCL.ServerEntities
             #region Split Parts and Parameter
 
             string splitParameterBy = " :";
-            int parameterIndex = standardMessage.IndexOf(splitParameterBy);
+            int parameterIndex = standardMessage.IndexOf(splitParameterBy, StringComparison.Ordinal);
 
             string messagePartsUnsplit;
             string parameter = null;
@@ -171,18 +202,8 @@ namespace smIRCL.ServerEntities
 
             #endregion
 
-            return new IrcMessage
-            {
-                Tags = tags,
-                SourceHostMask = sourceHostMask,
-                SourceNick = sourceNick,
-                SourceUserName = sourceUserName,
-                SourceHost = sourceHost,
-                Command = command.ToUpper(),
-                Parameters = messageParts
-            };
+            return new IrcMessage(messageParts, tags, sourceHostMask, sourceNick, sourceUserName, sourceHost, command);
         }
-
 
         private static string UnescapeTagValue(string tagValue)
         {

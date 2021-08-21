@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using smIRCL.Core;
 
 namespace smIRCL.ServerEntities
 {
@@ -8,42 +10,64 @@ namespace smIRCL.ServerEntities
     /// </summary>
     public class IrcChannel
     {
-        /// <summary>
-        /// Instantiates a new channel
-        /// </summary>
-        /// <param name="name">The name of the channel</param>
-        /// <param name="checkerChars">Optional list of valid chars for server-specific checking from ISupport</param>
-        public IrcChannel(string name, List<char> checkerChars = null)
-        {
-            if (!IsValidName(name, checkerChars)) throw new ArgumentException("Not a valid channel name", nameof(name));
-            Name = name;
-        }
-
+        protected readonly IrcController SourceController;
+        
         /// <summary>
         /// The name of the channel
         /// </summary>
         public string Name { get; internal set; }
+        
         /// <summary>
         /// The topic of the channel
         /// </summary>
         public string Topic { get; internal set; }
+        
         /// <summary>
         /// The modes and their parameters set on the channel
         /// </summary>
-        public List<KeyValuePair<char, string>> Modes { get; internal set; } = new List<KeyValuePair<char, string>>();
+        public ReadOnlyCollection<KeyValuePair<char, string>> Modes => new(ModesInternal);
+        /// <summary>
+        /// The modes and their parameters set on the channel (internal)
+        /// </summary>
+        protected internal readonly List<KeyValuePair<char, string>> ModesInternal = new();
+        
         /// <summary>
         /// The modes set on the client in this channel
         /// </summary>
-        public List<char> ClientModes { get; internal set; } = new List<char>();
+        public ReadOnlyCollection<char> ClientModes => new(ClientModesInternal);
+        /// <summary>
+        /// The modes set on the client in this channel (internal)
+        /// </summary>
+        protected internal List<char> ClientModesInternal = new();
+        
         /// <summary>
         /// The users in the channel
         /// </summary>
-        public List<string> Users { get; internal set; } = new List<string>();
+        public ReadOnlyCollection<string> Users => new(UsersInternal);
+        /// <summary>
+        /// The users in the channel (internal)
+        /// </summary>
+        protected internal List<string> UsersInternal = new();
+        
         /// <summary>
         /// Whether the Users collection has been fully populated yet
         /// </summary>
         public bool UserCollectionComplete { get; internal set; }
 
+        /// <summary>
+        /// Instantiates a new channel
+        /// </summary>
+        /// <param name="sourceController">The controller the channel is associated with</param>
+        /// <param name="name">The name of the channel</param>
+        /// <param name="supportedChannelTypes">List of valid chars for server-specific checking from ISupport</param>
+        public IrcChannel(IrcController sourceController, string name, List<char> supportedChannelTypes)
+        {
+            if (!IsValidName(name, supportedChannelTypes)) throw new ArgumentException("Not a valid channel name", nameof(name));
+            
+            SourceController = sourceController;
+            Name = name;
+        }
+        
         /// <summary>
         /// Checks if a given string forms a valid channel name
         /// </summary>
@@ -52,7 +76,7 @@ namespace smIRCL.ServerEntities
         /// <returns>Whether the string is a valid channel name</returns>
         public static bool IsValidName(string channelName, List<char> checkerChars = null)
         {
-            if (checkerChars == null) checkerChars = Constants.GeneralConstants.Rcf1459ValidChannelChars;
+            checkerChars ??= Constants.GeneralConstants.Rcf1459ValidChannelChars;
 
             foreach (char c in checkerChars)
             {
@@ -60,6 +84,33 @@ namespace smIRCL.ServerEntities
             }
 
             return false;
+        }
+
+        /// <summary>
+        /// Send a private message to the IRC channel
+        /// </summary>
+        /// <param name="message">The message to send</param>
+        public void SendMessage(string message)
+        {
+            SourceController.SendPrivMsg(Name, message);
+        }
+
+        /// <summary>
+        /// Send a private notice to the IRC channel
+        /// </summary>
+        /// <param name="message">The message to send</param>
+        public void SendNotice(string message)
+        {
+            SourceController.SendNotice(Name, message);
+        }
+        
+        /// <summary>
+        /// Send a private CTCP message to the IRC channel
+        /// </summary>
+        /// <param name="fullCommand">The full command, including all arguments, to be sent</param>
+        public void SendCtcp(string fullCommand)
+        {
+            SourceController.SendPrivMsg(Name, '\x01' + fullCommand + '\x01');
         }
     }
 }

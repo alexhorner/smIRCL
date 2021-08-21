@@ -311,7 +311,7 @@ namespace smIRCL.Core
                 }
                 else
                 {
-                    _users.Add(new IrcUser
+                    _users.Add(new IrcUser(this)
                     {
                         Nick = channelOrNick,
                         LastPrivateMessage = DateTime.Now
@@ -347,7 +347,7 @@ namespace smIRCL.Core
                 }
                 else
                 {
-                    _users.Add(new IrcUser
+                    _users.Add(new IrcUser(this)
                     {
                         Nick = channelOrNick,
                         LastPrivateMessage = DateTime.Now
