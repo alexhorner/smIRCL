@@ -1,4 +1,7 @@
-﻿using smIRCL.EventArgs;
+﻿using System;
+using smIRCL.EventArgs;
+using smIRCL.ServerEntities;
+
 // ReSharper disable EventNeverSubscribedTo.Global
 
 namespace smIRCL.Core
@@ -81,5 +84,24 @@ namespace smIRCL.Core
         /// Fired when a channel notice is received
         /// </summary>
         public event ChannelNoticeHandler OnChannelNotice;
+        
+        
+        /// <summary>
+        /// A handler for client error handling
+        /// </summary>
+        /// <param name="controller">The source controller</param>
+        /// <param name="message">The command message which resulted in the error</param>
+        /// <param name="exception">The error that occured</param>
+        public delegate void ClientErroredHandler(IrcController controller, IrcMessage message, Exception exception);
+        
+        /// <summary>
+        /// Fired when a client error occurs on the controller's event hooks. Examples: <see cref="OnChannelMessage"/>, <see cref="OnPrivateNotice"/>
+        /// </summary>
+        public event ClientErroredHandler OnClientError;
+        
+        /// <summary>
+        /// Fired when a client error occurs on the controller's event name based <see cref="Handlers"/>
+        /// </summary>
+        public event ClientErroredHandler OnClientBaseError;
     }
 }

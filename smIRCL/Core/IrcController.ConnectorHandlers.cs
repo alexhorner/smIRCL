@@ -55,7 +55,21 @@ namespace smIRCL.Core
 
             foreach (KeyValuePair<string, IrcMessageHandler> ircMessageHandler in Handlers.Where(h => h.Key == message.Command))
             {
-                ircMessageHandler.Value.Invoke(this, message);
+                try
+                {
+                    ircMessageHandler.Value.Invoke(this, message);
+                }
+                catch (Exception e)
+                {
+                    try
+                    {
+                        OnClientBaseError?.Invoke(this, message, e);
+                    }
+                    catch (Exception criticalException)
+                    {
+                        //TODO critical
+                    }
+                }
             }
         }
     }

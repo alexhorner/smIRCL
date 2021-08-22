@@ -16,7 +16,22 @@ namespace smIRCL.Core
         private void PingHandler(IrcController controller, IrcMessage message)
         {
             Connector.Transmit($"PONG :{message.Parameters[0]}");
-            Ping?.Invoke(controller, message);
+            
+            try
+            {
+                Ping?.Invoke(controller, message);
+            }
+            catch (Exception e)
+            {
+                try
+                {
+                    OnClientError?.Invoke(this, message, e);
+                }
+                catch (Exception criticalException)
+                {
+                    //TODO critical
+                }
+            }
         }
         
         /// <summary>
@@ -48,27 +63,41 @@ namespace smIRCL.Core
                     WhoIs(message.SourceNick);
                 }
             }
-
-            if (message.Parameters[1].StartsWith("\x01"))
+            
+            try
             {
-                if (isChannel)
+                if (message.Parameters[1].StartsWith("\x01"))
                 {
-                    OnChannelCtcpMessage?.Invoke(controller, new ChannelCtcpMessageEventArgs(controller, message));
+                    if (isChannel)
+                    {
+                        OnChannelCtcpMessage?.Invoke(controller, new ChannelCtcpMessageEventArgs(controller, message));
+                    }
+                    else
+                    {
+                        OnPrivateCtcpMessage?.Invoke(controller, new PrivateCtcpMessageEventArgs(controller, message));
+                    }
                 }
                 else
                 {
-                    OnPrivateCtcpMessage?.Invoke(controller, new PrivateCtcpMessageEventArgs(controller, message));
+                    if (isChannel)
+                    {
+                        OnChannelMessage?.Invoke(controller, new ChannelMessageEventArgs(controller, message));
+                    }
+                    else
+                    {
+                        OnPrivateMessage?.Invoke(controller, new PrivateMessageEventArgs(controller, message));
+                    }
                 }
             }
-            else
+            catch (Exception e)
             {
-                if (isChannel)
+                try
                 {
-                    OnChannelMessage?.Invoke(controller, new ChannelMessageEventArgs(controller, message));
+                    OnClientError?.Invoke(this, message, e);
                 }
-                else
+                catch (Exception criticalException)
                 {
-                    OnPrivateMessage?.Invoke(controller, new PrivateMessageEventArgs(controller, message));
+                    //TODO critical
                 }
             }
         }
@@ -102,14 +131,28 @@ namespace smIRCL.Core
                     WhoIs(message.SourceNick);
                 }
             }
-
-            if (isChannel)
+            
+            try
             {
-                OnChannelNotice?.Invoke(controller, new ChannelNoticeEventArgs(controller, message));
+                if (isChannel)
+                {
+                    OnChannelNotice?.Invoke(controller, new ChannelNoticeEventArgs(controller, message));
+                }
+                else
+                {
+                    OnPrivateNotice?.Invoke(controller, new PrivateNoticeEventArgs(controller, message));
+                }
             }
-            else
+            catch (Exception e)
             {
-                OnPrivateNotice?.Invoke(controller, new PrivateNoticeEventArgs(controller, message));
+                try
+                {
+                    OnClientError?.Invoke(this, message, e);
+                }
+                catch (Exception criticalException)
+                {
+                    //TODO critical
+                }
             }
         }
         
