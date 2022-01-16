@@ -20,14 +20,14 @@ namespace smIRCL.EventArgs
         
         public PrivateCtcpMessageEventArgs(IrcController source, IrcMessage message)
         {
-            if (message.Command.ToIrcLower() != "privmsg" || source.IsValidChannelName(message.Parameters[0]) || source.Nick.ToIrcLower() == message.Parameters[0].ToIrcLower()) throw new ArgumentException("Not a private PRIVMSG", nameof(message));
+            if (message.Command.ToIrcLower() != "privmsg" || source.IsValidChannelName(message.Parameters[0]) || source.Nick.ToIrcLower() != message.Parameters[0].ToIrcLower()) throw new ArgumentException("Not a private PRIVMSG", nameof(message));
             
-            Author = source.Users.FirstOrDefault(user => user.Nick.ToIrcLower() == message.SourceNick.ToIrcLower());
+            Author = source.Users.TryGetValue(message.SourceNick.ToIrcLower(), out IrcUser user) ? user : null;
             RawContent = message.Parameters[1].Trim('\x01');
 
             _parts = RawContent.Split(" ").ToList();
 
-            AllArguments = RawContent.Substring(Command.Length + 1, RawContent.Length - (Command.Length + 1));
+            AllArguments = _parts.Count > 1 ? RawContent.Substring(Command.Length + 1, RawContent.Length - (Command.Length + 1)) : "";
         }
     }
 }

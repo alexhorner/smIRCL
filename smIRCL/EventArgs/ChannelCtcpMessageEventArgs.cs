@@ -23,13 +23,13 @@ namespace smIRCL.EventArgs
         {
             if (message.Command.ToIrcLower() != "privmsg" || !source.IsValidChannelName(message.Parameters[0])) throw new ArgumentException("Not a channel PRIVMSG", nameof(message));
             
-            Author = source.Users.FirstOrDefault(user => user.Nick.ToIrcLower() == message.SourceNick.ToIrcLower());
-            Channel = source.Channels.FirstOrDefault(channel => channel.Name.ToIrcLower() == message.Parameters[0].ToIrcLower());
+            Author = source.Users.TryGetValue(message.SourceNick.ToIrcLower(), out IrcUser user) ? user : null;
+            Channel = source.Channels.TryGetValue(message.Parameters[0].ToIrcLower(), out IrcChannel channel) ? channel : null;
             RawContent = message.Parameters[1].Trim('\x01');
 
             _parts = RawContent.Split(" ").ToList();
 
-            AllArguments = RawContent.Substring(Command.Length + 1, RawContent.Length - (Command.Length + 1));
+            AllArguments = _parts.Count > 1 ? RawContent.Substring(Command.Length + 1, RawContent.Length - (Command.Length + 1)) : "";
         }
     }
 }

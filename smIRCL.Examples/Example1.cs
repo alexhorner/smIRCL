@@ -47,13 +47,50 @@ namespace smIRCL.Examples
                 args.Author.SendMessage("Hello, " + args.Author.Nick);
             };
             
+            controller.OnChannelCtcpMessage += (ircController, args) =>
+            {
+                if (args.Command.ToIrcLower() != "version") return;
+                
+                Console.WriteLine($"Channel CTCP >>> [{DateTime.Now}] {args.Author.Nick}({args.Author.HostMask}) {args.Author.RealName}: {args.Command} / {args.AllArguments}");
+                args.Author.SendCtcpResponse("VERSION Example 1 smIRCL");
+            };
+            
+            controller.OnPrivateCtcpMessage += (ircController, args) =>
+            {
+                if (args.Command.ToIrcLower() != "version") return;
+                
+                Console.WriteLine($"Channel CTCP >>> [{DateTime.Now}] {args.Author.Nick}({args.Author.HostMask}) {args.Author.RealName}: {args.Command} / {args.AllArguments}");
+                args.Author.SendCtcpResponse("VERSION Example 1 smIRCL");
+            };
+            
+            controller.OnChannelNotice += (ircController, args) =>
+            {
+                if (args.Content.ToIrcLower() != "hello") return;
+                
+                Console.WriteLine($"[NOTICE] {args.Channel.Name} >>> [{DateTime.Now}] {args.Author.Nick}({args.Author.HostMask}) {args.Author.RealName}: {args.Content}");
+                args.Channel.SendNotice("Hello, " + args.Author.Nick);
+            };
+            
+            controller.OnPrivateNotice += (ircController, args) =>
+            {
+                if (args.Content.ToIrcLower() != "hello") return;
+                
+                Console.WriteLine($"[NOTICE] Private >>> [{DateTime.Now}] {args.Author.Nick}({args.Author.HostMask}) {args.Author.RealName}: {args.Content}");
+                args.Author.SendNotice("Hello, " + args.Author.Nick);
+            };
+
+            controller.OnClientError += (ircController, message, exception) =>
+            {
+                Console.WriteLine($"[ERROR] >>> [{message}] {exception}");
+            };
+            
             Console.Write("Connecting... ");
             
             connector.Connect();
 
             while (!connector.IsConnected || controller.SupportedChannelTypes.Count < 1)
             {
-                //wait
+                //wait1
             }
             
             Console.WriteLine("Done");

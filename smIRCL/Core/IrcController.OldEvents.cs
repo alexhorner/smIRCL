@@ -7,7 +7,6 @@ namespace smIRCL.Core
         /// <summary>
         /// An IRC message handler for commands and numerics
         /// </summary>
-        /// <param name="connector">The connector which fired the message</param>
         /// <param name="controller">The controller handling the message</param>
         /// <param name="message">The message received</param>
         public delegate void IrcMessageHandler(IrcController controller, IrcMessage message);

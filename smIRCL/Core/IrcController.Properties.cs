@@ -15,20 +15,20 @@ namespace smIRCL.Core
         /// <summary>
         /// A list of Users who are within scope of the client
         /// </summary>
-        public ReadOnlyCollection<IrcUser> Users => new ReadOnlyCollection<IrcUser>(_users);
+        public ReadOnlyDictionary<string, IrcUser> Users => new(_users);
         /// <summary>
         /// A list of Users who are within scope of the client (internal)
         /// </summary>
-        private readonly List<IrcUser> _users = new List<IrcUser>();
+        private readonly Dictionary<string, IrcUser> _users = new();
 
         /// <summary>
         /// A list of channels currently joined by the client (internal)
         /// </summary>
-        public ReadOnlyCollection<IrcChannel> Channels => new ReadOnlyCollection<IrcChannel>(_channels);
+        public ReadOnlyDictionary<string, IrcChannel> Channels => new ReadOnlyDictionary<string, IrcChannel>(_channels);
         /// <summary>
         /// A list of channels currently joined by the client (internal)
         /// </summary>
-        private readonly List<IrcChannel> _channels = new List<IrcChannel>();
+        private readonly Dictionary<string, IrcChannel> _channels = new();
         
 
         /// <summary>

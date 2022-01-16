@@ -12,6 +12,8 @@ namespace smIRCL.Extensions
         /// <returns>The IRC lowercased string</returns>
         public static string ToIrcLower(this string str)
         {
+            if (str == null) return null;
+            
             string retStr = "";
 
             foreach (char c in str)

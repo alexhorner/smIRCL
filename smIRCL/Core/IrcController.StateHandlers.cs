@@ -29,7 +29,7 @@ namespace smIRCL.Core
                 }
                 catch (Exception criticalException)
                 {
-                    //TODO critical
+                    throw new AggregateException("Client error handler failed", criticalException, e);
                 }
             }
         }
@@ -43,15 +43,13 @@ namespace smIRCL.Core
             
             if (!isChannel)
             {
-                IrcUser user = _users.FirstOrDefault(u => u.Nick.ToIrcLower() == message.SourceNick.ToIrcLower());
-                
-                if (user != null)
+                if (_users.TryGetValue(message.SourceNick.ToIrcLower(), out IrcUser user))
                 {
                     user.LastPrivateMessage = DateTime.Now;
                 }
                 else
                 {
-                    _users.Add(new IrcUser(this)
+                    _users.Add(message.SourceNick.ToIrcLower(), new IrcUser(this)
                     {
                         HostMask = message.SourceHostMask,
                         Nick = message.SourceNick,
@@ -97,7 +95,7 @@ namespace smIRCL.Core
                 }
                 catch (Exception criticalException)
                 {
-                    //TODO critical
+                    throw new AggregateException("Client error handler failed", criticalException, e);
                 }
             }
         }
@@ -111,15 +109,13 @@ namespace smIRCL.Core
             
             if (!isChannel)
             {
-                IrcUser user = _users.FirstOrDefault(u => u.Nick.ToIrcLower() == message.SourceNick.ToIrcLower());
-                
-                if (user != null)
+                if (_users.TryGetValue(message.SourceNick.ToIrcLower(), out IrcUser user))
                 {
                     user.LastPrivateMessage = DateTime.Now;
                 }
                 else
                 {
-                    _users.Add(new IrcUser(this)
+                    _users.Add(message.SourceNick.ToIrcLower(), new IrcUser(this)
                     {
                         HostMask = message.SourceHostMask,
                         Nick = message.SourceNick,
@@ -151,7 +147,7 @@ namespace smIRCL.Core
                 }
                 catch (Exception criticalException)
                 {
-                    //TODO critical
+                    throw new AggregateException("Client error handler failed", criticalException, e);
                 }
             }
         }
@@ -196,10 +192,9 @@ namespace smIRCL.Core
             {
                 Nick = message.Parameters[0];
             }
-            else if (_users.Any(u => u.Nick.ToIrcLower() == message.SourceNick.ToIrcLower()))
+            else if (_users.TryGetValue(message.SourceNick.ToIrcLower(), out IrcUser user))
             {
-                IrcUser user = _users.FirstOrDefault(u => u.Nick.ToIrcLower() == message.SourceNick.ToIrcLower());
-                if (user != null) user.Nick = message.Parameters[0];
+                user.Nick = message.Parameters[0];
             }
 
             WhoIs(message.Parameters[0]);
@@ -262,8 +257,9 @@ namespace smIRCL.Core
                 Host = message.Parameters[3];
                 RealName = message.Parameters[7].Split(new[] { ' ' }, 2)[1];
 
-                IrcChannel channel = _channels.FirstOrDefault(ch => ch.Name.ToIrcLower() == message.Parameters[1].ToIrcLower());
-                channel?.ClientModesInternal.Clear();
+                if (!_channels.TryGetValue(message.Parameters[1].ToIrcLower(), out IrcChannel channel)) return;
+                
+                channel.ClientModesInternal.Clear();
 
                 foreach (char status in statuses)
                 {
@@ -280,44 +276,39 @@ namespace smIRCL.Core
                         default:
                             if (SupportedUserPrefixes.Any(sup => sup.Value == status))
                             {
-                                channel?.ClientModesInternal.Add(SupportedUserPrefixes.FirstOrDefault(sup => sup.Value == status).Key);
+                                channel.ClientModesInternal.Add(SupportedUserPrefixes.FirstOrDefault(sup => sup.Value == status).Key);
                             }
                             break;
                     }
                 }
             }
-            else if (_users.Any(u => u.Nick.ToIrcLower() == message.Parameters[5].ToIrcLower())) //If we know of the existence of the target user
+            else if (_users.TryGetValue(message.Parameters[5].ToIrcLower(), out IrcUser user)) //If we know of the existence of the target user
             {
-                IrcUser user = _users.FirstOrDefault(u => u.Nick.ToIrcLower() == message.Parameters[5].ToIrcLower());
-                
-                if (user != null)
+                user.UserName = message.Parameters[2];
+                user.Host = message.Parameters[3];
+                user.RealName = message.Parameters[7].Split(new[] { ' ' }, 2)[1];
+
+                KeyValuePair<string, List<char>> userMutualChannelModes = user.MutualChannelModes.FirstOrDefault(mcm => mcm.Key.ToIrcLower() == message.Parameters[1].ToIrcLower());
+                if (userMutualChannelModes.Key != null) userMutualChannelModes.Value.Clear();
+
+                foreach (char status in statuses)
                 {
-                    user.UserName = message.Parameters[2];
-                    user.Host = message.Parameters[3];
-                    user.RealName = message.Parameters[7].Split(new[] { ' ' }, 2)[1];
-
-                    KeyValuePair<string, List<char>> userMutualChannelModes = user.MutualChannelModes.FirstOrDefault(mcm => mcm.Key.ToIrcLower() == message.Parameters[1].ToIrcLower());
-                    if (userMutualChannelModes.Key != null) userMutualChannelModes.Value.Clear();
-
-                    foreach (char status in statuses)
+                    switch (status)
                     {
-                        switch (status)
-                        {
-                            case 'G':
-                                user.Away = "Unknown";
-                                break;
+                        case 'G':
+                            user.Away = "Unknown";
+                            break;
 
-                            case 'H':
-                                user.Away = null;
-                                break;
+                        case 'H':
+                            user.Away = null;
+                            break;
 
-                            default:
-                                if (SupportedUserPrefixes.Any(sup => sup.Value == status) && userMutualChannelModes.Key != null)
-                                {
-                                    userMutualChannelModes.Value.Add(SupportedUserPrefixes.FirstOrDefault(sup => sup.Value == status).Key);
-                                }
-                                break;
-                        }
+                        default:
+                            if (SupportedUserPrefixes.Any(sup => sup.Value == status) && userMutualChannelModes.Key != null)
+                            {
+                                userMutualChannelModes.Value.Add(SupportedUserPrefixes.FirstOrDefault(sup => sup.Value == status).Key);
+                            }
+                            break;
                     }
                 }
             }
@@ -334,16 +325,11 @@ namespace smIRCL.Core
                 Host = message.Parameters[3];
                 RealName = message.Parameters[5];
             }
-            else if (_users.Any(u => u.Nick.ToIrcLower() == message.Parameters[1].ToIrcLower())) //If we know of the existence of the target user
+            else if (_users.TryGetValue(message.Parameters[1].ToIrcLower(), out IrcUser user)) //If we know of the existence of the target user
             {
-                IrcUser user = _users.FirstOrDefault(u => u.Nick.ToIrcLower() == message.Parameters[1].ToIrcLower());
-                
-                if (user != null)
-                {
-                    user.UserName = message.Parameters[2];
-                    user.Host = message.Parameters[3];
-                    user.RealName = message.Parameters[5];
-                }
+                user.UserName = message.Parameters[2];
+                user.Host = message.Parameters[3];
+                user.RealName = message.Parameters[5];
             }
         }
         
@@ -352,22 +338,18 @@ namespace smIRCL.Core
         /// </summary>
         private void WhoIsChannelsReplyHandler(IrcController controller, IrcMessage message)
         {
-            if (message.Parameters[1].ToIrcLower() != Nick.ToIrcLower() && _users.Any(u => u.Nick.ToIrcLower() == message.Parameters[1].ToIrcLower())) //If we know of the existence of the target user and it is not us
+            if (message.Parameters[1].ToIrcLower() != Nick.ToIrcLower() && _users.TryGetValue(message.Parameters[1].ToIrcLower(), out IrcUser user)) //If we know of the existence of the target user and it is not us
             {
                 string[] channels = message.Parameters[2].Split(' ');
                 List<string> trimmedChannels = new List<string>();
-                foreach (string channel in channels)
-                {
-                    trimmedChannels.Add(channel.TrimStart('@', '+'));
-                }
+                
+                foreach (string channel in channels) trimmedChannels.Add(channel.TrimStart('@', '+'));
 
                 foreach (string channel in trimmedChannels)
                 {
-                    if (_channels.Any(ch => ch.Name.ToIrcLower() == channel.ToIrcLower()))
-                    {
-                        IrcUser user = _users.FirstOrDefault(u => u.Nick.ToIrcLower() == message.Parameters[1].ToIrcLower()); //TODO do we need to get on every loop?
-                        if (user != null && user.MutualChannels.All(uch => uch.ToIrcLower() != channel.ToIrcLower())) user.MutualChannelsInternal.Add(channel);
-                    }
+                    if (!_channels.ContainsKey(channel.ToIrcLower())) continue;
+                    
+                    if (user.MutualChannels.All(uch => uch != channel.ToIrcLower())) user.MutualChannelsInternal.Add(channel.ToIrcLower());
                 }
             }
         }
@@ -387,11 +369,16 @@ namespace smIRCL.Core
         {
             if(message.SourceNick.ToIrcLower() == Nick.ToIrcLower()) //If the target user is us
             {
-                if (_channels.All(ch => ch.Name.ToIrcLower() != message.Parameters[0].ToIrcLower())) _channels.Add(new IrcChannel(this, message.Parameters[0], SupportedChannelTypes)); //Add to our channel list if it isn't on there already
+                if (!_channels.ContainsKey(message.Parameters[0].ToIrcLower())) _channels.Add(message.Parameters[0].ToIrcLower(), new IrcChannel(this, message.Parameters[0], SupportedChannelTypes)); //Add to our channel list if it isn't on there already
             }
             else
             {
-                if (_users.All(u => u.Nick.ToIrcLower() != message.SourceNick.ToIrcLower())) //If we dont already know of the existence of the target user
+                if (_users.TryGetValue(message.SourceNick.ToIrcLower(), out IrcUser user)) //If we dont already know of the existence of the target user
+                {
+                    user.MutualChannelsInternal.Add(message.Parameters[0].ToIrcLower());
+                    user.MutualChannelModesInternal.Add(new KeyValuePair<string, List<char>>(message.Parameters[0], new List<char>()));
+                }
+                else
                 {
                     string realName = null;
                     string identifiedAccount = null;
@@ -402,35 +389,25 @@ namespace smIRCL.Core
                         realName = message.Parameters[2];
                     }
 
-                    _users.Add(new IrcUser(this)
+                    IrcUser newUser = new(this)
                     {
                         HostMask = message.SourceHostMask,
                         Nick = message.SourceNick,
                         Host = message.SourceHost,
                         UserName = message.SourceUserName,
                         RealName = realName,
-                        IdentifiedAccount = identifiedAccount,
-                        MutualChannelsInternal = new List<string>
-                        {
-                            message.Parameters[0] //This is the first time we know of the user, so we initialise them with the current mutual channel as their only known mutual
-                        },
-                        MutualChannelModesInternal = new List<KeyValuePair<string, List<char>>>
-                        {
-                            new(message.Parameters[0], new List<char>())
-                        }
-                    });
+                        IdentifiedAccount = identifiedAccount
+                    };
+                    
+                    newUser.MutualChannelsInternal.Add(message.Parameters[0].ToIrcLower()); //This is the first time we know of the user, so we initialise them with the current mutual channel as their only known mutual
+                    newUser.MutualChannelModesInternal.Add(new KeyValuePair<string, List<char>>(message.Parameters[0].ToIrcLower(), new List<char>()));
+                    
+                    _users.Add(message.SourceNick.ToIrcLower(), newUser);
                     
                     WhoIs(message.SourceNick); //Get more info on the user
                 }
-                else
-                {
-                    IrcUser user = _users.FirstOrDefault(u => u.Nick.ToIrcLower() == message.SourceNick.ToIrcLower());
-                    
-                    user?.MutualChannelsInternal.Add(message.Parameters[0]);
-                    user?.MutualChannelModesInternal.Add(new KeyValuePair<string, List<char>>(message.Parameters[0], new List<char>()));
-                }
 
-                _channels.FirstOrDefault(ch => ch.Name.ToIrcLower() == message.Parameters[0].ToIrcLower())?.UsersInternal.Add(message.SourceNick);
+                if (_channels.TryGetValue(message.Parameters[0].ToIrcLower(), out IrcChannel channel)) channel.UsersInternal.Add(message.SourceNick);
             }
         }
         
@@ -439,14 +416,12 @@ namespace smIRCL.Core
         /// </summary>
         private void NamesReplyHandler(IrcController controller, IrcMessage message)
         {
-            IrcChannel channel = _channels.FirstOrDefault(ch => ch.Name.ToIrcLower() == message.Parameters[2].ToIrcLower());
-
-            if (channel == null) return;
+            if (!_channels.TryGetValue(message.Parameters[2].ToIrcLower(), out IrcChannel channel)) return;
             
             if (channel.UserCollectionComplete)
             {
                 channel.UserCollectionComplete = false;
-                channel.UsersInternal = new List<string>(); //Clear users for repopulation
+                channel.UsersInternal.Clear(); //Clear users for repopulation
             }
 
             string[] users = message.Parameters[3].Split(' ');
@@ -489,34 +464,28 @@ namespace smIRCL.Core
                     {
                         if (SupportedUserPrefixes.Any(p => p.Value == prefix)) userModes.Add(SupportedUserPrefixes.FirstOrDefault(p => p.Value == prefix).Key);
                     }
-                    
+
                     //Check user against cache
-                    if (_users.All(u => u.Nick.ToLower() != userNick.ToIrcLower()))
+                    if (_users.TryGetValue(userNick.ToIrcLower(), out IrcUser globalUser))
                     {
-                        _users.Add(new IrcUser(this)
+                        if (globalUser.MutualChannels.All(ch => ch != channel.Name.ToIrcLower())) globalUser.MutualChannelsInternal.Add(channel.Name.ToIrcLower());
+                        
+                        if (globalUser.MutualChannelModes.All(ch => ch.Key.ToIrcLower() != channel.Name.ToIrcLower())) globalUser.MutualChannelModesInternal.Add(new KeyValuePair<string, List<char>>(channel.Name, userModes));
+                    }
+                    else
+                    {
+                        IrcUser newUser = new(this)
                         {
                             Nick = userNick,
                             HostMask = userHost != null ? userHostMaskOrNickOnly : null,
                             Host = userHost,
-                            UserName = userUserName,
-                            MutualChannelsInternal = new List<string>
-                            {
-                                channel.Name
-                            },
-                            MutualChannelModesInternal = new List<KeyValuePair<string, List<char>>>
-                            {
-                                new(channel.Name, userModes)
-                            }
-                        });
-                    }
-                    else
-                    {
-                        IrcUser globalUser = _users.FirstOrDefault(u => u.Nick.ToIrcLower() == userNick.ToIrcLower());
-
-                        if (globalUser == null) continue;
+                            UserName = userUserName
+                        };
                         
-                        if (globalUser.MutualChannels.All(ch => ch.ToIrcLower() != channel.Name.ToIrcLower())) globalUser.MutualChannelsInternal.Add(channel.Name);
-                        if (globalUser.MutualChannelModes.All(ch => ch.Key.ToIrcLower() != channel.Name.ToIrcLower())) globalUser.MutualChannelModesInternal.Add(new KeyValuePair<string, List<char>>(channel.Name, userModes));
+                        newUser.MutualChannelsInternal.Add(channel.Name.ToIrcLower());
+                        newUser.MutualChannelModesInternal.Add(new KeyValuePair<string, List<char>>(channel.Name.ToIrcLower(), userModes));
+                        
+                        _users.Add(userNick.ToIrcLower(), newUser);
                     }
                 }
                 else
@@ -532,15 +501,13 @@ namespace smIRCL.Core
                             userSplice = userSplice.TrimStart(trimmableUserPrefix);
                         }
                     }
-
-                    List<char> userModes = new List<char>();
+                    
+                    channel.ClientModesInternal.Clear();
 
                     foreach (char prefix in userPrefixes)
                     {
-                        if (SupportedUserPrefixes.Any(p => p.Value == prefix)) userModes.Add(SupportedUserPrefixes.FirstOrDefault(p => p.Value == prefix).Key);
+                        if (SupportedUserPrefixes.Any(p => p.Value == prefix)) channel.ClientModesInternal.Add(SupportedUserPrefixes.FirstOrDefault(p => p.Value == prefix).Key);
                     }
-
-                    channel.ClientModesInternal = userModes;
                 }
             }
         }
@@ -550,8 +517,7 @@ namespace smIRCL.Core
         /// </summary>
         private void NamesEndHandler(IrcController controller, IrcMessage message)
         {
-            IrcChannel channel = _channels.FirstOrDefault(ch => ch.Name.ToIrcLower() == message.Parameters[1].ToIrcLower());
-            if (channel != null) channel.UserCollectionComplete = true;
+            if (_channels.TryGetValue(message.Parameters[1].ToIrcLower(), out IrcChannel channel)) channel.UserCollectionComplete = true;
 
             Who(message.Parameters[1]);
         }
@@ -561,34 +527,31 @@ namespace smIRCL.Core
         /// </summary>
         private void ChannelModesHandler(IrcController controller, IrcMessage message)
         {
-            IrcChannel channel = _channels.FirstOrDefault(ch => ch.Name.ToIrcLower() == message.Parameters[1].ToIrcLower());
+            if (!_channels.TryGetValue(message.Parameters[1].ToIrcLower(), out IrcChannel channel)) return;
             
-            if (channel != null)
+            char[] channelModes = message.Parameters[2].TrimStart('+').ToCharArray(); //TODO what if this is - ?
+            Queue<string> channelModeParameters = new Queue<string>();
+
+            for (int i = 3; i < message.Parameters.Count; i++)
             {
-                char[] channelModes = message.Parameters[2].TrimStart('+').ToCharArray(); //TODO what if this is - ?
-                Queue<string> channelModeParameters = new Queue<string>();
+                channelModeParameters.Enqueue(message.Parameters[i]);
+            }
 
-                for (int i = 3; i < message.Parameters.Count; i++)
+            foreach (char channelMode in channelModes)
+            {
+                if (SupportedChannelModes.A.Contains(channelMode))
                 {
-                    channelModeParameters.Enqueue(message.Parameters[i]);
+                    channelModeParameters.Dequeue(); //Not listening for A, discard
                 }
-
-                foreach (char channelMode in channelModes)
+                else if (SupportedChannelModes.B.Contains(channelMode) || SupportedChannelModes.C.Contains(channelMode))
                 {
-                    if (SupportedChannelModes.A.Contains(channelMode))
-                    {
-                        channelModeParameters.Dequeue(); //Not listening for A, discard
-                    }
-                    else if (SupportedChannelModes.B.Contains(channelMode) || SupportedChannelModes.C.Contains(channelMode))
-                    {
-                        channel.ModesInternal.RemoveAll(m => m.Key == channelMode);
-                        channel.ModesInternal.Add(new KeyValuePair<char, string>(channelMode, channelModeParameters.Dequeue()));
-                    }
-                    else if (SupportedChannelModes.D.Contains(channelMode))
-                    {
-                        channel.ModesInternal.RemoveAll(m => m.Key == channelMode);
-                        channel.ModesInternal.Add(new KeyValuePair<char, string>(channelMode, null));
-                    }
+                    channel.ModesInternal.RemoveAll(m => m.Key == channelMode);
+                    channel.ModesInternal.Add(new KeyValuePair<char, string>(channelMode, channelModeParameters.Dequeue()));
+                }
+                else if (SupportedChannelModes.D.Contains(channelMode))
+                {
+                    channel.ModesInternal.RemoveAll(m => m.Key == channelMode);
+                    channel.ModesInternal.Add(new KeyValuePair<char, string>(channelMode, null));
                 }
             }
         }
@@ -598,9 +561,7 @@ namespace smIRCL.Core
         /// </summary>
         private void ModeHandler(IrcController controller, IrcMessage message)
         {
-            IrcChannel channel = _channels.FirstOrDefault(ch => ch.Name.ToIrcLower() == message.Parameters[0].ToIrcLower());
-
-            if (channel == null) return;
+            if (!_channels.TryGetValue(message.Parameters[0].ToIrcLower(), out IrcChannel channel)) return;
             
             char[] sentModes = message.Parameters[1].ToCharArray();
             bool removal = false;
@@ -651,9 +612,7 @@ namespace smIRCL.Core
                     }
                     else //If we know of the existence of the target user and it is not us
                     {
-                        IrcUser user = _users.FirstOrDefault(u => u.Nick.ToIrcLower() == targetNick.ToIrcLower());
-
-                        if (user != null)
+                        if (_users.TryGetValue(targetNick.ToIrcLower(), out IrcUser user))
                         {
                             KeyValuePair<string, List<char>> mutualChannelModes = user.MutualChannelModes.FirstOrDefault(mcm => mcm.Key.ToIrcLower() == channel.Name.ToIrcLower()); //Find the mutual channel for the known user
                                 
@@ -671,24 +630,21 @@ namespace smIRCL.Core
         /// </summary>
         private void PartHandler(IrcController controller, IrcMessage message)
         {
+            string lowerNamedChannel = message.Parameters[0].ToIrcLower();
+            
             if (message.SourceNick.ToIrcLower() == Nick.ToIrcLower())
             {
-                IrcChannel channel = _channels.FirstOrDefault(ch => ch.Name.ToIrcLower() == message.Parameters[0].ToIrcLower());
-                if (channel != null) _channels.Remove(channel);
+                _channels.Remove(lowerNamedChannel);
 
-                List<IrcUser> usersWithMutualChannels = _users.Where(u => u.MutualChannels.Any(ch => ch.ToIrcLower() == message.Parameters[0].ToIrcLower())).ToList();
-                foreach (IrcUser user in usersWithMutualChannels)
-                {
-                    user.MutualChannelsInternal.RemoveAll(ch => ch.ToIrcLower() == message.Parameters[0].ToIrcLower());
-                }
+                IEnumerable<KeyValuePair<string, IrcUser>> usersWithMutualChannels = _users.Where(u => u.Value.MutualChannels.Any(ch => ch == lowerNamedChannel));
+                
+                foreach (KeyValuePair<string, IrcUser> user in usersWithMutualChannels) user.Value.MutualChannelsInternal.RemoveAll(ch => ch == lowerNamedChannel);
             }
             else
             {
-                IrcChannel channel = _channels.FirstOrDefault(ch => ch.Name.ToIrcLower() == message.Parameters[0].ToIrcLower());
-                channel?.UsersInternal.RemoveAll(u => u.ToIrcLower() == message.SourceNick.ToIrcLower());
+                if (_channels.TryGetValue(lowerNamedChannel, out IrcChannel channel))  channel.UsersInternal.RemoveAll(u => u == message.SourceNick.ToIrcLower());
 
-                IrcUser user = _users.FirstOrDefault(u => u.Nick.ToIrcLower() == message.SourceNick.ToIrcLower());
-                user?.MutualChannelsInternal.RemoveAll(ch => ch.ToIrcLower() == message.Parameters[0].ToIrcLower());
+                if (_users.TryGetValue(message.SourceNick.ToIrcLower(), out IrcUser user)) user.MutualChannelsInternal.RemoveAll(ch => ch == lowerNamedChannel);
             }
 
             DoUserGarbageCollection();
@@ -701,22 +657,20 @@ namespace smIRCL.Core
         {
             if (message.Parameters[1].ToIrcLower() == Nick.ToIrcLower())
             {
-                IrcChannel channel = _channels.FirstOrDefault(ch => ch.Name.ToIrcLower() == message.Parameters[0].ToIrcLower());
-                if (channel != null) _channels.Remove(channel);
+                _channels.Remove(message.Parameters[0].ToIrcLower());
 
-                List<IrcUser> usersWithMutualChannels = _users.Where(u => u.MutualChannels.Any(ch => ch.ToIrcLower() == message.Parameters[0].ToIrcLower())).ToList();
-                foreach (IrcUser user in usersWithMutualChannels)
+                IEnumerable<KeyValuePair<string, IrcUser>> usersWithMutualChannels = _users.Where(u => u.Value.MutualChannels.Any(ch => ch.ToIrcLower() == message.Parameters[0].ToIrcLower()));
+                
+                foreach (KeyValuePair<string, IrcUser> user in usersWithMutualChannels)
                 {
-                    user.MutualChannelsInternal.RemoveAll(ch => ch.ToIrcLower() == message.Parameters[0].ToIrcLower());
+                    user.Value.MutualChannelsInternal.RemoveAll(ch => ch == message.Parameters[0].ToIrcLower());
                 }
             }
             else
             {
-                IrcChannel channel = _channels.FirstOrDefault(ch => ch.Name.ToIrcLower() == message.Parameters[0].ToIrcLower());
-                channel?.UsersInternal.RemoveAll(u => u.ToIrcLower() == message.Parameters[1].ToIrcLower());
+                if (_channels.TryGetValue(message.Parameters[1].ToIrcLower(), out IrcChannel channel)) channel.UsersInternal.RemoveAll(u => u == message.Parameters[1].ToIrcLower());
 
-                IrcUser user = _users.FirstOrDefault(u => u.Nick.ToIrcLower() == message.Parameters[1].ToIrcLower());
-                user?.MutualChannelsInternal.RemoveAll(ch => ch.ToIrcLower() == message.Parameters[0].ToIrcLower());
+                if (_users.TryGetValue(message.Parameters[1].ToIrcLower(), out IrcUser user)) user.MutualChannelsInternal.RemoveAll(ch => ch == message.Parameters[0].ToIrcLower());
             }
 
             DoUserGarbageCollection();
@@ -729,16 +683,11 @@ namespace smIRCL.Core
         {
             if (message.SourceNick.ToIrcLower() == Nick.ToIrcLower()) return;
             
-            List<IrcChannel> mutualChannels = _channels.Where(ch => ch.Users.Any(u => u.ToIrcLower() == message.SourceNick.ToIrcLower())).ToList();
+            IEnumerable<KeyValuePair<string, IrcChannel>> mutualChannels = _channels.Where(ch => ch.Value.UsersInternal.Any(u => u == message.SourceNick.ToIrcLower()));
             
-            foreach (IrcChannel mutualChannel in mutualChannels)
-            {
-                mutualChannel.UsersInternal.RemoveAll(u => u.ToIrcLower() == message.SourceNick.ToIrcLower());
-            }
+            foreach (KeyValuePair<string, IrcChannel> mutualChannel in mutualChannels) mutualChannel.Value.UsersInternal.RemoveAll(u => u == message.SourceNick.ToIrcLower());
 
-            IrcUser user = _users.FirstOrDefault(u => u.Nick.ToIrcLower() == message.SourceNick.ToIrcLower());
-            
-            if (user != null) _users.Remove(user);
+            _users.Remove(message.SourceNick.ToIrcLower());
         }
         
         /// <summary>
@@ -746,9 +695,7 @@ namespace smIRCL.Core
         /// </summary>
         private void TopicInformHandler(IrcController controller, IrcMessage message)
         {
-            IrcChannel channel = _channels.FirstOrDefault(ch => ch.Name.ToIrcLower() == message.Parameters[1].ToIrcLower());
-            
-            if (channel != null) channel.Topic = message.Parameters[2];
+            if (_channels.TryGetValue(message.Parameters[1].ToIrcLower(), out IrcChannel channel)) channel.Topic = message.Parameters[2];
         }
         
         /// <summary>
@@ -756,8 +703,7 @@ namespace smIRCL.Core
         /// </summary>
         private void TopicUpdateHandler(IrcController controller, IrcMessage message)
         {
-            IrcChannel channel = _channels.FirstOrDefault(ch => ch.Name.ToIrcLower() == message.Parameters[0].ToIrcLower());
-            if (channel != null) channel.Topic = message.Parameters[1] != "" ? message.Parameters[1] : null;
+            if (_channels.TryGetValue(message.Parameters[0].ToIrcLower(), out IrcChannel channel)) channel.Topic = message.Parameters[1] != "" ? message.Parameters[1] : null;
         }
         
         /// <summary>
@@ -911,9 +857,7 @@ namespace smIRCL.Core
             }
             else
             {
-                IrcUser user = _users.FirstOrDefault(u => u.Nick.ToIrcLower() == message.SourceNick.ToIrcLower());
-
-                if (user == null) return;
+                if (!_users.TryGetValue(message.SourceNick.ToIrcLower(), out IrcUser user)) return;
                 
                 user.Away = message.Parameters.Count == 0 ? null : message.Parameters[0];
             }
@@ -931,9 +875,7 @@ namespace smIRCL.Core
             }
             else
             {
-                IrcUser user = _users.FirstOrDefault(u => u.Nick.ToIrcLower() == message.SourceNick.ToIrcLower());
-                
-                if (user == null) return;
+                if (!_users.TryGetValue(message.SourceNick.ToIrcLower(), out IrcUser user)) return;
                 
                 user.UserName = message.Parameters[0];
                 user.HostMask = message.Parameters[1];

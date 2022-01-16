@@ -16,8 +16,8 @@ namespace smIRCL.EventArgs
         {
             if (message.Command.ToIrcLower() != "notice" || !source.IsValidChannelName(message.Parameters[0])) throw new ArgumentException("Not a channel NOTICE", nameof(message));
             
-            Author = source.Users.FirstOrDefault(user => user.Nick.ToIrcLower() == message.SourceNick.ToIrcLower());
-            Channel = source.Channels.FirstOrDefault(channel => channel.Name.ToIrcLower() == message.Parameters[0].ToIrcLower());
+            Author = source.Users.TryGetValue(message.SourceNick.ToIrcLower(), out IrcUser user) ? user : null;
+            Channel = source.Channels.TryGetValue(message.Parameters[0].ToIrcLower(), out IrcChannel channel) ? channel : null;
             Content = message.Parameters[1];
         }
     }

@@ -38,7 +38,7 @@ namespace smIRCL.ServerEntities
         /// <summary>
         /// The modes set on the client in this channel (internal)
         /// </summary>
-        protected internal List<char> ClientModesInternal = new();
+        protected internal readonly List<char> ClientModesInternal = new();
         
         /// <summary>
         /// The users in the channel
@@ -47,7 +47,7 @@ namespace smIRCL.ServerEntities
         /// <summary>
         /// The users in the channel (internal)
         /// </summary>
-        protected internal List<string> UsersInternal = new();
+        protected internal readonly List<string> UsersInternal = new();
         
         /// <summary>
         /// Whether the Users collection has been fully populated yet

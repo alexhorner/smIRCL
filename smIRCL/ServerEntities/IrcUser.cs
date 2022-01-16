@@ -54,7 +54,7 @@ namespace smIRCL.ServerEntities
         /// <summary>
         /// The channels shared between the IRC user and the client (internal)
         /// </summary>
-        protected internal List<string> MutualChannelsInternal = new();
+        protected internal readonly List<string> MutualChannelsInternal = new();
         
         /// <summary>
         /// The modes the IRC user has in the associated mutual channel
@@ -63,7 +63,7 @@ namespace smIRCL.ServerEntities
         /// <summary>
         /// The modes the IRC user has in the associated mutual channel (internal)
         /// </summary>
-        protected internal List<KeyValuePair<string, List<char>>> MutualChannelModesInternal = new();
+        protected internal readonly List<KeyValuePair<string, List<char>>> MutualChannelModesInternal = new();
         
         /// <summary>
         /// The time of the last private message from or to the IRC user
@@ -104,6 +104,15 @@ namespace smIRCL.ServerEntities
         public void SendCtcp(string fullCommand)
         {
             SourceController.SendPrivMsg(Nick, '\x01' + fullCommand + '\x01');
+        }
+
+        /// <summary>
+        /// Send a CTCP response message
+        /// </summary>
+        /// <param name="message">The message to send</param>
+        public void SendCtcpResponse(string message)
+        {
+            SourceController.SendCtcpResponse(Nick, message);
         }
     }
 }

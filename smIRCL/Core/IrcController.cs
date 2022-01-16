@@ -103,7 +103,12 @@ namespace smIRCL.Core
 
         private void DoUserGarbageCollection()
         {
-            _users.RemoveAll(u => u.MutualChannels.Count == 0 && (u.LastPrivateMessage == null ||  u.LastPrivateMessage + Connector.Config.DirectMessageHoldingPeriod < DateTime.Now));
+            IEnumerable<KeyValuePair<string, IrcUser>> expiredUsers = _users.Where(u => u.Value.MutualChannels.Count == 0 && (u.Value.LastPrivateMessage == null || u.Value.LastPrivateMessage + Connector.Config.DirectMessageHoldingPeriod < DateTime.Now));
+
+            foreach (var (key, _) in expiredUsers)
+            {
+                _users.Remove(key);
+            }
         }
         private void DoUserGarbageCollection(Object source, ElapsedEventArgs e)
         {
@@ -263,11 +268,10 @@ namespace smIRCL.Core
                 throw new ArgumentException("Not a valid channel name", nameof(channelName));
             }
 
-            if (_channels.All(ch => ch.Name.ToIrcLower() != channelName.ToIrcLower()))
-            {
-                Connector.Transmit($"JOIN :{channelName}");
-                Connector.Transmit($"MODE :{channelName}");
-            }
+            if (_channels.ContainsKey(channelName.ToIrcLower())) return;
+            
+            Connector.Transmit($"JOIN :{channelName}");
+            Connector.Transmit($"MODE :{channelName}");
         }
 
         /// <summary>
@@ -276,15 +280,9 @@ namespace smIRCL.Core
         /// <param name="channelName">The Channel to leave</param>
         public void Part(string channelName)
         {
-            if (!IsValidChannelName(channelName))
-            {
-                throw new ArgumentException("Not a valid channel name", nameof(channelName));
-            }
+            if (!IsValidChannelName(channelName)) throw new ArgumentException("Not a valid channel name", nameof(channelName));
 
-            if (_channels.Any(ch => ch.Name.ToIrcLower() == channelName.ToIrcLower()))
-            {
-                Connector.Transmit($"PART :{channelName}");
-            }
+            if (_channels.ContainsKey(channelName.ToIrcLower())) Connector.Transmit($"PART :{channelName}");
         }
 
         /// <summary>
@@ -296,26 +294,26 @@ namespace smIRCL.Core
         {
             if (IsValidChannelName(channelOrNick))
             {
-                if (_channels.All(ch => ch.Name.ToIrcLower() != channelOrNick.ToIrcLower()))
+                if (!_channels.ContainsKey(channelOrNick.ToIrcLower()))
                 {
                     throw new ArgumentException("Not in the requested channel", nameof(channelOrNick));
                 }
             }
             else
             {
-                IrcUser user = _users.FirstOrDefault(u => u.Nick.ToIrcLower() == channelOrNick.ToIrcLower());
+                bool success = _users.TryGetValue(channelOrNick.ToIrcLower(), out IrcUser user);
                 
-                if (user != null)
+                if (success)
                 {
                     user.LastPrivateMessage = DateTime.Now;
                 }
                 else
                 {
-                    _users.Add(new IrcUser(this)
+                    _users[channelOrNick.ToIrcLower()] = new IrcUser(this)
                     {
                         Nick = channelOrNick,
                         LastPrivateMessage = DateTime.Now
-                    });
+                    };
                     
                     WhoIs(channelOrNick);
                 }
@@ -333,30 +331,43 @@ namespace smIRCL.Core
         {
             if (IsValidChannelName(channelOrNick))
             {
-                if (_channels.All(ch => ch.Name.ToIrcLower() != channelOrNick.ToIrcLower()))
+                if (!_channels.ContainsKey(channelOrNick.ToIrcLower()))
                 {
                     throw new ArgumentException("Not in the requested channel", nameof(channelOrNick));
                 }
             }
             else
             {
-                IrcUser user = _users.FirstOrDefault(u => u.Nick.ToIrcLower() == channelOrNick.ToIrcLower());
-                if (user != null)
+                bool success = _users.TryGetValue(channelOrNick.ToIrcLower(), out IrcUser user);
+                
+                if (success)
                 {
                     user.LastPrivateMessage = DateTime.Now;
                 }
                 else
                 {
-                    _users.Add(new IrcUser(this)
+                    _users[channelOrNick.ToIrcLower()] = new IrcUser(this)
                     {
                         Nick = channelOrNick,
                         LastPrivateMessage = DateTime.Now
-                    });
+                    };
+                    
                     WhoIs(channelOrNick);
                 }
             }
 
             Connector.Transmit($"NOTICE {channelOrNick} :{message}");
+        }
+        
+        
+        /// <summary>
+        /// Send a CTCP response message
+        /// </summary>
+        /// <param name="channelOrNick">The Nick or Channel recipient</param>
+        /// <param name="message">The message to send</param>
+        public void SendCtcpResponse(string channelOrNick, string message)
+        {
+            SendNotice(channelOrNick, $"\x01{message}\x01");
         }
 
         /// <summary>
