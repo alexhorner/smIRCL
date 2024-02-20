@@ -14,5 +14,5 @@ For documentation of all library parts, and additional information such as **Get
 ## Credit
 An absolutely huge thanks to [@jesopo]( https://github.com/jesopo) for their incredibly large amount of technical IRC knowledge. This library would not have been possible without their assistance and support!
 
-## Freenode
+## Libera
 Have a peek over at `##smIRCL` on `irc.libera.chat` if you'd like to talk!
